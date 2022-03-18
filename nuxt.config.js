@@ -41,6 +41,12 @@ export default {
     scss: ['~/assets/scss/_variables.scss'],
   },
 
+  webfontloader: {
+    google: {
+      families: ['Zen+Kaku+Gothic+New:400,700', 'Zen+Antique:400'],
+    },
+  },
+
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
