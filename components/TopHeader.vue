@@ -2,12 +2,8 @@
   <!-- ヘッダー -->
   <header class="header">
     <div class="container grid">
-      <NavButton
-        :isOpen="sideNavOpen"
-        @toggle="$emit('sideNavToggle')"
-        class="nav-button"
-      />
       <img class="logo" src="logo.png" alt="" />
+      <Hamburger @toggle="sideNavToggle" />
       <!-- SNS メニュー ( md 以上の端末で表示 ) -->
       <div class="sns">
         <a href="#">
@@ -33,11 +29,13 @@
 </template>
 
 <script>
-import NavButton from '../navigation/NavButton.vue'
-
 export default {
-  components: { NavButton },
   props: ['sideNavOpen'],
+  methods: {
+    sideNavToggle() {
+      this.$emit('sideNavToggle')
+    },
+  },
 }
 </script>
 
@@ -46,16 +44,11 @@ export default {
   display: grid;
 }
 
-.nav-button {
-  z-index: 10000;
-  justify-self: end;
-  margin-bottom: -16px;
-}
-
 .header {
   width: 100%;
   padding-top: 32px;
-  padding-bottom: 32px;
+  margin-bottom: 24px;
+
   background: linear-gradient(
       to bottom,
       hsla(200, 100%, 11%, 1) 0,
@@ -95,9 +88,10 @@ export default {
 }
 
 @include mq(sm) {
-  .nav-button {
-    margin-bottom: 24px;
+  .header {
+    margin-bottom: 48px;
   }
+
   .logo {
     width: 85%;
     height: 85%;
@@ -132,9 +126,6 @@ export default {
     grid-template-columns: 45fr 55fr;
   }
 
-  .nav-button {
-    display: none;
-  }
   .logo {
     width: 100%;
     height: 100%;

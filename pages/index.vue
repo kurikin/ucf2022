@@ -2,7 +2,6 @@
   <div class="top">
     <!-- ヘッダー -->
     <TopHeader
-      class="top-header"
       :sideNavOpen="sideNavOpen"
       @sideNavToggle="sideNavOpen = !sideNavOpen"
     />
@@ -26,11 +25,8 @@
 </template>
 
 <script>
-import TopHeader from '../components/header/TopHeader.vue'
-import SideNav from '../components/navigation/SideNav.vue'
 export default {
   name: 'IndexPage',
-  components: { TopHeader, SideNav },
   data() {
     return {
       sideNavOpen: false,
@@ -54,15 +50,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/* ### ヘッダー ### */
-.top-header {
-  margin-bottom: 24px;
-
-  @include mq() {
-    margin-bottom: 48px;
-  }
-}
-
 /* ### 各セクションのタイトル ### */
 .heading {
   font-family: 'Zen Antique';

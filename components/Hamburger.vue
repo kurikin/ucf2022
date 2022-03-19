@@ -1,5 +1,6 @@
 <template>
-  <div @click="menuClicked" class="hamburger-lines" :class="{ open: isOpen }">
+  <!-- ハンバーガーメニュー -->
+  <div @click="menuClicked" class="hamburger" :class="{ open: isOpen }">
     <span class="line line1"></span>
     <span class="line line2"></span>
     <span class="line line3"></span>
@@ -11,7 +12,6 @@ export default {
   props: ['isOpen'],
   methods: {
     menuClicked() {
-      this.isOpen = !this.isOpen
       this.$emit('toggle')
     },
   },
@@ -19,25 +19,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.hamburger-lines {
-  display: inline-block;
+.hamburger {
+  z-index: 10000;
+  margin-bottom: -16px;
   height: 22px;
   width: 28px;
   display: flex;
-  z-index: 100;
   flex-direction: column;
   justify-content: space-between;
-}
+  justify-self: end;
+  grid-column: 2;
 
-.hamburger-lines .line {
-  display: block;
-  height: 2.2px;
-  width: 100%;
-  border-radius: 2px;
-  background: $white;
-}
-
-.hamburger-lines {
+  @include mq() {
+    display: none;
+  }
+  .line {
+    display: block;
+    height: 2.2px;
+    width: 100%;
+    border-radius: 2px;
+    background: $white;
+  }
   .line1 {
     transform-origin: 0% 0%;
     transition: transform 0.3s ease-in-out;
