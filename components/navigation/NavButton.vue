@@ -8,14 +8,11 @@
 
 <script>
 export default {
-  data() {
-    return {
-      isOpen: false,
-    }
-  },
+  props: ['isOpen'],
   methods: {
     menuClicked() {
       this.isOpen = !this.isOpen
+      this.$emit('toggle')
     },
   },
 }
