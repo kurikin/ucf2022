@@ -1,43 +1,99 @@
 <template>
-  <div class="sidenav-container">
-    <!-- サイドバーのバックドロップ背景 -->
-    <div
-      v-if="show"
-      class="sidenav-backdrop"
-      @click="$emit('sideNavClose')"
-    ></div>
-    <!-- トランジション -->
-    <transition name="slide-side">
-      <!-- サイドナブ -->
-      <div v-if="show" class="sidenav">
-        <!-- ハンバーガーメニュー -->
-        <ul class="nav-list" @click="$emit('close')">
-          <h3 class="genre-title">LINE UP</h3>
-          <li class="nav-item"><nuxt-link to="#">都市文化祭とは</nuxt-link></li>
-          <li class="nav-item"><nuxt-link to="#">企画一覧</nuxt-link></li>
-          <h3 class="genre-title">GUIDES</h3>
-          <li class="nav-item"><nuxt-link to="#">アクセス</nuxt-link></li>
-          <li class="nav-item"><nuxt-link to="#">入試情報</nuxt-link></li>
-          <li class="nav-item"><nuxt-link to="#">お問合せ</nuxt-link></li>
-        </ul>
-      </div>
-    </transition>
+  <div class="sideNav">
+    <!-- ハンバーガーメニュー -->
+    <div class="hamburger" @click="isOpen = !isOpen" :class="{ open: isOpen }">
+      <span class="line line1"></span>
+      <span class="line line2"></span>
+      <span class="line line3"></span>
+    </div>
+    <!-- サイドナビゲーション-->
+    <div class="sidenav-container">
+      <!-- サイドバーのバックドロップ背景 -->
+      <div v-if="isOpen" @click="isOpen = false" class="sidenav-backdrop"></div>
+      <!-- トランジション -->
+      <transition name="slide-side">
+        <!-- サイドナビゲーション -->
+        <div v-if="isOpen" class="sidenav">
+          <ul class="nav-list" @click="isOpen = false">
+            <h3 class="genre-title">LINE UP</h3>
+            <li class="nav-item">
+              <nuxt-link to="#">都市文化祭とは</nuxt-link>
+            </li>
+            <li class="nav-item"><nuxt-link to="#">企画一覧</nuxt-link></li>
+            <h3 class="genre-title">GUIDES</h3>
+            <li class="nav-item"><nuxt-link to="#">アクセス</nuxt-link></li>
+            <li class="nav-item"><nuxt-link to="#">入試情報</nuxt-link></li>
+            <li class="nav-item"><nuxt-link to="#">お問合せ</nuxt-link></li>
+          </ul>
+        </div>
+      </transition>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'TheSidenav',
-  props: {
-    show: {
-      type: Boolean,
-      default: false,
-    },
+  data() {
+    return {
+      isOpen: false,
+    }
   },
 }
 </script>
 
 <style lang="scss" scoped>
+.sideNav {
+  grid-row: 1;
+  grid-column: 1;
+  justify-self: end;
+}
+.hamburger {
+  height: 22px;
+  width: 28px;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include mq(md) {
+    display: none;
+  }
+  .line {
+    display: block;
+    height: 2.2px;
+    width: 100%;
+    border-radius: 2px;
+    background: $white;
+  }
+  .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .line2 {
+    transition: transform 0.1s ease-in-out;
+  }
+
+  .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &.open {
+    .line1 {
+      transform: rotate(45deg);
+    }
+
+    .line2 {
+      transform: scaleY(0);
+    }
+    .line3 {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+/* ### ハンバーガーメニュー ### */
 .sidenav-container {
   height: 100%;
   width: 100%;
@@ -101,27 +157,5 @@ export default {
     color: $white;
     font-size: 16px;
   }
-}
-
-.drawer-toggle {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 35px;
-  width: 35px;
-  cursor: pointer;
-}
-.bar {
-  height: 2px;
-  background: black;
-  transition: all 0.3s ease-in-out 0.5s;
-}
-.bar:nth-child(1) {
-  transform: rotate(135deg) translateY(-10px);
-  transform-origin: bottom;
-}
-.bar:nth-child(2) {
-  transform: rotate(-135deg) translateY(10px);
-  transform-origin: top;
 }
 </style>

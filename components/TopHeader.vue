@@ -2,8 +2,9 @@
   <!-- ヘッダー -->
   <header class="header">
     <div class="container grid">
+      <!-- サイドメニュー ( md 以下の端末のみ ) -->
       <img class="logo" src="logo.png" alt="" />
-      <Hamburger @toggle="sideNavToggle" />
+      <SideNav />
       <!-- SNS メニュー ( md 以上の端末で表示 ) -->
       <div class="sns">
         <a href="#">
@@ -29,24 +30,19 @@
 </template>
 
 <script>
-export default {
-  props: ['sideNavOpen'],
-  methods: {
-    sideNavToggle() {
-      this.$emit('sideNavToggle')
-    },
-  },
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>
 .grid {
   display: grid;
+  gap: 32px;
 }
 
 .header {
   width: 100%;
-  padding-top: 32px;
+  padding-top: 24px;
+  padding-bottom: 24px;
   margin-bottom: 24px;
 
   background: linear-gradient(
@@ -64,8 +60,10 @@ export default {
   width: 98%;
   height: 98%;
   object-fit: contain;
-  margin-bottom: 64px;
   justify-self: center;
+  margin-top: 18px;
+  grid-row: 1;
+  grid-column: 1;
 }
 
 .sns {
@@ -95,7 +93,7 @@ export default {
   .logo {
     width: 85%;
     height: 85%;
-    margin-bottom: 48px;
+    margin-top: 24px;
   }
 
   .text-box {
@@ -108,6 +106,11 @@ export default {
 }
 
 @include mq() {
+  .grid {
+    align-content: center;
+    grid-template-columns: 45fr 55fr;
+    gap: 0;
+  }
   .header {
     background: linear-gradient(
         to bottom,
@@ -121,14 +124,10 @@ export default {
     padding-bottom: 48px;
   }
 
-  .grid {
-    align-content: center;
-    grid-template-columns: 45fr 55fr;
-  }
-
   .logo {
     width: 100%;
     height: 100%;
+    margin-top: 0;
     grid-row: 1 / -1;
     margin-bottom: 0;
   }

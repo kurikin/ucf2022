@@ -1,12 +1,7 @@
 <template>
   <div class="top">
     <!-- ヘッダー -->
-    <TopHeader
-      :sideNavOpen="sideNavOpen"
-      @sideNavToggle="sideNavOpen = !sideNavOpen"
-    />
-    <!-- サイドメニュー ( md 以下の端末のみ ) -->
-    <SideNav @sideNavClose="sideNavOpen = false" :show="sideNavOpen" />
+    <TopHeader />
     <!-- 新着情報 -->
     <section class="section-news container">
       <h2 class="heading">新着情報</h2>
@@ -27,11 +22,6 @@
 <script>
 export default {
   name: 'IndexPage',
-  data() {
-    return {
-      sideNavOpen: false,
-    }
-  },
   head() {
     return {
       bodyAttrs: {
