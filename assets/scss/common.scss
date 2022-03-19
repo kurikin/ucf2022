@@ -10,15 +10,15 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  height: 100%;
-}
-
 body {
   font-family: 'Zen Kaku Gothic New';
   line-height: 1.5;
   background-color: $black;
+
+  &.side-nav-open {
+    max-height: 100vh;
+    overflow: hidden;
+  }
 }
 
 ul {
@@ -28,7 +28,11 @@ ul {
 .container {
   max-width: 1140px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 20px;
+
+  @include mq(sm) {
+    padding: 0 28px;
+  }
 }
 
 a {

@@ -46,7 +46,8 @@ export default {
 .sidenav-backdrop {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: hsla(200, 100%, 14%, 0.3);
+
   z-index: 999;
   position: fixed;
   top: 0;

@@ -27,7 +27,7 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  buildModules: ['nuxt-microcms-module'],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -39,6 +39,14 @@ export default {
 
   styleResources: {
     scss: ['~/assets/scss/_variables.scss', '~/assets/scss/_mixin.scss'],
+  },
+
+  microcms: {
+    options: {
+      serviceDomain: process.env.SERVICE_DOMAIN,
+      apiKey: process.env.API_KEY,
+    },
+    mode: process.env.NODE_ENV === 'production' ? 'server' : 'all',
   },
 
   webfontloader: {
