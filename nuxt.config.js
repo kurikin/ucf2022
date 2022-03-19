@@ -35,6 +35,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
     'nuxt-webfontloader',
+    '@nuxtjs/date-fns',
   ],
 
   styleResources: {
