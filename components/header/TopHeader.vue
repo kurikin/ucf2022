@@ -59,8 +59,8 @@ export default {
   background: linear-gradient(
       to bottom,
       hsla(200, 100%, 11%, 1) 0,
-      hsla(200, 100%, 11%, 0.82) 4%,
-      hsla(200, 100%, 11%, 0.82) 90%,
+      hsla(200, 100%, 11%, 0.82) 3%,
+      hsla(200, 100%, 11%, 0.82) 92%,
       hsla(200, 100%, 11%, 1) 100%
     ),
     url('/header-back.jpg');

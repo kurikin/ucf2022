@@ -21,6 +21,10 @@ body {
   background-color: $black;
 }
 
+ul {
+  list-style: none;
+}
+
 .container {
   max-width: 1140px;
   margin: 0 auto;

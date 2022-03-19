@@ -12,10 +12,10 @@
       <div v-if="show" class="sidenav">
         <!-- ハンバーガーメニュー -->
         <ul class="nav-list" @click="$emit('close')">
-          <h2 class="genre-title">LINE UP</h2>
+          <h3 class="genre-title">LINE UP</h3>
           <li class="nav-item"><nuxt-link to="#">都市文化祭とは</nuxt-link></li>
           <li class="nav-item"><nuxt-link to="#">企画一覧</nuxt-link></li>
-          <h2 class="genre-title">GUIDES</h2>
+          <h3 class="genre-title">GUIDES</h3>
           <li class="nav-item"><nuxt-link to="#">アクセス</nuxt-link></li>
           <li class="nav-item"><nuxt-link to="#">入試情報</nuxt-link></li>
           <li class="nav-item"><nuxt-link to="#">お問合せ</nuxt-link></li>
@@ -84,6 +84,7 @@ export default {
 
 .genre-title {
   font-size: 24px;
+  font-weight: 700;
   margin-bottom: 2px;
 
   &:not(:first-child) {
