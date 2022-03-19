@@ -12,9 +12,13 @@
       <div v-if="show" class="sidenav">
         <!-- ハンバーガーメニュー -->
         <ul class="nav-list" @click="$emit('close')">
-          <li class="nav-item"><nuxt-link to="#">ブログ</nuxt-link></li>
-          <li class="nav-item"><nuxt-link to="#">About</nuxt-link></li>
-          <li class="nav-item"><nuxt-link to="#">管理画面</nuxt-link></li>
+          <h2 class="genre-title">LINE UP</h2>
+          <li class="nav-item"><nuxt-link to="#">都市文化祭とは</nuxt-link></li>
+          <li class="nav-item"><nuxt-link to="#">企画一覧</nuxt-link></li>
+          <h2 class="genre-title">GUIDES</h2>
+          <li class="nav-item"><nuxt-link to="#">アクセス</nuxt-link></li>
+          <li class="nav-item"><nuxt-link to="#">入試情報</nuxt-link></li>
+          <li class="nav-item"><nuxt-link to="#">お問合せ</nuxt-link></li>
         </ul>
       </div>
     </transition>
@@ -58,7 +62,7 @@ export default {
   top: 0;
   right: 0;
   box-sizing: border-box;
-  padding: 30px;
+  padding: 24px;
 }
 
 .slide-side-enter-active,
@@ -71,17 +75,30 @@ export default {
 }
 
 .nav-list {
-  padding-top: 24px;
+  display: grid;
+  gap: 12px;
+  padding-top: 32px;
   list-style: none;
   color: $white;
 }
 
+.genre-title {
+  font-size: 24px;
+  margin-bottom: 2px;
+
+  &:not(:first-child) {
+    margin-top: 12px;
+  }
+}
+
 .nav-item {
-  margin: 20px 0;
+  padding-bottom: 12px;
+  border-bottom: 0.5px solid;
+  border-color: hsla(0, 0%, 100%, 0.5);
 
   a {
     color: $white;
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
