@@ -1,19 +1,19 @@
 <template>
   <!-- ヘッダー -->
   <header class="header">
+    <SideNav />
     <div class="container grid">
       <!-- サイドメニュー ( md 以下の端末のみ ) -->
       <img class="logo" src="logo.png" alt="" />
-      <SideNav />
       <!-- SNS メニュー ( md 以上の端末で表示 ) -->
       <div class="sns">
-        <a href="#">
+        <a href="https://twitter.com/cus_ucf_oc" target="_blank">
           <img src="twitter.svg" alt="" />
         </a>
-        <a href="#">
+        <a href="https://www.instagram.com/cus_ucf_oc/?hl=ja" target="_blank">
           <img src="instagram.svg" alt="" />
         </a>
-        <a href="#">
+        <a href="https://note.com/ucf2022/" target="_blank">
           <img src="note.svg" alt="" />
         </a>
       </div>
@@ -106,6 +106,7 @@ export default {}
   .grid {
     align-content: center;
     grid-template-columns: 45fr 55fr;
+    grid-template-rows: auto 1fr;
     gap: 0;
   }
   .header {
@@ -135,11 +136,17 @@ export default {}
     grid-row: 1;
     grid-column: 2;
     justify-self: end;
+    align-self: start;
 
-    img {
-      display: inline-block;
+    a {
       width: 32px;
       height: 32px;
+      z-index: 9999;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
     }
   }
 
@@ -147,7 +154,7 @@ export default {}
     text-align: right;
     justify-content: end;
     align-content: end;
-    grid-row: 1;
+    grid-row: 2;
     grid-column: 2;
   }
 }

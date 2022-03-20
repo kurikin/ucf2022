@@ -16,6 +16,10 @@
         </li>
       </ul>
     </section>
+    <!-- ピックアップ企画 -->
+    <section class="section-pickup container">
+      <h2 class="heading">ピックアップ企画</h2>
+    </section>
     <!-- 企画一覧を見る -->
     <div class="container center">
       <nuxt-link class="btn" to="#">企画一覧を見る</nuxt-link>
@@ -43,7 +47,7 @@ export default {
 .heading {
   font-family: 'Zen Antique';
   color: $white;
-  font-size: 30px;
+  font-size: 28px;
   margin-bottom: 16px;
 
   @include mq() {
@@ -111,7 +115,13 @@ export default {
   }
 }
 
-.btn {
-  margin: 0 auto;
+/* ### ピックアップ企画 ### */
+.section-pickup {
+  text-align: center;
+  margin-bottom: 64px;
+
+  .heading {
+    letter-spacing: -1.5px;
+  }
 }
 </style>

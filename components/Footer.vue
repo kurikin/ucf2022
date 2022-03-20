@@ -3,8 +3,8 @@
     <footer class="footer">
       <ul class="nav-list">
         <li><nuxt-link class="nav-item" to="#">実行委員一覧</nuxt-link></li>
-        <li><nuxt-link class="nav-item" to="#">入試情報</nuxt-link></li>
-        <li><nuxt-link class="nav-item" to="#">お問合せ</nuxt-link></li>
+        <li><a class="nav-item" to="#">入試情報</a></li>
+        <li><a class="nav-item" to="#">お問合せ</a></li>
       </ul>
       <p class="copyright">&copy;2022 都市文化祭2022実行委員会</p>
     </footer>
