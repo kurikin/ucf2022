@@ -38,6 +38,13 @@ export default {
       isOpen: false,
     }
   },
+  head() {
+    return {
+      bodyAttrs: {
+        class: this.isOpen ? 'side-nav-open' : '',
+      },
+    }
+  },
 }
 </script>
 
@@ -55,7 +62,7 @@ export default {
   justify-content: space-between;
 
   @include mq(sm) {
-    top: 28px;
+    top: 36px;
     right: 28px;
   }
 

@@ -35,7 +35,6 @@ export default {}
 
 <style lang="scss" scoped>
 .grid {
-  display: grid;
   gap: 32px;
 }
 

@@ -22,12 +22,19 @@ body {
   }
 }
 
+.grid {
+  display: grid;
+}
+
 ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
-  position: relative;
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 20px;
@@ -37,6 +44,27 @@ ul {
   }
 }
 
-a {
-  text-decoration: none;
+.center {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  margin: 0 auto;
+  color: $white;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: $primary;
+  border-radius: 24px;
+  padding: 8px 24px;
+
+  @include mq(sm) {
+    font-size: 18px;
+  }
+
+  @include mq(md) {
+    font-size: 20px;
+    padding: 10px 32px;
+    border-radius: 32px;
+  }
 }

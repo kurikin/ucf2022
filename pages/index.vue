@@ -1,5 +1,5 @@
 <template>
-  <div class="top">
+  <div>
     <!-- ヘッダー -->
     <TopHeader />
     <!-- 新着情報 -->
@@ -16,19 +16,18 @@
         </li>
       </ul>
     </section>
+    <!-- 企画一覧を見る -->
+    <div class="container center">
+      <nuxt-link class="btn" to="#">企画一覧を見る</nuxt-link>
+    </div>
+    <!-- フッター -->
+    <Footer />
   </div>
 </template>
 
 <script>
 export default {
   name: 'IndexPage',
-  head() {
-    return {
-      bodyAttrs: {
-        class: this.sideNavOpen ? 'side-nav-open' : '',
-      },
-    }
-  },
   async asyncData({ $microcms }) {
     const data = await $microcms.get({
       endpoint: 'news',
@@ -56,7 +55,7 @@ export default {
 /* ### 新着情報 ### */
 .section-news {
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 64px;
 }
 
 .news-list {
@@ -64,11 +63,16 @@ export default {
   display: grid;
   gap: 12px;
   width: 100%;
-  padding: 16px;
-  border-radius: 16px;
+  padding: 20px;
+  border-radius: $radius-xs;
 
   @include mq(sm) {
     padding: 24px;
+    border-radius: $radius-sm;
+  }
+
+  @include mq(md) {
+    border-radius: $radius-md;
   }
 
   @include mq(lg) {
@@ -105,5 +109,9 @@ export default {
   .title {
     color: $black;
   }
+}
+
+.btn {
+  margin: 0 auto;
 }
 </style>
