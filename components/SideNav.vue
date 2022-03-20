@@ -42,18 +42,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.sideNav {
-  grid-row: 1;
-  grid-column: 1;
-  justify-self: end;
-}
 .hamburger {
+  position: fixed;
+  top: 30px;
+  right: 20px;
+
   height: 22px;
   width: 28px;
   z-index: 10000;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @include mq(sm) {
+    top: 28px;
+    right: 28px;
+  }
 
   @include mq(md) {
     display: none;

@@ -41,7 +41,7 @@ export default {}
 
 .header {
   width: 100%;
-  padding-top: 24px;
+  padding-top: 32px;
   padding-bottom: 24px;
   margin-bottom: 24px;
 
@@ -61,9 +61,7 @@ export default {}
   height: 98%;
   object-fit: contain;
   justify-self: center;
-  margin-top: 18px;
-  grid-row: 1;
-  grid-column: 1;
+  margin-top: 24px;
 }
 
 .sns {
@@ -93,7 +91,7 @@ export default {}
   .logo {
     width: 85%;
     height: 85%;
-    margin-top: 24px;
+    margin-top: 32px;
   }
 
   .text-box {
