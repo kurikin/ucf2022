@@ -1,0 +1,57 @@
+<template>
+  <section class="pickup container">
+    <h2 class="heading">ピックアップ企画</h2>
+    <ul class="pickup-list">
+      <li class="list-item">
+        <PickupItem
+          :title="'たたずみたい都市'"
+          :description="'お気に入りの風景を募集中'"
+          :imageUri="'tatatoshi.jpeg'"
+        />
+      </li>
+      <li class="list-item">
+        <PickupItem :title="'Coming soon...'" :description="'More Program'" />
+      </li>
+      <li class="list-item">
+        <PickupItem :title="'Coming soon...'" :description="'More Program'" />
+      </li>
+    </ul>
+    <nuxt-link class="primary-button" to="#">企画一覧を見る</nuxt-link>
+  </section>
+</template>
+
+<script></script>
+
+<style lang="scss" scoped>
+.pickup {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.heading {
+  letter-spacing: -1.5px;
+}
+
+.pickup-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 64px;
+}
+
+@include mq(sm) {
+  .pickup-list {
+    flex-direction: row;
+  }
+
+  .list-item {
+    flex: 1;
+  }
+}
+
+@include mq(lg) {
+  .pickup-list {
+    gap: 48px;
+  }
+}
+</style>
