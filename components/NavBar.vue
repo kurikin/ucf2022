@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <nav class="nav-bar">
+    <nav class="nav-bar" :class="{ 'nav-bar--hidden': !showNavBar }">
       <ul class="nav-list">
         <li class="list-item">
           <img class="logo-img" src="logo-black.png" alt="" />
@@ -26,23 +26,60 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      showNavBar: true,
+      lastScrollPosition: 0,
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.onScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.onScroll)
+  },
+  methods: {
+    onScroll() {
+      const currentScrollPosition =
+        window.pageYOffset || document.documentElement.scrollTop
+
+      console.log(currentScrollPosition)
+
+      if (currentScrollPosition < 0) {
+        return
+      }
+
+      if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 50) {
+        return
+      }
+
+      this.showNavBar = currentScrollPosition < this.lastScrollPosition
+      console.log(this.showNavBar)
+      this.lastScrollPosition = currentScrollPosition
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
 .nav-bar {
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   top: 40px;
   left: 50%;
+  height: 70px;
   transform: translateX(-50%);
   width: calc(100% - 40px);
   max-width: 1100px;
   background-color: $white;
   border-radius: $radius-xs;
-  padding: 12px 0;
+  transition: 0.3s all ease-out;
 
-  @include mq(md) {
-    display: block;
+  &--hidden {
+    transform: translate(-50%, -110px);
   }
 }
 
