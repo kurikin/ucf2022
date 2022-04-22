@@ -1,9 +1,7 @@
 <template>
   <nuxt-link to="#">
     <div class="pickup-item">
-      <div class="img-container">
-        <img class="thumbnail" :src="imageUri" alt="" />
-      </div>
+      <img class="thumbnail" :src="imageUri" alt="" />
       <div class="text-box">
         <p class="description">{{ description }}</p>
         <h3 class="title">{{ title }}</h3>
@@ -39,21 +37,14 @@ export default {
   overflow: hidden;
 }
 
-.img-container {
-  overflow: hidden;
-  border-radius: $radius-xs;
-  aspect-ratio: 4 / 3;
-  margin-bottom: 8px;
-  transform: translateZ(0);
-}
-
 .thumbnail {
   width: 100%;
   display: block;
   object-fit: cover;
   border-radius: $radius-xs;
+  margin-bottom: 8px;
   aspect-ratio: 4 / 3;
-  transition: all 0.5s;
+  transition: all 0.4s;
 
   &:hover {
     transform: scale(1.1);

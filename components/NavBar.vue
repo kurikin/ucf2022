@@ -3,7 +3,9 @@
     <nav class="nav-bar" :class="{ 'nav-bar--hidden': !showNavBar }">
       <ul class="nav-list">
         <li class="list-item">
-          <img class="logo-img" src="logo-black.png" alt="" />
+          <nuxt-link to="/">
+            <img class="logo-img" src="logo-black.png" alt="" />
+          </nuxt-link>
         </li>
         <li class="list-item">
           <nuxt-link class="nav-link" to="/">ホーム</nuxt-link>
@@ -19,6 +21,10 @@
         <div class="divider"></div>
         <li class="list-item">
           <nuxt-link class="nav-link" to="">学科紹介</nuxt-link>
+        </li>
+        <div class="divider"></div>
+        <li class="list-item">
+          <nuxt-link class="nav-link" to="">スタジオ紹介</nuxt-link>
         </li>
       </ul>
     </nav>
@@ -50,7 +56,7 @@ export default {
         return
       }
 
-      if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 50) {
+      if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 20) {
         return
       }
 
@@ -64,10 +70,9 @@ export default {
 
 <style lang="scss" scoped>
 .nav-bar {
+  display: none;
   position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
   top: 40px;
   left: 50%;
   height: 70px;
@@ -76,10 +81,19 @@ export default {
   max-width: 1100px;
   background-color: $white;
   border-radius: $radius-xs;
-  transition: 0.3s all ease-out;
+  z-index: 999;
+  box-shadow: 0 2px 15px rgba(71, 120, 120, 0.3);
+  transition: 0.25s all ease-out;
 
   &--hidden {
     transform: translate(-50%, -110px);
+    box-shadow: none;
+  }
+
+  @include mq(md) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 

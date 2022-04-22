@@ -147,6 +147,7 @@ export default {
   padding-top: 32px;
   list-style: none;
   color: $white;
+  text-align: left;
 }
 
 .genre-title {

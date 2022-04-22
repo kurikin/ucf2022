@@ -17,6 +17,12 @@
         <li class="list-item">
           <nuxt-link class="nav-link" to="">学科紹介</nuxt-link>
         </li>
+        <div class="divider"></div>
+        <li class="list-item">
+          <nuxt-link class="nav-link" to="/studio-intro"
+            >スタジオ紹介</nuxt-link
+          >
+        </li>
       </ul>
     </nav>
   </div>
@@ -32,10 +38,12 @@ export default {}
   background-color: $white;
   margin-bottom: 80px;
   border-radius: $radius-xs;
-  padding: 20px 0;
+  height: 65px;
 
   @include mq(md) {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
@@ -61,6 +69,7 @@ export default {}
   display: inline-block;
   color: $black;
   transition: all 0.3s;
+  font-weight: 700;
 
   @include mq(lg) {
     font-size: 20px;

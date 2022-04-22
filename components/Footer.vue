@@ -31,7 +31,6 @@ export default {}
   flex-direction: column;
   gap: 10px;
 
-  margin-top: 48px;
   background-color: $secondary;
   padding: 20px;
   padding-bottom: 8px;

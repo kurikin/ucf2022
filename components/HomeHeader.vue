@@ -41,7 +41,7 @@ export default {}
 
 <style lang="scss" scoped>
 .grid {
-  gap: 32px;
+  gap: 48px;
 }
 
 .home-header {
@@ -62,8 +62,8 @@ export default {}
 }
 
 .logo {
-  width: 98%;
-  height: 98%;
+  width: 90%;
+  height: 90%;
   object-fit: contain;
   justify-self: center;
   margin-top: 24px;
