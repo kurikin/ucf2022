@@ -15,7 +15,9 @@
         </li>
         <div class="divider"></div>
         <li class="list-item">
-          <nuxt-link class="nav-link" to="">学科紹介</nuxt-link>
+          <nuxt-link class="nav-link" to="/department-intro"
+            >学科紹介</nuxt-link
+          >
         </li>
         <div class="divider"></div>
         <li class="list-item">

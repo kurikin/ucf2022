@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="black">
     <HomeHeader />
     <Hamburger />
     <HomeNavBar />
@@ -10,7 +10,6 @@
 </template>
 
 <script>
-import Pickup from '../components/Pickup.vue'
 export default {
   name: 'IndexPage',
   async asyncData({ $microcms }) {
@@ -20,7 +19,6 @@ export default {
     })
     return data
   },
-  components: { Pickup },
 }
 </script>
 

@@ -13,13 +13,25 @@
 body {
   font-family: 'Zen Kaku Gothic New';
   line-height: 1.5;
-  background-color: $black;
-  color: $black;
 
   &.side-nav-open {
     max-height: 100vh;
     overflow: hidden;
   }
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Zen Antique';
+  color: $white;
+}
+
+.black {
+  background-color: $black;
+}
+.white {
+  background-color: $white;
 }
 
 .grid {

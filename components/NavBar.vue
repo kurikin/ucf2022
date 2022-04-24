@@ -20,11 +20,15 @@
         </li>
         <div class="divider"></div>
         <li class="list-item">
-          <nuxt-link class="nav-link" to="">学科紹介</nuxt-link>
+          <nuxt-link class="nav-link" to="/department-intro"
+            >学科紹介</nuxt-link
+          >
         </li>
         <div class="divider"></div>
         <li class="list-item">
-          <nuxt-link class="nav-link" to="">スタジオ紹介</nuxt-link>
+          <nuxt-link class="nav-link" to="/studio-intro"
+            >スタジオ紹介</nuxt-link
+          >
         </li>
       </ul>
     </nav>
@@ -50,8 +54,6 @@ export default {
       const currentScrollPosition =
         window.pageYOffset || document.documentElement.scrollTop
 
-      console.log(currentScrollPosition)
-
       if (currentScrollPosition < 0) {
         return
       }
@@ -61,7 +63,6 @@ export default {
       }
 
       this.showNavBar = currentScrollPosition < this.lastScrollPosition
-      console.log(this.showNavBar)
       this.lastScrollPosition = currentScrollPosition
     },
   },

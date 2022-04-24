@@ -17,7 +17,10 @@
           <ul class="nav-list" @click="isOpen = false">
             <h3 class="genre-title">LINE UP</h3>
             <li class="nav-item">
-              <nuxt-link to="#">都市文化祭とは</nuxt-link>
+              <nuxt-link to="/">HOME</nuxt-link>
+            </li>
+            <li class="nav-item">
+              <nuxt-link to="/intro">都市文化祭とは</nuxt-link>
             </li>
             <li class="nav-item"><nuxt-link to="#">企画一覧</nuxt-link></li>
             <h3 class="genre-title">GUIDES</h3>
