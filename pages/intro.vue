@@ -1,9 +1,10 @@
 <template>
   <div class="black">
-    <Header>都<span>市</span>文化祭とは</Header>
+    <BlackHeader>都<span>市</span>文化祭とは</BlackHeader>
     <Slogan />
     <div class="center-line"></div>
     <Theme />
+    <div class="center-line"></div>
     <Footer />
   </div>
 </template>
@@ -25,7 +26,13 @@ export default {
   width: 1px;
   height: 100px;
   background-color: $white;
-  margin: 0 auto;
-  margin-bottom: 32px;
+  margin: 32px auto;
+}
+
+@include mq() {
+  .center-line {
+    height: 180px;
+    margin: 52px auto;
+  }
 }
 </style>

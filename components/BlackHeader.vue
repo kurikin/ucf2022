@@ -1,20 +1,16 @@
 <template>
   <header class="header">
-    <NavBar />
-    <Hamburger />
+    <WhiteNavBar />
+    <Hamburger :isBlack="false" />
     <div class="container">
-      <h1 class="title">
+      <h1 class="page-title">
         <slot></slot>
       </h1>
     </div>
   </header>
 </template>
 
-<script>
-import NavBar from './NavBar.vue'
-import Hamburger from './Hamburger.vue'
-export default { components: { NavBar, Hamburger } }
-</script>
+<script></script>
 
 <style lang="scss" scoped>
 .header {
@@ -35,7 +31,7 @@ export default { components: { NavBar, Hamburger } }
   background-position: center;
 }
 
-.title {
+.page-title {
   margin-top: 80px;
   font-size: 36px;
   color: $white;
@@ -45,6 +41,15 @@ export default { components: { NavBar, Hamburger } }
   span {
     color: $primary;
   }
+
+  @include mq(sm) {
+    font-size: 52px;
+  }
+
+  @include mq() {
+    font-size: 72px;
+    margin-top: 200px;
+  }
 }
 
 @include mq(sm) {
@@ -52,20 +57,11 @@ export default { components: { NavBar, Hamburger } }
     height: 300px;
     margin-bottom: 48px;
   }
-
-  .title {
-    font-size: 52px;
-  }
 }
 
 @include mq(md) {
   .header {
     height: 500px;
-  }
-
-  .title {
-    font-size: 72px;
-    margin-top: 200px;
   }
 }
 </style>

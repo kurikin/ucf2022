@@ -10,8 +10,17 @@
 </template>
 
 <script>
+import HomeHeader from '~/components/home/HomeHeader.vue'
+import News from '~/components/home/News.vue'
+import Pickup from '~/components/home/Pickup.vue'
+
 export default {
   name: 'IndexPage',
+  components: {
+    HomeHeader,
+    News,
+    Pickup,
+  },
   async asyncData({ $microcms }) {
     const data = await $microcms.get({
       endpoint: 'news',

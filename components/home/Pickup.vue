@@ -20,7 +20,14 @@
   </section>
 </template>
 
-<script></script>
+<script>
+import PickupItem from './PickupItem.vue'
+export default {
+  components: {
+    PickupItem,
+  },
+}
+</script>
 
 <style lang="scss" scoped>
 .pickup {

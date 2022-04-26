@@ -30,8 +30,9 @@ h3 {
 .black {
   background-color: $black;
 }
+
 .white {
-  background-color: $white;
+  background: $white !important;
 }
 
 .grid {

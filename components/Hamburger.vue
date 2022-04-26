@@ -2,9 +2,9 @@
   <div class="hamburger">
     <!-- ハンバーガーメニュー -->
     <div class="lines" @click="isOpen = !isOpen" :class="{ open: isOpen }">
-      <span class="line line1"></span>
-      <span class="line line2"></span>
-      <span class="line line3"></span>
+      <span class="line line1" :class="{ black: isBlack }"></span>
+      <span class="line line2" :class="{ black: isBlack }"></span>
+      <span class="line line3" :class="{ black: isBlack }"></span>
     </div>
     <!-- サイドナビゲーション-->
     <div class="sidenav-container">
@@ -40,6 +40,12 @@ export default {
     return {
       isOpen: false,
     }
+  },
+  props: {
+    isBlack: {
+      type: Boolean,
+      default: false,
+    },
   },
   head() {
     return {
@@ -78,6 +84,10 @@ export default {
     width: 100%;
     border-radius: 2px;
     background: $white;
+
+    &.black {
+      background: $black;
+    }
   }
   .line1 {
     transform-origin: 0% 0%;

@@ -1,6 +1,9 @@
 <template>
   <div class="container">
-    <nav class="nav-bar" :class="{ 'nav-bar--hidden': !showNavBar }">
+    <nav
+      class="white-nav-bar"
+      :class="{ 'white-nav-bar--hidden': !showNavBar }"
+    >
       <ul class="nav-list">
         <li class="list-item">
           <nuxt-link to="/">
@@ -70,7 +73,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.nav-bar {
+.white-nav-bar {
   display: none;
   position: fixed;
 

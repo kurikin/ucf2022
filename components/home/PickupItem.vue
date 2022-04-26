@@ -72,18 +72,9 @@ export default {
 }
 .title {
   font-size: 20px;
+  font-family: Zen Kaku Gothic New;
   color: $black;
 }
-
-// @include mq(sm) {
-//   .pickup-item {
-//     transition: all 0.4s;
-
-//     &:hover {
-//       transform: translateY(-10px);
-//     }
-//   }
-// }
 
 @include mq() {
   .pickup-item {

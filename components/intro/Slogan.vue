@@ -23,7 +23,18 @@ export default {}
   font-size: 16px;
   line-height: 1.7;
   text-align: center;
-  font-weight: 400;
   margin-bottom: 48px;
+}
+
+@include mq(sm) {
+  .slogan {
+    font-size: 24px;
+  }
+}
+
+@include mq() {
+  .slogan {
+    font-size: 24px;
+  }
 }
 </style>

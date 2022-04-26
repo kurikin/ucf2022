@@ -7,7 +7,10 @@
           <h3 class="text">メインテーマ</h3>
           <div class="underline"></div>
         </div>
-        <img src="logo.png" alt="" class="logo" />
+        <img src="text-logo.svg" alt="" class="logo" />
+        <p class="description">
+          「雑踏」は、都市そのものの象徴とも捉えることができます。都市は外的に定義されるだけでなく、人々の足跡が、時間というレイヤーを重ねながら地層のように立ち昇らせることもあります。しかし、コロナ禍で、都市から雑踏が消えました。その影を追うように、私たちは「雑踏」というテーマを掲げることにしました。
+        </p>
       </div>
       <div class="sub-theme">
         <div class="title">
@@ -28,6 +31,9 @@
             <p class="item-right">はぐれる</p>
           </li>
         </ul>
+        <p class="description">
+          「のまれる」「たたずむ」「はぐれる」は、「雑踏」に繋がる動詞たちであり、雑踏と関わる自分自身の在り方を問います。個としてのあなた自身は、雑踏をどう歩くのでしょうか。「雑踏」の後に続ける言葉を、都市文化祭を通じて考えてみてほしいと思っています。
+        </p>
       </div>
     </div>
   </section>
@@ -38,8 +44,13 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
+//  - Font sizes (px)
+//  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+// - Spacing system (px)
+// 2 / 4 / 8 / 12 / 16 / 20 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 .theme {
-  margin-bottom: 32px;
+  margin-bottom: 100px;
 }
 
 .theme-heading {
@@ -58,15 +69,15 @@ export default {}
 
 .logo {
   display: block;
-  height: 80%;
-  width: 80%;
+  width: 220px;
+  height: 220px;
   margin: 0 auto;
 }
 
 .title {
   display: grid;
   gap: 2px;
-  margin-bottom: 28px;
+  margin-bottom: 48px;
 
   .text {
     font-size: 20px;
@@ -77,6 +88,12 @@ export default {}
     height: 0.5px;
     background-color: $white;
   }
+}
+
+.description {
+  margin-top: 48px;
+  font-size: 18px;
+  color: $white;
 }
 
 .sub-theme-list {
@@ -98,6 +115,102 @@ export default {}
 
   .item-right {
     color: $white;
+  }
+}
+
+@include mq(sm) {
+  .theme-heading {
+    font-size: 36px;
+    margin-bottom: 48px;
+  }
+
+  .theme-box {
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  .title {
+    .text {
+      font-size: 30px;
+    }
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .list-item {
+    font-size: 30px;
+  }
+
+  .main-theme {
+    flex: 1;
+  }
+
+  .sub-theme {
+    flex: 1;
+  }
+
+  .sub-theme-list {
+    align-items: flex-start;
+    height: 220px;
+  }
+}
+
+@include mq() {
+  .theme-heading {
+    font-size: 48px;
+    margin-bottom: 64px;
+  }
+
+  .title {
+    margin-bottom: 32px;
+    gap: 4px;
+
+    .text {
+      font-size: 30px;
+    }
+  }
+
+  .description {
+    margin-top: 48px;
+  }
+
+  .list-item {
+    font-size: 36px;
+    gap: 32px;
+  }
+
+  .main-theme,
+  .sub-theme {
+    flex: 1;
+  }
+
+  .logo {
+    width: 250px;
+    height: 250px;
+  }
+
+  .theme-box {
+    gap: 64px;
+  }
+
+  .sub-theme-list {
+    height: 250px;
+  }
+}
+
+@include mq(lg) {
+  .title {
+    margin-bottom: 44px;
+  }
+  .description {
+    font-size: 20px;
+    line-height: 1.7;
+  }
+  .list-item {
+    font-size: 44px;
+    gap: 48px;
   }
 }
 </style>
