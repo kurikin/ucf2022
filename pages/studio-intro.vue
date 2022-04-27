@@ -11,12 +11,6 @@
     </WhiteHeader>
     <AnalyzeButton />
     <Studio />
-
-    <!-- <swiper class="swiper" :options="swiperOption">
-      <swiper-slide class="slide">スライダー１</swiper-slide>
-      <swiper-slide class="slide">スライダー２</swiper-slide>
-      <swiper-slide class="slide">スライダー３</swiper-slide>
-    </swiper> -->
   </div>
 </template>
 
