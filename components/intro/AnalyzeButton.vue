@@ -23,7 +23,7 @@ export default {}
 .button-container {
   display: flex;
   flex-direction: column;
-  padding: 16px 20px;
+  padding: 10px 20px;
   align-items: center;
   justify-content: center;
   gap: 6px;
@@ -42,11 +42,11 @@ export default {}
   @include mq(sm) {
     flex-direction: row;
     justify-content: space-around;
-    border-radius: 32px;
+    border-radius: 36px;
   }
 
   @include mq() {
-    padding: 16px 20px;
+    padding: 12px 20px;
     border-radius: 48px;
     justify-content: center;
     gap: 48px;

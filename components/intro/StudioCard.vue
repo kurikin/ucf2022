@@ -25,7 +25,7 @@ export default {}
   margin-top: 24px;
   background-color: $white;
   flex-direction: column;
-  border-radius: 24px;
+  border-radius: 36px;
   padding-bottom: 16px;
   gap: 12px;
 }

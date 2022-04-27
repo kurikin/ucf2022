@@ -24,7 +24,7 @@
 
 .header {
   width: 100%;
-  padding-top: 64px;
+  padding-top: 48px;
   text-align: center;
   margin-bottom: 32px;
 

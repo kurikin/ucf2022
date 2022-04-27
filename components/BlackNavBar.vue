@@ -91,7 +91,7 @@ export default {
   transition: 0.25s all ease-out;
 
   &--hidden {
-    transform: translate(-50%, -110px);
+    transform: translate(-50%, -120px);
     box-shadow: none;
   }
 
