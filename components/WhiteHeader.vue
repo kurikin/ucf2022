@@ -68,9 +68,5 @@
   @include mq() {
     font-size: 20px;
   }
-
-  @include mq(lg) {
-    font-size: 24px;
-  }
 }
 </style>

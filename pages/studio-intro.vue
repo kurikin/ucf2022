@@ -10,6 +10,7 @@
       >
     </WhiteHeader>
     <AnalyzeButton />
+    <Studio />
 
     <!-- <swiper class="swiper" :options="swiperOption">
       <swiper-slide class="slide">スライダー１</swiper-slide>
@@ -22,6 +23,7 @@
 <script>
 import WhiteHeader from '../components/WhiteHeader.vue'
 import AnalyzeButton from '../components/intro/AnalyzeButton.vue'
+import Studio from '../components/intro/Studio.vue'
 export default {
   data() {
     return {
@@ -31,7 +33,7 @@ export default {
       },
     }
   },
-  components: { WhiteHeader, AnalyzeButton },
+  components: { WhiteHeader, AnalyzeButton, Studio },
 }
 </script>
 
