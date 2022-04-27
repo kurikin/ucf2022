@@ -25,13 +25,14 @@ export default {}
   flex-direction: column;
   padding: 16px 20px;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 28px;
 
   &:visited,
   &:link {
     color: $white;
     background-color: $secondary;
-    border-radius: 32px;
   }
 
   &:hover,
@@ -41,6 +42,18 @@ export default {}
   @include mq(sm) {
     flex-direction: row;
     justify-content: space-around;
+    border-radius: 32px;
+  }
+
+  @include mq() {
+    padding: 16px 20px;
+    border-radius: 48px;
+    justify-content: center;
+    gap: 48px;
+  }
+
+  @include mq(lg) {
+    gap: 80px;
   }
 }
 
@@ -49,22 +62,51 @@ export default {}
   padding: 4px 0;
   border-top: 1px solid $white;
   border-bottom: 1px solid $white;
+
+  @include mq() {
+    font-size: 18px;
+  }
+
+  @include mq(lg) {
+    font-size: 22px;
+    border-top: 1.5px solid $white;
+    border-bottom: 1.5px solid $white;
+  }
 }
 
 .title-box {
   display: flex;
   align-items: center;
-  gap: 4px;
   justify-content: center;
+  gap: 4px;
 }
 
 .title {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: 2px;
+
+  @include mq() {
+    font-size: 24px;
+    letter-spacing: 4px;
+  }
+
+  @include mq(lg) {
+    font-size: 30px;
+    letter-spacing: 6px;
+  }
 }
 .right-arrow {
   height: 40px;
+  display: block;
   color: $white;
+
+  @include mq() {
+    height: 52px;
+  }
+
+  @include mq(lg) {
+    height: 60px;
+  }
 }
 </style>

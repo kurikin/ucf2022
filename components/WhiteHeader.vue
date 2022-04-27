@@ -10,7 +10,6 @@
         <slot name="description"></slot>
       </p>
     </div>
-    <div class="spacing"></div>
   </header>
 </template>
 
@@ -25,17 +24,20 @@
 
 .header {
   width: 100%;
-  padding-top: 32px;
+  padding-top: 64px;
   text-align: center;
   margin-bottom: 32px;
 
   @include mq(sm) {
     margin-bottom: 48px;
   }
+
+  @include mq() {
+    margin-bottom: 64px;
+  }
 }
 
 .page-title {
-  margin-top: 64px;
   font-size: 36px;
   color: $black;
   font-family: 'Zen Antique';
@@ -54,12 +56,21 @@
 
   @include mq() {
     font-size: 72px;
-    margin-top: 200px;
+    margin-top: 180px;
   }
 }
 
 .description {
   color: $black;
   text-align: left;
+  font-size: 16px;
+
+  @include mq() {
+    font-size: 20px;
+  }
+
+  @include mq(lg) {
+    font-size: 24px;
+  }
 }
 </style>

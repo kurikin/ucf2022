@@ -77,11 +77,11 @@ export default {
   display: none;
   position: fixed;
 
-  top: 40px;
+  top: 50px;
   left: 50%;
   height: 70px;
   transform: translateX(-50%);
-  width: calc(100% - 40px);
+  width: calc(100% - 50px);
   max-width: 1100px;
   background-color: $white;
   border-radius: $radius-xs;
