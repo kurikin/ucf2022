@@ -27,6 +27,7 @@ export default {
   data() {
     return {
       swiperOption: {
+        slidesPerView: 2,
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
@@ -57,5 +58,8 @@ export default {
 .swiper-button-prev,
 .swiper-button-next {
   color: $white;
+}
+
+.swiper-button-prev {
 }
 </style>
