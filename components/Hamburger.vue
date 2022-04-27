@@ -2,9 +2,9 @@
   <div class="hamburger">
     <!-- ハンバーガーメニュー -->
     <div class="lines" @click="isOpen = !isOpen" :class="{ open: isOpen }">
-      <span class="line line1" :class="{ black: isBlack }"></span>
-      <span class="line line2" :class="{ black: isBlack }"></span>
-      <span class="line line3" :class="{ black: isBlack }"></span>
+      <span class="line line1" :class="lineColor"></span>
+      <span class="line line2" :class="lineColor"></span>
+      <span class="line line3" :class="lineColor"></span>
     </div>
     <!-- サイドナビゲーション-->
     <div class="sidenav-container">
@@ -41,10 +41,19 @@ export default {
       isOpen: false,
     }
   },
+  computed: {
+    lineColor() {
+      if (this.baseColor === 'black') {
+        return this.isOpen ? 'white' : 'black'
+      } else {
+        return this.isOpen ? 'white' : 'white'
+      }
+    },
+  },
   props: {
-    isBlack: {
-      type: Boolean,
-      default: false,
+    baseColor: {
+      type: String,
+      default: 'black',
     },
   },
   head() {
@@ -78,14 +87,18 @@ export default {
   @include mq(md) {
     display: none;
   }
+
   .line {
     display: block;
     height: 2.2px;
     width: 100%;
     border-radius: 2px;
-    background: $white;
 
-    &.black {
+    .white {
+      background: $white;
+    }
+
+    .black {
       background: $black;
     }
   }

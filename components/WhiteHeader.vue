@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <BlackNavBar />
-    <Hamburger :isBlack="true" />
+    <Hamburger :baseColor="`black`" />
     <div class="container">
       <h1 class="page-title">
         <slot name="page-title"></slot>
@@ -27,7 +27,11 @@
   width: 100%;
   padding-top: 32px;
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
+
+  @include mq(sm) {
+    margin-bottom: 48px;
+  }
 }
 
 .page-title {
@@ -37,7 +41,7 @@
   font-family: 'Zen Antique';
   text-align: left;
   font-weight: 400;
-  margin-bottom: 20px;
+  margin-bottom: 32px;
 
   span {
     color: $primary;
@@ -45,6 +49,7 @@
 
   @include mq(sm) {
     font-size: 52px;
+    margin-bottom: 48px;
   }
 
   @include mq() {

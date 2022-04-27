@@ -1,7 +1,6 @@
 <template>
   <div class="black">
     <HomeHeader />
-    <Hamburger />
     <HomeNavBar />
     <News :contents="this.contents" />
     <Pickup />

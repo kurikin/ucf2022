@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <WhiteNavBar />
-    <Hamburger :isBlack="false" />
+    <Hamburger :baseColor="'white'" />
     <div class="container">
       <h1 class="page-title">
         <slot></slot>

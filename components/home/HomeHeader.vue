@@ -1,5 +1,6 @@
 <template>
   <header class="home-header">
+    <Hamburger :baseColor="'white'" />
     <div class="container grid">
       <!-- サイドメニュー ( md 以下の端末のみ ) -->
       <img class="logo" src="logo.png" alt="" />
