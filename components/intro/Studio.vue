@@ -1,20 +1,27 @@
 <template>
   <div class="studio container">
     <h1 class="studio-name">海外研究スタジオ</h1>
-    <div class="card-container"></div>
-    <swiper class="swiper" :options="swiperOption">
-      <swiper-slide>
-        <StudioCard />
-      </swiper-slide>
-      <swiper-slide>
-        <StudioCard />
-      </swiper-slide>
-      <swiper-slide>
-        <StudioCard />
-      </swiper-slide>
-      <div class="swiper-button-prev" slot="button-prev"></div>
-      <div class="swiper-button-next" slot="button-next"></div>
-    </swiper>
+    <div class="card-container">
+      <img src="left-arrow-black.svg" alt="" class="swiper-button-prev" />
+      <swiper class="swiper" :options="swiperOption">
+        <swiper-slide>
+          <StudioCard />
+        </swiper-slide>
+        <swiper-slide>
+          <StudioCard />
+        </swiper-slide>
+        <swiper-slide>
+          <StudioCard />
+        </swiper-slide>
+        <swiper-slide>
+          <StudioCard />
+        </swiper-slide>
+        <swiper-slide>
+          <StudioCard />
+        </swiper-slide>
+      </swiper>
+      <img src="right-arrow-black.svg" alt="" class="swiper-button-next" />
+    </div>
   </div>
 </template>
 
@@ -27,10 +34,19 @@ export default {
   data() {
     return {
       swiperOption: {
-        slidesPerView: 2,
+        slidesPerView: 1,
+        spaceBetween: 20,
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          576: {
+            slidesPerView: 2,
+          },
+          992: {
+            slidesPerView: 3,
+          },
         },
       },
     }
@@ -52,14 +68,13 @@ export default {
 
 .card-container {
   display: flex;
-  gap: 20px;
+  align-items: center;
+  gap: 28px;
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: $white;
-}
-
-.swiper-button-prev {
+  position: static;
+  width: 15px;
 }
 </style>

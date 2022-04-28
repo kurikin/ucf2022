@@ -19,6 +19,13 @@ body {
     overflow: hidden;
   }
 }
+.--show-over-sm {
+  display: none;
+
+  @include mq(xs) {
+    display: block;
+  }
+}
 
 h1,
 h2,

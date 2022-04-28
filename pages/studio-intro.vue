@@ -42,11 +42,4 @@ export default {
 .slide {
   font-size: 60px;
 }
-.--show-over-sm {
-  display: none;
-
-  @include mq(xs) {
-    display: block;
-  }
-}
 </style>
