@@ -10,7 +10,7 @@
       />
       <swiper class="swiper" :options="swiperOption">
         <swiper-slide v-for="studio in data.studios" :key="studio.teacherName">
-          <StudioCard :data="studio" />
+          <StudioCard v-on="$listeners" :data="studio" />
         </swiper-slide>
       </swiper>
       <img

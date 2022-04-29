@@ -1,5 +1,8 @@
 <template>
   <div class="white">
+    <modal name="modal-content">
+      <p>モーダルウィンドウで表示されるコンテンツ</p>
+    </modal>
     <WhiteHeader>
       <template v-slot:page-title> ス<span>タ</span>ジオ紹介 </template>
       <template v-slot:description
@@ -15,12 +18,18 @@
     </WhiteHeader>
     <AnalyzeButton />
     <div class="studio-container">
-      <Studio :category="'cat1'" :data="studioInfo[0]">海外研究スタジオ</Studio>
-      <Studio :category="'cat2'" :data="studioInfo[1]"
+      <Studio @showModal="showModal" :category="'cat1'" :data="studioInfo[0]"
+        >海外研究スタジオ</Studio
+      >
+      <Studio @showModal="showModal" :category="'cat2'" :data="studioInfo[1]"
         >社会文化批評スタジオ</Studio
       >
-      <Studio :category="'cat3'" :data="studioInfo[2]">社会分析スタジオ</Studio>
-      <Studio :category="'cat4'" :data="studioInfo[3]">文化創成スタジオ</Studio>
+      <Studio @showModal="showModal" :category="'cat3'" :data="studioInfo[2]"
+        >社会分析スタジオ</Studio
+      >
+      <Studio @showModal="showModal" :category="'cat4'" :data="studioInfo[3]"
+        >文化創成スタジオ</Studio
+      >
     </div>
     <AnalyzeButton class="margin-bottom" />
     <Footer />
@@ -45,10 +54,10 @@ export default {
   },
   components: { WhiteHeader, AnalyzeButton, Studio, Studio },
   methods: {
-    show() {
+    showModal() {
       this.$modal.show('modal-content')
     },
-    hide() {
+    hideModal() {
       this.$modal.hide('modal-content')
     },
   },

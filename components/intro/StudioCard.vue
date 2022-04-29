@@ -1,6 +1,5 @@
 <template>
-  <div class="studio-card" @click="show">
-    <modal name="modal-content"><p>モーダルのコンテンツ</p></modal>
+  <div class="studio-card" @click="showModal">
     <img src="comingsoon.jpeg" alt="" class="studio-img" />
     <div class="text-box">
       <p class="teacher-name">{{ data.teacherName }}</p>
@@ -19,10 +18,10 @@
 <script>
 export default {
   methods: {
-    show() {
-      this.$modal.show('modal-content')
+    showModal() {
+      this.$emit('showModal', this.data)
     },
-    hide() {
+    hideModal() {
       this.$modal.hide('modal-content')
     },
   },
@@ -93,5 +92,12 @@ export default {
   @include mq() {
     font-size: 18px;
   }
+}
+
+.modal {
+  height: 100vh;
+  width: 100vh;
+  position: fixed;
+  z-index: 1000;
 }
 </style>
