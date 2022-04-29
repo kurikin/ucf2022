@@ -56,7 +56,7 @@
 
   @include mq() {
     font-size: 72px;
-    margin-top: 180px;
+    margin-top: 140px;
   }
 }
 

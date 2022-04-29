@@ -14,20 +14,56 @@
       <transition name="slide-side">
         <!-- サイドナビゲーション -->
         <div v-if="isOpen" class="sidenav">
-          <ul class="nav-list" @click="isOpen = false">
-            <h3 class="genre-title">LINE UP</h3>
-            <li class="nav-item">
-              <nuxt-link to="/">HOME</nuxt-link>
-            </li>
-            <li class="nav-item">
-              <nuxt-link to="/intro">都市文化祭とは</nuxt-link>
-            </li>
-            <li class="nav-item"><nuxt-link to="#">企画一覧</nuxt-link></li>
-            <h3 class="genre-title">GUIDES</h3>
-            <li class="nav-item"><nuxt-link to="#">アクセス</nuxt-link></li>
-            <li class="nav-item"><nuxt-link to="#">入試情報</nuxt-link></li>
-            <li class="nav-item"><nuxt-link to="#">お問合せ</nuxt-link></li>
-          </ul>
+          <div class="nav-container">
+            <h3 class="genre-title">MENU</h3>
+            <ul class="nav-list" @click="isOpen = false">
+              <li class="nav-item">
+                <nuxt-link to="/">HOME</nuxt-link>
+              </li>
+              <li class="nav-item">
+                <nuxt-link to="/intro">都市文化祭とは</nuxt-link>
+              </li>
+              <li class="nav-item"><nuxt-link to="#">企画一覧</nuxt-link></li>
+              <li class="nav-item"><nuxt-link to="#">学科紹介</nuxt-link></li>
+              <li class="nav-item">
+                <nuxt-link to="/studio-intro">スタジオ診断</nuxt-link>
+              </li>
+            </ul>
+          </div>
+          <div class="nav-container">
+            <h3 class="genre-title">GUIDE</h3>
+            <ul class="nav-list">
+              <li class="nav-item">
+                <nuxt-link to="#">実行委員一覧</nuxt-link>
+              </li>
+              <li class="nav-item"><nuxt-link to="#">入試情報</nuxt-link></li>
+              <li class="nav-item"><nuxt-link to="#">アクセス</nuxt-link></li>
+              <li class="nav-item"><nuxt-link to="#">お問合せ</nuxt-link></li>
+            </ul>
+          </div>
+          <div class="sns">
+            <a
+              class="sns-link"
+              href="https://twitter.com/cus_ucf_oc"
+              target="_blank"
+            >
+              <img class="sns-logo" src="twitter.svg" alt="" />
+            </a>
+            <a
+              class="sns-link"
+              href="https://www.instagram.com/cus_ucf_oc/?hl=ja"
+              target="_blank"
+            >
+              <img class="sns-logo" src="instagram.svg" alt="" />
+            </a>
+            <a
+              class="sns-link"
+              href="https://note.com/ucf2022/"
+              target="_blank"
+            >
+              <img class="sns-logo" src="note.svg" alt="" />
+            </a>
+          </div>
         </div>
       </transition>
     </div>
@@ -139,7 +175,7 @@ export default {
 .sidenav-backdrop {
   width: 100%;
   height: 100%;
-  background-color: hsla(200, 100%, 14%, 0.3);
+  background-color: hsla(200, 100%, 14%, 0.2);
   z-index: 999;
   position: fixed;
   top: 0;
@@ -149,13 +185,22 @@ export default {
 .sidenav {
   height: 100%;
   width: 300px;
-  background-color: $black;
-  z-index: 1000;
+  display: flex;
   position: fixed;
+  box-sizing: border-box;
+  background-color: $secondary;
+  z-index: 1000;
   top: 0;
   right: 0;
-  box-sizing: border-box;
-  padding: 24px;
+  padding: 28px;
+  padding-top: 40px;
+  flex-direction: column;
+  gap: 18px;
+
+  @media (min-height: 570px) {
+    padding-top: 52px;
+    gap: 32px;
+  }
 }
 
 .slide-side-enter-active,
@@ -167,33 +212,63 @@ export default {
   transform: translateX(100%);
 }
 
+.genre-title {
+  font-size: 24px;
+  width: 85%;
+  font-family: 'Zen Antique';
+  letter-spacing: 4px;
+  font-weight: 400;
+  border-bottom: 1px solid;
+  text-align: left;
+  border-color: hsla(0, 0%, 100%, 1);
+  padding-bottom: 2px;
+  margin-bottom: 16px;
+
+  @media (min-height: 570px) {
+    margin-bottom: 24px;
+  }
+}
 .nav-list {
   display: grid;
-  gap: 12px;
-  padding-top: 32px;
   list-style: none;
   color: $white;
   text-align: left;
-}
+  gap: 4px;
 
-.genre-title {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 2px;
-
-  &:not(:first-child) {
-    margin-top: 12px;
+  @media (min-height: 570px) {
+    gap: 12px;
   }
 }
 
 .nav-item {
-  padding-bottom: 12px;
-  border-bottom: 0.5px solid;
-  border-color: hsla(0, 0%, 100%, 0.5);
+  padding-bottom: 6px;
+  font-size: 18px;
+  font-weight: 400;
 
   a {
     color: $white;
     font-size: 16px;
   }
+}
+
+// SNS リンク
+.sns {
+  display: flex;
+  gap: 24px;
+  margin-top: 6px;
+
+  @media (min-height: 570px) {
+    margin-top: 12px;
+  }
+}
+
+.sns-link {
+  width: 24px;
+  height: 24px;
+}
+
+.sns-logo {
+  width: 100%;
+  height: 100%;
 }
 </style>

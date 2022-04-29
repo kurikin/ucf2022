@@ -19,7 +19,7 @@ body {
     overflow: hidden;
   }
 }
-.--show-over-sm {
+.show-over-sm {
   display: none;
 
   @include mq(xs) {
@@ -106,5 +106,17 @@ a {
   @include mq() {
     font-size: 36px;
     margin-bottom: 32px;
+  }
+}
+
+.margin-bottom {
+  margin-bottom: 32px;
+
+  @include mq(sm) {
+    margin-bottom: 48px;
+  }
+
+  @include mq() {
+    margin-bottom: 64px;
   }
 }

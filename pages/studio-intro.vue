@@ -3,18 +3,29 @@
     <WhiteHeader>
       <template v-slot:page-title> ス<span>タ</span>ジオ紹介 </template>
       <template v-slot:description
-        >都市社会共生学科では２年次以降、<br class="--show-over-sm" />
+        >都市社会共生学科では２年次以降、<br class="show-over-sm" />
         興味のある分野を選択し、専門性を持って取り組めるカリキュラムになっています。<br
-          class="--show-over-sm"
+          class="show-over-sm"
         />
         以下の4種類のスタジオを大学2年生から2つ選択し、<br
-          class="--show-over-sm"
+          class="show-over-sm"
         />
         その後の研究や卒業論文を執筆するゼミを決定していきます。</template
       >
     </WhiteHeader>
+    <!-- <button @click="show">クリックする</button> -->
+    <!-- <modal name="modal-content">
+      <p>モーダルウィンドウで表示されるコンテンツ</p>
+    </modal> -->
     <AnalyzeButton />
-    <Studio />
+    <div class="studio-container">
+      <Studio :index="'first'" />
+      <Studio :index="'second'" />
+      <Studio :index="'third'" />
+      <Studio :index="'fourth'" />
+    </div>
+    <AnalyzeButton class="margin-bottom" />
+    <Footer />
   </div>
 </template>
 
@@ -31,11 +42,25 @@ export default {
       },
     }
   },
+  methods: {
+    show() {
+      this.$modal.show('modal-content')
+    },
+    hide() {
+      this.$modal.hide('modal-content')
+    },
+  },
   components: { WhiteHeader, AnalyzeButton, Studio },
 }
 </script>
 
 <style lang="scss" scoped>
+.studio-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 92px;
+}
 .spacing {
   height: 100vh;
 }
