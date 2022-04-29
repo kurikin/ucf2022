@@ -2,21 +2,28 @@
   <div class="studio-card">
     <img src="comingsoon.jpeg" alt="" class="studio-img" />
     <div class="text-box">
-      <p class="teacher-name">小宮 正安</p>
+      <p class="teacher-name">{{ data.teacherName }}</p>
       <p class="hashtags">
-        <span class="hashtag">#オーストラリア</span
-        ><span class="hashtag">#モーツァルト</span
-        ><span class="hashtag">#中世ヨーロッパ</span
-        ><span class="hashtag">#市民革命</span
-        ><span class="hashtag">#市民台頭の歴史</span>
-        <span class="hashtag">#ファッション</span>
+        <span
+          v-for="hashtag in data.hashtags"
+          :key="hashtag.teaherName"
+          class="hashtag"
+          >{{ hashtag }}</span
+        >
       </p>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    data: {
+      type: Object,
+      default: {},
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>

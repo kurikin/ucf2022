@@ -1,35 +1,23 @@
 <template>
   <div class="studio container">
-    <h1 class="studio-name">海外研究スタジオ</h1>
+    <h1 class="studio-name"><slot></slot></h1>
     <div class="card-container">
       <img
         src="left-arrow-black.svg"
         alt=""
         class="swiper-button-prev"
-        :class="index"
+        :class="category"
       />
       <swiper class="swiper" :options="swiperOption">
-        <swiper-slide>
-          <StudioCard />
-        </swiper-slide>
-        <swiper-slide>
-          <StudioCard />
-        </swiper-slide>
-        <swiper-slide>
-          <StudioCard />
-        </swiper-slide>
-        <swiper-slide>
-          <StudioCard />
-        </swiper-slide>
-        <swiper-slide>
-          <StudioCard />
+        <swiper-slide v-for="studio in data.studios" :key="studio.teacherName">
+          <StudioCard :data="studio" />
         </swiper-slide>
       </swiper>
       <img
         src="right-arrow-black.svg"
         alt=""
         class="swiper-button-next"
-        :class="index"
+        :class="category"
       />
     </div>
   </div>
@@ -42,7 +30,11 @@ import 'swiper/css/swiper.css'
 export default {
   components: { StudioCard, Swiper, SwiperSlide },
   props: {
-    index: {
+    data: {
+      type: Object,
+      default: {},
+    },
+    category: {
       type: String,
       default: '',
     },
@@ -53,8 +45,8 @@ export default {
         slidesPerView: 1,
         spaceBetween: 20,
         navigation: {
-          nextEl: `.swiper-button-next.${this.index}`,
-          prevEl: `.swiper-button-prev.${this.index}`,
+          nextEl: `.swiper-button-next.${this.category}`,
+          prevEl: `.swiper-button-prev.${this.category}`,
         },
         breakpoints: {
           576: {

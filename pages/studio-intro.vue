@@ -19,10 +19,12 @@
     </modal> -->
     <AnalyzeButton />
     <div class="studio-container">
-      <Studio :index="'first'" />
-      <Studio :index="'second'" />
-      <Studio :index="'third'" />
-      <Studio :index="'fourth'" />
+      <Studio :category="'cat1'" :data="studioInfo[0]">海外研究スタジオ</Studio>
+      <Studio :category="'cat2'" :data="studioInfo[1]"
+        >社会文化批評スタジオ</Studio
+      >
+      <Studio :category="'cat3'" :data="studioInfo[2]">社会分析スタジオ</Studio>
+      <Studio :category="'cat4'" :data="studioInfo[3]">文化創成スタジオ</Studio>
     </div>
     <AnalyzeButton class="margin-bottom" />
     <Footer />
@@ -33,6 +35,8 @@
 import WhiteHeader from '../components/WhiteHeader.vue'
 import AnalyzeButton from '../components/intro/AnalyzeButton.vue'
 import Studio from '../components/intro/Studio.vue'
+import { studioInfo } from '~/assets/studio-info'
+
 export default {
   data() {
     return {
@@ -40,6 +44,7 @@ export default {
         slidesPerView: 1,
         loop: true, // 最終ページの次にまた1枚目が表示される
       },
+      studioInfo: studioInfo,
     }
   },
   methods: {
@@ -50,7 +55,7 @@ export default {
       this.$modal.hide('modal-content')
     },
   },
-  components: { WhiteHeader, AnalyzeButton, Studio },
+  components: { WhiteHeader, AnalyzeButton, Studio, Studio },
 }
 </script>
 
