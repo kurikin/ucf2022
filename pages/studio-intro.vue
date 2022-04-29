@@ -13,10 +13,6 @@
         その後の研究や卒業論文を執筆するゼミを決定していきます。</template
       >
     </WhiteHeader>
-    <!-- <button @click="show">クリックする</button> -->
-    <!-- <modal name="modal-content">
-      <p>モーダルウィンドウで表示されるコンテンツ</p>
-    </modal> -->
     <AnalyzeButton />
     <div class="studio-container">
       <Studio :category="'cat1'" :data="studioInfo[0]">海外研究スタジオ</Studio>
@@ -47,6 +43,7 @@ export default {
       studioInfo: studioInfo,
     }
   },
+  components: { WhiteHeader, AnalyzeButton, Studio, Studio },
   methods: {
     show() {
       this.$modal.show('modal-content')
@@ -55,7 +52,6 @@ export default {
       this.$modal.hide('modal-content')
     },
   },
-  components: { WhiteHeader, AnalyzeButton, Studio, Studio },
 }
 </script>
 

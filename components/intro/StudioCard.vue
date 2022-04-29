@@ -1,5 +1,6 @@
 <template>
-  <div class="studio-card">
+  <div class="studio-card" @click="show">
+    <modal name="modal-content"><p>モーダルのコンテンツ</p></modal>
     <img src="comingsoon.jpeg" alt="" class="studio-img" />
     <div class="text-box">
       <p class="teacher-name">{{ data.teacherName }}</p>
@@ -17,6 +18,14 @@
 
 <script>
 export default {
+  methods: {
+    show() {
+      this.$modal.show('modal-content')
+    },
+    hide() {
+      this.$modal.hide('modal-content')
+    },
+  },
   props: {
     data: {
       type: Object,
