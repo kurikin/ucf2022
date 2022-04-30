@@ -1,4 +1,4 @@
-export const studioInfo = [
+export const studioData = [
   {
     title: '海外研究スタジオ',
     studios: [

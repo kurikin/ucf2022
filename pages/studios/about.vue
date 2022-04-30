@@ -21,28 +21,12 @@
     <AnalyzeButton />
     <div class="studio-container">
       <StudioSlider
+        v-for="(data, index) in studioData"
+        :key="index"
         @showModal="showModal"
-        :category="'cat1'"
-        :data="studioInfo[0]"
-        >海外研究スタジオ</StudioSlider
-      >
-      <StudioSlider
-        @showModal="showModal"
-        :category="'cat2'"
-        :data="studioInfo[1]"
-        >社会文化批評スタジオ</StudioSlider
-      >
-      <StudioSlider
-        @showModal="showModal"
-        :category="'cat3'"
-        :data="studioInfo[2]"
-        >社会分析スタジオ</StudioSlider
-      >
-      <StudioSlider
-        @showModal="showModal"
-        :category="'cat4'"
-        :data="studioInfo[3]"
-        >文化創成スタジオ</StudioSlider
+        :index="index"
+        :data="data"
+      />
       >
     </div>
     <AnalyzeButton class="margin-bottom" />
@@ -54,7 +38,7 @@
 import WhiteHeader from '@/components/WhiteHeader.vue'
 import AnalyzeButton from '@/components/studio/AnalyzeButton.vue'
 import StudioSlider from '~/components/studio/StudioSlider.vue'
-import { studioInfo } from '@/assets/studio-info'
+import { studioData } from '@/assets/studio_data'
 
 export default {
   data() {
@@ -63,7 +47,7 @@ export default {
         slidesPerView: 1,
         loop: true, // 最終ページの次にまた1枚目が表示される
       },
-      studioInfo: studioInfo,
+      studioData: studioData,
     }
   },
   components: { WhiteHeader, AnalyzeButton, StudioSlider },

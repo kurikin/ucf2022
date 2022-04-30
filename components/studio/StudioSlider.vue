@@ -1,12 +1,12 @@
 <template>
   <div class="studio-slider container">
-    <h1 class="studio-name"><slot></slot></h1>
+    <h1 class="studio-name">{{ data.title }}</h1>
     <div class="card-container">
       <img
         src="/left-arrow-black.svg"
         alt=""
         class="swiper-button-prev"
-        :class="category"
+        :class="'index-' + index"
       />
       <swiper class="swiper" :options="swiperOption">
         <swiper-slide v-for="studio in data.studios" :key="studio.teacherName">
@@ -17,7 +17,7 @@
         src="/right-arrow-black.svg"
         alt=""
         class="swiper-button-next"
-        :class="category"
+        :class="'index-' + index"
       />
     </div>
   </div>
@@ -34,9 +34,9 @@ export default {
       type: Object,
       default: {},
     },
-    category: {
-      type: String,
-      default: '',
+    index: {
+      type: Number,
+      default: -1,
     },
   },
   data() {
@@ -45,8 +45,8 @@ export default {
         slidesPerView: 1,
         spaceBetween: 20,
         navigation: {
-          nextEl: `.swiper-button-next.${this.category}`,
-          prevEl: `.swiper-button-prev.${this.category}`,
+          nextEl: `.swiper-button-next.index-${this.index}`,
+          prevEl: `.swiper-button-prev.index-${this.index}`,
         },
         breakpoints: {
           576: {
