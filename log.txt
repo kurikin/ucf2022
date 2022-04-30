@@ -597,3 +597,7 @@ t=2022-04-30T14:32:51+0900 lvl=info msg="join connections" obj=join id=673780cd3
 t=2022-04-30T14:32:51+0900 lvl=info msg="join connections" obj=join id=3f78185d16f6 l=127.0.0.1:3000 r=133.34.225.251:50931
 t=2022-04-30T14:33:11+0900 lvl=info msg="join connections" obj=join id=838e6b10c152 l=127.0.0.1:3000 r=133.34.225.251:50929
 t=2022-04-30T14:33:49+0900 lvl=info msg="join connections" obj=join id=801abdcbe608 l=127.0.0.1:3000 r=133.34.225.251:50933
+t=2022-04-30T15:29:35+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=86b4b7adcd71 clientid=eccbf21b082602aa7312d0c143d24150
+t=2022-04-30T15:29:35+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=f0242c916180 err="session closed"
+t=2022-04-30T15:29:35+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-04-30T15:29:35+0900 lvl=info msg="client session established" obj=csess id=f0242c916180

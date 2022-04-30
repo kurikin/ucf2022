@@ -1,7 +1,7 @@
 <template>
   <div class="overlay">
     <div class="content">
-      <h1 class="studio-name">{{ studioData.teacherName }}</h1>
+      <h1 class="studio-name">{{ studioData.teacherName }} スタジオ</h1>
       <button class="close-modal-button" @click="closeModal">閉じる</button>
     </div>
   </div>
@@ -38,10 +38,33 @@ export default {
 }
 
 .content {
-  height: 50%;
   width: 50%;
   background-color: $white;
+  border-radius: 32px;
+  padding: 24px;
 
   display: grid;
+  grid-template-columns: 75fr auto;
+  grid-auto-rows: auto auto;
+  align-items: center;
+  column-gap: 16px;
+}
+
+.studio-name {
+  color: $black;
+  letter-spacing: 2px;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.close-modal-button {
+  padding: 10px 20px;
+  color: $white;
+  border: none;
+  background-color: $secondary;
+  border-radius: 20px;
+  &:hover {
+    cursor: pointer;
+  }
 }
 </style>
