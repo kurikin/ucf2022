@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import Slogan from '~/components/intro/Slogan'
-import Theme from '~/components/intro/Theme'
+import Slogan from '~/components/about/Slogan'
+import Theme from '~/components/about/Theme'
 
 export default {
   components: {

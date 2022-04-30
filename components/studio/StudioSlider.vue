@@ -1,9 +1,9 @@
 <template>
-  <div class="studio container">
+  <div class="studio-slider container">
     <h1 class="studio-name"><slot></slot></h1>
     <div class="card-container">
       <img
-        src="left-arrow-black.svg"
+        src="/left-arrow-black.svg"
         alt=""
         class="swiper-button-prev"
         :class="category"
@@ -14,7 +14,7 @@
         </swiper-slide>
       </swiper>
       <img
-        src="right-arrow-black.svg"
+        src="/right-arrow-black.svg"
         alt=""
         class="swiper-button-next"
         :class="category"
@@ -69,7 +69,7 @@ export default {
 
 // - Spacing system (px)
 // 2 / 4 / 8 / 12 / 16 / 20 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-.studio {
+.studio-slider {
   margin-top: 48px;
   width: 100%;
 

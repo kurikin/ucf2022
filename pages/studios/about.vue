@@ -1,8 +1,10 @@
 <template>
   <div class="white">
-    <modal name="modal-content">
-      <p>モーダルウィンドウで表示されるコンテンツ</p>
-    </modal>
+    <div class="modal-container">
+      <modal name="modal-content" :width="'80%'" :height="'80%'">
+        <p>モーダルウィンドウで表示されるコンテンツ</p>
+      </modal>
+    </div>
     <WhiteHeader>
       <template v-slot:page-title> ス<span>タ</span>ジオ紹介 </template>
       <template v-slot:description
@@ -18,17 +20,29 @@
     </WhiteHeader>
     <AnalyzeButton />
     <div class="studio-container">
-      <Studio @showModal="showModal" :category="'cat1'" :data="studioInfo[0]"
-        >海外研究スタジオ</Studio
+      <StudioSlider
+        @showModal="showModal"
+        :category="'cat1'"
+        :data="studioInfo[0]"
+        >海外研究スタジオ</StudioSlider
       >
-      <Studio @showModal="showModal" :category="'cat2'" :data="studioInfo[1]"
-        >社会文化批評スタジオ</Studio
+      <StudioSlider
+        @showModal="showModal"
+        :category="'cat2'"
+        :data="studioInfo[1]"
+        >社会文化批評スタジオ</StudioSlider
       >
-      <Studio @showModal="showModal" :category="'cat3'" :data="studioInfo[2]"
-        >社会分析スタジオ</Studio
+      <StudioSlider
+        @showModal="showModal"
+        :category="'cat3'"
+        :data="studioInfo[2]"
+        >社会分析スタジオ</StudioSlider
       >
-      <Studio @showModal="showModal" :category="'cat4'" :data="studioInfo[3]"
-        >文化創成スタジオ</Studio
+      <StudioSlider
+        @showModal="showModal"
+        :category="'cat4'"
+        :data="studioInfo[3]"
+        >文化創成スタジオ</StudioSlider
       >
     </div>
     <AnalyzeButton class="margin-bottom" />
@@ -37,10 +51,10 @@
 </template>
 
 <script>
-import WhiteHeader from '../components/WhiteHeader.vue'
-import AnalyzeButton from '../components/intro/AnalyzeButton.vue'
-import Studio from '../components/intro/Studio.vue'
-import { studioInfo } from '~/assets/studio-info'
+import WhiteHeader from '@/components/WhiteHeader.vue'
+import AnalyzeButton from '@/components/studio/AnalyzeButton.vue'
+import StudioSlider from '~/components/studio/StudioSlider.vue'
+import { studioInfo } from '@/assets/studio-info'
 
 export default {
   data() {
@@ -52,7 +66,7 @@ export default {
       studioInfo: studioInfo,
     }
   },
-  components: { WhiteHeader, AnalyzeButton, Studio, Studio },
+  components: { WhiteHeader, AnalyzeButton, StudioSlider },
   methods: {
     showModal() {
       this.$modal.show('modal-content')

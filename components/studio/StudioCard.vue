@@ -1,6 +1,6 @@
 <template>
   <div class="studio-card" @click="showModal">
-    <img src="comingsoon.jpeg" alt="" class="studio-img" />
+    <img src="/comingsoon.jpeg" alt="" class="studio-img" />
     <div class="text-box">
       <p class="teacher-name">{{ data.teacherName }}</p>
       <p class="hashtags">
@@ -42,6 +42,10 @@ export default {
   background-color: #fff;
   flex-direction: column;
   border-radius: $radius-sm;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   @include mq(sm) {
     border-radius: $radius-md;

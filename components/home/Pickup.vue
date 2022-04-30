@@ -6,7 +6,7 @@
         <PickupItem
           :title="'たたずみたい都市'"
           :description="'お気に入りの風景を募集中'"
-          :imageUri="'tatatoshi.jpeg'"
+          :imageUri="'/tatatoshi.jpeg'"
         />
       </li>
       <li class="list-item">

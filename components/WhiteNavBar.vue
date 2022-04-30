@@ -15,7 +15,7 @@
         </li>
         <div class="divider"></div>
         <li class="list-item">
-          <nuxt-link class="nav-link" to="/intro">都市文化祭とは</nuxt-link>
+          <nuxt-link class="nav-link" to="/about">都市文化祭とは</nuxt-link>
         </li>
         <div class="divider"></div>
         <li class="list-item">
@@ -29,7 +29,7 @@
         </li>
         <div class="divider"></div>
         <li class="list-item">
-          <nuxt-link class="nav-link" to="/studio-intro"
+          <nuxt-link class="nav-link" to="/studios/about"
             >スタジオ紹介</nuxt-link
           >
         </li>
