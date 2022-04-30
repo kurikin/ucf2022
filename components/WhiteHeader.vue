@@ -38,11 +38,9 @@
 }
 
 .page-title {
-  font-size: 36px;
   color: $black;
   font-family: 'Zen Antique';
   text-align: left;
-  font-weight: 400;
   margin-bottom: 32px;
 
   span {
@@ -50,12 +48,10 @@
   }
 
   @include mq(sm) {
-    font-size: 52px;
     margin-bottom: 48px;
   }
 
   @include mq() {
-    font-size: 72px;
     margin-top: 140px;
   }
 }

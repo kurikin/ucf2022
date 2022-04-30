@@ -1,12 +1,13 @@
 <template>
   <div class="container">
     <nuxt-link class="button-container" to="#">
-      <div class="message show-over-sm">
+      <div class="message hide-over-xs">あなたにぴったりのスタジオは？</div>
+      <div class="message show-over-xs">
         あなたにぴったりのスタジオが分かっちゃう！？
       </div>
       <div class="title-box">
         <div class="title">スタジオ診断</div>
-        <img src="right-arrow-white.svg" alt="" class="right-arrow" />
+        <img src="/right-arrow-white.svg" alt="" class="right-arrow" />
       </div>
     </nuxt-link>
   </div>
@@ -27,8 +28,9 @@ export default {}
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4px 12px;
-  border-radius: 24px;
+  padding: 12px 10px;
+  gap: 6px;
+  border-radius: 28px;
 
   &:visited,
   &:link {
@@ -38,12 +40,6 @@ export default {}
 
   &:hover,
   &:active {
-  }
-
-  @include mq(xs) {
-    padding: 12px 20px;
-    gap: 6px;
-    border-radius: 28px;
   }
 
   @include mq(sm) {
@@ -92,6 +88,7 @@ export default {}
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 4px;
+  flex: 1;
 
   @include mq() {
     font-size: 24px;
@@ -105,14 +102,17 @@ export default {}
 }
 .right-arrow {
   height: 20px;
+  width: 20px;
   display: block;
 
   @include mq() {
     height: 24px;
+    width: 24px;
   }
 
   @include mq(lg) {
     height: 30px;
+    width: 30px;
   }
 }
 </style>

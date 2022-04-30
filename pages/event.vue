@@ -1,6 +1,6 @@
 <template>
   <div class="black">
-    <BlackHeader>学<span>科</span>紹介</BlackHeader>
+    <BlackHeader>企<span>画</span>一覧</BlackHeader>
   </div>
 </template>
 

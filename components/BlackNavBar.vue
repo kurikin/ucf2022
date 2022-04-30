@@ -19,7 +19,7 @@
         </li>
         <div class="divider"></div>
         <li class="list-item">
-          <nuxt-link class="nav-link" to="">企画一覧</nuxt-link>
+          <nuxt-link class="nav-link" to="/event">企画一覧</nuxt-link>
         </li>
         <div class="divider"></div>
         <li class="list-item">
@@ -86,7 +86,7 @@ export default {
   max-width: 1100px;
   background-color: $black;
   border-radius: $radius-xs;
-  z-index: 999;
+  z-index: 100;
   box-shadow: 0 2px 15px rgba(71, 120, 120, 0.3);
   transition: 0.25s all ease-out;
 

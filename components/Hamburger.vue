@@ -26,7 +26,7 @@
               <li class="nav-item"><nuxt-link to="#">企画一覧</nuxt-link></li>
               <li class="nav-item"><nuxt-link to="#">学科紹介</nuxt-link></li>
               <li class="nav-item">
-                <nuxt-link to="/studio-intro">スタジオ診断</nuxt-link>
+                <nuxt-link to="/studios/about">スタジオ紹介</nuxt-link>
               </li>
             </ul>
           </div>
@@ -47,21 +47,21 @@
               href="https://twitter.com/cus_ucf_oc"
               target="_blank"
             >
-              <img class="sns-logo" src="twitter.svg" alt="" />
+              <img class="sns-logo" src="/twitter.svg" alt="" />
             </a>
             <a
               class="sns-link"
               href="https://www.instagram.com/cus_ucf_oc/?hl=ja"
               target="_blank"
             >
-              <img class="sns-logo" src="instagram.svg" alt="" />
+              <img class="sns-logo" src="/instagram.svg" alt="" />
             </a>
             <a
               class="sns-link"
               href="https://note.com/ucf2022/"
               target="_blank"
             >
-              <img class="sns-logo" src="note.svg" alt="" />
+              <img class="sns-logo" src="/note.svg" alt="" />
             </a>
           </div>
         </div>

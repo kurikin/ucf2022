@@ -42,13 +42,14 @@ export default {
 .pickup-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 48px;
   margin-bottom: 64px;
 }
 
 @include mq(sm) {
   .pickup-list {
     flex-direction: row;
+    gap: 20px;
   }
 
   .list-item {

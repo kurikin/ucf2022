@@ -35,8 +35,6 @@
   margin-top: 80px;
   font-size: 36px;
   color: $white;
-  font-family: 'Zen Antique';
-  font-weight: 400;
 
   span {
     color: $primary;

@@ -1,6 +1,6 @@
 <template>
   <div class="studio-slider container">
-    <h1 class="studio-name">{{ data.title }}</h1>
+    <h1 class="studio-name">{{ studios.title }}</h1>
     <div class="card-container">
       <img
         src="/left-arrow-black.svg"
@@ -9,8 +9,11 @@
         :class="'index-' + index"
       />
       <swiper class="swiper" :options="swiperOption">
-        <swiper-slide v-for="studio in data.studios" :key="studio.teacherName">
-          <StudioCard v-on="$listeners" :data="studio" />
+        <swiper-slide
+          v-for="studio in studios.studioList"
+          :key="studio.teacherName"
+        >
+          <StudioCard v-on="$listeners" :studioData="studio" />
         </swiper-slide>
       </swiper>
       <img
@@ -30,13 +33,11 @@ import 'swiper/css/swiper.css'
 export default {
   components: { StudioCard, Swiper, SwiperSlide },
   props: {
-    data: {
+    studios: {
       type: Object,
-      default: {},
     },
     index: {
       type: Number,
-      default: -1,
     },
   },
   data() {
@@ -84,8 +85,8 @@ export default {
 
 .studio-name {
   color: $black;
-  font-size: 24px;
-  letter-spacing: 4px;
+  font-size: 28px;
+  letter-spacing: 3px;
   font-weight: 500;
   margin-bottom: 24px;
 
@@ -108,7 +109,7 @@ export default {
 .card-container {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 20px;
 
   @include mq(sm) {
     gap: 20px;
@@ -123,6 +124,7 @@ export default {
 .swiper-button-next {
   width: 12px;
   position: static;
+  outline: none;
 
   @include mq() {
     width: 15px;

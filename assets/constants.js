@@ -1,7 +1,7 @@
-export const studioData = [
+export const allStudios = [
   {
     title: '海外研究スタジオ',
-    studios: [
+    studioList: [
       {
         teacherName: '小宮 正安',
         hashtags: [
@@ -85,7 +85,7 @@ export const studioData = [
   },
   {
     title: '社会文化批評スタジオ',
-    studios: [
+    studioList: [
       {
         teacherName: '中川 克志',
         hashtags: [
@@ -143,7 +143,7 @@ export const studioData = [
   },
   {
     title: '社会分析スタジオ',
-    studios: [
+    studioList: [
       {
         teacherName: '鎌原 勇太',
         hashtags: [
@@ -232,7 +232,7 @@ export const studioData = [
   },
   {
     title: '海外研究スタジオ',
-    studios: [
+    studioList: [
       {
         teacherName: '須川 亜紀子',
         hashtags: [

@@ -2,10 +2,10 @@
   <div class="studio-card" @click="showModal">
     <img src="/comingsoon.jpeg" alt="" class="studio-img" />
     <div class="text-box">
-      <p class="teacher-name">{{ data.teacherName }}</p>
+      <p class="teacher-name">{{ studioData.teacherName }}</p>
       <p class="hashtags">
         <span
-          v-for="hashtag in data.hashtags"
+          v-for="hashtag in studioData.hashtags"
           :key="hashtag.teaherName"
           class="hashtag"
           >{{ hashtag }}</span
@@ -19,16 +19,15 @@
 export default {
   methods: {
     showModal() {
-      this.$emit('showModal', this.data)
+      this.$emit('showModal', this.studioData)
     },
     hideModal() {
       this.$modal.hide('modal-content')
     },
   },
   props: {
-    data: {
+    studioData: {
       type: Object,
-      default: {},
     },
   },
 }

@@ -1,12 +1,7 @@
 <template>
   <div class="white">
-    <div class="modal-container">
-      <modal name="modal-content" :width="'80%'" :height="'80%'">
-        <p>モーダルウィンドウで表示されるコンテンツ</p>
-      </modal>
-    </div>
     <WhiteHeader>
-      <template v-slot:page-title> ス<span>タ</span>ジオ紹介 </template>
+      <template v-slot:page-title>ス<span>タ</span>ジオ紹介</template>
       <template v-slot:description
         >都市社会共生学科では２年次以降、<br class="show-over-sm" />
         興味のある分野を選択し、専門性を持って取り組めるカリキュラムになっています。<br
@@ -21,15 +16,15 @@
     <AnalyzeButton />
     <div class="studio-container">
       <StudioSlider
-        v-for="(data, index) in studioData"
+        v-for="(studios, index) in allStudios"
         :key="index"
         @showModal="showModal"
         :index="index"
-        :data="data"
+        :studios="studios"
       />
-      >
     </div>
     <AnalyzeButton class="margin-bottom" />
+    <StudioModal v-show="modalOpen" :studioData="modalData" />
     <Footer />
   </div>
 </template>
@@ -38,25 +33,25 @@
 import WhiteHeader from '@/components/WhiteHeader.vue'
 import AnalyzeButton from '@/components/studio/AnalyzeButton.vue'
 import StudioSlider from '~/components/studio/StudioSlider.vue'
-import { studioData } from '@/assets/studio_data'
+import { allStudios } from '@/assets/constants'
+import StudioModal from '~/components/studio/StudioModal.vue'
 
 export default {
   data() {
     return {
-      swiperOption: {
-        slidesPerView: 1,
-        loop: true, // 最終ページの次にまた1枚目が表示される
-      },
-      studioData: studioData,
+      allStudios: allStudios,
+      modalOpen: false,
+      modalData: {},
     }
   },
-  components: { WhiteHeader, AnalyzeButton, StudioSlider },
+  components: { WhiteHeader, AnalyzeButton, StudioSlider, StudioModal },
   methods: {
-    showModal() {
-      this.$modal.show('modal-content')
+    showModal(studioData) {
+      this.modalData = studioData
+      this.modalOpen = true
     },
-    hideModal() {
-      this.$modal.hide('modal-content')
+    closeModal() {
+      this.modalOpen = false
     },
   },
 }
