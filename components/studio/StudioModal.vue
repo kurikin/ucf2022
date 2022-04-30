@@ -2,7 +2,11 @@
   <div class="overlay">
     <div class="content">
       <h1 class="studio-name">{{ studioData.teacherName }} スタジオ</h1>
-      <button class="close-modal-button" @click="closeModal">閉じる</button>
+      <button class="close-modal-button" @click="closeModal">
+        <span>閉じる</span><img class="close-icon" src="/close.svg" alt="" />
+      </button>
+      <img src="/comingsoon.jpeg" alt="" class="studio-img" />
+      <p class="description">{{ studioData.description }}</p>
     </div>
   </div>
 </template>
@@ -23,6 +27,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+//  - Font sizes (px)
+//  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+// - Spacing system (px)
+// 2 / 4 / 8 / 12 / 16 / 20 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
 .overlay {
   position: fixed;
   z-index: 101;
@@ -38,16 +48,17 @@ export default {
 }
 
 .content {
-  width: 50%;
+  width: 55%;
   background-color: $white;
-  border-radius: 32px;
-  padding: 24px;
+  border-radius: 24px;
+  padding: 32px 32px;
 
   display: grid;
-  grid-template-columns: 75fr auto;
+  grid-template-columns: 60fr 40fr;
   grid-auto-rows: auto auto;
   align-items: center;
-  column-gap: 16px;
+  column-gap: 32px;
+  row-gap: 32px;
 }
 
 .studio-name {
@@ -58,13 +69,37 @@ export default {
 }
 
 .close-modal-button {
-  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 20px;
   color: $white;
   border: none;
   background-color: $secondary;
   border-radius: 20px;
+  justify-self: end;
+
   &:hover {
     cursor: pointer;
   }
+}
+
+.studio-img {
+  width: 100%;
+  grid-column: 1;
+  grid-row: 2;
+  border-radius: 24px;
+}
+
+.description {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: flex-start;
+  color: $black;
+}
+
+.close-icon {
+  width: 12px;
+  height: 12px;
 }
 </style>
