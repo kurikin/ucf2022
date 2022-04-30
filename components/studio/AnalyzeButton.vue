@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <nuxt-link class="button-container" to="#">
+    <nuxt-link class="button-container" to="/studios/analyze">
       <div class="message hide-over-xs">あなたにぴったりのスタジオは？</div>
       <div class="message show-over-xs">
         あなたにぴったりのスタジオが分かっちゃう！？
