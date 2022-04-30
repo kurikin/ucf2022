@@ -1,7 +1,8 @@
 <template>
   <div class="overlay">
     <div class="content">
-      {{ studioData.teacherName }}
+      <h1 class="studio-name">{{ studioData.teacherName }}</h1>
+      <button class="close-modal-button" @click="closeModal">閉じる</button>
     </div>
   </div>
 </template>
@@ -11,6 +12,11 @@ export default {
   props: {
     studioData: {
       type: Object,
+    },
+  },
+  methods: {
+    closeModal() {
+      this.$emit('closeModal')
     },
   },
 }
@@ -35,5 +41,7 @@ export default {
   height: 50%;
   width: 50%;
   background-color: $white;
+
+  display: grid;
 }
 </style>

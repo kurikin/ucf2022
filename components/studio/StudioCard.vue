@@ -21,9 +21,6 @@ export default {
     showModal() {
       this.$emit('showModal', this.studioData)
     },
-    hideModal() {
-      this.$modal.hide('modal-content')
-    },
   },
   props: {
     studioData: {

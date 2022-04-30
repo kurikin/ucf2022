@@ -24,7 +24,11 @@
       />
     </div>
     <AnalyzeButton class="margin-bottom" />
-    <StudioModal v-show="modalOpen" :studioData="modalData" />
+    <StudioModal
+      v-show="modalOpen"
+      @closeModal="closeModal"
+      :studioData="modalData"
+    />
     <Footer />
   </div>
 </template>
