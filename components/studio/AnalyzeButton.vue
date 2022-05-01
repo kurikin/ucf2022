@@ -28,9 +28,9 @@ export default {}
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 12px 10px;
+  padding: 16px 10px;
   gap: 6px;
-  border-radius: 28px;
+  border-radius: 24px;
 
   &:visited,
   &:link {

@@ -24,6 +24,7 @@ export default {
   plugins: [
     { src: '@/plugins/swiper', ssr: false },
     { src: '@/plugins/modal' },
+    { src: '@/plugins/scroll_lock' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

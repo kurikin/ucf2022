@@ -45,6 +45,7 @@ export default {
       swiperOption: {
         slidesPerView: 1,
         spaceBetween: 20,
+        allowTouchMove: false,
         navigation: {
           nextEl: `.swiper-button-next.index-${this.index}`,
           prevEl: `.swiper-button-prev.index-${this.index}`,

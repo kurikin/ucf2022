@@ -28,6 +28,7 @@
       v-show="modalOpen"
       @closeModal="closeModal"
       :studioData="modalData"
+      :modalOpen="modalOpen"
     />
     <Footer />
   </div>
@@ -68,9 +69,7 @@ export default {
   gap: 4px;
   margin-bottom: 92px;
 }
-.spacing {
-  height: 100vh;
-}
+
 .slide {
   font-size: 60px;
 }

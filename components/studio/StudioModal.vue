@@ -1,6 +1,6 @@
 <template>
   <div class="overlay">
-    <div class="content">
+    <div class="content" v-scroll-lock="modalOpen">
       <h1 class="studio-name">{{ studioData.teacherName }} スタジオ</h1>
       <button class="close-modal-button" @click="closeModal">
         <span>閉じる</span><img class="close-icon" src="/close.svg" alt="" />
@@ -16,6 +16,9 @@ export default {
   props: {
     studioData: {
       type: Object,
+    },
+    modalOpen: {
+      type: Boolean,
     },
   },
   methods: {
@@ -48,18 +51,21 @@ export default {
 }
 
 .content {
-  width: 85%;
+  width: 90%;
   height: 90%;
+  max-width: 1000px;
   background-color: $white;
   border-radius: 24px;
-  padding: 32px 32px;
+  padding: 28px;
   display: grid;
   gap: 20px;
+  overflow: scroll;
 
   @include mq() {
     width: 80%;
     height: auto;
     display: grid;
+    padding: 32px;
     align-items: flex-start;
     grid-template-columns: 60fr 40fr;
     grid-template-rows: auto auto;
