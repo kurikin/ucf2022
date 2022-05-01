@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="white">
     <WhiteHeader>
       <template v-slot:page-title>ス<span>タ</span>ジオ診断</template>
       <template v-slot:description

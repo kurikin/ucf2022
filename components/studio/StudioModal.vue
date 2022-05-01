@@ -48,17 +48,24 @@ export default {
 }
 
 .content {
-  width: 55%;
+  width: 85%;
+  height: 90%;
   background-color: $white;
   border-radius: 24px;
   padding: 32px 32px;
-
   display: grid;
-  grid-template-columns: 60fr 40fr;
-  grid-auto-rows: auto auto;
-  align-items: center;
-  column-gap: 32px;
-  row-gap: 32px;
+  gap: 20px;
+
+  @include mq() {
+    width: 80%;
+    height: auto;
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: 60fr 40fr;
+    grid-template-rows: auto auto;
+    column-gap: 32px;
+    row-gap: 32px;
+  }
 }
 
 .studio-name {
@@ -78,28 +85,30 @@ export default {
   background-color: $secondary;
   border-radius: 20px;
   justify-self: end;
+  grid-row: 1;
+
+  @include mq() {
+    grid-row: 1;
+    grid-column: 2;
+  }
 
   &:hover {
     cursor: pointer;
   }
 }
 
+.close-icon {
+  width: 12px;
+  height: 12px;
+}
+
 .studio-img {
   width: 100%;
-  grid-column: 1;
-  grid-row: 2;
   border-radius: 24px;
 }
 
 .description {
-  grid-column: 2;
-  grid-row: 2;
   align-self: flex-start;
   color: $black;
-}
-
-.close-icon {
-  width: 12px;
-  height: 12px;
 }
 </style>

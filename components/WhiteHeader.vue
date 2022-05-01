@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <BlackNavBar />
-    <Hamburger :baseColor="`black`" />
+    <Hamburger :baseColor="`black`" v-show="!hideHamburger" />
     <div class="container">
       <h1 class="page-title">
         <slot name="page-title"></slot>
@@ -13,7 +13,15 @@
   </header>
 </template>
 
-<script></script>
+<script>
+export default {
+  props: {
+    hideHamburger: {
+      type: Boolean,
+    },
+  },
+}
+</script>
 
 <style lang="scss" scoped>
 //  - Font sizes (px)

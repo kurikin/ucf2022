@@ -2,7 +2,9 @@
   <div class="container">
     <footer class="footer">
       <ul class="nav-list">
-        <li><nuxt-link class="nav-link" to="#">実行委員一覧</nuxt-link></li>
+        <li>
+          <nuxt-link class="nav-link" to="/members">実行委員一覧</nuxt-link>
+        </li>
         <li><a class="nav-link" to="#">入試情報</a></li>
         <li><a class="nav-link" to="#">お問合せ</a></li>
       </ul>

@@ -1,6 +1,6 @@
 <template>
   <div class="white">
-    <WhiteHeader>
+    <WhiteHeader :hideHamburger="modalOpen">
       <template v-slot:page-title>ス<span>タ</span>ジオ紹介</template>
       <template v-slot:description
         >都市社会共生学科では２年次以降、<br class="show-over-sm" />
