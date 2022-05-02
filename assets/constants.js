@@ -289,3 +289,7 @@ export const allStudios = [
     ],
   },
 ]
+
+export const members = {
+  manager: [],
+}

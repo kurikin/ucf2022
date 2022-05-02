@@ -44,10 +44,14 @@ import StudioModal from '~/components/studio/StudioModal.vue'
 export default {
   data() {
     return {
-      allStudios: allStudios,
       modalOpen: false,
       modalData: {},
     }
+  },
+  computed: {
+    allStudios() {
+      return allStudios
+    },
   },
   components: { WhiteHeader, AnalyzeButton, StudioSlider, StudioModal },
   methods: {

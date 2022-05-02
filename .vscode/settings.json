@@ -1,4 +1,6 @@
 {
   "nuxt.isNuxtApp": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.format.enable": true,
+  "editor.formatOnSave": true
 }

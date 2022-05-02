@@ -13,6 +13,7 @@
 body {
   font-family: 'Zen Kaku Gothic New';
   line-height: 1.5;
+  color: $black;
 
   &.side-nav-open {
     max-height: 100vh;

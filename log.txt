@@ -830,3 +830,136 @@ t=2022-05-01T12:59:12+0900 lvl=info msg="join connections" obj=join id=7464cb9d6
 t=2022-05-01T12:59:17+0900 lvl=info msg="join connections" obj=join id=1eecbbd2eca7 l=127.0.0.1:3000 r=175.177.42.120:61492
 t=2022-05-01T12:59:18+0900 lvl=info msg="join connections" obj=join id=4a8f61fdcd24 l=127.0.0.1:3000 r=175.177.42.120:61491
 t=2022-05-01T12:59:18+0900 lvl=info msg="join connections" obj=join id=d99a8b36fc0c l=127.0.0.1:3000 r=175.177.42.120:61490
+t=2022-05-01T13:02:25+0900 lvl=info msg="join connections" obj=join id=fd072f7327eb l=127.0.0.1:3000 r=175.177.42.120:61531
+t=2022-05-01T13:02:52+0900 lvl=info msg="join connections" obj=join id=7f92bc126bc8 l=127.0.0.1:3000 r=175.177.42.120:61544
+t=2022-05-01T13:12:22+0900 lvl=info msg="join connections" obj=join id=9b255cbeb5e1 l=127.0.0.1:3000 r=175.177.42.120:61560
+t=2022-05-01T13:12:49+0900 lvl=info msg="join connections" obj=join id=61dbcae69203 l=127.0.0.1:3000 r=175.177.42.120:61561
+t=2022-05-01T13:15:18+0900 lvl=info msg="join connections" obj=join id=7e9b9cfcd0e6 l=127.0.0.1:3000 r=175.177.42.120:61563
+t=2022-05-01T13:16:04+0900 lvl=info msg="join connections" obj=join id=32d5ccc2be7c l=127.0.0.1:3000 r=175.177.42.120:61564
+t=2022-05-01T13:17:09+0900 lvl=info msg="join connections" obj=join id=9830ff7be0c0 l=127.0.0.1:3000 r=175.177.42.120:61565
+t=2022-05-01T13:17:09+0900 lvl=info msg="join connections" obj=join id=765bb72879ce l=127.0.0.1:3000 r=175.177.42.120:61566
+t=2022-05-01T13:17:09+0900 lvl=info msg="join connections" obj=join id=9cc34ee3a91f l=127.0.0.1:3000 r=175.177.42.120:40708
+t=2022-05-01T13:17:09+0900 lvl=info msg="join connections" obj=join id=2dd3da43ade4 l=127.0.0.1:3000 r=175.177.42.120:61569
+t=2022-05-01T13:17:09+0900 lvl=info msg="join connections" obj=join id=688a755b3be5 l=127.0.0.1:3000 r=175.177.42.120:61567
+t=2022-05-01T13:17:09+0900 lvl=info msg="join connections" obj=join id=66860858285c l=127.0.0.1:3000 r=175.177.42.120:61570
+t=2022-05-01T13:20:41+0900 lvl=info msg="join connections" obj=join id=05fa9f5a812b l=127.0.0.1:3000 r=175.177.42.120:61578
+t=2022-05-01T13:20:41+0900 lvl=info msg="join connections" obj=join id=2aede4536f7e l=127.0.0.1:3000 r=175.177.42.120:61579
+t=2022-05-01T13:20:49+0900 lvl=info msg="join connections" obj=join id=698185bf9fba l=127.0.0.1:3000 r=175.177.42.120:61578
+t=2022-05-01T13:20:49+0900 lvl=info msg="join connections" obj=join id=800a145959d5 l=127.0.0.1:3000 r=175.177.42.120:61578
+t=2022-05-01T13:21:15+0900 lvl=info msg="join connections" obj=join id=4a6b3b3faf40 l=127.0.0.1:3000 r=175.177.42.120:61578
+t=2022-05-01T13:21:15+0900 lvl=info msg="join connections" obj=join id=dc3992d986bc l=127.0.0.1:3000 r=175.177.42.120:61579
+t=2022-05-01T13:21:28+0900 lvl=info msg="join connections" obj=join id=dc9d22cd7839 l=127.0.0.1:3000 r=175.177.42.120:61578
+t=2022-05-01T13:21:28+0900 lvl=info msg="join connections" obj=join id=f6b46f1c8add l=127.0.0.1:3000 r=175.177.42.120:61578
+t=2022-05-01T13:21:44+0900 lvl=info msg="join connections" obj=join id=b482f2879fb9 l=127.0.0.1:3000 r=175.177.42.120:61578
+t=2022-05-01T13:21:54+0900 lvl=info msg="join connections" obj=join id=ca7fc5bc8798 l=127.0.0.1:3000 r=175.177.42.120:61578
+t=2022-05-01T13:22:30+0900 lvl=info msg="join connections" obj=join id=88e8f8457d04 l=127.0.0.1:3000 r=175.177.42.120:61580
+t=2022-05-01T13:24:15+0900 lvl=info msg="join connections" obj=join id=2ba595f6042a l=127.0.0.1:3000 r=175.177.42.120:61581
+t=2022-05-01T13:24:22+0900 lvl=info msg="join connections" obj=join id=91892bc9138b l=127.0.0.1:3000 r=175.177.42.120:61581
+t=2022-05-01T13:24:22+0900 lvl=info msg="join connections" obj=join id=bf8b1c44ae73 l=127.0.0.1:3000 r=175.177.42.120:61583
+t=2022-05-01T13:24:22+0900 lvl=info msg="join connections" obj=join id=29704c83a7d0 l=127.0.0.1:3000 r=175.177.42.120:61582
+t=2022-05-01T13:24:22+0900 lvl=info msg="join connections" obj=join id=df75dcfa82ea l=127.0.0.1:3000 r=175.177.42.120:61586
+t=2022-05-01T13:24:22+0900 lvl=info msg="join connections" obj=join id=b3763114e752 l=127.0.0.1:3000 r=175.177.42.120:61585
+t=2022-05-01T13:24:22+0900 lvl=info msg="join connections" obj=join id=96a643792d1a l=127.0.0.1:3000 r=175.177.42.120:61584
+t=2022-05-01T13:26:08+0900 lvl=info msg="join connections" obj=join id=1a99a0243ad5 l=127.0.0.1:3000 r=175.177.42.120:61587
+t=2022-05-01T13:26:21+0900 lvl=info msg="join connections" obj=join id=b9d149b1e068 l=127.0.0.1:3000 r=175.177.42.120:61587
+t=2022-05-01T13:26:47+0900 lvl=info msg="join connections" obj=join id=fae716667761 l=127.0.0.1:3000 r=175.177.42.120:61587
+t=2022-05-01T13:27:37+0900 lvl=info msg="join connections" obj=join id=0dfa09582bd9 l=127.0.0.1:3000 r=175.177.42.120:61589
+t=2022-05-01T13:27:46+0900 lvl=info msg="join connections" obj=join id=d96714847b46 l=127.0.0.1:3000 r=175.177.42.120:61589
+t=2022-05-01T13:27:46+0900 lvl=info msg="join connections" obj=join id=3b7685863866 l=127.0.0.1:3000 r=175.177.42.120:61590
+t=2022-05-01T13:27:59+0900 lvl=info msg="join connections" obj=join id=21a375dbc172 l=127.0.0.1:3000 r=175.177.42.120:61589
+t=2022-05-01T13:28:05+0900 lvl=info msg="join connections" obj=join id=fe897a03c4ee l=127.0.0.1:3000 r=175.177.42.120:61589
+t=2022-05-01T13:28:11+0900 lvl=info msg="join connections" obj=join id=04c225895b94 l=127.0.0.1:3000 r=175.177.42.120:61589
+t=2022-05-01T13:28:21+0900 lvl=info msg="join connections" obj=join id=583a65e69cac l=127.0.0.1:3000 r=175.177.42.120:61589
+t=2022-05-01T13:28:37+0900 lvl=info msg="join connections" obj=join id=b6badd99ef71 l=127.0.0.1:3000 r=175.177.42.120:61589
+t=2022-05-01T13:28:43+0900 lvl=info msg="join connections" obj=join id=e689a28bfb6e l=127.0.0.1:3000 r=175.177.42.120:61589
+t=2022-05-01T13:29:01+0900 lvl=info msg="join connections" obj=join id=10ae21de0cf5 l=127.0.0.1:3000 r=175.177.42.120:61589
+t=2022-05-01T13:29:06+0900 lvl=info msg="join connections" obj=join id=9994c750a95f l=127.0.0.1:3000 r=175.177.42.120:61589
+t=2022-05-01T13:29:24+0900 lvl=info msg="join connections" obj=join id=89d01ab158d4 l=127.0.0.1:3000 r=175.177.42.120:61589
+t=2022-05-01T13:30:56+0900 lvl=info msg="join connections" obj=join id=a917fc31feb0 l=127.0.0.1:3000 r=175.177.42.120:61593
+t=2022-05-01T13:31:09+0900 lvl=info msg="join connections" obj=join id=6714bc62d446 l=127.0.0.1:3000 r=175.177.42.120:61593
+t=2022-05-01T13:31:30+0900 lvl=info msg="join connections" obj=join id=202a9bfa2fa0 l=127.0.0.1:3000 r=175.177.42.120:61593
+t=2022-05-01T13:31:36+0900 lvl=info msg="join connections" obj=join id=a6aaafe3a46e l=127.0.0.1:3000 r=175.177.42.120:61593
+t=2022-05-01T13:32:12+0900 lvl=info msg="join connections" obj=join id=2e7e0a355cdf l=127.0.0.1:3000 r=175.177.42.120:61594
+t=2022-05-01T13:32:18+0900 lvl=info msg="join connections" obj=join id=2418bb7f7f22 l=127.0.0.1:3000 r=175.177.42.120:61594
+t=2022-05-01T13:32:54+0900 lvl=info msg="join connections" obj=join id=40d7e6ca49a8 l=127.0.0.1:3000 r=175.177.42.120:61595
+t=2022-05-01T13:33:05+0900 lvl=info msg="join connections" obj=join id=d77ea1246c7e l=127.0.0.1:3000 r=175.177.42.120:61595
+t=2022-05-01T13:33:12+0900 lvl=info msg="join connections" obj=join id=92114c144a9d l=127.0.0.1:3000 r=175.177.42.120:61595
+t=2022-05-01T13:33:18+0900 lvl=info msg="join connections" obj=join id=c93b75ae95d4 l=127.0.0.1:3000 r=175.177.42.120:61595
+t=2022-05-01T13:33:24+0900 lvl=info msg="join connections" obj=join id=3dd2d6b64555 l=127.0.0.1:3000 r=175.177.42.120:61595
+t=2022-05-01T13:33:40+0900 lvl=info msg="join connections" obj=join id=14ab118c613e l=127.0.0.1:3000 r=175.177.42.120:61595
+t=2022-05-01T13:33:40+0900 lvl=info msg="join connections" obj=join id=4627210decb5 l=127.0.0.1:3000 r=175.177.42.120:61597
+t=2022-05-01T13:33:40+0900 lvl=info msg="join connections" obj=join id=b9f57013911d l=127.0.0.1:3000 r=175.177.42.120:61596
+t=2022-05-01T13:35:42+0900 lvl=info msg="join connections" obj=join id=5451a31731f7 l=127.0.0.1:3000 r=175.177.42.120:61601
+t=2022-05-01T13:35:42+0900 lvl=info msg="join connections" obj=join id=749e8f09f208 l=127.0.0.1:3000 r=175.177.42.120:61603
+t=2022-05-01T13:35:42+0900 lvl=info msg="join connections" obj=join id=f3c77d99fc91 l=127.0.0.1:3000 r=175.177.42.120:61602
+t=2022-05-01T13:35:44+0900 lvl=info msg="join connections" obj=join id=8d4d206a7625 l=127.0.0.1:3000 r=175.177.42.120:61603
+t=2022-05-01T13:35:44+0900 lvl=info msg="join connections" obj=join id=fd7c0b0b6ea8 l=127.0.0.1:3000 r=175.177.42.120:61605
+t=2022-05-01T13:35:46+0900 lvl=info msg="join connections" obj=join id=cf2203cb465a l=127.0.0.1:3000 r=175.177.42.120:61603
+t=2022-05-01T13:35:51+0900 lvl=info msg="join connections" obj=join id=68ea846c5aa8 l=127.0.0.1:3000 r=175.177.42.120:61603
+t=2022-05-01T13:57:09+0900 lvl=info msg="join connections" obj=join id=2cf96c3276ca l=127.0.0.1:3000 r=175.177.42.120:9025
+t=2022-05-01T13:57:09+0900 lvl=info msg="join connections" obj=join id=caf08239fa68 l=127.0.0.1:3000 r=175.177.42.120:18306
+t=2022-05-01T13:57:09+0900 lvl=info msg="join connections" obj=join id=71cf00fc1caf l=127.0.0.1:3000 r=175.177.42.120:61824
+t=2022-05-01T13:57:11+0900 lvl=info msg="join connections" obj=join id=ddc5ef3dba87 l=127.0.0.1:3000 r=175.177.42.120:18306
+t=2022-05-01T13:57:11+0900 lvl=info msg="join connections" obj=join id=6399ac4b8205 l=127.0.0.1:3000 r=175.177.42.120:61828
+t=2022-05-01T13:57:11+0900 lvl=info msg="join connections" obj=join id=f8424751f318 l=127.0.0.1:3000 r=175.177.42.120:61827
+t=2022-05-01T13:57:21+0900 lvl=info msg="join connections" obj=join id=e3b64f1af1bd l=127.0.0.1:3000 r=175.177.42.120:9025
+t=2022-05-01T13:57:21+0900 lvl=info msg="join connections" obj=join id=67497edc3d10 l=127.0.0.1:3000 r=175.177.42.120:61828
+t=2022-05-01T13:57:23+0900 lvl=info msg="join connections" obj=join id=60fb642efef8 l=127.0.0.1:3000 r=175.177.42.120:61827
+t=2022-05-01T13:57:23+0900 lvl=info msg="join connections" obj=join id=dce8a3a44f10 l=127.0.0.1:3000 r=175.177.42.120:18306
+t=2022-05-01T13:57:38+0900 lvl=info msg="join connections" obj=join id=a619cf5155ed l=127.0.0.1:3000 r=175.177.42.120:9025
+t=2022-05-01T14:02:15+0900 lvl=info msg="join connections" obj=join id=a8688744d77c l=127.0.0.1:3000 r=175.177.42.120:61841
+t=2022-05-01T14:06:17+0900 lvl=info msg="join connections" obj=join id=6e915e8b3086 l=127.0.0.1:3000 r=175.177.42.120:61844
+t=2022-05-01T14:06:32+0900 lvl=info msg="join connections" obj=join id=9a6df936ed98 l=127.0.0.1:3000 r=175.177.42.120:61844
+t=2022-05-01T14:10:13+0900 lvl=info msg="join connections" obj=join id=4b1b779bb322 l=127.0.0.1:3000 r=175.177.42.120:61857
+t=2022-05-01T14:10:25+0900 lvl=info msg="join connections" obj=join id=fe4373813bc0 l=127.0.0.1:3000 r=175.177.42.120:61857
+t=2022-05-01T14:28:09+0900 lvl=warn msg="failed to open private leg" id=89c173c61d4d privaddr=localhost:3000 err="dial tcp [::1]:3000: connect: connection refused"
+t=2022-05-01T16:09:05+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=f0242c916180 err="read tcp 100.67.222.112:54597->18.177.129.29:443: read: connection reset by peer"
+t=2022-05-01T16:09:06+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-01T16:09:06+0900 lvl=info msg="client session established" obj=csess id=f0242c916180
+t=2022-05-01T16:11:22+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=135063ac4865 clientid=eccbf21b082602aa7312d0c143d24150
+t=2022-05-01T16:11:32+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=5ead923996b1 clientid=eccbf21b082602aa7312d0c143d24150
+t=2022-05-01T16:11:32+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=f0242c916180 err="session closed"
+t=2022-05-01T16:11:32+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-01T16:11:33+0900 lvl=info msg="client session established" obj=csess id=f0242c916180
+t=2022-05-01T17:43:23+0900 lvl=warn msg="failed to open private leg" id=f0450626c352 privaddr=localhost:3000 err="dial tcp [::1]:3000: connect: connection refused"
+t=2022-05-01T17:43:23+0900 lvl=warn msg="failed to open private leg" id=32eb96b597a8 privaddr=localhost:3000 err="dial tcp [::1]:3000: connect: connection refused"
+t=2022-05-01T17:43:23+0900 lvl=warn msg="failed to open private leg" id=b0769301021e privaddr=localhost:3000 err="dial tcp [::1]:3000: connect: connection refused"
+t=2022-05-01T17:43:23+0900 lvl=warn msg="failed to open private leg" id=918bb0299881 privaddr=localhost:3000 err="dial tcp [::1]:3000: connect: connection refused"
+t=2022-05-01T17:43:23+0900 lvl=warn msg="failed to open private leg" id=3774994fbc2b privaddr=localhost:3000 err="dial tcp [::1]:3000: connect: connection refused"
+t=2022-05-01T17:43:23+0900 lvl=warn msg="failed to open private leg" id=4b0a7de052a4 privaddr=localhost:3000 err="dial tcp [::1]:3000: connect: connection refused"
+t=2022-05-01T18:36:12+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=f0242c916180 err="read tcp 100.67.222.112:55443->18.177.245.43:443: read: connection reset by peer"
+t=2022-05-01T18:36:12+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-01T18:36:13+0900 lvl=info msg="client session established" obj=csess id=f0242c916180
+t=2022-05-01T18:36:27+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=7a92ecb4aa63 clientid=eccbf21b082602aa7312d0c143d24150
+t=2022-05-01T18:48:08+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=ed63052049a3 clientid=eccbf21b082602aa7312d0c143d24150
+t=2022-05-01T18:48:08+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=f0242c916180 err="session closed"
+t=2022-05-01T18:48:08+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-01T18:48:08+0900 lvl=info msg="client session established" obj=csess id=f0242c916180
+t=2022-05-01T19:04:29+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=f0242c916180 err="read tcp 100.67.222.112:61142->18.177.245.43:443: read: connection reset by peer"
+t=2022-05-01T19:04:29+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-01T19:04:29+0900 lvl=info msg="client session established" obj=csess id=f0242c916180
+t=2022-05-01T19:04:44+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=8ad43ffc828e clientid=eccbf21b082602aa7312d0c143d24150
+t=2022-05-01T19:21:28+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=f0242c916180 err="read tcp 100.67.222.112:61188->18.177.245.43:443: read: connection reset by peer"
+t=2022-05-01T19:21:29+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-01T19:21:29+0900 lvl=info msg="client session established" obj=csess id=f0242c916180
+t=2022-05-01T19:21:43+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=22e6568a7159 clientid=eccbf21b082602aa7312d0c143d24150
+t=2022-05-01T19:28:26+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=f0242c916180 err="read tcp 100.67.222.112:61298->18.177.245.43:443: read: connection reset by peer"
+t=2022-05-01T19:28:26+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-01T19:28:26+0900 lvl=info msg="client session established" obj=csess id=f0242c916180
+t=2022-05-01T19:28:41+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=44440e3b866c clientid=eccbf21b082602aa7312d0c143d24150
+t=2022-05-01T19:45:36+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=f0242c916180 err="read tcp 100.67.222.112:61373->18.177.245.43:443: read: connection reset by peer"
+t=2022-05-01T19:45:36+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-01T19:45:36+0900 lvl=info msg="client session established" obj=csess id=f0242c916180
+t=2022-05-01T19:45:50+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=174231ad83ca clientid=eccbf21b082602aa7312d0c143d24150
+t=2022-05-01T20:19:44+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=f0242c916180 err="read tcp 100.67.222.112:61494->18.177.129.29:443: read: connection reset by peer"
+t=2022-05-01T20:19:44+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-01T20:19:45+0900 lvl=info msg="client session established" obj=csess id=f0242c916180
+t=2022-05-01T20:19:59+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=825005c1ae20 clientid=eccbf21b082602aa7312d0c143d24150
+t=2022-05-01T21:36:41+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=f0242c916180 err="read tcp 100.67.222.112:62538->18.177.129.29:443: read: connection reset by peer"
+t=2022-05-01T21:36:41+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-01T21:36:41+0900 lvl=info msg="client session established" obj=csess id=f0242c916180
+t=2022-05-01T21:36:56+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=588399803cfb clientid=eccbf21b082602aa7312d0c143d24150
+t=2022-05-01T23:24:57+0900 lvl=info msg="Got quit command" obj=consoleui
+t=2022-05-01T23:24:57+0900 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+t=2022-05-01T23:24:57+0900 lvl=info msg="session closing" obj=tunnels.session err=nil
+t=2022-05-01T23:24:57+0900 lvl=info msg="accept failed" obj=csess id=f0242c916180 err="reconnecting session closed"

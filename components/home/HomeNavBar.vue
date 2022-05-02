@@ -11,19 +11,15 @@
         </li>
         <div class="divider"></div>
         <li class="list-item">
-          <nuxt-link class="nav-link" to="">企画一覧</nuxt-link>
+          <nuxt-link class="nav-link" to="/events">企画一覧</nuxt-link>
         </li>
         <div class="divider"></div>
         <li class="list-item">
-          <nuxt-link class="nav-link" to="/department-intro"
-            >学科紹介</nuxt-link
-          >
+          <nuxt-link class="nav-link" to="/departments">学科紹介</nuxt-link>
         </li>
         <div class="divider"></div>
         <li class="list-item">
-          <nuxt-link class="nav-link" to="/studios/about"
-            >スタジオ紹介</nuxt-link
-          >
+          <nuxt-link class="nav-link" to="/studios">スタジオ紹介</nuxt-link>
         </li>
       </ul>
     </nav>
