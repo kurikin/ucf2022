@@ -290,6 +290,111 @@ export const allStudios = [
   },
 ]
 
-export const members = {
-  manager: [],
-}
+export const members = [
+  {
+    department: '総務部',
+    leaders: [
+      {
+        name: '池田 瑞季',
+        position: '総務部長',
+        belong: '都市科学部 都市社会共生学科３年',
+      },
+    ],
+    members: [
+      {
+        name: '青砥 陸',
+        position: 'たたずみたい都市',
+        belong: '理工学部 情報工学EP３年',
+      },
+      {
+        name: '青砥 陸',
+        position: 'たたずみたい都市',
+        belong: '理工学部 情報工学EP３年',
+      },
+      {
+        name: '青砥 陸',
+        position: 'たたずみたい都市',
+        belong: '理工学部 情報工学EP３年',
+      },
+      {
+        name: '青砥 陸',
+        position: 'たたずみたい都市',
+        belong: '理工学部 情報工学EP３年',
+      },
+    ],
+  },
+  {
+    department: '企画部',
+    leaders: [
+      {
+        name: '岡村 香澄',
+        position: '企画部長',
+        belong: '都市科学部 都市社会共生学科３年',
+      },
+    ],
+    members: [
+      {
+        name: '青砥 陸',
+        position: 'たたずみたい都市',
+        belong: '理工学部 情報工学EP３年',
+      },
+      {
+        name: '青砥 陸',
+        position: 'たたずみたい都市',
+        belong: '理工学部 情報工学EP３年',
+      },
+      {
+        name: '青砥 陸',
+        position: 'たたずみたい都市',
+        belong: '理工学部 情報工学EP３年',
+      },
+      {
+        name: '青砥 陸',
+        position: 'たたずみたい都市',
+        belong: '理工学部 情報工学EP３年',
+      },
+      {
+        name: '青砥 陸',
+        position: 'たたずみたい都市',
+        belong: '理工学部 情報工学EP３年',
+      },
+      {
+        name: '青砥 陸',
+        position: 'たたずみたい都市',
+        belong: '理工学部 情報工学EP３年',
+      },
+      {
+        name: '青砥 陸',
+        position: 'たたずみたい都市',
+        belong: '理工学部 情報工学EP３年',
+      },
+    ],
+  },
+  {
+    department: '広報部',
+    leaders: [
+      {
+        name: '池田 瑞季',
+        position: '総務部長',
+        belong: '都市科学部 都市社会共生学科３年',
+      },
+    ],
+    members: [],
+  },
+  {
+    department: 'システム部',
+    leaders: [
+      {
+        name: '村瀬 悠',
+        position: 'システム部部長',
+        belong: '都市科学部 都市社会共生学科３年',
+      },
+      {
+        name: '青砥 陸',
+        position: 'ホームページ制作担当',
+        belong: '理工学部 情報工学EP３年',
+      },
+    ],
+    members: [],
+  },
+]

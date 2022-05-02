@@ -34,6 +34,14 @@ body {
   }
 }
 
+.show-over-sm {
+  display: none;
+
+  @include mq(sm) {
+    display: block;
+  }
+}
+
 h1,
 h2,
 h3 {

@@ -5,8 +5,8 @@
     </WhiteHeader>
     <div class="container">
       <h2 class="department-name">総務部</h2>
-      <div class="core-members-box">
-        <div class="core-member">
+      <div class="leaders-box">
+        <div class="leader">
           <img src="/ikeda.png" alt="" class="portrait" />
           <div class="text-box">
             <p class="name">池田 瑞季</p>
@@ -24,6 +24,24 @@
             <div class="description">
               <p class="position">優しさの街</p>
               <p class="belong">経済学部３年</p>
+            </div>
+          </div>
+        </div>
+        <div class="member">
+          <div class="text-box">
+            <p class="name">矢野 誠悟</p>
+            <div class="description">
+              <p class="position">本棚の片隅、覗かせてください</p>
+              <p class="belong">都市科学部 都市社会共生学科３年</p>
+            </div>
+          </div>
+        </div>
+        <div class="member">
+          <div class="text-box">
+            <p class="name">田中 怜</p>
+            <div class="description">
+              <p class="position">優しさの街</p>
+              <p class="belong">都市科学部 都市社会共生学科３年</p>
             </div>
           </div>
         </div>
@@ -54,14 +72,15 @@ export default { components: { WhiteHeader, Footer } }
   font-size: 30px;
   font-weight: 500;
   letter-spacing: 4px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 
   @include mq(sm) {
-    font-size: 36px;
+    font-size: 44px;
+    margin-bottom: 32px;
   }
 }
 
-.core-member {
+.leader {
   display: flex;
   gap: 20px;
 
@@ -82,6 +101,17 @@ export default { components: { WhiteHeader, Footer } }
   gap: 8px;
 }
 
+.leaders-box {
+  margin-bottom: 48px;
+}
+
+.members-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 16px;
+  column-gap: 16px;
+}
+
 .name {
   font-size: 24px;
   font-weight: 600;
@@ -100,16 +130,5 @@ export default { components: { WhiteHeader, Footer } }
   @include mq(sm) {
     font-size: 20px;
   }
-}
-
-.core-members-box {
-  margin-bottom: 48px;
-}
-
-.members-box {
-  display: flex;
-  column-gap: 48px;
-  row-gap: 8px;
-  flex-wrap: wrap;
 }
 </style>

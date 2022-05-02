@@ -68,6 +68,10 @@ export default {
   gap: 20px;
   overflow: scroll;
 
+  @include mq(sm) {
+    gap: 24px;
+  }
+
   @include mq() {
     width: 80%;
     height: auto;
