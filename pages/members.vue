@@ -4,30 +4,42 @@
       <template v-slot:page-title>実<span>行</span>委員一覧</template>
     </WhiteHeader>
     <div class="container">
-      <h2 class="department-name">総務部</h2>
-      <div class="leaders-box">
-        <div class="leader">
-          <img src="/ikeda.png" alt="" class="portrait" />
-          <div class="text-box">
-            <p class="name">池田 瑞季</p>
-            <div class="description">
-              <p class="position">総務部長</p>
-              <p class="belong">都市科学部 都市社会共生学科３年</p>
+      <div class="department-container">
+        <div
+          v-for="department in members"
+          :key="department.departmentName"
+          class="department"
+        >
+          <h2 class="department-name">{{ department.departmentName }}</h2>
+          <div class="leaders-box">
+            <div
+              v-for="leader in department.leaders"
+              :key="leader.name"
+              class="leader"
+            >
+              <img src="/ikeda.png" alt="" class="portrait" />
+              <div class="text-box">
+                <p class="name">{{ leader.name }}</p>
+                <div class="description">
+                  <p class="position">{{ leader.position }}</p>
+                  <p class="belong">{{ leader.belong }}</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="members-box">
-        <div
-          v-for="member in members[0].members"
-          :key="member.name"
-          class="member"
-        >
-          <div class="text-box">
-            <p class="name">{{ member.name }}</p>
-            <div class="description">
-              <p class="position show-over-sm">{{ member.position }}</p>
-              <p class="belong">{{ member.belong }}</p>
+          <div class="members-box">
+            <div
+              v-for="member in members[0].members"
+              :key="member.name"
+              class="member"
+            >
+              <div class="text-box">
+                <p class="name">{{ member.name }}</p>
+                <div class="description">
+                  <p class="position show-over-sm">{{ member.position }}</p>
+                  <p class="belong">{{ member.belong }}</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -94,7 +106,7 @@ export default {
 .members-box {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: 16px;
+  row-gap: 24px;
   column-gap: 16px;
 }
 

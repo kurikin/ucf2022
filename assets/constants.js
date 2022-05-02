@@ -292,7 +292,7 @@ export const allStudios = [
 
 export const members = [
   {
-    department: '総務部',
+    departmentName: '総務部',
     leaders: [
       {
         name: '池田 瑞季',
@@ -324,7 +324,7 @@ export const members = [
     ],
   },
   {
-    department: '企画部',
+    departmentName: '企画部',
     leaders: [
       {
         name: '岡村 香澄',
@@ -371,7 +371,7 @@ export const members = [
     ],
   },
   {
-    department: '広報部',
+    departmentName: '広報部',
     leaders: [
       {
         name: '池田 瑞季',
@@ -382,7 +382,7 @@ export const members = [
     members: [],
   },
   {
-    department: 'システム部',
+    departmentName: 'システム部',
     leaders: [
       {
         name: '村瀬 悠',
