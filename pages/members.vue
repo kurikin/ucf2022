@@ -18,39 +18,16 @@
         </div>
       </div>
       <div class="members-box">
-        <div class="member">
+        <div
+          v-for="member in members[0].members"
+          :key="member.name"
+          class="member"
+        >
           <div class="text-box">
-            <p class="name">田中 怜</p>
+            <p class="name">{{ member.name }}</p>
             <div class="description">
-              <p class="position">優しさの街</p>
-              <p class="belong">経済学部３年</p>
-            </div>
-          </div>
-        </div>
-        <div class="member">
-          <div class="text-box">
-            <p class="name">矢野 誠悟</p>
-            <div class="description">
-              <p class="position">本棚の片隅、覗かせてください</p>
-              <p class="belong">都市科学部 都市社会共生学科３年</p>
-            </div>
-          </div>
-        </div>
-        <div class="member">
-          <div class="text-box">
-            <p class="name">田中 怜</p>
-            <div class="description">
-              <p class="position">優しさの街</p>
-              <p class="belong">都市科学部 都市社会共生学科３年</p>
-            </div>
-          </div>
-        </div>
-        <div class="member">
-          <div class="text-box">
-            <p class="name">田中 怜</p>
-            <div class="description">
-              <p class="position">優しさの街</p>
-              <p class="belong">経済学部３年</p>
+              <p class="position show-over-sm">{{ member.position }}</p>
+              <p class="belong">{{ member.belong }}</p>
             </div>
           </div>
         </div>
@@ -63,7 +40,16 @@
 <script>
 import WhiteHeader from '../components/WhiteHeader.vue'
 import Footer from '~/components/Footer.vue'
-export default { components: { WhiteHeader, Footer } }
+import { members } from '~/assets/constants'
+
+export default {
+  components: { WhiteHeader, Footer },
+  computed: {
+    members() {
+      return members
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -72,7 +58,7 @@ export default { components: { WhiteHeader, Footer } }
   font-size: 30px;
   font-weight: 500;
   letter-spacing: 4px;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 
   @include mq(sm) {
     font-size: 44px;

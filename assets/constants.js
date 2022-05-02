@@ -302,18 +302,18 @@ export const members = [
     ],
     members: [
       {
-        name: '青砥 陸',
+        name: '田中 怜',
+        position: '優しさの街',
+        belong: '経済学部３年',
+      },
+      {
+        name: '矢野 誠悟',
         position: 'たたずみたい都市',
-        belong: '理工学部 情報工学EP３年',
+        belong: '都市科学部 都市社会共生学科３年',
       },
       {
         name: '青砥 陸',
-        position: 'たたずみたい都市',
-        belong: '理工学部 情報工学EP３年',
-      },
-      {
-        name: '青砥 陸',
-        position: 'たたずみたい都市',
+        position: '本棚の片隅、覗かせてください',
         belong: '理工学部 情報工学EP３年',
       },
       {
