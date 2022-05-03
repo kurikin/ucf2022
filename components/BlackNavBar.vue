@@ -139,6 +139,6 @@ export default {
 }
 .nav-link:hover,
 .nav-link:active {
-  color: $white;
+  color: $primary;
 }
 </style>

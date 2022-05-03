@@ -17,7 +17,7 @@
               :key="leader.name"
               class="leader"
             >
-              <img src="/ikeda.png" alt="" class="portrait" />
+              <img :src="leader.fileName" alt="" class="portrait" />
               <div class="text-box">
                 <p class="name">{{ leader.name }}</p>
                 <div class="description">
@@ -29,7 +29,7 @@
           </div>
           <div class="members-box">
             <div
-              v-for="member in members[0].members"
+              v-for="member in department.members"
               :key="member.name"
               class="member"
             >
@@ -65,6 +65,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.department-container {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  @include mq() {
+    gap: 64px;
+  }
+}
+
 .department-name {
   color: $black;
   font-size: 30px;
@@ -73,8 +83,26 @@ export default {
   margin-bottom: 32px;
 
   @include mq(sm) {
-    font-size: 44px;
     margin-bottom: 32px;
+  }
+
+  @include mq() {
+    font-size: 44px;
+    margin-bottom: 48px;
+  }
+
+  @include mq(lg) {
+    font-size: 52px;
+  }
+}
+
+.leaders-box {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  @include mq(lg) {
+    flex-direction: row;
   }
 }
 
@@ -85,12 +113,25 @@ export default {
   @include mq(sm) {
     gap: 48px;
   }
+
+  @include mq() {
+    gap: 64px;
+  }
 }
 
 .portrait {
-  width: 40%;
-  height: 40%;
-  max-width: 130px;
+  width: 120px;
+  height: 120px;
+
+  @include mq(sm) {
+    width: 130px;
+    height: auto;
+  }
+
+  @include mq() {
+    width: 150px;
+    height: auto;
+  }
 }
 
 .text-box {
@@ -99,22 +140,28 @@ export default {
   gap: 8px;
 }
 
-.leaders-box {
-  margin-bottom: 48px;
-}
-
 .members-box {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: 24px;
+  row-gap: 32px;
   column-gap: 16px;
+  margin-top: 48px;
+
+  @include mq() {
+    row-gap: 48px;
+    margin-top: 64px;
+  }
+
+  @include mq(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .name {
   font-size: 24px;
   font-weight: 600;
 
-  @include mq(sm) {
+  @include mq() {
     font-size: 30px;
   }
 }
@@ -125,7 +172,7 @@ export default {
   flex-direction: column;
   gap: 2px;
 
-  @include mq(sm) {
+  @include mq() {
     font-size: 20px;
   }
 }

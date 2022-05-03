@@ -72,16 +72,22 @@ export default {
     gap: 24px;
   }
 
-  @include mq() {
+  @include mq(sm) {
     width: 80%;
+    gap: 24px;
     height: auto;
     display: grid;
     padding: 32px;
-    align-items: flex-start;
-    grid-template-columns: 60fr 40fr;
+    align-items: center;
+    grid-template-columns: 1fr auto;
     grid-template-rows: auto auto;
+  }
+
+  @include mq() {
     column-gap: 32px;
     row-gap: 32px;
+    align-items: flex-start;
+    grid-template-columns: 60fr 40fr;
   }
 }
 
@@ -90,6 +96,10 @@ export default {
   letter-spacing: 2px;
   font-size: 30px;
   font-weight: 500;
+
+  @include mq() {
+    font-size: 36px;
+  }
 }
 
 .close-modal-button {
@@ -104,8 +114,7 @@ export default {
   justify-self: end;
   grid-row: 1;
 
-  @include mq() {
-    grid-row: 1;
+  @include mq(sm) {
     grid-column: 2;
   }
 
@@ -128,11 +137,27 @@ export default {
   width: 100%;
   display: block;
   border-radius: 24px;
+
+  @include mq(sm) {
+    grid-column: 1 / -1;
+  }
+
+  @include mq() {
+    grid-column: 1;
+  }
 }
 
 .description {
   align-self: flex-start;
   color: $black;
   font-size: 16px;
+
+  @include mq(sm) {
+    grid-column: 1 / -1;
+  }
+
+  @include mq() {
+    grid-column: 2;
+  }
 }
 </style>

@@ -296,6 +296,7 @@ export const members = [
     leaders: [
       {
         name: '池田 瑞季',
+        fileName: 'ikeda.png',
         position: '総務部長',
         belong: '都市科学部 都市社会共生学科３年',
       },
@@ -312,12 +313,12 @@ export const members = [
         belong: '都市科学部 都市社会共生学科３年',
       },
       {
-        name: '青砥 陸',
+        name: '山崎 昴陽',
         position: '本棚の片隅、覗かせてください',
         belong: '理工学部 情報工学EP３年',
       },
       {
-        name: '青砥 陸',
+        name: '喜元 陽',
         position: 'たたずみたい都市',
         belong: '理工学部 情報工学EP３年',
       },
@@ -328,6 +329,7 @@ export const members = [
     leaders: [
       {
         name: '岡村 香澄',
+        fileName: 'okamura.png',
         position: '企画部長',
         belong: '都市科学部 都市社会共生学科３年',
       },
@@ -374,8 +376,9 @@ export const members = [
     departmentName: '広報部',
     leaders: [
       {
-        name: '池田 瑞季',
-        position: '総務部長',
+        name: '藤田 里奈',
+        fileName: 'fujita.png',
+        position: '広報部長',
         belong: '都市科学部 都市社会共生学科３年',
       },
     ],
@@ -386,11 +389,13 @@ export const members = [
     leaders: [
       {
         name: '村瀬 悠',
+        fileName: 'murase.png',
         position: 'システム部部長',
         belong: '都市科学部 都市社会共生学科３年',
       },
       {
         name: '青砥 陸',
+        fileName: 'aoto.png',
         position: 'ホームページ制作担当',
         belong: '理工学部 情報工学EP３年',
       },
