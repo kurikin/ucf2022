@@ -9,6 +9,7 @@
       <p class="description">
         <slot name="description"></slot>
       </p>
+      <slot name="custom"></slot>
     </div>
   </header>
 </template>

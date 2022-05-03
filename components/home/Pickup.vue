@@ -16,7 +16,7 @@
         <PickupItem :title="'Coming soon...'" :description="'More Program'" />
       </li>
     </ul>
-    <nuxt-link class="primary-button" to="#">企画一覧を見る</nuxt-link>
+    <nuxt-link class="primary-button" to="/events">企画一覧を見る</nuxt-link>
   </section>
 </template>
 
