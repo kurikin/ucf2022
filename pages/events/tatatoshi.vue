@@ -9,18 +9,25 @@
             自分の周りの都市・地域を見つめなおしてみませんか？<br />
             自分の知らない都市・地域を知ってみませんか？
           </p>
-          <button class="primary-button how-to-apply">
+          <button class="primary-button how-to-apply" @click="showApplyModal">
             参加方法はこちら！
           </button>
         </div>
       </template>
     </WhiteHeader>
     <ImageGallery :contents="contents" @showImageModal="showImageModal" />
+
+    <!-- モーダル -->
     <ImageModal
       v-show="imageModalOpen"
       :modalOpen="imageModalOpen"
       :imageModalData="imageModalData"
       @closeImageModal="closeImageModal"
+    />
+    <ApplyModal
+      v-show="applyModalOpen"
+      :modalOpen="applyModalOpen"
+      @closeApplyModal="closeApplyModal"
     />
     <Footer />
   </div>
@@ -30,9 +37,10 @@
 import Footer from '~/components/Footer.vue'
 import ImageGallery from '../../components/event/ImageGallery.vue'
 import ImageModal from '~/components/event/ImageModal.vue'
+import ApplyModal from '~/components/event/ApplyModal.vue'
 
 export default {
-  components: { Footer, ImageGallery, ImageModal },
+  components: { Footer, ImageGallery, ImageModal, ApplyModal },
   data() {
     return {
       imageModalOpen: false,
@@ -54,6 +62,12 @@ export default {
     },
     closeImageModal() {
       this.imageModalOpen = false
+    },
+    showApplyModal() {
+      this.applyModalOpen = true
+    },
+    closeApplyModal() {
+      this.applyModalOpen = false
     },
   },
   async asyncData({ $microcms }) {
@@ -91,6 +105,10 @@ export default {
 .primary-button.how-to-apply {
   margin: 0;
   align-self: center;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   @include mq() {
     padding: 12px 64px;
