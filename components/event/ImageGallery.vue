@@ -3,6 +3,7 @@
     <div class="grid image-gallery">
       <img
         v-for="content in contents"
+        @click="showImageModal(content)"
         class="image"
         :src="content.image.url"
         :key="content.id"
@@ -15,6 +16,11 @@
 <script>
 export default {
   props: ['contents'],
+  methods: {
+    showImageModal(content) {
+      this.$emit('showImageModal', content)
+    },
+  },
 }
 </script>
 

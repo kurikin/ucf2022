@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import BaseModal from '../BaseModal.vue'
+import BaseModal from '~/components/BaseModal.vue'
 export default {
   props: {
     studioData: {

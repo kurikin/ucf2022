@@ -15,7 +15,13 @@
         </div>
       </template>
     </WhiteHeader>
-    <ImageGallery :contents="contents" />
+    <ImageGallery :contents="contents" @showImageModal="showImageModal" />
+    <ImageModal
+      v-show="imageModalOpen"
+      :modalOpen="imageModalOpen"
+      :imageModalData="imageModalData"
+      @closeImageModal="closeImageModal"
+    />
     <Footer />
   </div>
 </template>
@@ -23,15 +29,30 @@
 <script>
 import Footer from '~/components/Footer.vue'
 import ImageGallery from '../../components/event/ImageGallery.vue'
+import ImageModal from '~/components/event/ImageModal.vue'
 
 export default {
-  components: { Footer, ImageGallery },
+  components: { Footer, ImageGallery, ImageModal },
+  data() {
+    return {
+      imageModalOpen: false,
+      imageModalData: {},
+      applyModalOpen: false,
+    }
+  },
+  methods: {
+    showImageModal(content) {
+      this.imageModalData = content
+      this.imageModalOpen = true
+    },
+    closeImageModal() {
+      this.imageModalOpen = false
+    },
+  },
   async asyncData({ $microcms }) {
     const images = await $microcms.get({
       endpoint: 'tatatoshi',
     })
-
-    console.log(images)
 
     return images
   },
