@@ -15,7 +15,7 @@
         </div>
       </template>
     </WhiteHeader>
-    <ImageGallery />
+    <ImageGallery :contents="contents" />
     <Footer />
   </div>
 </template>
@@ -26,6 +26,15 @@ import ImageGallery from '../../components/event/ImageGallery.vue'
 
 export default {
   components: { Footer, ImageGallery },
+  async asyncData({ $microcms }) {
+    const images = await $microcms.get({
+      endpoint: 'tatatoshi',
+    })
+
+    console.log(images)
+
+    return images
+  },
 }
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link to="#">
+  <nuxt-link :to="path">
     <div class="pickup-item">
       <div class="img-container">
         <img class="thumbnail" :src="imageUri" alt="" />
@@ -15,6 +15,10 @@
 <script>
 export default {
   props: {
+    path: {
+      type: String,
+      default: '#',
+    },
     title: {
       type: String,
       required: true,
@@ -83,6 +87,10 @@ export default {
 
   .text-box {
     margin-bottom: 2px;
+  }
+
+  .img-container {
+    border-radius: $radius-sm;
   }
 
   .thumbnail {

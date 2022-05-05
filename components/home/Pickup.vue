@@ -7,6 +7,7 @@
           :title="'たたずみたい都市'"
           :description="'お気に入りの風景を募集中'"
           :imageUri="'/tatatoshi.jpeg'"
+          :path="'/events/tatatoshi'"
         />
       </li>
       <li class="list-item">

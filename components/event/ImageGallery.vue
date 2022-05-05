@@ -1,21 +1,21 @@
 <template>
   <div class="container">
     <div class="grid image-gallery">
-      <img class="image" src="/comingsoon.jpeg" alt="" />
-      <img class="image" src="/comingsoon.jpeg" alt="" />
-      <img class="image" src="/comingsoon.jpeg" alt="" />
-      <img class="image" src="/comingsoon.jpeg" alt="" />
-      <img class="image" src="/comingsoon.jpeg" alt="" />
-      <img class="image" src="/comingsoon.jpeg" alt="" />
-      <img class="image" src="/comingsoon.jpeg" alt="" />
-      <img class="image" src="/comingsoon.jpeg" alt="" />
-      <img class="image" src="/comingsoon.jpeg" alt="" />
+      <img
+        v-for="content in contents"
+        class="image"
+        :src="content.image.url"
+        :key="content.id"
+        alt=""
+      />
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  props: ['contents'],
+}
 </script>
 
 <style lang="scss" scoped>
@@ -45,8 +45,10 @@ export default {}
 }
 
 .image {
-  width: 100%;
   border-radius: 24px;
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  object-fit: cover;
 
   @include mq() {
     border-radius: $radius-md;
