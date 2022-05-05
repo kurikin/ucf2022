@@ -36,7 +36,14 @@ export default {
   data() {
     return {
       imageModalOpen: false,
-      imageModalData: {},
+      imageModalData: {
+        id: '',
+        nickname: '',
+        comment: '',
+        image: {
+          url: '/comingsoon.jpeg',
+        },
+      },
       applyModalOpen: false,
     }
   },

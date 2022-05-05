@@ -1,6 +1,6 @@
 <template>
   <BaseModal :modalOpen="modalOpen">
-    <h1 class="studio-name"></h1>
+    <img class="image" :src="imageModalData.image.url" alt="" />
     <button class="close-modal-button" @click="closeImageModal">
       <span class="close-text">閉じる</span
       ><img class="close-icon" src="/close.svg" alt="" />
@@ -18,6 +18,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    imageModalData: {
+      type: Object,
+      default: () => {},
+    },
   },
   methods: {
     closeImageModal() {
@@ -27,4 +31,11 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 24px;
+  object-fit: cover;
+}
+</style>

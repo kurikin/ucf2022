@@ -59,5 +59,9 @@ export default {
   @include mq() {
     border-radius: $radius-md;
   }
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 </style>
