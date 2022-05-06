@@ -73,6 +73,9 @@ export default {
   async asyncData({ $microcms }) {
     const images = await $microcms.get({
       endpoint: 'tatatoshi',
+      queries: {
+        limit: 30,
+      },
     })
 
     return images

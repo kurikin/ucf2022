@@ -5,6 +5,19 @@
       <span class="close-text">閉じる</span
       ><img class="close-icon" src="/close.svg" alt="" />
     </button>
+    <div class="image-info-box">
+      <div class="nickname-box">
+        <img src="/person.svg" alt="" class="leading-icon" />
+        <p class="nickname">{{ imageModalData.nickname }}</p>
+      </div>
+      <div class="location-box">
+        <img src="/location.svg" alt="" class="leading-icon" />
+        <p class="location">{{ imageModalData.location }}</p>
+      </div>
+    </div>
+    <p v-show="imageModalData.comment != ''" class="comment">
+      {{ imageModalData.comment }}
+    </p>
   </BaseModal>
 </template>
 
@@ -37,5 +50,57 @@ export default {
   aspect-ratio: 4 / 3;
   border-radius: 24px;
   object-fit: cover;
+
+  @include mq() {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    width: 72%;
+  }
+}
+
+.image-info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @include mq(sm) {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  @include mq() {
+    gap: 32px;
+  }
+}
+
+.leading-icon {
+  height: 20px;
+
+  @include mq() {
+    height: 24px;
+  }
+}
+
+.nickname-box,
+.location-box {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.nickname,
+.location,
+.comment {
+  color: $black;
+  font-size: 16px;
+
+  @include mq() {
+    font-size: 20px;
+  }
+}
+
+.comment {
+  grid-column: 1 / -1;
 }
 </style>

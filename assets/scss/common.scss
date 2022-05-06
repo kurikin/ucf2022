@@ -10,16 +10,18 @@
   box-sizing: border-box;
 }
 
-body {
+body,
+button {
   font-family: 'Zen Kaku Gothic New';
   line-height: 1.5;
   color: $black;
-
-  &.side-nav-open {
-    max-height: 100vh;
-    overflow: hidden;
-  }
 }
+
+body.side-nav-open {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
 .hide-over-xs {
   @include mq(xs) {
     display: none;
@@ -97,7 +99,6 @@ a {
   border: none;
 
   @include mq(sm) {
-    font-size: 18px;
     padding: 10px 24px;
     letter-spacing: 1px;
   }
@@ -156,7 +157,8 @@ a {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 8px 20px;
+  padding: 6px 18px;
+  font-size: 16px;
   color: $white;
   border: none;
   background-color: $secondary;
@@ -166,7 +168,12 @@ a {
 
   @include mq(sm) {
     grid-column: 2;
-    padding: 8px 20px;
+  }
+
+  @include mq(lg) {
+    font-size: 20px;
+    padding: 8px 24px;
+    border-radius: 32px;
   }
 
   &:hover {
@@ -174,12 +181,12 @@ a {
   }
 }
 
-.close-text {
-  font-size: 14px;
-  font-weight: 400;
-}
-
 .close-icon {
   width: 12px;
   height: 12px;
+
+  @include mq(lg) {
+    width: 16px;
+    height: 16px;
+  }
 }

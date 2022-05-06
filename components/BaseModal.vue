@@ -37,7 +37,7 @@ export default {
   max-width: 1000px;
   max-height: 95%;
   background-color: $white;
-  border-radius: 24px;
+  border-radius: $radius-sm;
   padding: 20px;
   display: grid;
   gap: 20px;
@@ -58,9 +58,12 @@ export default {
   @include mq() {
     column-gap: 32px;
     row-gap: 32px;
-    padding: 32px;
     align-items: flex-start;
     grid-template-columns: 60fr 40fr;
+  }
+
+  @include mq(lg) {
+    padding: 32px;
   }
 }
 </style>
