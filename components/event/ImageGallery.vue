@@ -55,6 +55,7 @@ export default {
   aspect-ratio: 4 / 3;
   width: 100%;
   object-fit: cover;
+  border-radius: $radius-sm;
 
   @include mq() {
     border-radius: $radius-md;

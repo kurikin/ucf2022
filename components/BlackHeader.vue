@@ -29,6 +29,10 @@
     ),
     url('/header-back.jpg');
   background-position: center;
+
+  @include mq(xs) {
+    height: 270px;
+  }
 }
 
 .page-title {
@@ -38,6 +42,10 @@
 
   span {
     color: $primary;
+  }
+
+  @include mq(xs) {
+    font-size: 44px;
   }
 
   @include mq(sm) {

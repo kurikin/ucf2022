@@ -104,6 +104,7 @@ export default {
 
 .primary-button.how-to-apply {
   margin: 0;
+  padding: 12px 24px;
   align-self: center;
 
   &:hover {

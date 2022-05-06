@@ -34,26 +34,23 @@ export default {
 
 .content {
   width: 90%;
-  height: 85%;
   max-width: 1000px;
+  max-height: 95%;
   background-color: $white;
   border-radius: 24px;
-  padding: 24px 28px;
+  padding: 20px;
   display: grid;
   gap: 20px;
+  align-items: center;
   overflow: scroll;
-
-  @include mq(sm) {
-    gap: 24px;
-  }
 
   @include mq(sm) {
     width: 80%;
     gap: 24px;
     height: auto;
     display: grid;
-    padding: 32px;
-    align-items: center;
+    padding: 24px;
+    align-items: start;
     grid-template-columns: 1fr auto;
     grid-template-rows: auto auto;
   }
@@ -61,6 +58,7 @@ export default {
   @include mq() {
     column-gap: 32px;
     row-gap: 32px;
+    padding: 32px;
     align-items: flex-start;
     grid-template-columns: 60fr 40fr;
   }

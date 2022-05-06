@@ -71,7 +71,6 @@ export default {
 }
 
 .description {
-  align-self: flex-start;
   color: $black;
   font-size: 16px;
 

@@ -17,7 +17,11 @@
               :key="leader.name"
               class="leader"
             >
-              <img :src="leader.fileName" alt="" class="portrait" />
+              <img
+                :src="'/portraits/' + leader.fileName"
+                alt=""
+                class="portrait"
+              />
               <div class="text-box">
                 <p class="name">{{ leader.name }}</p>
                 <div class="description">
