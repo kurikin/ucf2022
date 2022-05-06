@@ -15,7 +15,7 @@
         <p class="location">{{ imageModalData.location }}</p>
       </div>
     </div>
-    <p v-show="imageModalData.comment != ''" class="comment">
+    <p v-if="'comment' in imageModalData" class="comment">
       {{ imageModalData.comment }}
     </p>
   </BaseModal>
@@ -33,7 +33,7 @@ export default {
     },
     imageModalData: {
       type: Object,
-      default: () => {},
+      default: () => ({}),
     },
   },
   methods: {
@@ -47,14 +47,14 @@ export default {
 <style lang="scss" scoped>
 .image {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 7 / 5;
   border-radius: 24px;
   object-fit: cover;
 
   @include mq() {
     grid-column: 1 / -1;
     grid-row: 1;
-    width: 72%;
+    width: 78%;
   }
 }
 

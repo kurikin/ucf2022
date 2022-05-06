@@ -2,8 +2,8 @@
   <div class="container">
     <div class="grid image-gallery">
       <img
-        v-for="content in contents"
-        @click="showImageModal(content)"
+        v-for="(content, index) in contents"
+        @click="showImageModal(index)"
         class="image"
         :src="content.image.url"
         :key="content.id"
@@ -17,8 +17,8 @@
 export default {
   props: ['contents'],
   methods: {
-    showImageModal(content) {
-      this.$emit('showImageModal', content)
+    showImageModal(index) {
+      this.$emit('showImageModal', index)
     },
   },
 }

@@ -19,7 +19,7 @@
 
     <!-- モーダル -->
     <ImageModal
-      v-show="imageModalOpen"
+      v-if="imageModalOpen"
       :modalOpen="imageModalOpen"
       :imageModalData="imageModalData"
       @closeImageModal="closeImageModal"
@@ -43,21 +43,19 @@ export default {
   components: { Footer, ImageGallery, ImageModal, ApplyModal },
   data() {
     return {
+      modalContentIndex: 0,
       imageModalOpen: false,
-      imageModalData: {
-        id: '',
-        nickname: '',
-        comment: '',
-        image: {
-          url: '/comingsoon.jpeg',
-        },
-      },
       applyModalOpen: false,
     }
   },
+  computed: {
+    imageModalData() {
+      return this.contents[this.modalContentIndex]
+    },
+  },
   methods: {
-    showImageModal(content) {
-      this.imageModalData = content
+    showImageModal(index) {
+      this.modalContentIndex = index
       this.imageModalOpen = true
     },
     closeImageModal() {
@@ -78,6 +76,7 @@ export default {
       },
     })
 
+    console.log(images)
     return images
   },
 }
