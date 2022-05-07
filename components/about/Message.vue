@@ -29,16 +29,17 @@ export default {}
   font-size: 30px;
   letter-spacing: 2px;
   text-align: left;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   font-weight: 500;
 
   @include mq(sm) {
-    font-size: 36px;
+    font-size: 44px;
     margin-bottom: 20px;
   }
 
   @include mq() {
-    font-size: 48px;
+    font-size: 52px;
+    margin-bottom: 32px;
     letter-spacing: 5px;
   }
 }
@@ -48,33 +49,56 @@ export default {}
   display: flex;
   flex-direction: column;
   gap: 4px;
-  margin-bottom: 16px;
+
+  @include mq(sm) {
+    gap: 8px;
+  }
 
   .position {
     font-size: 16px;
+
+    @include mq(sm) {
+      font-size: 18px;
+    }
+
+    @include mq() {
+      font-size: 24px;
+    }
   }
 
   .name {
     font-size: 24px;
+
+    @include mq(sm) {
+      font-size: 30px;
+    }
+
+    @include mq() {
+      font-size: 36px;
+    }
   }
 }
 
 .message-container {
+  margin-top: 24px;
   background-color: $white;
   padding: 24px;
   border-radius: $radius-xs;
 
   @include mq(sm) {
     padding: 32px;
+    margin-top: 32px;
     border-radius: $radius-sm;
   }
 
   @include mq() {
     padding: 48px;
+    margin-top: 48px;
     border-radius: $radius-md;
   }
 
   @include mq(lg) {
+    margin-top: 64px;
     padding: 80px;
   }
 

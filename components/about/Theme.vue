@@ -66,12 +66,12 @@ export default {}
   font-weight: 500;
 
   @include mq(sm) {
-    font-size: 36px;
+    font-size: 44px;
     margin-bottom: 48px;
   }
 
   @include mq() {
-    font-size: 48px;
+    font-size: 52px;
     margin-bottom: 64px;
     letter-spacing: 5px;
   }
