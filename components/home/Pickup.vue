@@ -11,10 +11,10 @@
         />
       </li>
       <li class="list-item">
-        <PickupItem :title="'Coming soon...'" :description="'More Program'" />
+        <PickupItem :title="'Coming soon...'" :description="'More Programs'" />
       </li>
       <li class="list-item">
-        <PickupItem :title="'Coming soon...'" :description="'More Program'" />
+        <PickupItem :title="'Coming soon...'" :description="'More Programs'" />
       </li>
     </ul>
     <nuxt-link class="primary-button" to="/events">企画一覧を見る</nuxt-link>

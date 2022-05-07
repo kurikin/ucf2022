@@ -50,7 +50,11 @@ export default {}
 // - Spacing system (px)
 // 2 / 4 / 8 / 12 / 16 / 20 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 .theme {
-  margin-bottom: 100px;
+  margin-bottom: 20px;
+
+  @include mq() {
+    margin-bottom: 48px;
+  }
 }
 
 .theme-heading {
@@ -59,12 +63,29 @@ export default {}
   letter-spacing: 2px;
   text-align: center;
   margin-bottom: 32px;
+  font-weight: 500;
+
+  @include mq(sm) {
+    font-size: 36px;
+    margin-bottom: 48px;
+  }
+
+  @include mq() {
+    font-size: 48px;
+    margin-bottom: 64px;
+    letter-spacing: 5px;
+  }
 }
 
 .theme-box {
   display: flex;
   flex-direction: column;
   gap: 28px;
+
+  @include mq(sm) {
+    flex-direction: row;
+    gap: 32px;
+  }
 }
 
 .logo {
@@ -94,6 +115,13 @@ export default {}
   margin-top: 48px;
   font-size: 18px;
   color: $white;
+  font-weight: 400;
+  line-height: 1.6;
+
+  @include mq(lg) {
+    font-size: 20px;
+    line-height: 1.7;
+  }
 }
 
 .sub-theme-list {
@@ -119,16 +147,6 @@ export default {}
 }
 
 @include mq(sm) {
-  .theme-heading {
-    font-size: 36px;
-    margin-bottom: 48px;
-  }
-
-  .theme-box {
-    flex-direction: row;
-    gap: 32px;
-  }
-
   .title {
     .text {
       font-size: 30px;
@@ -158,11 +176,6 @@ export default {}
 }
 
 @include mq() {
-  .theme-heading {
-    font-size: 48px;
-    margin-bottom: 64px;
-  }
-
   .title {
     margin-bottom: 32px;
     gap: 4px;
@@ -170,10 +183,6 @@ export default {}
     .text {
       font-size: 30px;
     }
-  }
-
-  .description {
-    margin-top: 48px;
   }
 
   .list-item {
@@ -203,10 +212,6 @@ export default {}
 @include mq(lg) {
   .title {
     margin-bottom: 44px;
-  }
-  .description {
-    font-size: 20px;
-    line-height: 1.7;
   }
   .list-item {
     font-size: 44px;

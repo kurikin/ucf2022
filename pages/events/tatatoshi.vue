@@ -124,4 +124,12 @@ export default {
     justify-self: end;
   }
 }
+
+.description {
+  font-size: 18px;
+
+  @include mq(sm) {
+    font-size: 20px;
+  }
+}
 </style>

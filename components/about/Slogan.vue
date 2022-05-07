@@ -20,21 +20,22 @@ export default {}
   display: grid;
   gap: 24px;
   color: $white;
-  font-size: 16px;
-  line-height: 1.7;
+  font-size: 18px;
+  line-height: 1.6;
   text-align: center;
   margin-bottom: 48px;
-}
+  font-weight: 400;
 
-@include mq(sm) {
-  .slogan {
+  @include mq(sm) {
+    font-size: 20px;
+  }
+
+  @include mq() {
     font-size: 24px;
   }
-}
 
-@include mq() {
-  .slogan {
-    font-size: 24px;
+  @include mq(lg) {
+    line-height: 1.7;
   }
 }
 </style>

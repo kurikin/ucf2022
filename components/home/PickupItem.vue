@@ -78,6 +78,7 @@ export default {
   font-size: 20px;
   font-family: Zen Kaku Gothic New;
   color: $black;
+  font-weight: 600;
 }
 
 @include mq() {

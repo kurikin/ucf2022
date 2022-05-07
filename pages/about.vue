@@ -5,6 +5,7 @@
     <div class="center-line"></div>
     <Theme />
     <div class="center-line"></div>
+    <Message />
     <Footer />
   </div>
 </template>
@@ -12,11 +13,13 @@
 <script>
 import Slogan from '~/components/about/Slogan'
 import Theme from '~/components/about/Theme'
+import Message from '~/components/about/Message.vue'
 
 export default {
   components: {
     Slogan,
     Theme,
+    Message,
   },
 }
 </script>

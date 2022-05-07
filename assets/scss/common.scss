@@ -17,6 +17,16 @@ button {
   color: $black;
 }
 
+h1,
+h2,
+h3 {
+  font-weight: 500;
+}
+
+p {
+  font-weight: 400;
+}
+
 body.side-nav-open {
   max-height: 100vh;
   overflow: hidden;
@@ -172,7 +182,7 @@ a {
 
   @include mq(lg) {
     font-size: 20px;
-    padding: 8px 24px;
+    padding: 7px 24px;
     border-radius: 32px;
   }
 

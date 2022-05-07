@@ -8,8 +8,9 @@
     <div class="sns-apply-box">
       <h2 class="apply-heading">1. Twitter/Instagramで参加</h2>
       <p class="description">
-        Twitter/Instagramで、 ① ハッシュタグ「#都市文化祭2022」「#たたとし」②
-        撮影場所 ③コメント（任意）
+        Twitter/Instagramで、<br />
+        ① ハッシュタグ「#都市文化祭2022」「#たたとし」② 撮影場所
+        ③コメント（任意）
         をつけて投稿すると、都市文化祭ホームページに写真が掲載されます。<br />
         <span>
           ※アカウント名がニックネームとして掲載されます。あらかじめご了承ください。</span
@@ -62,6 +63,10 @@ export default {
   color: $black;
   font-size: 20px;
   font-weight: 600;
+
+  @include mq() {
+    font-size: 24px;
+  }
 }
 
 .sns-apply-box,
@@ -70,6 +75,14 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  @include mq() {
+    gap: 16px;
+  }
+}
+
+.form-apply-box {
+  grid-row: 3;
 }
 
 .description {
@@ -78,11 +91,28 @@ export default {
   span {
     color: $primary;
   }
+
+  @include mq() {
+    font-size: 18px;
+    line-height: 1.6;
+  }
 }
 
 .google-form-button {
   grid-column: 1 / 3;
   padding: 8px 32px;
   margin-top: 4px;
+
+  @include mq() {
+    padding: 10px 48px;
+  }
+
+  @include mq(lg) {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: center;
+    justify-self: end;
+    margin: 0;
+  }
 }
 </style>
