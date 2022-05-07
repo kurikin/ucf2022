@@ -1039,3 +1039,79 @@ t=2022-05-06T14:55:13+0900 lvl=eror msg="session closed, starting reconnect loop
 t=2022-05-06T14:55:13+0900 lvl=info msg="tunnel session started" obj=tunnels.session
 t=2022-05-06T14:55:13+0900 lvl=info msg="client session established" obj=csess id=a476b475cb92
 t=2022-05-06T14:55:28+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=21c5ce3f70c5 clientid=43f600978075748b42662caa7aad91da
+t=2022-05-06T17:56:44+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=a476b475cb92 err="read tcp 100.67.222.112:51280->52.196.202.158:443: read: connection reset by peer"
+t=2022-05-06T17:56:45+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-06T17:56:45+0900 lvl=info msg="client session established" obj=csess id=a476b475cb92
+t=2022-05-06T17:56:59+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=f0607a254a32 clientid=43f600978075748b42662caa7aad91da
+t=2022-05-06T18:10:52+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=0472bec91009 clientid=43f600978075748b42662caa7aad91da
+t=2022-05-06T18:10:52+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=a476b475cb92 err="session closed"
+t=2022-05-06T18:10:52+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-06T18:10:52+0900 lvl=info msg="client session established" obj=csess id=a476b475cb92
+t=2022-05-06T19:01:13+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=a476b475cb92 err="read tcp 100.67.222.112:57816->52.196.202.158:443: read: connection reset by peer"
+t=2022-05-06T19:01:14+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-06T19:01:14+0900 lvl=info msg="client session established" obj=csess id=a476b475cb92
+t=2022-05-06T19:01:29+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=4ba02e5f0bb8 clientid=43f600978075748b42662caa7aad91da
+t=2022-05-06T19:48:12+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=a476b475cb92 err="read tcp 100.67.222.112:58079->18.177.129.29:443: read: connection reset by peer"
+t=2022-05-06T19:48:13+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-06T19:48:13+0900 lvl=info msg="client session established" obj=csess id=a476b475cb92
+t=2022-05-06T19:48:27+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=7f9eaf73e107 clientid=43f600978075748b42662caa7aad91da
+t=2022-05-07T01:52:06+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=a476b475cb92 err="read tcp 100.67.222.112:58521->18.177.245.43:443: read: connection reset by peer"
+t=2022-05-07T01:52:06+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-07T01:52:06+0900 lvl=info msg="client session established" obj=csess id=a476b475cb92
+t=2022-05-07T03:52:15+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=a476b475cb92 err="read tcp 100.67.222.112:55559->52.196.202.158:443: read: connection reset by peer"
+t=2022-05-07T03:52:15+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-07T03:52:15+0900 lvl=info msg="client session established" obj=csess id=a476b475cb92
+t=2022-05-07T03:52:19+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=eed6dbac4714 clientid=43f600978075748b42662caa7aad91da
+t=2022-05-07T05:33:01+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=a476b475cb92 err="read tcp 100.67.222.112:55571->13.112.247.114:443: read: connection reset by peer"
+t=2022-05-07T05:33:01+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-07T05:33:01+0900 lvl=info msg="client session established" obj=csess id=a476b475cb92
+t=2022-05-07T05:33:06+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=95e9b35d5706 clientid=43f600978075748b42662caa7aad91da
+t=2022-05-07T07:33:09+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=a476b475cb92 err="read tcp 100.67.222.112:55597->52.196.202.158:443: read: connection reset by peer"
+t=2022-05-07T07:33:09+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-07T07:33:09+0900 lvl=info msg="client session established" obj=csess id=a476b475cb92
+t=2022-05-07T08:15:57+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=a3f838048369 clientid=43f600978075748b42662caa7aad91da
+t=2022-05-07T08:16:02+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=a476b475cb92 err="read tcp 100.67.222.112:55622->54.178.247.185:443: read: connection reset by peer"
+t=2022-05-07T08:16:02+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-07T08:16:02+0900 lvl=info msg="client session established" obj=csess id=a476b475cb92
+t=2022-05-07T08:28:33+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=909a68d7eeb9 clientid=43f600978075748b42662caa7aad91da
+t=2022-05-07T08:28:39+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=a476b475cb92 err="read tcp 100.67.222.112:55648->13.112.247.114:443: read: connection reset by peer"
+t=2022-05-07T08:28:39+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-07T08:28:39+0900 lvl=info msg="client session established" obj=csess id=a476b475cb92
+t=2022-05-07T08:30:36+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=0279d2951434 clientid=43f600978075748b42662caa7aad91da
+t=2022-05-07T08:30:39+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=a476b475cb92 err="read EOF from remote peer"
+t=2022-05-07T08:30:39+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-07T08:30:39+0900 lvl=info msg="client session established" obj=csess id=a476b475cb92
+t=2022-05-07T09:44:45+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=6acdc14d19f2 clientid=43f600978075748b42662caa7aad91da
+t=2022-05-07T09:44:48+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=a476b475cb92 err="read tcp 100.67.222.112:55674->18.177.245.43:443: read: connection reset by peer"
+t=2022-05-07T09:44:48+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-07T09:44:48+0900 lvl=info msg="client session established" obj=csess id=a476b475cb92
+t=2022-05-07T09:44:55+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=f0eb8dd0bebf clientid=43f600978075748b42662caa7aad91da
+t=2022-05-07T09:45:03+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=b935afd811f8 clientid=43f600978075748b42662caa7aad91da
+t=2022-05-07T10:48:48+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=397232fca06d clientid=43f600978075748b42662caa7aad91da
+t=2022-05-07T10:48:48+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=a476b475cb92 err="session closed"
+t=2022-05-07T10:48:48+0900 lvl=eror msg="failed to reconnect session" obj=csess id=a476b475cb92 err="dial tcp: lookup tunnel.jp.ngrok.com on [::1]:53: read udp [::1]:57711->[::1]:53: read: connection refused"
+t=2022-05-07T10:48:48+0900 lvl=eror msg="failed to reconnect session" obj=csess id=a476b475cb92 err="dial tcp: lookup tunnel.jp.ngrok.com on [::1]:53: read udp [::1]:52489->[::1]:53: read: connection refused"
+t=2022-05-07T10:48:49+0900 lvl=eror msg="failed to reconnect session" obj=csess id=a476b475cb92 err="Get \"https://dns.google.com/resolve?cd=true&name=tunnel.jp.ngrok.com&type=AAAA\": dial tcp: lookup dns.google.com on [::1]:53: read udp [::1]:60425->[::1]:53: read: connection refused"
+t=2022-05-07T10:48:50+0900 lvl=eror msg="failed to reconnect session" obj=csess id=a476b475cb92 err="Get \"https://s3.amazonaws.com/dns.ngrok.com/tunnel.json\": dial tcp: lookup s3.amazonaws.com on [::1]:53: read udp [::1]:59267->[::1]:53: read: connection refused"
+t=2022-05-07T10:48:52+0900 lvl=eror msg="failed to reconnect session" obj=csess id=a476b475cb92 err="resolved tunnel.jp.ngrok.com has no records"
+t=2022-05-07T10:48:55+0900 lvl=eror msg="failed to reconnect session" obj=csess id=a476b475cb92 err="dial tcp: lookup tunnel.jp.ngrok.com on [::1]:53: read udp [::1]:62509->[::1]:53: read: connection refused"
+t=2022-05-07T10:49:00+0900 lvl=eror msg="failed to reconnect session" obj=csess id=a476b475cb92 err="Get \"https://dns.google.com/resolve?cd=true&name=tunnel.jp.ngrok.com&type=AAAA\": dial tcp: lookup dns.google.com on [::1]:53: read udp [::1]:59808->[::1]:53: read: connection refused"
+t=2022-05-07T10:54:30+0900 lvl=eror msg="failed to reconnect session" obj=csess id=a476b475cb92 err="Get \"https://s3.amazonaws.com/dns.ngrok.com/tunnel.json\": dial tcp: lookup s3.amazonaws.com on [::1]:53: read udp [::1]:62920->[::1]:53: read: connection refused"
+t=2022-05-07T10:54:40+0900 lvl=eror msg="failed to reconnect session" obj=csess id=a476b475cb92 err="resolved tunnel.jp.ngrok.com has no records"
+t=2022-05-07T10:54:54+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-07T10:54:55+0900 lvl=info msg="client session established" obj=csess id=a476b475cb92
+t=2022-05-07T11:00:59+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=60e34ab8054d clientid=43f600978075748b42662caa7aad91da
+t=2022-05-07T11:00:59+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=a476b475cb92 err="session closed"
+t=2022-05-07T11:00:59+0900 lvl=eror msg="failed to reconnect session" obj=csess id=a476b475cb92 err="dial tcp: lookup tunnel.jp.ngrok.com on [::1]:53: read udp [::1]:54156->[::1]:53: read: connection refused"
+t=2022-05-07T11:01:00+0900 lvl=eror msg="failed to reconnect session" obj=csess id=a476b475cb92 err="dial tcp: lookup tunnel.jp.ngrok.com on [::1]:53: read udp [::1]:65401->[::1]:53: read: connection refused"
+t=2022-05-07T11:01:01+0900 lvl=eror msg="failed to reconnect session" obj=csess id=a476b475cb92 err="Get \"https://dns.google.com/resolve?cd=true&name=tunnel.jp.ngrok.com&type=AAAA\": dial tcp: lookup dns.google.com on [::1]:53: read udp [::1]:49833->[::1]:53: read: connection refused"
+t=2022-05-07T11:01:02+0900 lvl=eror msg="failed to reconnect session" obj=csess id=a476b475cb92 err="Get \"https://s3.amazonaws.com/dns.ngrok.com/tunnel.json\": dial tcp: lookup s3.amazonaws.com on [::1]:53: read udp [::1]:63808->[::1]:53: read: connection refused"
+t=2022-05-07T11:01:03+0900 lvl=eror msg="failed to reconnect session" obj=csess id=a476b475cb92 err="resolved tunnel.jp.ngrok.com has no records"
+t=2022-05-07T11:01:05+0900 lvl=eror msg="failed to reconnect session" obj=csess id=a476b475cb92 err="dial tcp: lookup tunnel.jp.ngrok.com on [::1]:53: read udp [::1]:58002->[::1]:53: read: connection refused"
+t=2022-05-07T11:01:09+0900 lvl=eror msg="failed to reconnect session" obj=csess id=a476b475cb92 err="Get \"https://dns.google.com/resolve?cd=true&name=tunnel.jp.ngrok.com&type=A\": dial tcp: lookup dns.google.com on [::1]:53: read udp [::1]:56241->[::1]:53: read: connection refused"
+t=2022-05-07T11:35:28+0900 lvl=eror msg="failed to reconnect session" obj=csess id=a476b475cb92 err="Get \"https://s3.amazonaws.com/dns.ngrok.com/tunnel.json\": dial tcp: lookup s3.amazonaws.com on [::1]:53: read udp [::1]:55114->[::1]:53: read: connection refused"
+t=2022-05-07T11:35:35+0900 lvl=eror msg="failed to reconnect session" obj=csess id=a476b475cb92 err="resolved tunnel.jp.ngrok.com has no records"
+t=2022-05-07T11:35:45+0900 lvl=eror msg="failed to reconnect session" obj=csess id=a476b475cb92 err="dial tcp: lookup tunnel.jp.ngrok.com on [::1]:53: read udp [::1]:59746->[::1]:53: read: connection refused"
+t=2022-05-07T11:35:57+0900 lvl=eror msg="failed to reconnect session" obj=csess id=a476b475cb92 err="dial tcp: lookup tunnel.jp.ngrok.com on [::1]:53: read udp [::1]:56933->[::1]:53: read: connection refused"
+t=2022-05-07T11:36:14+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-07T11:36:14+0900 lvl=info msg="client session established" obj=csess id=a476b475cb92

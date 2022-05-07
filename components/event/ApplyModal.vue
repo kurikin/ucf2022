@@ -1,9 +1,27 @@
 <template>
   <BaseModal :modalOpen="modalOpen">
+    <h1 class="modal-title">参加方法</h1>
     <button class="close-modal-button" @click="closeApplyModal">
       <span class="close-text">閉じる</span
-      ><img class="close-icon" src="/close.svg" alt="" /></button
-  ></BaseModal>
+      ><img class="close-icon" src="/close.svg" alt="" />
+    </button>
+    <div class="sns-apply-box">
+      <h2 class="apply-heading">1. Twitter/Instagramで参加</h2>
+      <p class="description">
+        Twitter/Instagramで、 ① ハッシュタグ「#都市文化祭2022」「#たたとし」②
+        撮影場所 ③コメント（任意）
+        をつけて投稿すると、都市文化祭ホームページに写真が掲載されます。<br />
+        <span>
+          ※アカウント名がニックネームとして掲載されます。あらかじめご了承ください。</span
+        >
+      </p>
+    </div>
+    <div class="form-apply-box">
+      <h2 class="apply-heading">2. Googleフォームで参加</h2>
+      <p class="description">参加用Googleフォームからも写真を投稿できます。</p>
+    </div>
+    <button class="primary-button google-form-button">Googleフォーム</button>
+  </BaseModal>
 </template>
 
 <script>
@@ -25,4 +43,46 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.modal-title {
+  color: $black;
+  letter-spacing: 2px;
+  font-size: 30px;
+  font-weight: 500;
+  grid-row: 1;
+
+  @include mq() {
+    font-size: 36px;
+    letter-spacing: 5px;
+  }
+}
+
+.apply-heading {
+  font-family: 'Zen Kaku Gothic New';
+  color: $black;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.sns-apply-box,
+.form-apply-box {
+  grid-column: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.description {
+  font-size: 16px;
+
+  span {
+    color: $primary;
+  }
+}
+
+.google-form-button {
+  grid-column: 1 / 3;
+  padding: 8px 32px;
+  margin-top: 4px;
+}
+</style>

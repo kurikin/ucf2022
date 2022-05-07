@@ -48,7 +48,6 @@ export default {
     width: 80%;
     gap: 24px;
     height: auto;
-    display: grid;
     padding: 24px;
     align-items: start;
     grid-template-columns: 1fr auto;

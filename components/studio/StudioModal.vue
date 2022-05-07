@@ -50,6 +50,7 @@ export default {
   font-weight: 500;
 
   @include mq() {
+    letter-spacing: 5px;
     font-size: 36px;
   }
 }

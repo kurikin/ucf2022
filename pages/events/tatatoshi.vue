@@ -76,7 +76,6 @@ export default {
       },
     })
 
-    console.log(images)
     return images
   },
 }
