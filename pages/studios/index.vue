@@ -24,12 +24,14 @@
       />
     </div>
     <AnalyzeButton class="margin-bottom" />
-    <StudioModal
-      v-show="modalOpen"
-      @closeModal="closeModal"
-      :studioData="modalData"
-      :modalOpen="modalOpen"
-    />
+    <transition name="component-fade">
+      <StudioModal
+        v-show="modalOpen"
+        @closeModal="closeModal"
+        :studioData="modalData"
+        :modalOpen="modalOpen"
+      />
+    </transition>
     <Footer />
   </div>
 </template>

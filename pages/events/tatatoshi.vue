@@ -18,17 +18,21 @@
     <ImageGallery :contents="contents" @showImageModal="showImageModal" />
 
     <!-- モーダル -->
-    <ImageModal
-      v-if="imageModalOpen"
-      :modalOpen="imageModalOpen"
-      :imageModalData="imageModalData"
-      @closeImageModal="closeImageModal"
-    />
-    <ApplyModal
-      v-show="applyModalOpen"
-      :modalOpen="applyModalOpen"
-      @closeApplyModal="closeApplyModal"
-    />
+    <transition name="component-fade">
+      <ImageModal
+        v-if="imageModalOpen"
+        :modalOpen="imageModalOpen"
+        :imageModalData="imageModalData"
+        @closeImageModal="closeImageModal"
+      />
+    </transition>
+    <transition name="component-fade">
+      <ApplyModal
+        v-show="applyModalOpen"
+        :modalOpen="applyModalOpen"
+        @closeApplyModal="closeApplyModal"
+      />
+    </transition>
     <Footer />
   </div>
 </template>
