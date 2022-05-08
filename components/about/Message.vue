@@ -1,12 +1,13 @@
 <template>
   <section class="message container">
-    <h1 class="message-title">都市に生きる全ての人へ</h1>
-    <div class="leader-info-box">
+    <div class="message-header">
+      <h1 class="message-title">都市に生きる全ての人へ</h1>
       <p class="position">
         都市科学部 都市社会共生学科3年<br />
         都市文化祭2022実行委員長
       </p>
       <p class="name">池田瑞季</p>
+      <img class="portrait show-over-xs" src="/portraits/ikeda2.png" alt="" />
     </div>
     <div class="message-container">
       <p class="text">
@@ -31,6 +32,11 @@ export default {}
   text-align: left;
   margin-bottom: 16px;
   font-weight: 500;
+  grid-row: 1;
+
+  @include mq(xs) {
+    grid-column: 1 / -1;
+  }
 
   @include mq(sm) {
     font-size: 44px;
@@ -44,18 +50,23 @@ export default {}
   }
 }
 
-.leader-info-box {
+.message-header {
   color: $white;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 4px;
 
-  @include mq(sm) {
+  @include mq(xs) {
+    grid-template-columns: 1fr auto;
+    align-items: flex-start;
     gap: 8px;
   }
 
   .position {
     font-size: 16px;
+
+    @include mq(xs) {
+      grid-column: 1;
+    }
 
     @include mq(sm) {
       font-size: 18px;
@@ -69,6 +80,10 @@ export default {}
   .name {
     font-size: 24px;
 
+    @include mq(xs) {
+      grid-column: 1;
+    }
+
     @include mq(sm) {
       font-size: 30px;
     }
@@ -79,8 +94,28 @@ export default {}
   }
 }
 
+.portrait {
+  height: 100px;
+  grid-row: 2 / 4;
+  grid-column: 2;
+
+  @include mq(sm) {
+    height: 120px;
+  }
+
+  @include mq() {
+    height: 150px;
+  }
+
+  @include mq(lg) {
+    height: 240px;
+    grid-row: 1 / 4;
+  }
+}
+
 .message-container {
   margin-top: 24px;
+  margin-bottom: 32px;
   background-color: $white;
   padding: 24px;
   border-radius: $radius-xs;
@@ -88,17 +123,20 @@ export default {}
   @include mq(sm) {
     padding: 32px;
     margin-top: 32px;
+    margin-bottom: 48px;
     border-radius: $radius-sm;
   }
 
   @include mq() {
     padding: 48px;
     margin-top: 48px;
+    margin-bottom: 64px;
     border-radius: $radius-md;
   }
 
   @include mq(lg) {
     margin-top: 64px;
+    margin-bottom: 96px;
     padding: 80px;
   }
 

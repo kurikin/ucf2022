@@ -8,13 +8,15 @@
         ​まだ見ぬ世界に出会えるかも…！？</template
       >
     </WhiteHeader>
+    <Footer />
   </div>
 </template>
 
 <script>
 import WhiteHeader from '../../components/WhiteHeader.vue'
+import Footer from '~/components/Footer.vue'
 export default {
-  components: { WhiteHeader },
+  components: { WhiteHeader, Footer },
 }
 </script>
 

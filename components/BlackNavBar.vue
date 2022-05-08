@@ -57,7 +57,7 @@ export default {
         return
       }
 
-      if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 20) {
+      if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 15) {
         return
       }
 
