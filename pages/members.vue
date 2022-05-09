@@ -119,7 +119,7 @@ export default {
   }
 
   @include mq() {
-    gap: 64px;
+    gap: 48px;
   }
 }
 
@@ -129,12 +129,12 @@ export default {
 
   @include mq(sm) {
     width: 130px;
-    height: auto;
+    height: 130px;
   }
 
   @include mq() {
     width: 150px;
-    height: auto;
+    height: 150px;
   }
 }
 
@@ -142,6 +142,10 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 8px;
+
+  @include mq() {
+    gap: 16px;
+  }
 }
 
 .members-box {
