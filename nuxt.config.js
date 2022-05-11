@@ -51,6 +51,7 @@ export default {
       'nuxt-lazy-load',
       {
         defaultImage: '/comingsoon.jpeg',
+        directiveOnly: true,
       },
     ],
   ],

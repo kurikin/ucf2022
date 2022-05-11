@@ -8,6 +8,7 @@
         :src="content.image.url"
         :key="content.id"
         alt=""
+        v-lazy-load
       />
     </div>
   </div>
