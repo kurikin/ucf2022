@@ -2,7 +2,7 @@
   <div class="black">
     <HomeHeader />
     <HomeNavBar />
-    <News :contents="this.contents" />
+    <News class="fadeIn" :contents="this.contents" />
     <Pickup />
     <Footer />
   </div>
@@ -30,4 +30,11 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.fadeIn {
+  animation-name: fadeInAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+</style>
