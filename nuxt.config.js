@@ -25,7 +25,11 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['~/assets/scss/common.scss'],
+  css: [
+    '~/assets/scss/common.scss',
+    '~/assets/scss/animations.scss',
+    '~/assets/scss/keyframes.scss',
+  ],
 
   // Disable progress bar
   loading: false,

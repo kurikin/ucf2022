@@ -1,5 +1,5 @@
 <template>
-  <header class="home-header">
+  <header class="home-header fadeUp">
     <Hamburger :baseColor="'white'" />
     <div class="container grid">
       <!-- サイドメニュー ( md 以下の端末のみ ) -->
