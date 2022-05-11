@@ -1,6 +1,7 @@
 .fadeIn {
   animation-name: fadeInAnime;
-  animation-duration: 3s;
+  animation-timing-function: ease-out;
+  animation-duration: 0.8s;
   animation-fill-mode: forwards;
   opacity: 0;
 }

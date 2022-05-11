@@ -1,11 +1,11 @@
 <template>
-  <header class="home-header fadeUp">
+  <header class="home-header">
     <Hamburger :baseColor="'white'" />
     <div class="container grid">
       <!-- サイドメニュー ( md 以下の端末のみ ) -->
-      <img class="logo" src="logo.png" alt="" />
+      <img class="logo fadeIn" src="logo.png" alt="" />
       <!-- SNS メニュー ( md 以上の端末で表示 ) -->
-      <div class="sns">
+      <div class="sns fadeIn">
         <a
           class="sns-link"
           href="https://twitter.com/cus_ucf_oc"
@@ -24,7 +24,7 @@
           <img class="sns-logo" src="note.svg" alt="" />
         </a>
       </div>
-      <div class="description">
+      <div class="description fadeIn">
         <p class="date">
           <span>2022</span>年<span> 6</span>月<span> 26</span>日（日）
         </p>
@@ -68,6 +68,17 @@ export default {}
   object-fit: contain;
   justify-self: center;
   margin-top: 24px;
+
+  &.fadeIn {
+    animation-delay: 0;
+  }
+}
+
+.sns,
+.description {
+  &.fadeIn {
+    animation-delay: 0.5s;
+  }
 }
 
 .sns {

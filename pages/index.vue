@@ -2,7 +2,7 @@
   <div class="black">
     <HomeHeader />
     <HomeNavBar />
-    <News class="fadeIn" :contents="this.contents" />
+    <News :contents="this.contents" />
     <Pickup />
     <Footer />
   </div>
