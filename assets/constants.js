@@ -403,3 +403,5 @@ export const members = [
     members: [],
   },
 ]
+
+export const studioAnalyze = [{}]

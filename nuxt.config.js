@@ -27,6 +27,9 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['~/assets/scss/common.scss'],
 
+  // Disable progress bar
+  loading: false,
+
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '@/plugins/swiper', ssr: false },
@@ -40,7 +43,17 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: ['nuxt-microcms-module'],
 
-  modules: ['@nuxtjs/axios', '@nuxtjs/style-resources', '@nuxtjs/date-fns'],
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/style-resources',
+    '@nuxtjs/date-fns',
+    [
+      'nuxt-lazy-load',
+      {
+        defaultImage: '/comingsoon.jpeg',
+      },
+    ],
+  ],
 
   styleResources: {
     scss: ['~/assets/scss/_variables.scss', '~/assets/scss/_mixin.scss'],
