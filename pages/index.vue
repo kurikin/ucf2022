@@ -1,6 +1,6 @@
 <template>
   <div class="black">
-    <Splash v-if="showSplash" />
+    <Splash v-if="showSplash && firstLoad" />
     <div v-else class="content">
       <HomeHeader />
       <HomeNavBar />
@@ -16,6 +16,7 @@ import HomeHeader from '~/components/home/HomeHeader.vue'
 import News from '~/components/home/News.vue'
 import Pickup from '~/components/home/Pickup.vue'
 import Splash from '~/components/Splash.vue'
+import { mapGetters, mapMutations } from 'vuex'
 
 export default {
   name: 'IndexPage',
@@ -25,15 +26,24 @@ export default {
     Pickup,
     Splash,
   },
+
   data() {
     return {
       showSplash: true,
     }
   },
+  computed: {
+    ...mapGetters(['firstLoad']),
+  },
   mounted() {
     setTimeout(() => {
       this.showSplash = false
+      console.log(this.firstLoad)
+      this.toggleFirstLoad()
     }, 1500)
+  },
+  methods: {
+    ...mapMutations(['toggleFirstLoad']),
   },
   async asyncData({ $microcms }) {
     const data = await $microcms.get({

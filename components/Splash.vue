@@ -5,7 +5,11 @@
 </template>
 
 <script>
-export default {}
+export default {
+  beforeDestroy() {
+    console.log('before destroy')
+  },
+}
 </script>
 
 <style lang="scss" scoped>
