@@ -1,5 +1,5 @@
 <template>
-  <section class="pickup container">
+  <section class="pickup container fadeUp">
     <h2 class="heading">ピックアップ企画</h2>
     <ul class="pickup-list">
       <li class="list-item">
@@ -34,6 +34,10 @@ export default {
 .pickup {
   text-align: center;
   margin-bottom: 64px;
+
+  &.fadeUp {
+    animation-delay: 0.5s;
+  }
 }
 
 .heading {

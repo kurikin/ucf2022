@@ -1,11 +1,22 @@
 <template>
-  <div class="background">
+  <div class="background" v-if="showSplash">
     <img class="splash" src="/splash.gif" alt="" />
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      showSplash: true,
+    }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.showSplash = false
+    }, 2000)
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -16,6 +27,7 @@ export default {}
   align-items: center;
   justify-content: center;
   background-color: $black;
+  z-index: 100;
 }
 
 .splash {

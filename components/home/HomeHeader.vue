@@ -74,15 +74,12 @@ export default {}
   }
 }
 
-.sns,
-.description {
-  &.fadeIn {
-    animation-delay: 0.5s;
-  }
-}
-
 .sns {
   display: none;
+
+  &.fadeIn {
+    animation-delay: 0.3s;
+  }
 }
 
 .description {
@@ -90,6 +87,10 @@ export default {}
   gap: 8px;
   font-size: 18px;
   color: $white;
+
+  &.fadeIn {
+    animation-delay: 0.6s;
+  }
 
   .date span {
     font-size: 30px;

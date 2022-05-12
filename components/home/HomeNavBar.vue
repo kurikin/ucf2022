@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <nav class="home-nav-bar">
+    <nav class="home-nav-bar fadeIn">
       <ul class="nav-list">
         <li class="list-item">
           <nuxt-link class="nav-link" to="/">ホーム</nuxt-link>
@@ -37,6 +37,11 @@ export default {}
   margin-bottom: 80px;
   border-radius: $radius-xs;
   height: 65px;
+
+  .fadeIn {
+    animation-delay: 0.5s;
+    animation-duration: 1.2s;
+  }
 
   @include mq(md) {
     display: flex;

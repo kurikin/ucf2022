@@ -1,5 +1,6 @@
 <template>
   <div class="black">
+    <Splash />
     <HomeHeader />
     <HomeNavBar />
     <News :contents="this.contents" />
@@ -12,6 +13,7 @@
 import HomeHeader from '~/components/home/HomeHeader.vue'
 import News from '~/components/home/News.vue'
 import Pickup from '~/components/home/Pickup.vue'
+import Splash from '~/components/Splash.vue'
 
 export default {
   name: 'IndexPage',
@@ -19,6 +21,7 @@ export default {
     HomeHeader,
     News,
     Pickup,
+    Splash,
   },
   async asyncData({ $microcms }) {
     const data = await $microcms.get({
