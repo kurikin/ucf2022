@@ -38,15 +38,14 @@ export default {}
   border-radius: $radius-xs;
   height: 65px;
 
-  .fadeIn {
-    animation-delay: 0.5s;
-    animation-duration: 1.2s;
-  }
-
   @include mq(md) {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  &.fadeIn {
+    animation-delay: 0.5s;
   }
 }
 

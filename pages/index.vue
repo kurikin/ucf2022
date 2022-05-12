@@ -1,11 +1,13 @@
 <template>
   <div class="black">
-    <Splash />
-    <HomeHeader />
-    <HomeNavBar />
-    <News :contents="this.contents" />
-    <Pickup />
-    <Footer />
+    <Splash v-if="showSplash" />
+    <div v-else class="content">
+      <HomeHeader />
+      <HomeNavBar />
+      <News :contents="this.contents" />
+      <Pickup />
+      <Footer />
+    </div>
   </div>
 </template>
 
@@ -22,6 +24,16 @@ export default {
     News,
     Pickup,
     Splash,
+  },
+  data() {
+    return {
+      showSplash: true,
+    }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.showSplash = false
+    }, 1500)
   },
   async asyncData({ $microcms }) {
     const data = await $microcms.get({

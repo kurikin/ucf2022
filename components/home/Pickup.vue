@@ -34,10 +34,6 @@ export default {
 .pickup {
   text-align: center;
   margin-bottom: 64px;
-
-  &.fadeUp {
-    animation-delay: 0.5s;
-  }
 }
 
 .heading {

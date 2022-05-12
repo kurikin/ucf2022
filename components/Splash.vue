@@ -1,22 +1,11 @@
 <template>
-  <div class="background" v-if="showSplash">
+  <div class="background">
     <img class="splash" src="/splash.gif" alt="" />
   </div>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      showSplash: true,
-    }
-  },
-  mounted() {
-    setTimeout(() => {
-      this.showSplash = false
-    }, 2000)
-  },
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>

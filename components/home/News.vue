@@ -25,8 +25,8 @@ export default {
   text-align: center;
   margin-bottom: 80px;
 
-  .fadeUp {
-    animation-delay: 0.3s;
+  &.fadeUp {
+    animation-delay: 0.6s;
   }
 }
 

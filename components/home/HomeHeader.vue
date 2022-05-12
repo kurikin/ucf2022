@@ -70,16 +70,19 @@ export default {}
   margin-top: 24px;
 
   &.fadeIn {
-    animation-delay: 0;
+    animation-delay: 0s;
+  }
+}
+
+.sns,
+.description {
+  &.fadeIn {
+    animation-delay: 0.3s;
   }
 }
 
 .sns {
   display: none;
-
-  &.fadeIn {
-    animation-delay: 0.3s;
-  }
 }
 
 .description {
@@ -87,10 +90,6 @@ export default {}
   gap: 8px;
   font-size: 18px;
   color: $white;
-
-  &.fadeIn {
-    animation-delay: 0.6s;
-  }
 
   .date span {
     font-size: 30px;
