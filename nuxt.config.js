@@ -18,7 +18,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
       {
-        rel: 'preconnect',
+        rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Zen+Antique&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap',
       },
     ],
