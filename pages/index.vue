@@ -26,7 +26,6 @@ export default {
     Pickup,
     Splash,
   },
-
   data() {
     return {
       showSplash: true,
@@ -38,7 +37,6 @@ export default {
   mounted() {
     setTimeout(() => {
       this.showSplash = false
-      console.log(this.firstLoad)
       this.toggleFirstLoad()
     }, 1500)
   },

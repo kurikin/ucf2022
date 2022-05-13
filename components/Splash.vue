@@ -1,13 +1,19 @@
 <template>
   <div class="background">
-    <img class="splash" src="/splash.gif" alt="" />
+    <img class="splash" :src="'/splash.gif?' + unixTime()" alt="" />
+    <!-- <video autoplay class="splash">
+      <source src="/splash.mp4" type="video/mp4" />
+      <source src="/splash.webm" type="video/webm" />
+    </video> -->
   </div>
 </template>
 
 <script>
 export default {
-  beforeDestroy() {
-    console.log('before destroy')
+  methods: {
+    unixTime() {
+      return new Date().getTime()
+    },
   },
 }
 </script>
@@ -25,7 +31,7 @@ export default {
 
 .splash {
   display: block;
-  width: 300px;
-  height: 300px;
+  width: 180px;
+  height: 180px;
 }
 </style>

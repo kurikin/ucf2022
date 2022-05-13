@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <nav class="home-nav-bar fadeIn">
+    <nav class="home-nav-bar fadeIn animation-3">
       <ul class="nav-list">
         <li class="list-item">
           <nuxt-link class="nav-link" to="/">ホーム</nuxt-link>
@@ -42,10 +42,6 @@ export default {}
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-
-  &.fadeIn {
-    animation-delay: 0.5s;
   }
 }
 

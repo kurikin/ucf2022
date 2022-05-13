@@ -1,3 +1,29 @@
+// アニメーションの遅延
+.animation-1 {
+  animation-delay: calc(0 * $animation-interval);
+}
+
+.animation-2 {
+  animation-delay: calc(1 * $animation-interval);
+}
+
+.animation-3 {
+  animation-delay: calc(2 * $animation-interval);
+}
+
+.animation-4 {
+  animation-delay: calc(3 * $animation-interval);
+}
+
+.animation-5 {
+  animation-delay: calc(4 * $animation-interval);
+}
+
+.animation-6 {
+  animation-delay: calc(5 * $animation-interval);
+}
+
+// アニメーション
 .fadeIn {
   animation-name: fadeInAnime;
   animation-timing-function: ease-out;

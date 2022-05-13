@@ -1,5 +1,5 @@
 <template>
-  <section class="pickup container fadeUp">
+  <section class="pickup container fadeUp animation-5">
     <h2 class="heading">ピックアップ企画</h2>
     <ul class="pickup-list">
       <li class="list-item">

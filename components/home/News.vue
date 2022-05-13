@@ -1,5 +1,5 @@
 <template>
-  <section class="news container fadeUp">
+  <section class="news container fadeUp animation-4">
     <h2 class="heading">新着情報</h2>
     <ul class="news-list">
       <li class="list-item" v-for="content in contents" :key="content.id">
@@ -24,10 +24,6 @@ export default {
 .news {
   text-align: center;
   margin-bottom: 80px;
-
-  &.fadeUp {
-    animation-delay: 0.6s;
-  }
 }
 
 .news-list {

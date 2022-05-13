@@ -3,9 +3,9 @@
     <Hamburger :baseColor="'white'" />
     <div class="container grid">
       <!-- サイドメニュー ( md 以下の端末のみ ) -->
-      <img class="logo fadeIn" src="logo.png" alt="" />
+      <img class="logo fadeIn animation-1" src="logo.png" alt="" />
       <!-- SNS メニュー ( md 以上の端末で表示 ) -->
-      <div class="sns fadeIn">
+      <div class="sns fadeIn animation-2">
         <a
           class="sns-link"
           href="https://twitter.com/cus_ucf_oc"
@@ -24,7 +24,7 @@
           <img class="sns-logo" src="note.svg" alt="" />
         </a>
       </div>
-      <div class="description fadeIn">
+      <div class="description fadeIn animation-2">
         <p class="date">
           <span>2022</span>年<span> 6</span>月<span> 26</span>日（日）
         </p>
@@ -64,21 +64,15 @@ export default {}
 
 .logo {
   width: 90%;
-  height: 90%;
+  height: auto;
+  display: block;
   object-fit: contain;
   justify-self: center;
   margin-top: 24px;
-
-  &.fadeIn {
-    animation-delay: 0s;
-  }
 }
 
 .sns,
 .description {
-  &.fadeIn {
-    animation-delay: 0.3s;
-  }
 }
 
 .sns {
@@ -124,6 +118,7 @@ export default {}
     grid-template-rows: auto 1fr;
     gap: 0;
   }
+
   .home-header {
     background: linear-gradient(
         to bottom,
@@ -132,6 +127,7 @@ export default {}
         hsla(200, 100%, 11%, 1) 100%
       ),
       url('/header-back.jpg');
+
     background-position: center;
     padding-top: 48px;
     padding-bottom: 48px;
@@ -139,7 +135,7 @@ export default {}
 
   .logo {
     width: 100%;
-    height: 100%;
+    height: auto;
     margin-top: 0;
     grid-row: 1 / -1;
     margin-bottom: 0;
