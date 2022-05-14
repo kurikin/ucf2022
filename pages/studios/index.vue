@@ -40,7 +40,7 @@
 import WhiteHeader from '@/components/WhiteHeader.vue'
 import AnalyzeButton from '@/components/studio/AnalyzeButton.vue'
 import StudioSlider from '~/components/studio/StudioSlider.vue'
-import { allStudios } from '@/assets/constants'
+import { allStudios } from '@/assets/constants/studio'
 import StudioModal from '~/components/studio/StudioModal.vue'
 
 export default {

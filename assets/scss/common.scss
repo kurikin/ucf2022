@@ -137,6 +137,7 @@ a {
   @include mq() {
     font-size: 44px;
     margin-bottom: 48px;
+    letter-spacing: 6px;
   }
 }
 

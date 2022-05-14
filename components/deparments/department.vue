@@ -3,7 +3,7 @@
     <h2 class="section-heading">都市社会共生学科</h2>
     <div class="grid">
       <div class="image-box">
-        <img class="department-img" src="/departments/tosyakyo.jpg" alt="" />
+        <img class="department-img" src="/departments/dep2.jpg" alt="" />
       </div>
 
       <p class="description">
@@ -31,34 +31,37 @@ export default {}
 
   @include mq() {
     grid-template-columns: 60fr 40fr;
+    grid-template-rows: auto auto;
     column-gap: 32px;
-    row-gap: 32px;
+    row-gap: 64px;
   }
 
   @include mq(lg) {
-    grid-template-columns: 70fr 30fr;
-    column-gap: 32px;
+    grid-template-columns: 65fr 35fr;
+    column-gap: 48px;
+    row-gap: 80px;
   }
 }
 
 .image-box {
   overflow: hidden;
   border-radius: $radius-sm;
-  max-height: 350px;
+  max-height: 300px;
 
   @include mq() {
     grid-column: 2;
     grid-row: 1 / 3;
     margin-bottom: 0;
 
-    max-height: fit-content;
-    overflow: hidden;
+    max-height: none;
+    height: 100%;
   }
 }
 
 .department-img {
   width: 100%;
   height: 100%;
+  object-position: 50% 40%;
   object-fit: cover;
 }
 
@@ -92,7 +95,8 @@ export default {}
     padding: 10px 24px;
   }
 
-  @include mq(md) {
+  @include mq() {
+    margin: 0;
     font-size: 20px;
     padding: 10px 48px;
     border-radius: 32px;
@@ -112,6 +116,7 @@ export default {}
     grid-column: 1;
     grid-row: 2;
     gap: 20px;
+    align-items: flex-start;
   }
 }
 

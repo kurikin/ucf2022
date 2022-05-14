@@ -27,5 +27,10 @@ export default { components: { Footer, Department } }
   height: 100px;
   background-color: $white;
   margin: 32px auto;
+
+  @include mq() {
+    height: 250px;
+    margin: 48px auto;
+  }
 }
 </style>

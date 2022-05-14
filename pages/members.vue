@@ -61,7 +61,7 @@
 <script>
 import WhiteHeader from '../components/WhiteHeader.vue'
 import Footer from '~/components/Footer.vue'
-import { members } from '~/assets/constants'
+import { members } from '~/assets/constants/member'
 
 export default {
   components: { WhiteHeader, Footer },
