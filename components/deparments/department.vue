@@ -2,11 +2,13 @@
   <div class="department container">
     <h2 class="section-heading">都市社会共生学科</h2>
     <div class="grid">
-      <img class="department-img" src="/departments/tosyakyo.jpg" alt="" />
+      <div class="image-box">
+        <img class="department-img" src="/departments/tosyakyo.jpg" alt="" />
+      </div>
 
       <p class="description">
-        現代都市に暮らす人々の生活を支える社会基盤施設の計画から維持管理まで、構造、海岸・水圏環境、地盤工学と地盤環境、交通と都市、コンクリートの５つの研究分野を軸に学んでいく学科です。<br />
-        都市基盤に係る技術やデザイン、政策決定、マネジメントなどの専門教育も展開し、近年必要とされている防災・国際・環境といった観点を取り入れながら、安全安心で靭性の高い都市・バランスのとれた持続的発展・国際的な技術協力支援・今日的グローバル課題の解決などの実現に主導的に貢献できる人材を育成します。
+        現代社会において、多様性が重要であることは誰もが認めますが、その実現は困難を極めることも事実です。これは議論レベルの話ではなく、どんな場所でも、人々が衝突や葛藤を繰り返しながら共生の試みようとしています。<br />
+        都市社会共生学科ではこの問題に対して、都市社会というフィールドで、人文知を用いて共生の可能性を挑んでいます。それは都市から始まり、世界へと続く学びだと考えています。
       </p>
       <div class="button-box">
         <button class="base-button button--secondary">スタジオ診断</button>
@@ -25,12 +27,39 @@ export default {}
 <style lang="scss" scoped>
 .grid {
   display: grid;
+  row-gap: 24px;
+
+  @include mq() {
+    grid-template-columns: 60fr 40fr;
+    column-gap: 32px;
+    row-gap: 32px;
+  }
+
+  @include mq(lg) {
+    grid-template-columns: 70fr 30fr;
+    column-gap: 32px;
+  }
+}
+
+.image-box {
+  overflow: hidden;
+  border-radius: $radius-sm;
+  max-height: 350px;
+
+  @include mq() {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    margin-bottom: 0;
+
+    max-height: fit-content;
+    overflow: hidden;
+  }
 }
 
 .department-img {
   width: 100%;
-  border-radius: $radius-sm;
-  margin-bottom: 24px;
+  height: 100%;
+  object-fit: cover;
 }
 
 .description {
@@ -38,8 +67,13 @@ export default {}
   font-size: 16px;
   line-height: 1.6;
 
-  @include mq() {
+  @include mq(sm) {
     font-size: 18px;
+  }
+
+  @include mq() {
+    font-size: 20px;
+    line-height: 1.7;
   }
 }
 
@@ -62,6 +96,22 @@ export default {}
     font-size: 20px;
     padding: 10px 48px;
     border-radius: 32px;
+  }
+}
+
+.button-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @include mq(sm) {
+    gap: 16px;
+  }
+
+  @include mq() {
+    grid-column: 1;
+    grid-row: 2;
+    gap: 20px;
   }
 }
 

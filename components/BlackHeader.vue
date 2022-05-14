@@ -53,6 +53,7 @@
   margin-top: 80px;
   font-size: 36px;
   color: $white;
+  letter-spacing: 2px;
 
   span {
     color: $primary;
