@@ -1,6 +1,8 @@
 <template>
   <div class="black">
-    <BlackHeader>学<span>科</span>紹介</BlackHeader>
+    <BlackHeader
+      ><template v-slot:page-title>学<span>科</span>紹介</template>
+    </BlackHeader>
     <Footer />
   </div>
 </template>

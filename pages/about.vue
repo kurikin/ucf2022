@@ -1,7 +1,17 @@
 <template>
   <div class="black">
-    <BlackHeader>都<span>市</span>文化祭とは</BlackHeader>
-    <Slogan />
+    <BlackHeader
+      ><template v-slot:page-title>都<span>市</span>文化祭とは</template>
+      <template v-slot:description>
+        <p>「都市」を学び、<br />「都市」で学び、<br />「都市」と学ぶ。</p>
+        <p>
+          あらゆるものが詰まった都市というフィールドで、<br />
+          何を学び、何を考えるのかを、形にし、<br />
+          発信していくイベントが都市文化祭です。<br />
+        </p>
+      </template>
+    </BlackHeader>
+
     <div class="center-line"></div>
     <Theme />
     <div class="center-line"></div>

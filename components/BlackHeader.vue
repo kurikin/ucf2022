@@ -1,13 +1,18 @@
 <template>
-  <header class="header">
-    <WhiteNavBar />
-    <Hamburger :baseColor="'white'" />
-    <div class="container">
-      <h1 class="page-title">
-        <slot></slot>
-      </h1>
+  <div>
+    <header class="header">
+      <WhiteNavBar />
+      <Hamburger :baseColor="'white'" />
+      <div class="container">
+        <h1 class="page-title">
+          <slot name="page-title"></slot>
+        </h1>
+      </div>
+    </header>
+    <div class="description">
+      <slot name="description"></slot>
     </div>
-  </header>
+  </div>
 </template>
 
 <script></script>
@@ -32,6 +37,15 @@
 
   @include mq(xs) {
     height: 270px;
+  }
+
+  @include mq(sm) {
+    height: 300px;
+    margin-bottom: 48px;
+  }
+
+  @include mq(md) {
+    height: 500px;
   }
 }
 
@@ -58,16 +72,26 @@
   }
 }
 
-@include mq(sm) {
-  .header {
-    height: 300px;
-    margin-bottom: 48px;
-  }
-}
+.description {
+  display: grid;
+  gap: 24px;
+  color: $white;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 48px;
+  font-weight: 400;
 
-@include mq(md) {
-  .header {
-    height: 500px;
+  @include mq(sm) {
+    font-size: 20px;
+  }
+
+  @include mq() {
+    font-size: 24px;
+  }
+
+  @include mq(lg) {
+    line-height: 1.7;
   }
 }
 </style>
