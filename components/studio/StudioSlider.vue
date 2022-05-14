@@ -3,7 +3,7 @@
     <h1 class="studio-name">{{ studios.title }}</h1>
     <div class="card-container">
       <img
-        src="/left-arrow-black.svg"
+        src="/icons/left-arrow-black.svg"
         alt=""
         class="swiper-button-prev"
         :class="'index-' + index"
@@ -17,7 +17,7 @@
         </swiper-slide>
       </swiper>
       <img
-        src="/right-arrow-black.svg"
+        src="/icons/right-arrow-black.svg"
         alt=""
         class="swiper-button-next"
         :class="'index-' + index"

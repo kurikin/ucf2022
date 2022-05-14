@@ -7,7 +7,7 @@
           <h3 class="text">メインテーマ</h3>
           <div class="underline"></div>
         </div>
-        <img src="text-logo.svg" alt="" class="logo" />
+        <img src="/logos/text-logo.svg" alt="" class="logo" />
         <p class="description">
           「雑踏」は、都市そのものの象徴とも捉えることができます。都市は外的に定義されるだけでなく、人々の足跡が、時間というレイヤーを重ねながら地層のように立ち昇らせることもあります。しかし、コロナ禍で、都市から雑踏が消えました。その影を追うように、私たちは「雑踏」というテーマを掲げることにしました。
         </p>

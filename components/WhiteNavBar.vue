@@ -7,7 +7,7 @@
       <ul class="nav-list">
         <li class="list-item">
           <nuxt-link to="/">
-            <img class="logo-img" src="logo-black.png" alt="" />
+            <img class="logo-img" src="/logos/logo-black.png" alt="" />
           </nuxt-link>
         </li>
         <li class="list-item">

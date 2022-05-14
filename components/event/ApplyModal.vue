@@ -3,7 +3,7 @@
     <h1 class="modal-title">参加方法</h1>
     <button class="close-modal-button" @click="closeApplyModal">
       <span class="close-text">閉じる</span
-      ><img class="close-icon" src="/close.svg" alt="" />
+      ><img class="close-icon" src="/icons/close.svg" alt="" />
     </button>
     <div class="sns-apply-box">
       <h2 class="apply-heading">1. Twitter/Instagramで参加</h2>

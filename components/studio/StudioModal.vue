@@ -3,7 +3,7 @@
     <h1 class="studio-name">{{ lastName }}スタジオ</h1>
     <button class="close-modal-button" @click="closeModal">
       <span class="close-text">閉じる</span
-      ><img class="close-icon" src="/close.svg" alt="" />
+      ><img class="close-icon" src="/icons/close.svg" alt="" />
     </button>
     <img src="/comingsoon.jpeg" alt="" class="studio-img" />
     <p class="description">{{ studioData.description }}</p>

@@ -3,15 +3,15 @@
     <img class="image" :src="imageModalData.image.url" alt="" />
     <button class="close-modal-button" @click="closeImageModal">
       <span class="close-text">閉じる</span
-      ><img class="close-icon" src="/close.svg" alt="" />
+      ><img class="close-icon" src="/icons/close.svg" alt="" />
     </button>
     <div class="image-info-box">
       <div class="nickname-box">
-        <img src="/person.svg" alt="" class="leading-icon" />
+        <img src="/icons/person.svg" alt="" class="leading-icon" />
         <p class="nickname">{{ imageModalData.nickname }}</p>
       </div>
       <div class="location-box">
-        <img src="/location.svg" alt="" class="leading-icon" />
+        <img src="/icons/location.svg" alt="" class="leading-icon" />
         <p class="location">{{ imageModalData.location }}</p>
       </div>
     </div>
