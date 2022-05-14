@@ -40,7 +40,12 @@
               <div class="text-box">
                 <p class="name">{{ member.name }}</p>
                 <div class="description">
-                  <p class="position show-over-sm">{{ member.position }}</p>
+                  <p
+                    v-if="member.position !== ''"
+                    class="position show-over-sm"
+                  >
+                    {{ member.position }}
+                  </p>
                   <p class="belong">{{ member.belong }}</p>
                 </div>
               </div>

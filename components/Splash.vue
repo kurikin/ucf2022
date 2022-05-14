@@ -1,19 +1,18 @@
 <template>
   <div class="background">
     <img id="splash" class="splash" src="/background.png" alt="" />
-    <!-- <video autoplay class="splash">
-      <source src="/splash.mp4" type="video/mp4" />
-      <source src="/splash.webm" type="video/webm" />
-    </video> -->
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapMutations } from 'vuex'
 
 export default {
   computed: {
     ...mapGetters(['splashParam']),
+  },
+  methods: {
+    ...mapMutations(['toggleFirstLoad']),
   },
   mounted() {
     const randomValue = Math.random()
