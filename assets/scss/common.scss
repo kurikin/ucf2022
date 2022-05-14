@@ -107,10 +107,10 @@ a {
   border-radius: 24px;
   padding: 8px 24px;
   border: none;
+  letter-spacing: 2px;
 
   @include mq(sm) {
     padding: 10px 24px;
-    letter-spacing: 1px;
   }
 
   @include mq(md) {
@@ -120,20 +120,23 @@ a {
   }
 }
 
-.heading {
+.section-heading {
   font-family: 'Zen Antique';
   color: $white;
   font-size: 30px;
   margin-bottom: 24px;
   font-weight: 400;
+  letter-spacing: 4px;
+  text-align: center;
 
   @include mq(sm) {
-    font-size: 30px;
+    font-size: 36px;
+    letter-spacing: 5px;
   }
 
   @include mq() {
-    font-size: 36px;
-    margin-bottom: 32px;
+    font-size: 44px;
+    margin-bottom: 48px;
   }
 }
 

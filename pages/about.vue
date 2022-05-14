@@ -21,13 +21,11 @@
 </template>
 
 <script>
-import Slogan from '~/components/about/Slogan'
 import Theme from '~/components/about/Theme'
 import Message from '~/components/about/Message.vue'
 
 export default {
   components: {
-    Slogan,
     Theme,
     Message,
   },
@@ -45,7 +43,7 @@ export default {
 @include mq() {
   .center-line {
     height: 180px;
-    margin: 52px auto;
+    margin: 48px auto;
   }
 }
 </style>

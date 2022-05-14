@@ -26,7 +26,9 @@
               <li class="nav-item">
                 <nuxt-link to="/events">企画一覧</nuxt-link>
               </li>
-              <li class="nav-item"><nuxt-link to="#">学科紹介</nuxt-link></li>
+              <li class="nav-item">
+                <nuxt-link to="/departments">学科紹介</nuxt-link>
+              </li>
               <li class="nav-item">
                 <nuxt-link to="/studios">スタジオ紹介</nuxt-link>
               </li>

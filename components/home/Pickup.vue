@@ -1,6 +1,6 @@
 <template>
   <section class="pickup container fadeUp animation-5">
-    <h2 class="heading">ピックアップ企画</h2>
+    <h2 class="section-heading">ピックアップ企画</h2>
     <ul class="pickup-list">
       <li class="list-item">
         <PickupItem
@@ -34,10 +34,6 @@ export default {
 .pickup {
   text-align: center;
   margin-bottom: 64px;
-}
-
-.heading {
-  letter-spacing: -1.5px;
 }
 
 .pickup-list {

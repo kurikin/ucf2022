@@ -1,6 +1,8 @@
 <template>
   <div class="black">
-    <BlackHeader>企<span>画</span>一覧</BlackHeader>
+    <BlackHeader
+      ><template v-slot:page-title>企<span>画</span>一覧</template></BlackHeader
+    >
     <Footer />
   </div>
 </template>

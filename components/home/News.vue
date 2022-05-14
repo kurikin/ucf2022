@@ -1,6 +1,6 @@
 <template>
   <section class="news container fadeUp animation-4">
-    <h2 class="heading">新着情報</h2>
+    <h2 class="section-heading">新着情報</h2>
     <ul class="news-list">
       <li class="list-item" v-for="content in contents" :key="content.id">
         <nuxt-link class="item-link" to="#">

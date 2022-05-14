@@ -113,10 +113,14 @@ export default {}
 
 .description {
   margin-top: 48px;
-  font-size: 18px;
+  font-size: 16px;
   color: $white;
   font-weight: 400;
   line-height: 1.6;
+
+  @include mq() {
+    font-size: 18px;
+  }
 
   @include mq(lg) {
     font-size: 20px;

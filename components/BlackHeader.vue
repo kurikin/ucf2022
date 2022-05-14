@@ -9,7 +9,7 @@
         </h1>
       </div>
     </header>
-    <div class="description">
+    <div class="description container">
       <slot name="description"></slot>
     </div>
   </div>
@@ -79,7 +79,6 @@
   font-size: 18px;
   line-height: 1.6;
   text-align: center;
-  margin-bottom: 48px;
   font-weight: 400;
 
   @include mq(sm) {

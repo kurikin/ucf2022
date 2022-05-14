@@ -60,6 +60,23 @@ export default {}
     ),
     url('/header-back.jpg');
   background-position: center;
+
+  @include mq(sm) {
+    margin-bottom: 48px;
+  }
+
+  @include mq() {
+    background: linear-gradient(
+        to bottom,
+        hsla(200, 100%, 11%, 0.82) 0,
+        hsla(200, 100%, 11%, 0.82) 90%,
+        hsla(200, 100%, 11%, 1) 100%
+      ),
+      url('/header-back.jpg');
+
+    background-position: center;
+    padding-top: 48px;
+  }
 }
 
 .logo {
@@ -109,10 +126,6 @@ export default {}
 }
 
 @include mq(sm) {
-  .home-header {
-    margin-bottom: 48px;
-  }
-
   .description {
     font-size: 24px;
   }
@@ -127,20 +140,6 @@ export default {}
     grid-template-columns: 45fr 55fr;
     grid-template-rows: auto 1fr;
     gap: 0;
-  }
-
-  .home-header {
-    background: linear-gradient(
-        to bottom,
-        hsla(200, 100%, 11%, 0.82) 0,
-        hsla(200, 100%, 11%, 0.82) 90%,
-        hsla(200, 100%, 11%, 1) 100%
-      ),
-      url('/header-back.jpg');
-
-    background-position: center;
-    padding-top: 48px;
-    padding-bottom: 48px;
   }
 
   .sns {
