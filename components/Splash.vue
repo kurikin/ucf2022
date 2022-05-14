@@ -1,6 +1,6 @@
 <template>
   <div class="background">
-    <img class="splash" :src="'/splash.gif?' + unixTime()" alt="" />
+    <img id="splash" class="splash" src="/background.png" alt="" />
     <!-- <video autoplay class="splash">
       <source src="/splash.mp4" type="video/mp4" />
       <source src="/splash.webm" type="video/webm" />
@@ -9,11 +9,24 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
-  methods: {
-    unixTime() {
-      return new Date().getTime()
-    },
+  computed: {
+    ...mapGetters(['splashParam']),
+  },
+  mounted() {
+    const randomValue = Math.random()
+
+    const imageTag = window.document.getElementById('splash')
+    imageTag.setAttribute('src', `/splash.gif?${randomValue}`)
+
+    this.$nextTick(function () {
+      setTimeout(() => {
+        this.$emit('closeSplash')
+        this.toggleFirstLoad()
+      }, 1800)
+    })
   },
 }
 </script>
@@ -31,7 +44,7 @@ export default {
 
 .splash {
   display: block;
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
 }
 </style>

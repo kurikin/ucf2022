@@ -1,5 +1,5 @@
 <template>
-  <header class="home-header">
+  <header class="home-header fadeIn animation-1">
     <Hamburger :baseColor="'white'" />
     <div class="container grid">
       <!-- サイドメニュー ( md 以下の端末のみ ) -->
@@ -63,16 +63,32 @@ export default {}
 }
 
 .logo {
-  width: 90%;
-  height: auto;
+  width: auto;
+  height: 180px;
   display: block;
   object-fit: contain;
   justify-self: center;
   margin-top: 24px;
-}
 
-.sns,
-.description {
+  @include mq(xs) {
+    height: 210px;
+  }
+
+  @include mq(sm) {
+    height: 330px;
+    margin-top: 32px;
+  }
+
+  @include mq() {
+    height: 260px;
+    margin-top: 0;
+    grid-row: 1 / -1;
+    margin-bottom: 0;
+  }
+
+  @include mq(lg) {
+    height: 280px;
+  }
 }
 
 .sns {
@@ -95,12 +111,6 @@ export default {}
 @include mq(sm) {
   .home-header {
     margin-bottom: 48px;
-  }
-
-  .logo {
-    width: 85%;
-    height: 85%;
-    margin-top: 32px;
   }
 
   .description {
@@ -131,14 +141,6 @@ export default {}
     background-position: center;
     padding-top: 48px;
     padding-bottom: 48px;
-  }
-
-  .logo {
-    width: 100%;
-    height: auto;
-    margin-top: 0;
-    grid-row: 1 / -1;
-    margin-bottom: 0;
   }
 
   .sns {

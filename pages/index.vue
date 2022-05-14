@@ -1,6 +1,6 @@
 <template>
   <div class="black">
-    <Splash v-if="showSplash && firstLoad" />
+    <Splash @closeSplash="closeSplash" v-if="showSplash && firstLoad" />
     <div v-else class="content">
       <HomeHeader />
       <HomeNavBar />
@@ -26,6 +26,9 @@ export default {
     Pickup,
     Splash,
   },
+  created() {
+    this.changeSplashParam()
+  },
   data() {
     return {
       showSplash: true,
@@ -34,14 +37,11 @@ export default {
   computed: {
     ...mapGetters(['firstLoad']),
   },
-  mounted() {
-    setTimeout(() => {
-      this.showSplash = false
-      this.toggleFirstLoad()
-    }, 1500)
-  },
   methods: {
-    ...mapMutations(['toggleFirstLoad']),
+    closeSplash() {
+      this.showSplash = false
+    },
+    ...mapMutations(['toggleFirstLoad', 'changeSplashParam']),
   },
   async asyncData({ $microcms }) {
     const data = await $microcms.get({
