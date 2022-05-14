@@ -5,7 +5,7 @@
       <span class="close-text">閉じる</span
       ><img class="close-icon" src="/icons/close.svg" alt="" />
     </button>
-    <img src="/comingsoon.jpeg" alt="" class="studio-img" />
+    <img :src="imageUrl(studioData)" alt="" class="studio-img" />
     <p class="description">{{ studioData.description }}</p>
   </BaseModal>
 </template>
@@ -30,6 +30,13 @@ export default {
   methods: {
     closeModal() {
       this.$emit('closeModal')
+    },
+    imageUrl(studioData) {
+      if (studioData.hasStudioImage) {
+        return `/studios/${studioData.englishName}.jpeg`
+      } else {
+        return '/comingsoon.jpeg'
+      }
     },
   },
   components: { BaseModal },

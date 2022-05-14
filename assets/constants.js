@@ -5,6 +5,7 @@ export const allStudios = [
       {
         teacherName: '小宮 正安',
         englishName: 'komiya',
+        hasStudioImage: true,
         hashtags: [
           '#オーストラリア',
           '#モーツァルト',
@@ -19,6 +20,7 @@ export const allStudios = [
       {
         teacherName: '辻 大和',
         englishName: 'tsuji',
+        hasStudioImage: true,
         hashtags: [
           '#東アジア史',
           '#韓国',
@@ -34,6 +36,7 @@ export const allStudios = [
       {
         teacherName: '大須賀 史和',
         englishName: 'osuka',
+        hasStudioImage: false,
         hashtags: [
           '#哲学',
           '#倫理',
@@ -48,6 +51,7 @@ export const allStudios = [
       {
         teacherName: '朴 祥美',
         englishName: 'park',
+        hasStudioImage: true,
         hashtags: [
           '#韓国',
           '#日本',
@@ -62,6 +66,7 @@ export const allStudios = [
       {
         teacherName: '長谷川 秀樹',
         englishName: 'hasegawa',
+        hasStudioImage: true,
         hashtags: [
           '#フランス',
           '#カナダ',
@@ -76,6 +81,7 @@ export const allStudios = [
       {
         teacherName: '藤掛 洋子',
         englishName: 'fujikake',
+        hasStudioImage: false,
         hashtags: [
           '#国際協力',
           '#パラグアイ',
@@ -95,6 +101,7 @@ export const allStudios = [
       {
         teacherName: '中川 克志',
         englishName: 'nakagawa',
+        hasStudioImage: false,
         hashtags: [
           '#レコード音楽',
           '#音響メディア史',
@@ -108,6 +115,7 @@ export const allStudios = [
       {
         teacherName: '清田 友則',
         englishName: 'kiyota',
+        hasStudioImage: true,
         hashtags: [
           '#精神分析',
           '#現代思想',
@@ -122,6 +130,7 @@ export const allStudios = [
       {
         teacherName: '高橋 弘司',
         englishName: 'takahashi',
+        hasStudioImage: true,
         hashtags: [
           '#ジャーナリズム',
           '#メディア',
@@ -137,6 +146,7 @@ export const allStudios = [
       {
         teacherName: '彦江 智弘',
         englishName: 'hikoe',
+        hasStudioImage: false,
         hashtags: [
           '#ZINE',
           '#雑誌デザイン',
@@ -157,6 +167,7 @@ export const allStudios = [
       {
         teacherName: '鎌原 勇太',
         englishName: 'kamahara',
+        hasStudioImage: false,
         hashtags: [
           '#内戦研究',
           '#戦争',
@@ -172,6 +183,7 @@ export const allStudios = [
       {
         teacherName: '齊藤 麻人',
         englishName: 'saito',
+        hasStudioImage: false,
         hashtags: [
           '#都市社会学',
           '#社会学',
@@ -188,6 +200,7 @@ export const allStudios = [
       {
         teacherName: '佐藤 峰',
         englishName: 'sato',
+        hasStudioImage: false,
         hashtags: [
           '#開発',
           '#住民主体 の #街づくり',
@@ -202,6 +215,7 @@ export const allStudios = [
       {
         teacherName: '松本 尚久',
         englishName: 'matsumoto',
+        hasStudioImage: false,
         hashtags: [
           '#文化人類学',
           '#価値観崩壊',
@@ -217,6 +231,7 @@ export const allStudios = [
       {
         teacherName: '三浦 倫平',
         englishName: 'miura',
+        hasStudioImage: false,
         hashtags: [
           '#都市社会学',
           '#貧困',
@@ -233,6 +248,7 @@ export const allStudios = [
       {
         teacherName: '平野 恵子',
         englishName: 'hirano',
+        hasStudioImage: false,
         hashtags: [
           '#国際協力',
           '#パラグアイ',
@@ -252,6 +268,7 @@ export const allStudios = [
       {
         teacherName: '須川 亜紀子',
         englishName: 'sugawa',
+        hasStudioImage: false,
         hashtags: [
           '#ポップカルチャー',
           '#2.5次元',
@@ -266,6 +283,7 @@ export const allStudios = [
       {
         teacherName: '平倉 圭',
         englishName: 'hirakura',
+        hasStudioImage: true,
         hashtags: [
           '#近現代美術',
           '#舞踊',
@@ -280,6 +298,7 @@ export const allStudios = [
       {
         teacherName: 'ファビアン カルパントラ',
         englishName: 'fabien',
+        hasStudioImage: true,
         hashtags: [
           '#映像研究',
           '#60年代文化',
@@ -294,6 +313,7 @@ export const allStudios = [
       {
         teacherName: '榑沼 範久',
         englishName: 'kurenuma',
+        hasStudioImage: true,
         hashtags: [
           '#近現代思想',
           '#近現代芸術',
