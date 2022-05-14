@@ -3,7 +3,7 @@
     <div class="message-header">
       <h1 class="message-title">都市に生きる全ての人へ</h1>
       <p class="position">
-        都市科学部 都市社会共生学科3年<br />
+        都市科学部 都市社会共生学科３年<br />
         都市文化祭2022実行委員長
       </p>
       <p class="name">池田瑞季</p>
@@ -73,7 +73,7 @@ export default {}
     }
 
     @include mq() {
-      font-size: 24px;
+      font-size: 20px;
     }
   }
 

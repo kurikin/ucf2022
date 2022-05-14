@@ -44,27 +44,27 @@ export const members = [
     ],
     members: [
       {
-        name: '天野雄浩',
+        name: '天野 雄浩',
         position: 'たたずみたい都市',
         belong: '都市科学部 都市基盤学科３年',
       },
       {
-        name: '荒木拓巳',
+        name: '荒木 拓巳',
         position: 'ご当地調査委員会',
         belong: '経営学部３年',
       },
       {
-        name: '富樫悠也',
+        name: '富樫 悠也',
         position: '裏道探索 / ４学科対談',
         belong: '都市科学部 都市社会共生学科１年',
       },
       {
-        name: '新津裕太',
+        name: '新津 裕太',
         position: '裏道探索',
         belong: '教育学部２年',
       },
       {
-        name: '野本凛',
+        name: '野本 凛',
         position: '本棚の片隅、覗かせてください',
         belong: '経済学部２年',
       },
@@ -74,7 +74,7 @@ export const members = [
         belong: '都市科学部 都市社会共生学科１年',
       },
       {
-        name: '宮内爽太',
+        name: '宮内 爽太',
         position: '４学科対談 登壇',
         belong: '都市科学部 都市基盤学科３年',
       },

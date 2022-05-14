@@ -18,7 +18,15 @@
 <script>
 import Footer from '~/components/Footer.vue'
 import Department from '../components/deparments/department.vue'
-export default { components: { Footer, Department } }
+import { departments } from '~/assets/constants/department'
+
+export default {
+  components: { Footer, Department },
+
+  computed: {
+    departmentsData: departments,
+  },
+}
 </script>
 
 <style lang="scss" scoped>
