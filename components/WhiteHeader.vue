@@ -38,11 +38,11 @@ export default {
   margin-bottom: 32px;
 
   @include mq(sm) {
-    margin-bottom: 48px;
+    margin-bottom: 64px;
   }
 
   @include mq() {
-    margin-bottom: 64px;
+    margin-bottom: 80px;
   }
 }
 

@@ -55,7 +55,7 @@ export default {
             slidesPerView: 2,
           },
           992: {
-            spaceBetween: 30,
+            spaceBetween: 32,
             slidesPerView: 3,
           },
         },
@@ -72,11 +72,11 @@ export default {
 // - Spacing system (px)
 // 2 / 4 / 8 / 12 / 16 / 20 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 .studio-slider {
-  margin-top: 48px;
+  margin-top: 64px;
   width: 100%;
 
   @include mq() {
-    margin-top: 64px;
+    margin-top: 80px;
   }
 }
 

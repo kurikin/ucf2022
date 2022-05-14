@@ -4,6 +4,7 @@ export const allStudios = [
     studioList: [
       {
         teacherName: '小宮 正安',
+        englishName: 'komiya',
         hashtags: [
           '#オーストラリア',
           '#モーツァルト',
@@ -17,6 +18,7 @@ export const allStudios = [
       },
       {
         teacherName: '辻 大和',
+        englishName: 'tsuji',
         hashtags: [
           '#東アジア史',
           '#韓国',
@@ -31,6 +33,7 @@ export const allStudios = [
       },
       {
         teacherName: '大須賀 史和',
+        englishName: 'osuka',
         hashtags: [
           '#哲学',
           '#倫理',
@@ -44,6 +47,7 @@ export const allStudios = [
       },
       {
         teacherName: '朴 祥美',
+        englishName: 'park',
         hashtags: [
           '#韓国',
           '#日本',
@@ -57,6 +61,7 @@ export const allStudios = [
       },
       {
         teacherName: '長谷川 秀樹',
+        englishName: 'hasegawa',
         hashtags: [
           '#フランス',
           '#カナダ',
@@ -70,6 +75,7 @@ export const allStudios = [
       },
       {
         teacherName: '藤掛 洋子',
+        englishName: 'fujikake',
         hashtags: [
           '#国際協力',
           '#パラグアイ',
@@ -88,6 +94,7 @@ export const allStudios = [
     studioList: [
       {
         teacherName: '中川 克志',
+        englishName: 'nakagawa',
         hashtags: [
           '#レコード音楽',
           '#音響メディア史',
@@ -100,6 +107,7 @@ export const allStudios = [
       },
       {
         teacherName: '清田 友則',
+        englishName: 'kiyota',
         hashtags: [
           '#精神分析',
           '#現代思想',
@@ -113,6 +121,7 @@ export const allStudios = [
       },
       {
         teacherName: '高橋 弘司',
+        englishName: 'takahashi',
         hashtags: [
           '#ジャーナリズム',
           '#メディア',
@@ -127,6 +136,7 @@ export const allStudios = [
       },
       {
         teacherName: '彦江 智弘',
+        englishName: 'hikoe',
         hashtags: [
           '#ZINE',
           '#雑誌デザイン',
@@ -146,6 +156,7 @@ export const allStudios = [
     studioList: [
       {
         teacherName: '鎌原 勇太',
+        englishName: 'kamahara',
         hashtags: [
           '#内戦研究',
           '#戦争',
@@ -160,6 +171,7 @@ export const allStudios = [
       },
       {
         teacherName: '齊藤 麻人',
+        englishName: 'saito',
         hashtags: [
           '#都市社会学',
           '#社会学',
@@ -175,6 +187,7 @@ export const allStudios = [
       },
       {
         teacherName: '佐藤 峰',
+        englishName: 'sato',
         hashtags: [
           '#開発',
           '#住民主体 の #街づくり',
@@ -188,6 +201,7 @@ export const allStudios = [
       },
       {
         teacherName: '松本 尚久',
+        englishName: 'matsumoto',
         hashtags: [
           '#文化人類学',
           '#価値観崩壊',
@@ -202,6 +216,7 @@ export const allStudios = [
       },
       {
         teacherName: '三浦 倫平',
+        englishName: 'miura',
         hashtags: [
           '#都市社会学',
           '#貧困',
@@ -217,6 +232,7 @@ export const allStudios = [
       },
       {
         teacherName: '平野 恵子',
+        englishName: 'hirano',
         hashtags: [
           '#国際協力',
           '#パラグアイ',
@@ -231,10 +247,11 @@ export const allStudios = [
     ],
   },
   {
-    title: '海外研究スタジオ',
+    title: '文化創成スタジオ',
     studioList: [
       {
         teacherName: '須川 亜紀子',
+        englishName: 'sugawa',
         hashtags: [
           '#ポップカルチャー',
           '#2.5次元',
@@ -248,6 +265,7 @@ export const allStudios = [
       },
       {
         teacherName: '平倉 圭',
+        englishName: 'hirakura',
         hashtags: [
           '#近現代美術',
           '#舞踊',
@@ -261,6 +279,7 @@ export const allStudios = [
       },
       {
         teacherName: 'ファビアン カルパントラ',
+        englishName: 'fabien',
         hashtags: [
           '#映像研究',
           '#60年代文化',
@@ -274,6 +293,7 @@ export const allStudios = [
       },
       {
         teacherName: '榑沼 範久',
+        englishName: 'kurenuma',
         hashtags: [
           '#近現代思想',
           '#近現代芸術',

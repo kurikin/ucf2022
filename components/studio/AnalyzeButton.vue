@@ -7,7 +7,7 @@
       </div>
       <div class="title-box">
         <div class="title">スタジオ診断</div>
-        <img src="/right-arrow-white.svg" alt="" class="right-arrow" />
+        <img src="/icons/right-arrow-white.svg" alt="" class="right-arrow" />
       </div>
     </nuxt-link>
   </div>
@@ -36,10 +36,6 @@ export default {}
   &:link {
     color: $white;
     background-color: $secondary;
-  }
-
-  &:hover,
-  &:active {
   }
 
   @include mq(sm) {

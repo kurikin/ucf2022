@@ -1,6 +1,10 @@
 <template>
   <div class="studio-card" @click="showModal">
-    <img src="/comingsoon.jpeg" alt="" class="studio-img" />
+    <img
+      :src="'/teachers/' + studioData.englishName + '.jpeg'"
+      alt=""
+      class="teacher-img"
+    />
     <div class="text-box">
       <p class="teacher-name">{{ studioData.teacherName }}</p>
       <p class="hashtags">
@@ -55,13 +59,12 @@ export default {
   gap: 12px;
 }
 
-.studio-img {
+.teacher-img {
   width: 100%;
+  object-fit: cover;
   border-bottom-left-radius: $radius-xxs;
   border-bottom-right-radius: $radius-xxs;
 
-  @include mq(sm) {
-  }
 }
 
 .teacher-name {
