@@ -69,7 +69,7 @@ export const members = [
         belong: '経済学部２年',
       },
       {
-        name: 'F',
+        name: '藩 楓由香',
         position: '裏道探索 / ４学科対談',
         belong: '都市科学部 都市社会共生学科１年',
       },

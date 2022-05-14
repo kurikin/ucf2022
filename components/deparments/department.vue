@@ -1,19 +1,24 @@
 <template>
   <div class="department container">
-    <h2 class="section-heading">都市社会共生学科</h2>
-    <div class="grid">
+    <h2 class="section-heading">{{ data.name }}</h2>
+    <div class="grid" :class="{ 'left-side-image': !data.rightSideImage }">
       <div class="image-box">
-        <img class="department-img" src="/departments/dep2.jpg" alt="" />
+        <img class="department-img" :src="data.imagePath" alt="" />
       </div>
 
-      <p class="description">
-        現代社会において、多様性が重要であることは誰もが認めますが、その実現は困難を極めることも事実です。これは議論レベルの話ではなく、どんな場所でも、人々が衝突や葛藤を繰り返しながら共生の試みようとしています。<br />
-        都市社会共生学科ではこの問題に対して、都市社会というフィールドで、人文知を用いて共生の可能性を挑んでいます。それは都市から始まり、世界へと続く学びだと考えています。
-      </p>
-      <div class="button-box">
-        <button class="base-button button--secondary">スタジオ診断</button>
+      <p class="description">{{ data.description }}</p>
+      <div
+        class="button-box"
+        :class="{ '--has-two-buttons': data.showSecondaryButton }"
+      >
+        <button
+          class="base-button button--secondary"
+          v-if="data.showSecondaryButton"
+        >
+          {{ data.secondaryButtonText }}
+        </button>
         <button class="base-button button--primary">
-          都市社会共生学科 公式HP
+          {{ data.primaryButtonText }}
         </button>
       </div>
     </div>
@@ -21,13 +26,24 @@
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    data: {
+      type: Object,
+      default: () => {},
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
 .grid {
   display: grid;
   row-gap: 24px;
+
+  @include mq(sm) {
+    row-gap: 32px;
+  }
 
   @include mq() {
     grid-template-columns: 60fr 40fr;
@@ -40,6 +56,29 @@ export default {}
     grid-template-columns: 65fr 35fr;
     column-gap: 48px;
     row-gap: 80px;
+  }
+
+  &.left-side-image {
+    @include mq() {
+      grid-template-columns: 40fr 60fr;
+
+      .image-box {
+        grid-column: 1;
+      }
+
+      .description,
+      .button-box {
+        grid-column: 2;
+      }
+
+      .button-box {
+        align-items: flex-end;
+      }
+    }
+
+    @include mq(lg) {
+      grid-template-columns: 35fr 65fr;
+    }
   }
 }
 
@@ -106,17 +145,15 @@ export default {}
 .button-box {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-
-  @include mq(sm) {
-    gap: 16px;
-  }
 
   @include mq() {
     grid-column: 1;
     grid-row: 2;
-    gap: 20px;
     align-items: flex-start;
+  }
+
+  &.--has-two-buttons {
+    gap: 20px;
   }
 }
 

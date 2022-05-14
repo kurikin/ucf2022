@@ -10,7 +10,13 @@
       </template>
     </BlackHeader>
     <div class="center-line"></div>
-    <Department />
+    <div class="departments">
+      <Department
+        v-for="departmentData in departments"
+        :data="departmentData"
+        :key="departmentData.name"
+      />
+    </div>
     <Footer />
   </div>
 </template>
@@ -22,9 +28,10 @@ import { departments } from '~/assets/constants/department'
 
 export default {
   components: { Footer, Department },
-
   computed: {
-    departmentsData: departments,
+    departments() {
+      return departments
+    },
   },
 }
 </script>
@@ -39,6 +46,25 @@ export default {
   @include mq() {
     height: 250px;
     margin: 48px auto;
+  }
+}
+
+.departments {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-bottom: 48px;
+
+  @include mq(sm) {
+    gap: 64px;
+  }
+
+  @include mq() {
+    gap: 80px;
+  }
+
+  @include mq(lg) {
+    gap: 128px;
   }
 }
 </style>
