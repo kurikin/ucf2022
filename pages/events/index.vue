@@ -1,8 +1,12 @@
 <template>
   <div class="black-background">
-    <BlackHeader
-      ><template v-slot:page-title>企<span>画</span>一覧</template></BlackHeader
-    >
+    <div class="expand">
+      <BlackHeader
+        ><template v-slot:page-title
+          >企<span>画</span>一覧</template
+        ></BlackHeader
+      >
+    </div>
     <Footer />
   </div>
 </template>

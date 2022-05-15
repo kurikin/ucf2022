@@ -11,10 +11,7 @@
       </WhiteHeader>
       <div class="container">
         <div class="analyze-background">
-          <nuxt-link
-            class="primary-button analyze-start"
-            to="/studios/analyze/questions/1"
-          >
+          <nuxt-link class="analyze-button" to="/studios/analyze/questions/1">
             スタジオ診断を始める！
           </nuxt-link>
         </div>
@@ -33,15 +30,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.analyze-start {
+.analyze-button {
+  display: inline-block;
+  margin: 0 auto;
+  color: $white;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: $primary;
+  border-radius: 24px;
+  padding: 10px 24px;
+  border: none;
+  letter-spacing: 2px;
+  text-align: center;
+
+  @include mq(xs) {
+    font-size: 20px;
+  }
+
   @include mq() {
     font-size: 24px;
-  }
-}
-
-.primary-button {
-  @include mq() {
-    padding: 12px 48px;
+    padding: 16px 48px;
+    border-radius: 32px;
   }
 }
 </style>
