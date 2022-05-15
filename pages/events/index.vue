@@ -1,19 +1,20 @@
 <template>
   <div class="black-background">
-    <div class="expand">
-      <BlackHeader
-        ><template v-slot:page-title
-          >企<span>画</span>一覧</template
-        ></BlackHeader
-      >
+    <BlackHeader
+      ><template v-slot:page-title>企<span>画</span>一覧</template></BlackHeader
+    >
+    <div class="expand container">
+      <EventListHeader />
     </div>
+
     <Footer />
   </div>
 </template>
 
 <script>
 import Footer from '~/components/Footer.vue'
-export default { components: { Footer } }
+import EventListHeader from '~/components/event/EventListHeader.vue'
+export default { components: { Footer, EventListHeader } }
 </script>
 
 <style lang="scss" scoped></style>

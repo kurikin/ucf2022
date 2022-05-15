@@ -39,13 +39,13 @@ export default {
 .pickup-item {
   padding: 6px;
   background-color: $white;
-  border-radius: $radius-xs;
+  border-radius: $radius-md;
   overflow: hidden;
 }
 
 .img-container {
   overflow: hidden;
-  border-radius: $radius-xs;
+  border-radius: $radius-md;
   aspect-ratio: 4 / 3;
   margin-bottom: 8px;
   transform: translateZ(0);
@@ -55,7 +55,7 @@ export default {
   width: 100%;
   display: block;
   object-fit: cover;
-  border-radius: $radius-xs;
+  border-radius: $radius-md;
   aspect-ratio: 4 / 3;
   transition: all 0.5s;
 
@@ -83,7 +83,7 @@ export default {
 
 @include mq() {
   .pickup-item {
-    border-radius: $radius-sm;
+    border-radius: $radius-md;
   }
 
   .text-box {
@@ -91,12 +91,12 @@ export default {
   }
 
   .img-container {
-    border-radius: $radius-sm;
+    border-radius: $radius-md;
   }
 
   .thumbnail {
-    border-top-left-radius: $radius-sm;
-    border-top-right-radius: $radius-sm;
+    border-top-left-radius: $radius-md;
+    border-top-right-radius: $radius-md;
   }
 }
 
