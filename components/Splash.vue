@@ -38,7 +38,7 @@ export default {
   align-items: center;
   justify-content: center;
   background-color: $black;
-  z-index: 100;
+  z-index: 1;
 }
 
 .splash {

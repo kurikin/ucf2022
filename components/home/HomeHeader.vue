@@ -1,8 +1,6 @@
 <template>
   <header class="home-header fadeIn animation-1">
-    <Hamburger :baseColor="'white'" />
     <div class="container grid">
-      <!-- サイドメニュー ( md 以下の端末のみ ) -->
       <img class="logo fadeIn animation-1" src="/logos/logo.svg" alt="" />
       <!-- SNS メニュー ( md 以上の端末で表示 ) -->
       <div class="sns fadeIn animation-2">
@@ -154,7 +152,6 @@ export default {}
   .sns-link {
     width: 32px;
     height: 32px;
-    z-index: 9999;
   }
   .sns-logo {
     width: 100%;

@@ -205,6 +205,33 @@ a {
   }
 }
 
+.analyze-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  width: 100%;
+  min-height: 150px;
+
+  border-radius: $radius-xs;
+  margin-bottom: 24px;
+
+  @include mq(sm) {
+    min-height: 200px;
+    border-radius: $radius-sm;
+  }
+
+  @include mq() {
+    min-height: 250px;
+    margin-bottom: 48px;
+  }
+
+  @include mq(lg) {
+    min-height: 350px;
+    margin-bottom: 64px;
+  }
+}
+
 // モーダル用 トランジション
 .component-fade-enter-active,
 .component-fade-leave-active {

@@ -107,14 +107,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.hamburger {
+  z-index: 1000;
+}
+
 .lines {
   position: fixed;
   top: 30px;
   right: 20px;
+  z-index: 10000;
 
   height: 22px;
   width: 28px;
-  z-index: 10000;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -180,7 +184,6 @@ export default {
   width: 100%;
   height: 100%;
   background-color: hsla(200, 100%, 14%, 0.2);
-  z-index: 999;
   position: fixed;
   top: 0;
   left: 0;

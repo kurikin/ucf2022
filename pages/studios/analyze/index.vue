@@ -9,7 +9,7 @@
       >
     </WhiteHeader>
     <div class="container">
-      <div class="background">
+      <div class="analyze-background">
         <nuxt-link
           class="primary-button analyze-start"
           to="/studios/analyze/questions/1"
@@ -40,41 +40,6 @@ export default {
 .primary-button {
   @include mq() {
     padding: 12px 48px;
-  }
-}
-
-.background {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-  width: 100%;
-  height: 150px;
-  border-radius: $radius-xs;
-
-  @include mq(sm) {
-    height: 200px;
-    border-radius: $radius-sm;
-  }
-
-  @include mq() {
-    height: 250px;
-  }
-
-  @include mq(lg) {
-    height: 350px;
-  }
-}
-
-.container {
-  margin-bottom: 24px;
-
-  @include mq() {
-    margin-bottom: 40px;
-  }
-
-  @include mq(lg) {
-    margin-bottom: 64px;
   }
 }
 </style>
