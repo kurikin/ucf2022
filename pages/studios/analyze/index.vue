@@ -49,7 +49,7 @@ export default {
 
   @include mq() {
     font-size: 24px;
-    padding: 16px 48px;
+    padding: 12px 48px;
     border-radius: 32px;
   }
 }

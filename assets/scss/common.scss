@@ -222,14 +222,12 @@ a {
   justify-content: center;
   background-color: #fff;
   width: 100%;
-  min-height: 150px;
+  min-height: 200px;
   padding: 24px;
-
+  margin: 48px 0;
   border-radius: $radius-xs;
-  margin-bottom: 24px;
 
   @include mq(sm) {
-    min-height: 200px;
     border-radius: $radius-sm;
     padding: 32px;
   }

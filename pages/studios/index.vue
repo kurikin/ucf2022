@@ -73,7 +73,15 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  margin-bottom: 92px;
+  margin-bottom: 48px;
+
+  @include mq() {
+    margin-bottom: 64px;
+  }
+
+  @include mq(lg) {
+    margin-bottom: 96px;
+  }
 }
 
 .slide {

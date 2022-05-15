@@ -1,3 +1,5 @@
+const { teachers } = require('./assets/constants/teachers.js')
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -78,11 +80,5 @@ export default {
 
   build: {},
 
-  generate: {
-    routes() {
-      return [...Array(29)].map((index) => {
-        return `/studios/analyze/questions/${index + 1}`
-      })
-    },
-  },
+  generate: {},
 }

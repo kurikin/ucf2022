@@ -53,17 +53,11 @@
 import { questions } from '~/assets/constants/questions'
 
 export default {
-  computed: {
-    questions() {
-      return questions
-    },
-    question() {
-      return this.questions[this.id]
-    },
-  },
-  async asyncData({ $content, params }) {
+  async asyncData({ params }) {
     const id = params.id
-    return { id }
+    const question = questions[id]
+
+    return { question }
   },
 }
 </script>
@@ -138,7 +132,7 @@ export default {
 .button-box {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
 
   @include mq(sm) {
     flex-direction: row;
@@ -158,19 +152,18 @@ export default {
   display: inline-block;
   margin: 0 auto;
   color: $white;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 600;
   background-color: $primary;
   border-radius: 24px;
-  padding: 6px 24px;
+  padding: 8px 32px;
   border: none;
   letter-spacing: 1px;
-  min-width: 160px;
+  min-width: 230px;
   text-align: center;
 
   @include mq(sm) {
     padding: 6px 24px;
-    min-width: 230px;
   }
 
   @include mq() {
