@@ -113,7 +113,7 @@ a {
     padding: 10px 24px;
   }
 
-  @include mq(md) {
+  @include mq() {
     font-size: 20px;
     padding: 10px 48px;
     border-radius: 32px;

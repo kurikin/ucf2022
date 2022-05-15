@@ -101,6 +101,7 @@ export default {
     grid-column: 2;
     grid-row: 1 / 3;
     margin-bottom: 0;
+    border-radius: $radius-md;
 
     max-height: none;
     height: 100%;
@@ -129,7 +130,7 @@ export default {
 
   @include mq() {
     font-size: 20px;
-    line-height: 1.7;
+    line-height: 1.75;
     gap: 20px;
   }
 }

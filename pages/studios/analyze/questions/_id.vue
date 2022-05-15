@@ -13,10 +13,10 @@
 </template>
 
 <script>
-import WhiteHeader from '../../components/WhiteHeader.vue'
-import Footer from '~/components/Footer.vue'
 export default {
-  components: { WhiteHeader, Footer },
+  async asyncData({ $content, params }) {
+    return {}
+  },
 }
 </script>
 

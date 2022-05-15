@@ -89,6 +89,7 @@ export default {
   @include mq() {
     font-size: 18px;
     grid-column: 2;
+    line-height: 1.6;
   }
 }
 </style>
