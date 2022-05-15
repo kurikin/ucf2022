@@ -6,7 +6,17 @@
         <img class="department-img" :src="data.imagePath" alt="" />
       </div>
 
-      <p class="description">{{ data.description }}</p>
+      <!-- <p class="description">{{ data.description }}</p> -->
+      <div class="descriptions">
+        <p
+          v-for="(description, index) in data.descriptions"
+          :key="index"
+          class="description"
+        >
+          {{ description }}
+        </p>
+      </div>
+
       <div
         class="button-box"
         :class="{ '--has-two-buttons': data.showSecondaryButton }"
@@ -55,7 +65,7 @@ export default {
   @include mq(lg) {
     grid-template-columns: 65fr 35fr;
     column-gap: 48px;
-    row-gap: 80px;
+    row-gap: 96px;
   }
 
   &.left-side-image {
@@ -104,18 +114,23 @@ export default {
   object-fit: cover;
 }
 
-.description {
+.descriptions {
   color: $white;
   font-size: 16px;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 
   @include mq(sm) {
     font-size: 18px;
+    gap: 18px;
   }
 
   @include mq() {
     font-size: 20px;
     line-height: 1.7;
+    gap: 20px;
   }
 }
 
