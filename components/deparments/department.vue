@@ -21,15 +21,16 @@
         class="button-box"
         :class="{ '--has-two-buttons': data.showSecondaryButton }"
       >
-        <button
+        <nuxt-link
+          :to="data.secondaryButtonLink"
           class="base-button button--secondary"
           v-if="data.showSecondaryButton"
         >
           {{ data.secondaryButtonText }}
-        </button>
-        <button class="base-button button--primary">
+        </nuxt-link>
+        <a ref="" class="base-button button--primary">
           {{ data.primaryButtonText }}
-        </button>
+        </a>
       </div>
     </div>
   </div>

@@ -25,6 +25,10 @@
         <li class="list-item">
           <nuxt-link class="nav-link" to="/departments">学科紹介</nuxt-link>
         </li>
+        <div class="divider"></div>
+        <li class="list-item">
+          <nuxt-link class="nav-link" to="/studios">スタジオ紹介</nuxt-link>
+        </li>
       </ul>
     </nav>
   </div>

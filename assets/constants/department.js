@@ -8,9 +8,9 @@ export const departments = [
     imagePath: '/departments/dep1.jpg',
     showSecondaryButton: true,
     primaryButtonText: '都市社会共生学科 公式HP',
-    secondaryButtonText: 'スタジオ診断',
+    secondaryButtonText: 'スタジオ紹介',
     primaryButtonLink: '#',
-    secondryButtonLink: '#',
+    secondaryButtonLink: '/studios',
     rightSideImage: true,
   },
   {
@@ -24,7 +24,7 @@ export const departments = [
     primaryButtonText: '建築学科 公式HP',
     secondaryButtonText: '',
     primaryButtonLink: '#',
-    secondryButtonLink: '#',
+    secondaryButtonLink: '#',
     rightSideImage: false,
   },
   {
@@ -38,7 +38,7 @@ export const departments = [
     primaryButtonText: '都市基盤学科 公式HP',
     secondaryButtonText: '優しさの街 ～皆を支える都市基盤の魅力を伝える～',
     primaryButtonLink: '#',
-    secondryButtonLink: '#',
+    secondaryButtonLink: '#',
     rightSideImage: true,
   },
   {
@@ -52,7 +52,7 @@ export const departments = [
     primaryButtonText: '環境リスク共生学科 公式HP',
     secondaryButtonText: '',
     primaryButtonLink: '#',
-    secondryButtonLink: '#',
+    secondaryButtonLink: '#',
     rightSideImage: false,
   },
 ]

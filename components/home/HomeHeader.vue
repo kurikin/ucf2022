@@ -3,7 +3,7 @@
     <Hamburger :baseColor="'white'" />
     <div class="container grid">
       <!-- サイドメニュー ( md 以下の端末のみ ) -->
-      <img class="logo fadeIn animation-1" src="/logos/logo.png" alt="" />
+      <img class="logo fadeIn animation-1" src="/logos/logo.svg" alt="" />
       <!-- SNS メニュー ( md 以上の端末で表示 ) -->
       <div class="sns fadeIn animation-2">
         <a
@@ -76,6 +76,7 @@ export default {}
 
     background-position: center;
     padding-top: 48px;
+    padding-bottom: 48px;
   }
 }
 
