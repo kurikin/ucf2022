@@ -61,12 +61,18 @@ h3 {
   color: $white;
 }
 
-.black {
+.black-background {
   background-color: $black;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.white {
-  background: $white !important;
+.white-background {
+  background: $white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .grid {

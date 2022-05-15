@@ -138,14 +138,15 @@ export default {
     width: 100%;
     border-radius: 2px;
 
-    .white {
+    &.white {
       background: $white;
     }
 
-    .black {
+    &.black {
       background: $black;
     }
   }
+
   .line1 {
     transform-origin: 0% 0%;
     transition: transform 0.3s ease-in-out;

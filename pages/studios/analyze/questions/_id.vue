@@ -1,5 +1,5 @@
 <template>
-  <div class="white">
+  <div class="white-background">
     <WhiteHeader>
       <template v-slot:page-title>ス<span>タ</span>ジオ診断</template>
     </WhiteHeader>
@@ -89,6 +89,10 @@ export default {
   gap: 48px;
 
   @include mq() {
+    gap: 64px;
+  }
+
+  @include mq(lg) {
     gap: 96px;
   }
 }
@@ -103,17 +107,21 @@ export default {
   }
 
   @include mq() {
-    gap: 60px;
+    gap: 64px;
+  }
+
+  @include mq(lg) {
+    gap: 64px;
   }
 
   .choices-box {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
   }
 
   .choice-text {
-    font-size: 16px;
+    font-size: 18px;
 
     @include mq(sm) {
       font-size: 20px;
@@ -143,6 +151,7 @@ export default {
     gap: 80px;
   }
 }
+
 .choice-button {
   display: inline-block;
   margin: 0 auto;

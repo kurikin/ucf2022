@@ -1,5 +1,5 @@
 <template>
-  <div class="white">
+  <div class="white-background">
     <WhiteHeader>
       <template v-slot:page-title>た<span>た</span>ずみたい都市</template>
       <template v-slot:custom>

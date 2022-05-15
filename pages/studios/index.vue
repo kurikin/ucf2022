@@ -1,5 +1,5 @@
 <template>
-  <div class="white">
+  <div class="white-background">
     <WhiteHeader :hideHamburger="modalOpen">
       <template v-slot:page-title>ス<span>タ</span>ジオ紹介</template>
       <template v-slot:description

@@ -1,5 +1,5 @@
 <template>
-  <div class="black">
+  <div class="black-background">
     <BlackHeader
       ><template v-slot:page-title>企<span>画</span>一覧</template></BlackHeader
     >

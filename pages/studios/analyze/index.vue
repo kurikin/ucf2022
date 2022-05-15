@@ -1,21 +1,23 @@
 <template>
-  <div class="white">
-    <WhiteHeader>
-      <template v-slot:page-title>ス<span>タ</span>ジオ診断</template>
-      <template v-slot:description
-        >スタジオ？？よく分からない！！<br />
-        そんなあなたにぴったりのスタジオをご紹介します。<br />
-        ​まだ見ぬ世界に出会えるかも…！？</template
-      >
-    </WhiteHeader>
-    <div class="container">
-      <div class="analyze-background">
-        <nuxt-link
-          class="primary-button analyze-start"
-          to="/studios/analyze/questions/1"
+  <div class="white-background">
+    <div class="expand">
+      <WhiteHeader>
+        <template v-slot:page-title>ス<span>タ</span>ジオ診断</template>
+        <template v-slot:description
+          >スタジオ？？よく分からない！！<br />
+          そんなあなたにぴったりのスタジオをご紹介します。<br />
+          ​まだ見ぬ世界に出会えるかも…！？</template
         >
-          スタジオ診断を始める！
-        </nuxt-link>
+      </WhiteHeader>
+      <div class="container">
+        <div class="analyze-background">
+          <nuxt-link
+            class="primary-button analyze-start"
+            to="/studios/analyze/questions/1"
+          >
+            スタジオ診断を始める！
+          </nuxt-link>
+        </div>
       </div>
     </div>
     <Footer />
@@ -41,5 +43,9 @@ export default {
   @include mq() {
     padding: 12px 48px;
   }
+}
+
+.expand {
+  flex: 1;
 }
 </style>

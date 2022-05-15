@@ -1,5 +1,5 @@
 <template>
-  <div class="black">
+  <div class="black-background">
     <BlackHeader
       ><template v-slot:page-title>都<span>市</span>文化祭とは</template>
       <template v-slot:description>

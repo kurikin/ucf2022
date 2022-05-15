@@ -1,5 +1,5 @@
 <template>
-  <div class="black">
+  <div class="black-background">
     <BlackHeader
       ><template v-slot:page-title>学<span>科</span>紹介</template>
       <template v-slot:description>

@@ -1,5 +1,5 @@
 <template>
-  <div class="white">
+  <div class="white-background">
     <WhiteHeader>
       <template v-slot:page-title>実<span>行</span>委員一覧</template>
     </WhiteHeader>

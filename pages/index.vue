@@ -1,13 +1,13 @@
 <template>
-  <div class="black">
+  <div class="black-background">
     <Splash @closeSplash="closeSplash" v-if="showSplash && firstLoad" />
     <div v-else>
       <HomeHeader />
       <HomeNavBar />
       <News :contents="this.contents" />
       <Pickup />
-      <Footer />
       <Hamburger :baseColor="'white'" />
+      <Footer />
     </div>
   </div>
 </template>
