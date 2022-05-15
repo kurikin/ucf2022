@@ -212,6 +212,7 @@ a {
   background-color: #fff;
   width: 100%;
   min-height: 150px;
+  padding: 24px;
 
   border-radius: $radius-xs;
   margin-bottom: 24px;
@@ -219,11 +220,13 @@ a {
   @include mq(sm) {
     min-height: 200px;
     border-radius: $radius-sm;
+    padding: 32px;
   }
 
   @include mq() {
     min-height: 250px;
     margin-bottom: 48px;
+    padding: 48px;
   }
 
   @include mq(lg) {

@@ -33,7 +33,7 @@ export default {
 
 .header {
   width: 100%;
-  padding-top: 48px;
+  padding-top: 64px;
   text-align: center;
   margin-bottom: 32px;
 

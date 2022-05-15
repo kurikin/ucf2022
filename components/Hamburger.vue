@@ -185,6 +185,7 @@ export default {
   height: 100%;
   background-color: hsla(200, 100%, 14%, 0.2);
   position: fixed;
+  z-index: 1000;
   top: 0;
   left: 0;
 }

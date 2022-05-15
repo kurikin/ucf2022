@@ -5,8 +5,12 @@
     </WhiteHeader>
     <div class="container">
       <div class="analyze-background">
-        <div class="question-box">
+        <div class="question-box short-choice">
           <h2 class="question-text">休日はどうやって過ごす？</h2>
+          <div class="button-box">
+            <nuxt-link class="choice-button" to="/">アウトドア</nuxt-link>
+            <nuxt-link class="choice-button" to="/">インドア</nuxt-link>
+          </div>
         </div>
       </div>
     </div>
@@ -23,14 +27,74 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.question-box {
-  display: flex;
-  flex-direction: column;
-}
-
 .question-text {
   color: $black;
   font-family: 'Zen Kaku Gothic New';
-  font-size: 28px;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 600;
+
+  @include mq(sm) {
+    font-size: 30px;
+  }
+
+  @include mq() {
+    font-size: 36px;
+  }
+}
+
+.question-box.short-choice {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  @include mq() {
+    gap: 96px;
+  }
+
+  .button-box {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include mq(sm) {
+      flex-direction: row;
+      gap: 48px;
+    }
+
+    @include mq() {
+      gap: 64px;
+    }
+
+    @include mq(lg) {
+      gap: 80px;
+    }
+  }
+}
+.choice-button {
+  display: inline-block;
+  margin: 0 auto;
+  color: $white;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: $primary;
+  border-radius: 24px;
+  padding: 6px 24px;
+  border: none;
+  letter-spacing: 1px;
+  min-width: 160px;
+  text-align: center;
+
+  @include mq(sm) {
+    padding: 6px 24px;
+    min-width: 230px;
+  }
+
+  @include mq() {
+    font-size: 20px;
+    padding: 10px 24px;
+    border-radius: 32px;
+    min-width: 320px;
+  }
 }
 </style>
