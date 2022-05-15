@@ -77,4 +77,12 @@ export default {
   },
 
   build: {},
+
+  generate: {
+    routes() {
+      return [...Array(29)].map((index) => {
+        return `/studios/analyze/questions/${index + 1}`
+      })
+    },
+  },
 }

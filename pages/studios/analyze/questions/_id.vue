@@ -5,11 +5,40 @@
     </WhiteHeader>
     <div class="container">
       <div class="analyze-background">
-        <div class="question-box short-choice">
-          <h2 class="question-text">休日はどうやって過ごす？</h2>
+        <div v-if="!question.longChoice" class="question-box short-choice">
+          <h2 class="question-text">{{ question.questionText }}</h2>
           <div class="button-box">
-            <nuxt-link class="choice-button" to="/">アウトドア</nuxt-link>
-            <nuxt-link class="choice-button" to="/">インドア</nuxt-link>
+            <nuxt-link
+              class="choice-button"
+              :to="'/studios/analyze/' + question.firstChoiceNextPath"
+              >{{ question.firstChoice }}</nuxt-link
+            >
+            <nuxt-link
+              class="choice-button"
+              :to="'/studios/analyze/' + question.secondChoiceNextPath"
+              >{{ question.secondChoice }}</nuxt-link
+            >
+          </div>
+        </div>
+        <div v-else class="question-box long-choice">
+          <h2 class="question-text">{{ question.questionText }}</h2>
+          <div class="choices-box">
+            <p class="choice-text">{{ question.firstChoice }}</p>
+            <p class="choice-text">
+              {{ question.secondChoice }}
+            </p>
+          </div>
+          <div class="button-box">
+            <nuxt-link
+              class="choice-button"
+              :to="'/studios/analyze/' + question.firstChoiceNextPath"
+              >A</nuxt-link
+            >
+            <nuxt-link
+              class="choice-button"
+              :to="'/studios/analyze/' + question.secondChoiceNextPath"
+              >B</nuxt-link
+            >
           </div>
         </div>
       </div>
@@ -19,9 +48,20 @@
 </template>
 
 <script>
+import { questions } from '~/assets/constants/questions'
+
 export default {
+  computed: {
+    questions() {
+      return questions
+    },
+    question() {
+      return this.questions[this.id]
+    },
+  },
   async asyncData({ $content, params }) {
-    return {}
+    const id = params.id
+    return { id }
   },
 }
 </script>
@@ -51,24 +91,56 @@ export default {
   @include mq() {
     gap: 96px;
   }
+}
 
-  .button-box {
+.question-box.long-choice {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @include mq(sm) {
+    gap: 48px;
+  }
+
+  @include mq() {
+    gap: 60px;
+  }
+
+  .choices-box {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 20px;
+  }
+
+  .choice-text {
+    font-size: 16px;
 
     @include mq(sm) {
-      flex-direction: row;
-      gap: 48px;
+      font-size: 20px;
     }
 
     @include mq() {
-      gap: 64px;
+      font-size: 24px;
     }
+  }
+}
 
-    @include mq(lg) {
-      gap: 80px;
-    }
+.button-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include mq(sm) {
+    flex-direction: row;
+    gap: 48px;
+  }
+
+  @include mq() {
+    gap: 64px;
+  }
+
+  @include mq(lg) {
+    gap: 80px;
   }
 }
 .choice-button {
