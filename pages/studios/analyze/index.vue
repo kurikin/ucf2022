@@ -44,8 +44,4 @@ export default {
     padding: 12px 48px;
   }
 }
-
-.expand {
-  flex: 1;
-}
 </style>
