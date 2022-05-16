@@ -1,16 +1,18 @@
 <template>
   <div class="event-tile">
     <div class="title-box">
-      <h2 class="title">優しさの街</h2>
-      <h3 v-if="true" class="subtitle">〜皆を支える都市基盤の魅力を伝える〜</h3>
+      <h2 class="title">{{ eventData.title }}</h2>
+      <h3 v-if="eventData.hasSubtitle" class="subtitle">
+        {{ eventData.subtitle }}
+      </h3>
     </div>
     <div class="icon-box">
-      <img src="/icons/nomareru.svg" alt="" class="icon" />
-      <img src="/icons/on-demand.svg" alt="" class="icon" />
+      <img :src="'/icons/' + eventData.theme + '.svg'" alt="" class="icon" />
+      <img :src="'/icons/' + eventData.format + '.svg'" alt="" class="icon" />
     </div>
     <img src="/comingsoon.jpeg" alt="" class="thumbnail" />
     <p class="description">
-      散歩のとき、通学のとき、帰省のとき……様々な足跡、足音を音楽と結び付けて共有する企画です。都市文化祭テーマである「雑踏」などからあなたが自由に連想した曲をアンケートから教えてください。Spotifyにてプレイリスト化します。
+      {{ eventData.description }}
     </p>
     <div class="button-box">
       <button class="action-button">ボタン1</button>
@@ -20,7 +22,14 @@
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    eventData: {
+      type: Object,
+      default: () => {},
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -30,7 +39,7 @@ export default {}
   background-color: $white;
   width: 100%;
   border-radius: $radius-sm;
-  padding: 16px;
+  padding: 20px;
   gap: 24px;
 
   @include mq(sm) {

@@ -6,7 +6,11 @@
     <div class="expand container">
       <EventListHeader />
       <div class="event-list">
-        <EventTile />
+        <EventTile
+          v-for="eventData in events"
+          :eventData="eventData"
+          :key="eventData.title"
+        />
       </div>
     </div>
 
@@ -18,7 +22,16 @@
 import Footer from '~/components/Footer.vue'
 import EventListHeader from '~/components/event/EventListHeader.vue'
 import EventTile from '../../components/event/EventTile.vue'
-export default { components: { Footer, EventListHeader, EventTile } }
+import { events } from '~/assets/constants/event'
+
+export default {
+  components: { Footer, EventListHeader, EventTile },
+  computed: {
+    events() {
+      return events
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped></style>
