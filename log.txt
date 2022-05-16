@@ -2435,3 +2435,26 @@ t=2022-05-16T14:12:42+0900 lvl=info msg="join connections" obj=join id=8cec73a9f
 t=2022-05-16T14:12:42+0900 lvl=info msg="join connections" obj=join id=5f48bfb1ad59 l=127.0.0.1:3000 r=133.34.241.57:57358
 t=2022-05-16T14:17:41+0900 lvl=info msg="join connections" obj=join id=7ff8d7088614 l=127.0.0.1:3000 r=133.34.241.57:57368
 t=2022-05-16T14:22:44+0900 lvl=info msg="join connections" obj=join id=f0dd7db9ad88 l=127.0.0.1:3000 r=133.34.241.57:57373
+t=2022-05-16T14:34:18+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=0510cc85acb9 clientid=2e4603ae06f796fb15a4bfbaf3641739
+t=2022-05-16T14:34:18+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=36b947651966 err="session closed"
+t=2022-05-16T14:34:28+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="dial tcp: i/o timeout"
+t=2022-05-16T14:34:38+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="dial tcp: i/o timeout"
+t=2022-05-16T14:34:49+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="Get \"https://dns.google.com/resolve?cd=true&name=tunnel.jp.ngrok.com&type=AAAA\": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)"
+t=2022-05-16T14:35:00+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="Get \"https://s3.amazonaws.com/dns.ngrok.com/tunnel.json\": context deadline exceeded"
+t=2022-05-16T14:35:02+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="resolved tunnel.jp.ngrok.com has no records"
+t=2022-05-16T14:35:15+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="dial tcp: i/o timeout"
+t=2022-05-16T14:35:19+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="Get \"https://dns.google.com/resolve?cd=true&name=tunnel.jp.ngrok.com&type=AAAA\": dial tcp: lookup dns.google.com on 133.34.4.251:53: read udp 133.34.239.162:49219->133.34.4.251:53: i/o timeout"
+t=2022-05-16T14:35:34+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="Get \"https://s3.amazonaws.com/dns.ngrok.com/tunnel.json\": context deadline exceeded"
+t=2022-05-16T14:35:42+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="resolved tunnel.jp.ngrok.com has no records"
+t=2022-05-16T14:36:04+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="dial tcp: i/o timeout"
+t=2022-05-16T14:36:23+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="dial tcp: lookup tunnel.jp.ngrok.com on 133.34.4.251:53: write udp 133.34.239.162:54475->133.34.4.251:53: write: no route to host"
+t=2022-05-16T14:36:49+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="dial tcp: lookup tunnel.jp.ngrok.com on 133.34.4.251:53: write udp 133.34.239.162:53559->133.34.4.251:53: write: no route to host"
+t=2022-05-16T14:37:19+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="Get \"https://dns.google.com/resolve?cd=true&name=tunnel.jp.ngrok.com&type=A\": dial tcp: lookup dns.google.com on 133.34.4.251:53: write udp 133.34.239.162:65476->133.34.4.251:53: write: no route to host"
+t=2022-05-16T14:37:54+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="Get \"https://s3.amazonaws.com/dns.ngrok.com/tunnel.json\": dial tcp: lookup s3.amazonaws.com on 133.34.4.251:53: write udp 133.34.239.162:50650->133.34.4.251:53: write: no route to host"
+t=2022-05-16T14:38:24+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="resolved tunnel.jp.ngrok.com has no records"
+t=2022-05-16T14:38:54+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="dial tcp: lookup tunnel.jp.ngrok.com on 133.34.4.251:53: write udp 133.34.239.162:52366->133.34.4.251:53: write: no route to host"
+t=2022-05-16T14:39:24+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="Get \"https://dns.google.com/resolve?cd=true&name=tunnel.jp.ngrok.com&type=AAAA\": dial tcp: lookup dns.google.com on 133.34.4.251:53: write udp 133.34.239.162:54434->133.34.4.251:53: write: no route to host"
+t=2022-05-16T14:39:59+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="Get \"https://s3.amazonaws.com/dns.ngrok.com/tunnel.json\": dial tcp: lookup s3.amazonaws.com on 133.34.4.251:53: write udp 133.34.239.162:61637->133.34.4.251:53: write: no route to host"
+t=2022-05-16T14:40:29+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="resolved tunnel.jp.ngrok.com has no records"
+t=2022-05-16T14:40:59+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-16T14:40:59+0900 lvl=info msg="client session established" obj=csess id=36b947651966

@@ -5,7 +5,9 @@
     >
     <div class="expand container">
       <EventListHeader />
-      <EventTile />
+      <div class="event-list">
+        <EventTile />
+      </div>
     </div>
 
     <Footer />

@@ -31,7 +31,7 @@
               </div>
             </div>
           </div>
-          <div class="members-box">
+          <div v-if="department.members.length !== 0" class="members-box">
             <div
               v-for="member in department.members"
               :key="member.name"
@@ -78,9 +78,19 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 48px;
+  margin-bottom: 48px;
+
+  @include mq(sm) {
+    margin-bottom: 64px;
+  }
 
   @include mq() {
-    gap: 64px;
+    gap: 80px;
+  }
+
+  @include mq(lg) {
+    gap: 96px;
+    margin-bottom: 80px;
   }
 }
 
@@ -102,6 +112,7 @@ export default {
 
   @include mq(lg) {
     font-size: 52px;
+    letter-spacing: 8px;
   }
 }
 
@@ -166,7 +177,7 @@ export default {
   }
 
   @include mq(lg) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 55fr 45fr;
   }
 }
 
