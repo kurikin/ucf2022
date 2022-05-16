@@ -34,4 +34,18 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  @include mq() {
+    gap: 64px;
+  }
+
+  @include mq(lg) {
+    gap: 80px;
+  }
+}
+</style>

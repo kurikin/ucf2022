@@ -10,7 +10,7 @@
       <img :src="'/icons/' + eventData.theme + '.svg'" alt="" class="icon" />
       <img :src="'/icons/' + eventData.format + '.svg'" alt="" class="icon" />
     </div>
-    <img src="/comingsoon.jpeg" alt="" class="thumbnail" />
+    <img :src="'/events/' + eventData.thumbnail" alt="" class="thumbnail" />
     <p class="description">
       {{ eventData.description }}
     </p>
