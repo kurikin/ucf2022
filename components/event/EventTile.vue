@@ -1,8 +1,8 @@
 <template>
   <div class="event-tile">
     <div class="title-box">
-      <h2 class="title">ソーシャルビジネス最前線！</h2>
-      <h3 v-if="true" class="subtitle">〜 お散歩プレイリスト 〜</h3>
+      <h2 class="title">優しさの街</h2>
+      <h3 v-if="true" class="subtitle">〜皆を支える都市基盤の魅力を伝える〜</h3>
     </div>
     <div class="icon-box">
       <img src="/icons/nomareru.svg" alt="" class="icon" />
@@ -31,15 +31,22 @@ export default {}
   width: 100%;
   border-radius: $radius-sm;
   padding: 16px;
-  gap: 16px;
+  gap: 24px;
 
   @include mq(sm) {
     padding: 24px;
-    gap: 20px;
   }
 
   @include mq() {
     grid-template-columns: 1fr auto;
+    column-gap: 24px;
+    row-gap: 48px;
+  }
+
+  @include mq(lg) {
+    grid-template-columns: 1fr 1fr auto;
+    column-gap: 48px;
+    row-gap: 32px;
   }
 }
 
@@ -48,13 +55,26 @@ export default {}
   flex-direction: column;
   gap: 4px;
 
+  @include mq(lg) {
+    flex-direction: row;
+    gap: 12px;
+    align-items: baseline;
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
   .title {
     color: $black;
     letter-spacing: 1px;
     font-size: 24px;
 
     @include mq(sm) {
-      font-size: 28px;
+      font-size: 30px;
+    }
+
+    @include mq() {
+      font-size: 36px;
+      letter-spacing: 2px;
     }
   }
 
@@ -65,6 +85,10 @@ export default {}
 
     @include mq(sm) {
       font-size: 20px;
+    }
+
+    @include mq() {
+      font-size: 24px;
     }
   }
 }
@@ -83,6 +107,13 @@ export default {}
     grid-column: 2;
   }
 
+  @include mq(lg) {
+    grid-row: 1;
+    grid-column: 3;
+    // タイトルとアイコンの間隔を詰める
+    margin-left: -32px;
+  }
+
   .icon {
     height: 32px;
 
@@ -99,6 +130,14 @@ export default {}
 .button-box {
   display: flex;
   gap: 20px;
+  grid-column: 1 / -1;
+
+  @include mq(lg) {
+    grid-row: 3;
+    grid-column: 2 / 4;
+    gap: 48px;
+    align-self: flex-end;
+  }
 }
 
 .action-button {
@@ -112,13 +151,18 @@ export default {}
   border: none;
   letter-spacing: 2px;
 
+  @include mq(xs) {
+    flex: 1;
+  }
+
   @include mq(sm) {
     padding: 10px 24px;
+    flex: 1;
   }
 
   @include mq() {
     font-size: 20px;
-    padding: 10px 48px;
+    padding: 10px 64px;
     border-radius: 32px;
   }
 }
@@ -132,6 +176,12 @@ export default {}
   @include mq() {
     grid-column: 1 / -1;
   }
+
+  @include mq(lg) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    aspect-ratio: 4 / 3;
+  }
 }
 
 .description {
@@ -143,6 +193,13 @@ export default {}
 
   @include mq() {
     grid-column: 1 / -1;
+    font-size: 20px;
+  }
+
+  @include mq(lg) {
+    grid-column: 2 / 4;
+    grid-row: 2;
+    align-self: flex-start;
   }
 }
 </style>
