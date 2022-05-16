@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="event-list-header">
     <div class="theme-select">
       <p class="title">サブテーマを選ぶ</p>
       <div class="button-list">
@@ -36,6 +36,14 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
+.event-list-header {
+  margin-bottom: 48px;
+
+  @include mq() {
+    margin-bottom: 80px;
+  }
+}
+
 .title {
   color: $white;
   font-size: 24px;
@@ -99,7 +107,7 @@ export default {}
   border-radius: 32px;
 
   @include mq(sm) {
-    padding: 12px 20px;
+    padding: 10px 20px;
     font-size: 20px;
   }
 
@@ -113,10 +121,10 @@ export default {}
   height: 1px;
   width: 100%;
   background-color: $white;
-  margin: 24px auto;
+  margin: 30px auto;
 
   @include mq() {
-    margin: 48px auto;
+    margin: 36px auto;
   }
 }
 

@@ -5,6 +5,7 @@
     >
     <div class="expand container">
       <EventListHeader />
+      <EventTile />
     </div>
 
     <Footer />
@@ -14,7 +15,8 @@
 <script>
 import Footer from '~/components/Footer.vue'
 import EventListHeader from '~/components/event/EventListHeader.vue'
-export default { components: { Footer, EventListHeader } }
+import EventTile from '../../components/event/EventTile.vue'
+export default { components: { Footer, EventListHeader, EventTile } }
 </script>
 
 <style lang="scss" scoped></style>
