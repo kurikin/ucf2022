@@ -52,7 +52,7 @@ export default {
 .departments {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 80px;
   margin-bottom: 48px;
 
   @include mq(sm) {

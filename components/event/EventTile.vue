@@ -1,8 +1,8 @@
 <template>
   <div class="event-tile">
     <div class="title-box">
-      <h2 class="title">ソーシャルビジネス最前線</h2>
-      <h3 class="subtitle">〜 お散歩プレイリスト 〜</h3>
+      <h2 class="title">ソーシャルビジネス最前線！</h2>
+      <h3 v-if="true" class="subtitle">〜 お散歩プレイリスト 〜</h3>
     </div>
     <div class="icon-box">
       <img src="/icons/nomareru.svg" alt="" class="icon" />
@@ -30,8 +30,17 @@ export default {}
   background-color: $white;
   width: 100%;
   border-radius: $radius-sm;
-  padding: 16px 16px;
+  padding: 16px;
   gap: 16px;
+
+  @include mq(sm) {
+    padding: 24px;
+    gap: 20px;
+  }
+
+  @include mq() {
+    grid-template-columns: 1fr auto;
+  }
 }
 
 .title-box {
@@ -43,12 +52,20 @@ export default {}
     color: $black;
     letter-spacing: 1px;
     font-size: 24px;
+
+    @include mq(sm) {
+      font-size: 28px;
+    }
   }
 
   .subtitle {
     color: $black;
     letter-spacing: 0.5px;
     font-size: 18px;
+
+    @include mq(sm) {
+      font-size: 20px;
+    }
   }
 }
 
@@ -56,8 +73,26 @@ export default {}
   display: flex;
   gap: 12px;
 
+  @include mq(sm) {
+    gap: 16px;
+  }
+
+  @include mq() {
+    justify-self: end;
+    grid-row: 1;
+    grid-column: 2;
+  }
+
   .icon {
     height: 32px;
+
+    @include mq(sm) {
+      height: 36px;
+    }
+
+    @include mq() {
+      height: 38px;
+    }
   }
 }
 
@@ -93,9 +128,21 @@ export default {}
   aspect-ratio: 5 / 3;
   object-fit: cover;
   border-radius: $radius-sm;
+
+  @include mq() {
+    grid-column: 1 / -1;
+  }
 }
 
 .description {
   font-size: 16px;
+
+  @include mq(sm) {
+    font-size: 18px;
+  }
+
+  @include mq() {
+    grid-column: 1 / -1;
+  }
 }
 </style>

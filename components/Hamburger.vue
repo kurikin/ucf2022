@@ -252,18 +252,17 @@ export default {
 .nav-item {
   padding-bottom: 6px;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
 
   a {
     color: $white;
-    font-size: 16px;
   }
 }
 
 // SNS リンク
 .sns {
   display: flex;
-  gap: 24px;
+  gap: 32px;
   margin-top: 6px;
 
   @media (min-height: 570px) {
