@@ -55,7 +55,7 @@ export default {
   }
 
   @include mq(lg) {
-    grid-template-columns: 1fr 1fr auto;
+    grid-template-columns: 1.2fr 1fr auto;
     column-gap: 48px;
     row-gap: 32px;
   }

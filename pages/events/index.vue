@@ -4,7 +4,10 @@
       ><template v-slot:page-title>企<span>画</span>一覧</template></BlackHeader
     >
     <div class="expand container">
-      <EventListHeader />
+      <EventListHeader
+        :selectedIndex="selectedIndex"
+        @themeChange="themeChange"
+      />
       <div class="event-list">
         <EventTile
           v-for="eventData in events"
@@ -26,6 +29,16 @@ import { events } from '~/assets/constants/event'
 
 export default {
   components: { Footer, EventListHeader, EventTile },
+  data() {
+    return {
+      selectedIndex: 0,
+    }
+  },
+  methods: {
+    themeChange(index) {
+      this.selectedIndex = index
+    },
+  },
   computed: {
     events() {
       return events

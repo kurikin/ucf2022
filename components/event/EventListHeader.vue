@@ -3,10 +3,15 @@
     <div class="theme-select">
       <p class="title">サブテーマを選ぶ</p>
       <div class="button-list">
-        <button class="theme-button selected">すべて</button>
-        <button class="theme-button">のまれる</button>
-        <button class="theme-button">たたずむ</button>
-        <button class="theme-button">はぐれる</button>
+        <button
+          v-for="(theme, index) in themeList"
+          :key="index"
+          class="theme-button"
+          :class="{ selected: selectedIndex === index }"
+          @click="onSelected(index)"
+        >
+          {{ themeList[index] }}
+        </button>
       </div>
     </div>
     <div class="divider" />
@@ -32,7 +37,24 @@
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    selectedIndex: {
+      type: Number,
+      default: 0,
+    },
+  },
+  data() {
+    return {
+      themeList: ['すべて', 'のまれる', 'たたずむ', 'はぐれる'],
+    }
+  },
+  methods: {
+    onSelected(index) {
+      this.$emit('themeChange', index)
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
