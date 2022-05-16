@@ -2,11 +2,13 @@
   <div class="black-background">
     <Splash @closeSplash="closeSplash" v-if="showSplash && firstLoad" />
     <div v-else>
-      <HomeHeader />
-      <HomeNavBar />
-      <News :contents="this.contents" />
-      <Pickup />
-      <Hamburger :baseColor="'white'" />
+      <div class="content">
+        <HomeHeader />
+        <HomeNavBar />
+        <News :contents="this.contents" />
+        <Pickup />
+        <Hamburger :baseColor="'white'" />
+      </div>
       <Footer />
     </div>
   </div>

@@ -115,7 +115,6 @@ export default {}
 
 .message-container {
   margin-top: 24px;
-  margin-bottom: 32px;
   background-color: $white;
   padding: 24px;
   border-radius: $radius-xs;
@@ -123,20 +122,17 @@ export default {}
   @include mq(sm) {
     padding: 32px;
     margin-top: 32px;
-    margin-bottom: 48px;
     border-radius: $radius-sm;
   }
 
   @include mq() {
     padding: 48px;
     margin-top: 48px;
-    margin-bottom: 64px;
     border-radius: $radius-md;
   }
 
   @include mq(lg) {
     margin-top: 64px;
-    margin-bottom: 96px;
     padding: 80px;
   }
 

@@ -15,24 +15,26 @@
         </div>
       </template>
     </WhiteHeader>
-    <ImageGallery :contents="contents" @showImageModal="showImageModal" />
+    <div class="content">
+      <ImageGallery :contents="contents" @showImageModal="showImageModal" />
 
-    <!-- モーダル -->
-    <transition name="component-fade">
-      <ImageModal
-        v-if="imageModalOpen"
-        :modalOpen="imageModalOpen"
-        :imageModalData="imageModalData"
-        @closeImageModal="closeImageModal"
-      />
-    </transition>
-    <transition name="component-fade">
-      <ApplyModal
-        v-show="applyModalOpen"
-        :modalOpen="applyModalOpen"
-        @closeApplyModal="closeApplyModal"
-      />
-    </transition>
+      <!-- モーダル -->
+      <transition name="component-fade">
+        <ImageModal
+          v-if="imageModalOpen"
+          :modalOpen="imageModalOpen"
+          :imageModalData="imageModalData"
+          @closeImageModal="closeImageModal"
+        />
+      </transition>
+      <transition name="component-fade">
+        <ApplyModal
+          v-show="applyModalOpen"
+          :modalOpen="applyModalOpen"
+          @closeApplyModal="closeApplyModal"
+        />
+      </transition>
+    </div>
     <Footer />
   </div>
 </template>

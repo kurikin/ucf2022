@@ -1,9 +1,9 @@
 <template>
   <div class="white-background">
-    <div class="expand">
-      <WhiteHeader>
-        <template v-slot:page-title>ス<span>タ</span>ジオ診断</template>
-      </WhiteHeader>
+    <WhiteHeader>
+      <template v-slot:page-title>ス<span>タ</span>ジオ診断</template>
+    </WhiteHeader>
+    <div class="content">
       <div class="container">
         <div class="analyze-background">
           <div v-if="!question.longChoice" class="question-box short-choice">

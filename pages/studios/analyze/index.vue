@@ -8,11 +8,13 @@
         ​まだ見ぬ世界に出会えるかも…！？</template
       >
     </WhiteHeader>
-    <div class="container expand">
-      <div class="analyze-background">
-        <nuxt-link class="analyze-button" to="/studios/analyze/questions/1">
-          スタジオ診断を始める！
-        </nuxt-link>
+    <div class="content">
+      <div class="container">
+        <div class="analyze-background">
+          <nuxt-link class="analyze-button" to="/studios/analyze/questions/1">
+            スタジオ診断を始める！
+          </nuxt-link>
+        </div>
       </div>
     </div>
     <Footer />

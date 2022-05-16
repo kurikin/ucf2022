@@ -3,8 +3,8 @@
     <WhiteHeader>
       <template v-slot:page-title>実<span>行</span>委員一覧</template>
     </WhiteHeader>
-    <div class="container">
-      <div class="department-container">
+    <div class="container content">
+      <div class="members-container">
         <div
           v-for="department in members"
           :key="department.departmentName"
@@ -74,7 +74,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.department-container {
+.members-container {
   display: flex;
   flex-direction: column;
   gap: 48px;

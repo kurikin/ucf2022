@@ -28,7 +28,6 @@ export default {
 <style lang="scss" scoped>
 .image-gallery {
   margin-top: 48px;
-  margin-bottom: 48px;
 
   @include mq(lg) {
     margin-top: 80px;

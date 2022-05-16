@@ -3,7 +3,7 @@
     <BlackHeader
       ><template v-slot:page-title>企<span>画</span>一覧</template></BlackHeader
     >
-    <div class="expand container">
+    <div class="container content">
       <EventListHeader
         :selectedThemeIndex="selectedThemeIndex"
         @themeChange="themeChange"
@@ -16,7 +16,6 @@
         />
       </transition-group>
     </div>
-
     <Footer />
   </div>
 </template>
@@ -75,7 +74,7 @@ export default {
 
 .list-enter-active,
 .list-leave-active {
-  transition: all 1.5s ease;
+  transition: all 1.2s ease;
 }
 
 .list-leave-active {
@@ -84,15 +83,15 @@ export default {
 
 .list-leave-to {
   opacity: 0;
-  transform: translateX(5px);
+  transform: translateX(10px);
 }
 
 .list-enter {
   opacity: 0;
-  transform: translateX(-5px);
+  transform: translateX(-10px);
 }
 
 .list-move {
-  transition: transform 1.5s ease;
+  transition: transform 1.5s ease-in-out;
 }
 </style>

@@ -33,7 +33,6 @@ export default {
 <style lang="scss" scoped>
 .pickup {
   text-align: center;
-  margin-bottom: 64px;
 }
 
 .pickup-list {

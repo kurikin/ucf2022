@@ -9,13 +9,15 @@
         </p>
       </template>
     </BlackHeader>
-    <div class="center-line"></div>
-    <div class="departments">
-      <Department
-        v-for="departmentData in departments"
-        :data="departmentData"
-        :key="departmentData.name"
-      />
+    <div class="content">
+      <div class="center-line"></div>
+      <div class="departments">
+        <Department
+          v-for="departmentData in departments"
+          :data="departmentData"
+          :key="departmentData.name"
+        />
+      </div>
     </div>
     <Footer />
   </div>
@@ -53,7 +55,6 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 80px;
-  margin-bottom: 48px;
 
   @include mq(sm) {
     gap: 64px;

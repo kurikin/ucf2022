@@ -129,6 +129,7 @@ export default {
   padding: 8px 20px;
   border: none;
   border-radius: 32px;
+  transition: all 0.2s linear;
 
   @include mq(sm) {
     padding: 10px 20px;

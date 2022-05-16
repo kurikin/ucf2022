@@ -11,11 +11,12 @@
         </p>
       </template>
     </BlackHeader>
-
-    <div class="center-line"></div>
-    <Theme />
-    <div class="center-line"></div>
-    <Message />
+    <div class="content">
+      <div class="center-line"></div>
+      <Theme />
+      <div class="center-line"></div>
+      <Message />
+    </div>
     <Footer />
   </div>
 </template>

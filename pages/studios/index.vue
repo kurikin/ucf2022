@@ -7,23 +7,25 @@
         興味のある分野を選択し、専門性を持って取り組めるカリキュラムになっています。<br
           class="show-over-sm"
         />
-        以下の4種類のスタジオを大学2年生から2つ選択し、<br
+        以下の４種類のスタジオを大学２年生から２つ選択し、<br
           class="show-over-sm"
         />
         その後の研究や卒業論文を執筆するゼミを決定していきます。</template
       >
     </WhiteHeader>
-    <AnalyzeButton />
-    <div class="studio-container">
-      <StudioSlider
-        v-for="(studios, index) in allStudios"
-        :key="index"
-        @showModal="showModal"
-        :index="index"
-        :studios="studios"
-      />
+    <div class="content">
+      <AnalyzeButton />
+      <div class="studio-container">
+        <StudioSlider
+          v-for="(studios, index) in allStudios"
+          :key="index"
+          @showModal="showModal"
+          :index="index"
+          :studios="studios"
+        />
+      </div>
+      <AnalyzeButton />
     </div>
-    <AnalyzeButton class="margin-bottom" />
     <transition name="component-fade">
       <StudioModal
         v-show="modalOpen"
