@@ -41,18 +41,52 @@ export default {}
   font-size: 24px;
   font-weight: 600;
   text-align: center;
+  letter-spacing: 0.5px;
+
+  @include mq(sm) {
+    font-size: 30px;
+  }
+
+  @include mq() {
+    letter-spacing: 1px;
+  }
 }
 
-.theme-select {
+.theme-select,
+.icon-info {
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  @include mq(sm) {
+    gap: 28px;
+  }
+
+  @include mq(lg) {
+    flex-direction: row;
+    gap: 64px;
+    align-items: center;
+  }
 }
 
 .button-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+
+  @include mq(sm) {
+    gap: 24px;
+  }
+
+  @include mq() {
+    gap: 32px;
+  }
+
+  @include mq(lg) {
+    grid-template-columns: repeat(4, 1fr);
+    flex: 1;
+    gap: 24px;
+  }
 }
 
 .theme-button {
@@ -62,7 +96,12 @@ export default {}
   font-weight: 600;
   padding: 8px 20px;
   border: none;
-  border-radius: 24px;
+  border-radius: 32px;
+
+  @include mq(sm) {
+    padding: 12px 20px;
+    font-size: 20px;
+  }
 
   &.selected {
     color: $secondary;
@@ -74,18 +113,21 @@ export default {}
   height: 1px;
   width: 100%;
   background-color: $white;
-  margin: 32px auto;
-}
+  margin: 24px auto;
 
-.icon-info {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+  @include mq() {
+    margin: 48px auto;
+  }
 }
 
 .icon-list {
   display: flex;
   gap: 20px;
+
+  @include mq(lg) {
+    flex: 1;
+    justify-self: center;
+  }
 }
 
 .icon-box {
@@ -95,13 +137,22 @@ export default {}
   gap: 8px;
   flex: 1;
 
+  @include mq(sm) {
+    gap: 12px;
+  }
+
   .icon {
     width: 100%;
+    max-width: 150px;
   }
 
   .name {
     color: $white;
     font-size: 16px;
+
+    @include mq(sm) {
+      font-size: 20px;
+    }
   }
 }
 </style>
