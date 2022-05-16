@@ -1,5 +1,3 @@
-const { teachers } = require('./assets/constants/teachers.js')
-
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',

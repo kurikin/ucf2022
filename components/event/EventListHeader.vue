@@ -14,7 +14,7 @@
       <p class="title">アイコンの見方</p>
       <div class="icon-list">
         <div class="icon-box">
-          <img src="/icons/youtube-white.svg" alt="" class="icon" />
+          <img src="/icons/youtube-live-white.svg" alt="" class="icon" />
           <p class="name">YouTubeライブ配信</p>
         </div>
         <div class="icon-box">

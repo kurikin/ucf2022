@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import { questions } from '~/assets/constants/questions'
+import { questions } from '~/assets/constants/question'
 
 export default {
   async asyncData({ params }) {

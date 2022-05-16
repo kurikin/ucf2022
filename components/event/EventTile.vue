@@ -41,6 +41,8 @@ export default {}
     grid-template-columns: 1fr auto;
     column-gap: 24px;
     row-gap: 48px;
+    border-radius: $radius-md;
+    padding: 32px;
   }
 
   @include mq(lg) {
@@ -115,7 +117,7 @@ export default {}
   }
 
   .icon {
-    height: 32px;
+    height: 34px;
 
     @include mq(sm) {
       height: 36px;
@@ -194,6 +196,7 @@ export default {}
   @include mq() {
     grid-column: 1 / -1;
     font-size: 20px;
+    line-height: 1.6;
   }
 
   @include mq(lg) {
