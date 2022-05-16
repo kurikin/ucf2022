@@ -5,12 +5,12 @@
     >
     <div class="expand container">
       <EventListHeader
-        :selectedIndex="selectedIndex"
+        :selectedThemeIndex="selectedThemeIndex"
         @themeChange="themeChange"
       />
       <div class="event-list">
         <EventTile
-          v-for="eventData in events"
+          v-for="eventData in matchedEvents"
           :eventData="eventData"
           :key="eventData.title"
         />
@@ -26,22 +26,29 @@ import Footer from '~/components/Footer.vue'
 import EventListHeader from '~/components/event/EventListHeader.vue'
 import EventTile from '../../components/event/EventTile.vue'
 import { events } from '~/assets/constants/event'
+import { themeList } from '~/assets/constants/theme'
 
 export default {
   components: { Footer, EventListHeader, EventTile },
   data() {
     return {
-      selectedIndex: 0,
+      selectedThemeIndex: 0,
     }
   },
   methods: {
     themeChange(index) {
-      this.selectedIndex = index
+      this.selectedThemeIndex = index
     },
   },
   computed: {
-    events() {
-      return events
+    matchedEvents() {
+      if (this.selectedThemeIndex === 0) {
+        return events
+      }
+
+      return events.filter(
+        (e) => e.theme === themeList[this.selectedThemeIndex]
+      )
     },
   },
 }

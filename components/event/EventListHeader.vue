@@ -4,13 +4,13 @@
       <p class="title">サブテーマを選ぶ</p>
       <div class="button-list">
         <button
-          v-for="(theme, index) in themeList"
+          v-for="(theme, index) in jpThemeList"
           :key="index"
           class="theme-button"
-          :class="{ selected: selectedIndex === index }"
+          :class="{ selected: selectedThemeIndex === index }"
           @click="onSelected(index)"
         >
-          {{ themeList[index] }}
+          {{ theme }}
         </button>
       </div>
     </div>
@@ -37,21 +37,23 @@
 </template>
 
 <script>
+import { jpThemeList } from '~/assets/constants/theme'
+
 export default {
   props: {
-    selectedIndex: {
+    selectedThemeIndex: {
       type: Number,
       default: 0,
     },
   },
-  data() {
-    return {
-      themeList: ['すべて', 'のまれる', 'たたずむ', 'はぐれる'],
-    }
-  },
   methods: {
     onSelected(index) {
       this.$emit('themeChange', index)
+    },
+  },
+  computed: {
+    jpThemeList() {
+      return jpThemeList
     },
   },
 }
