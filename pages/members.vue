@@ -78,10 +78,8 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 48px;
-  margin-bottom: 48px;
 
   @include mq(sm) {
-    margin-bottom: 64px;
   }
 
   @include mq() {
@@ -90,7 +88,6 @@ export default {
 
   @include mq(lg) {
     gap: 96px;
-    margin-bottom: 80px;
   }
 }
 
