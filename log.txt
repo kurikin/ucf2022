@@ -2984,3 +2984,19 @@ t=2022-05-17T12:36:14+0900 lvl=eror msg="failed to reconnect session" obj=csess 
 t=2022-05-17T12:36:44+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="dial tcp: lookup tunnel.jp.ngrok.com on [::1]:53: read udp [::1]:57659->[::1]:53: read: connection refused"
 t=2022-05-17T12:37:14+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="dial tcp: lookup tunnel.jp.ngrok.com on [::1]:53: read udp [::1]:53425->[::1]:53: read: connection refused"
 t=2022-05-17T12:37:44+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="Get \"https://dns.google.com/resolve?cd=true&name=tunnel.jp.ngrok.com&type=A\": dial tcp: lookup dns.google.com on [::1]:53: read udp [::1]:64088->[::1]:53: read: connection refused"
+t=2022-05-17T12:38:19+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-17T12:38:20+0900 lvl=info msg="client session established" obj=csess id=36b947651966
+t=2022-05-17T12:39:55+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=3e4dade3ecaa clientid=2e4603ae06f796fb15a4bfbaf3641739
+t=2022-05-17T12:39:55+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=36b947651966 err="session closed"
+t=2022-05-17T12:39:55+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="dial tcp: lookup tunnel.jp.ngrok.com on [::1]:53: read udp [::1]:52470->[::1]:53: read: connection refused"
+t=2022-05-17T12:39:55+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="dial tcp: lookup tunnel.jp.ngrok.com on [::1]:53: read udp [::1]:56933->[::1]:53: read: connection refused"
+t=2022-05-17T12:39:56+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="Get \"https://dns.google.com/resolve?cd=true&name=tunnel.jp.ngrok.com&type=A\": dial tcp: lookup dns.google.com on [::1]:53: read udp [::1]:65353->[::1]:53: read: connection refused"
+t=2022-05-17T12:39:58+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="Get \"https://s3.amazonaws.com/dns.ngrok.com/tunnel.json\": dial tcp: lookup s3.amazonaws.com on [::1]:53: read udp [::1]:61469->[::1]:53: read: connection refused"
+t=2022-05-17T12:40:00+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="resolved tunnel.jp.ngrok.com has no records"
+t=2022-05-17T12:40:02+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="dial tcp: lookup tunnel.jp.ngrok.com on [::1]:53: read udp [::1]:63614->[::1]:53: read: connection refused"
+t=2022-05-17T12:40:06+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="Get \"https://dns.google.com/resolve?cd=true&name=tunnel.jp.ngrok.com&type=AAAA\": dial tcp: lookup dns.google.com on [::1]:53: read udp [::1]:61264->[::1]:53: read: connection refused"
+t=2022-05-17T12:40:11+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="Get \"https://s3.amazonaws.com/dns.ngrok.com/tunnel.json\": dial tcp: lookup s3.amazonaws.com on [::1]:53: read udp [::1]:55342->[::1]:53: read: connection refused"
+t=2022-05-17T12:45:57+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="resolved tunnel.jp.ngrok.com has no records"
+t=2022-05-17T12:46:06+0900 lvl=eror msg="failed to reconnect session" obj=csess id=36b947651966 err="dial tcp: lookup tunnel.jp.ngrok.com on [::1]:53: read udp [::1]:65352->[::1]:53: read: connection refused"
+t=2022-05-17T12:46:19+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-17T12:46:19+0900 lvl=info msg="client session established" obj=csess id=36b947651966

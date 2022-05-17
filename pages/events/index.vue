@@ -3,18 +3,20 @@
     <BlackHeader
       ><template v-slot:page-title>企<span>画</span>一覧</template></BlackHeader
     >
-    <div class="container content">
-      <EventListHeader
-        :selectedThemeIndex="selectedThemeIndex"
-        @themeChange="themeChange"
-      />
-      <transition-group name="list" tag="div" class="event-list">
-        <EventTile
-          v-for="eventData in matchedEvents"
-          :eventData="eventData"
-          :key="eventData.title"
+    <div class="content">
+      <div class="container">
+        <EventListHeader
+          :selectedThemeIndex="selectedThemeIndex"
+          @themeChange="themeChange"
         />
-      </transition-group>
+        <transition-group name="list" tag="div" class="event-list">
+          <EventTile
+            v-for="eventData in matchedEvents"
+            :eventData="eventData"
+            :key="eventData.title"
+          />
+        </transition-group>
+      </div>
     </div>
     <Footer />
   </div>
@@ -92,6 +94,6 @@ export default {
 }
 
 .list-move {
-  transition: transform 1.5s ease-in-out;
+  transition: transform 1.4s ease-in-out;
 }
 </style>

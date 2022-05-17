@@ -3,50 +3,52 @@
     <WhiteHeader>
       <template v-slot:page-title>実<span>行</span>委員一覧</template>
     </WhiteHeader>
-    <div class="container content">
-      <div class="members-container">
-        <div
-          v-for="department in members"
-          :key="department.departmentName"
-          class="department"
-        >
-          <h2 class="department-name">{{ department.departmentName }}</h2>
-          <div class="leaders-box">
-            <div
-              v-for="leader in department.leaders"
-              :key="leader.name"
-              class="leader"
-            >
-              <img
-                :src="'/portraits/' + leader.fileName"
-                alt=""
-                class="portrait"
-              />
-              <div class="text-box">
-                <p class="name">{{ leader.name }}</p>
-                <div class="description">
-                  <p class="position">{{ leader.position }}</p>
-                  <p class="belong">{{ leader.belong }}</p>
+    <div class="content">
+      <div class="container">
+        <div class="members-container">
+          <div
+            v-for="department in members"
+            :key="department.departmentName"
+            class="department"
+          >
+            <h2 class="department-name">{{ department.departmentName }}</h2>
+            <div class="leaders-box">
+              <div
+                v-for="leader in department.leaders"
+                :key="leader.name"
+                class="leader"
+              >
+                <img
+                  :src="'/portraits/' + leader.fileName"
+                  alt=""
+                  class="portrait"
+                />
+                <div class="text-box">
+                  <p class="name">{{ leader.name }}</p>
+                  <div class="description">
+                    <p class="position">{{ leader.position }}</p>
+                    <p class="belong">{{ leader.belong }}</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div v-if="department.members.length !== 0" class="members-box">
-            <div
-              v-for="member in department.members"
-              :key="member.name"
-              class="member"
-            >
-              <div class="text-box">
-                <p class="name">{{ member.name }}</p>
-                <div class="description">
-                  <p
-                    v-if="member.position !== ''"
-                    class="position show-over-sm"
-                  >
-                    {{ member.position }}
-                  </p>
-                  <p class="belong">{{ member.belong }}</p>
+            <div v-if="department.members.length !== 0" class="members-box">
+              <div
+                v-for="member in department.members"
+                :key="member.name"
+                class="member"
+              >
+                <div class="text-box">
+                  <p class="name">{{ member.name }}</p>
+                  <div class="description">
+                    <p
+                      v-if="member.position !== ''"
+                      class="position show-over-sm"
+                    >
+                      {{ member.position }}
+                    </p>
+                    <p class="belong">{{ member.belong }}</p>
+                  </div>
                 </div>
               </div>
             </div>
