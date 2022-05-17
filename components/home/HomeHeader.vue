@@ -31,11 +31,14 @@
         </p>
       </div>
     </div>
+    <HomeNavBar />
+    <img class="down-arrow" src="/icons/down-arrow-white.svg" alt="" />
   </header>
 </template>
 
 <script>
-export default {}
+import HomeNavBar from './HomeNavBar.vue'
+export default { components: { HomeNavBar } }
 </script>
 
 <style lang="scss" scoped>
@@ -48,6 +51,9 @@ export default {}
   padding-top: 32px;
   padding-bottom: 24px;
   margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   background: linear-gradient(
       to bottom,

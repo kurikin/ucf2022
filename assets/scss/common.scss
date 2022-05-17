@@ -95,6 +95,14 @@ a {
 .content {
   flex: 1;
   margin-bottom: 48px;
+
+  @include mq(sm) {
+    margin-bottom: 64px;
+  }
+
+  @include mq(lg) {
+    margin-bottom: 80px;
+  }
 }
 
 .container {

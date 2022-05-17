@@ -4,7 +4,6 @@
     <div v-else>
       <div class="content">
         <HomeHeader />
-        <HomeNavBar />
         <News :contents="this.contents" />
         <Pickup />
         <Hamburger :baseColor="'white'" />

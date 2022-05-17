@@ -34,15 +34,14 @@ export default {}
 .home-nav-bar {
   display: none;
   background-color: $white;
-  margin-bottom: 80px;
   border-radius: $radius-xs;
   height: 65px;
+  margin-top: 80px;
 
   @include mq(md) {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 128px;
   }
 }
 
