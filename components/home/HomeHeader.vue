@@ -31,8 +31,12 @@
         </p>
       </div>
     </div>
-    <HomeNavBar />
-    <img class="down-arrow" src="/icons/down-arrow-white.svg" alt="" />
+    <HomeNavBar class="fadeIn animation-3" />
+    <img
+      class="down-arrow fadeIn animation-3"
+      src="/icons/down-arrow-white.svg"
+      alt=""
+    />
   </header>
 </template>
 
@@ -79,8 +83,12 @@ export default { components: { HomeNavBar } }
       url('/header-back.jpg');
 
     background-position: center;
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding: 48px 0;
+    margin-bottom: 64px;
+  }
+
+  @include mq(lg) {
+    padding-bottom: 64px;
   }
 }
 
@@ -170,6 +178,24 @@ export default { components: { HomeNavBar } }
     align-content: end;
     grid-row: 2;
     grid-column: 2;
+  }
+}
+
+.down-arrow {
+  margin-top: 32px;
+  height: 18px;
+
+  @include mq(sm) {
+    margin-top: 48px;
+    height: 20px;
+  }
+
+  @include mq() {
+    margin-top: 64px;
+  }
+
+  @include mq(lg) {
+    margin-top: 80px;
   }
 }
 </style>
