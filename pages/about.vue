@@ -12,10 +12,10 @@
       </template>
     </BlackHeader>
     <div class="content">
-      <div class="center-line"></div>
-      <Theme />
-      <div class="center-line"></div>
-      <Message />
+      <div class="center-line fadeUp animation-3"></div>
+      <Theme class="fadeUp animation-4" />
+      <div class="center-line fadeUp animation-5"></div>
+      <Message class="fadeUp animation-6" />
     </div>
     <Footer />
   </div>

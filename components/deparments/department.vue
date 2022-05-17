@@ -1,5 +1,5 @@
 <template>
-  <div class="department container">
+  <div class="department container fadeUp" :class="'animation-' + animationNum">
     <h2 class="section-heading">{{ data.name }}</h2>
     <div class="grid" :class="{ 'left-side-image': !data.rightSideImage }">
       <div class="image-box">
@@ -39,6 +39,10 @@
 <script>
 export default {
   props: {
+    animationNum: {
+      type: Number,
+      default: 0,
+    },
     data: {
       type: Object,
       default: () => {},

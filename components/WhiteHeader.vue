@@ -3,10 +3,10 @@
     <BlackNavBar />
     <Hamburger :baseColor="`black`" v-show="!hideHamburger" />
     <div class="container">
-      <h1 class="page-title">
+      <h1 class="page-title fadeIn animation-1">
         <slot name="page-title"></slot>
       </h1>
-      <p class="description">
+      <p class="description fadeIn animation-2">
         <slot name="description"></slot>
       </p>
       <slot name="custom"></slot>

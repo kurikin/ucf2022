@@ -8,8 +8,13 @@
         <EventListHeader
           :selectedThemeIndex="selectedThemeIndex"
           @themeChange="themeChange"
+          class="fadeUp animation-2"
         />
-        <transition-group name="list" tag="div" class="event-list">
+        <transition-group
+          name="list"
+          tag="div"
+          class="event-list fadeUp animation-3"
+        >
           <EventTile
             v-for="eventData in matchedEvents"
             :eventData="eventData"

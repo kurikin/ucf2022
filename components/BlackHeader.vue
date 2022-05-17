@@ -4,12 +4,12 @@
       <WhiteNavBar />
       <Hamburger :baseColor="'white'" />
       <div class="container">
-        <h1 class="page-title">
+        <h1 class="page-title fadeIn animation-1">
           <slot name="page-title"></slot>
         </h1>
       </div>
     </header>
-    <div class="description container">
+    <div class="description container fadeUp animation-2">
       <slot name="description"></slot>
     </div>
   </div>

@@ -10,12 +10,13 @@
       </template>
     </BlackHeader>
     <div class="content">
-      <div class="center-line"></div>
+      <div class="center-line fadeUp animation-3"></div>
       <div class="departments">
         <Department
-          v-for="departmentData in departments"
+          v-for="(departmentData, index) in departments"
           :data="departmentData"
           :key="departmentData.name"
+          :animationNum="index + 4"
         />
       </div>
     </div>

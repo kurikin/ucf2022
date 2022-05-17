@@ -70,6 +70,7 @@ export default { components: { HomeNavBar } }
   background-position: center;
 
   @include mq(sm) {
+    padding-top: 48px;
     margin-bottom: 48px;
   }
 
@@ -83,11 +84,13 @@ export default { components: { HomeNavBar } }
       url('/header-back.jpg');
 
     background-position: center;
-    padding: 48px 0;
+    padding-top: 64px;
+    padding-bottom: 48px;
     margin-bottom: 64px;
   }
 
   @include mq(lg) {
+    padding-top: 80px;
     padding-bottom: 64px;
   }
 }
@@ -117,7 +120,7 @@ export default { components: { HomeNavBar } }
   }
 
   @include mq(lg) {
-    height: 280px;
+    height: 320px;
   }
 }
 
@@ -131,19 +134,26 @@ export default { components: { HomeNavBar } }
   font-size: 18px;
   color: $white;
 
+  @include mq(sm) {
+    font-size: 24px;
+  }
+
+  @include mq() {
+    text-align: right;
+    justify-content: end;
+    align-content: end;
+    grid-row: 2;
+    grid-column: 2;
+  }
+
   .date span {
     font-size: 30px;
     font-weight: 700;
     margin-right: 1px;
-  }
-}
 
-@include mq(sm) {
-  .description {
-    font-size: 24px;
-  }
-  .date span {
-    font-size: 36px;
+    @include mq(sm) {
+      font-size: 36px;
+    }
   }
 }
 
@@ -171,14 +181,6 @@ export default { components: { HomeNavBar } }
     width: 100%;
     height: 100%;
   }
-
-  .description {
-    text-align: right;
-    justify-content: end;
-    align-content: end;
-    grid-row: 2;
-    grid-column: 2;
-  }
 }
 
 .down-arrow {
@@ -196,6 +198,7 @@ export default { components: { HomeNavBar } }
 
   @include mq(lg) {
     margin-top: 80px;
+    height: 24px;
   }
 }
 </style>
