@@ -1,14 +1,28 @@
 <template>
-  <BaseModal :modalOpen="modalOpen">
+  <BaseModal :modalOpen="speakersModalOpen">
     <div class="modal-content">
-      <h1 class="eventName">都市科学部４学科対談</h1>
+      <h1 class="event-name">{{ speakersModalData.eventName }}</h1>
+      <button class="close-modal-button" @click="closeModal">
+        <span class="close-text">閉じる</span
+        ><img class="close-icon" src="/icons/close.svg" alt="" />
+      </button>
     </div>
   </BaseModal>
 </template>
 
 <script>
+import { mapState, mapMutations } from 'vuex'
+
 export default {
-  props: ['eventName', 'speakers', 'modalOpen'],
+  methods: {
+    closeModal() {
+      this.toggleSpeakersModal()
+    },
+    ...mapMutations(['toggleSpeakersModal']),
+  },
+  computed: {
+    ...mapState(['speakersModalOpen', 'speakersModalData']),
+  },
 }
 </script>
 
@@ -29,7 +43,18 @@ export default {
     column-gap: 32px;
     row-gap: 32px;
     align-items: flex-start;
-    grid-template-columns: 60fr 40fr;
+  }
+}
+
+.event-name {
+  color: $black;
+  letter-spacing: 2px;
+  font-size: 30px;
+  font-weight: 500;
+
+  @include mq() {
+    letter-spacing: 5px;
+    font-size: 36px;
   }
 }
 </style>

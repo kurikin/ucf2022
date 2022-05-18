@@ -18,8 +18,14 @@
       class="button-box"
       :class="{ 'one-button': !eventData.hasSecondButton }"
     >
-      <button class="action-button">{{ eventData.firstButtonText }}</button>
-      <button class="action-button" v-if="eventData.hasSecondButton">
+      <button class="action-button" @click="firstButtonClicked">
+        {{ eventData.firstButtonText }}
+      </button>
+      <button
+        class="action-button"
+        @click="secondButtonClicked"
+        v-if="eventData.hasSecondButton"
+      >
         {{ eventData.secondButtonText }}
       </button>
     </div>
@@ -27,12 +33,24 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 export default {
   props: {
     eventData: {
       type: Object,
       default: () => {},
     },
+  },
+  methods: {
+    firstButtonClicked() {
+      if (this.eventData.firstButtonOpenModal) {
+        this.setSpeakersModalData(this.eventData.title, this.eventData.speakers)
+        this.toggleSpeakersModal()
+      }
+    },
+    secondButtonClicked() {},
+    ...mapMutations(['setSpeakersModalData', 'toggleSpeakersModal']),
   },
 }
 </script>

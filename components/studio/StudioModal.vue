@@ -106,7 +106,7 @@ export default {
     column-gap: 32px;
     row-gap: 32px;
     align-items: flex-start;
-    grid-template-columns: 60fr 40fr;
+    grid-template-columns: 50fr 50fr;
   }
 }
 </style>

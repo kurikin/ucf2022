@@ -23,6 +23,9 @@
         </transition-group>
       </div>
     </div>
+    <transition name="component-fade">
+      <SpeakersModal v-if="speakersModalOpen" />
+    </transition>
     <Footer />
   </div>
 </template>
@@ -33,9 +36,11 @@ import EventListHeader from '~/components/event/EventListHeader.vue'
 import EventTile from '../../components/event/EventTile.vue'
 import { events } from '~/assets/constants/event'
 import { themeList } from '~/assets/constants/theme'
+import SpeakersModal from '~/components/event/SpeakersModal.vue'
+import { mapState } from 'vuex'
 
 export default {
-  components: { Footer, EventListHeader, EventTile },
+  components: { Footer, EventListHeader, EventTile, SpeakersModal },
   data() {
     return {
       selectedThemeIndex: 0,
@@ -59,6 +64,7 @@ export default {
         (e) => e.theme === themeList[this.selectedThemeIndex]
       )
     },
+    ...mapState(['speakersModalOpen']),
   },
 }
 </script>

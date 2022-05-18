@@ -4,8 +4,13 @@ export const state = () => ({
   studioModalOpen: false,
   imageModalOpen: false,
   applyModalOpen: false,
+  speakersModalOpen: false,
   studioModalData: {},
   imageModalData: {},
+  speakersModalData: {
+    eventName: '',
+    speakers: [],
+  },
 })
 
 export const mutations = {
@@ -24,10 +29,17 @@ export const mutations = {
   toggleApplyModal(state) {
     state.applyModalOpen = !state.applyModalOpen
   },
+  toggleSpeakersModal(state) {
+    state.speakersModalOpen = !state.speakersModalOpen
+  },
   setStudioModalData(state, data) {
     state.studioModalData = data
   },
   setImageModalData(state, data) {
     state.imageModalData = data
+  },
+  setSpeakersModalData(state, eventName, speakers) {
+    state.speakersModalData.eventName = eventName
+    state.speakersModalData.speakers = speakers
   },
 }

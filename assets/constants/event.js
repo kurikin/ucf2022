@@ -15,7 +15,7 @@ export const events = [
     firstButtonOpenModal: true,
     secondButtonOpenModal: false,
     hasSecondButton: false,
-    members: [
+    speakers: [
       {
         name: '日比野 莉良',
         belong: '都市社会共生学科 ３年',
@@ -50,7 +50,7 @@ export const events = [
     firstButtonOpenModal: true,
     secondButtonOpenModal: false,
     hasSecondButton: false,
-    members: [
+    speakers: [
       {
         name: '日比野 莉良',
         belong: '都市社会共生学科 ３年',
@@ -85,7 +85,7 @@ export const events = [
     firstButtonOpenModal: true,
     secondButtonOpenModal: false,
     hasSecondButton: false,
-    members: [],
+    speakers: [],
   },
   {
     title: 'ソーシャルビジネス最前線！',
@@ -103,7 +103,7 @@ export const events = [
     firstButtonOpenModal: true,
     secondButtonOpenModal: false,
     hasSecondButton: false,
-    members: [
+    speakers: [
       {
         name: '渡辺 洋平',
         belong: '経営学部 経営学科 ４年　ディアベリー株式会社',
@@ -135,7 +135,7 @@ export const events = [
     firstButtonOpenModal: false,
     secondButtonOpenModal: false,
     hasSecondButton: false,
-    members: [],
+    speakers: [],
   },
   {
     title: '本棚の片隅、覗かせてください',
@@ -153,7 +153,7 @@ export const events = [
     firstButtonOpenModal: false,
     secondButtonOpenModal: false,
     hasSecondButton: false,
-    members: [],
+    speakers: [],
   },
   {
     title: '記憶と歩みの友',
@@ -172,7 +172,7 @@ export const events = [
     firstButtonOpenModal: false,
     secondButtonOpenModal: false,
     hasSecondButton: true,
-    members: [],
+    speakers: [],
   },
   {
     title: 'たたずみたい都市',
@@ -190,7 +190,7 @@ export const events = [
     firstButtonOpenModal: false,
     secondButtonOpenModal: false,
     hasSecondButton: true,
-    members: [],
+    speakers: [],
   },
   {
     title: '優しさの街',
@@ -208,7 +208,7 @@ export const events = [
     firstButtonOpenModal: false,
     secondButtonOpenModal: false,
     hasSecondButton: false,
-    members: [],
+    speakers: [],
   },
   {
     title: 'としかがラジオ！',
@@ -226,7 +226,7 @@ export const events = [
     firstButtonOpenModal: false,
     secondButtonOpenModal: false,
     hasSecondButton: false,
-    members: [],
+    speakers: [],
   },
   {
     title: '裏道探索',
@@ -244,6 +244,6 @@ export const events = [
     firstButtonOpenModal: false,
     secondButtonOpenModal: false,
     hasSecondButton: false,
-    members: [],
+    speakers: [],
   },
 ]
