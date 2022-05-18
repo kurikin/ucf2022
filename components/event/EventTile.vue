@@ -45,8 +45,6 @@ export default {
   methods: {
     firstButtonClicked() {
       if (this.eventData.firstButtonOpenModal) {
-        console.log(this.eventData)
-        console.log(this.eventData.speakers)
         this.setSpeakersModalData({
           eventName: this.eventData.title,
           speakers: this.eventData.speakers,

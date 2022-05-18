@@ -66,4 +66,38 @@ export default {
     font-size: 36px;
   }
 }
+
+.speakers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @include mq(sm) {
+    gap: 16px;
+  }
+
+  @include mq() {
+    gap: 24px;
+  }
+}
+
+.speaker {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  .name {
+    color: $black;
+    font-size: 24px;
+  }
+
+  .belong {
+    color: $secondary;
+    font-size: 16px;
+
+    @include mq() {
+      font-size: 20px;
+    }
+  }
+}
 </style>
