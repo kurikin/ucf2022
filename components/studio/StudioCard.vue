@@ -20,11 +20,15 @@
 </template>
 
 <script>
+import { mapGetters, mapMutations } from 'vuex'
+
 export default {
   methods: {
     showModal() {
-      this.$emit('showModal', this.studioData)
+      this.setStudioModalData(this.studioData)
+      this.toggleStudioModal()
     },
+    ...mapMutations(['setStudioModalData', 'toggleStudioModal']),
   },
   props: {
     studioData: {
@@ -64,7 +68,6 @@ export default {
   object-fit: cover;
   border-bottom-left-radius: $radius-xxs;
   border-bottom-right-radius: $radius-xxs;
-
 }
 
 .teacher-name {

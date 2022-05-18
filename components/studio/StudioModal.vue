@@ -15,14 +15,6 @@
 <script>
 import BaseModal from '~/components/BaseModal.vue'
 export default {
-  props: {
-    studioData: {
-      type: Object,
-    },
-    modalOpen: {
-      type: Boolean,
-    },
-  },
   computed: {
     lastName() {
       const teacherName = new String(this.studioData.teacherName)

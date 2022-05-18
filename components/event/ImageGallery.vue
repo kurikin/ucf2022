@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="grid image-gallery">
+    <div class="grid image-gallery fadeIn animation-3">
       <img
         v-for="(content, index) in contents"
         @click="showImageModal(index)"

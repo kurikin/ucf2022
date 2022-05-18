@@ -21,7 +21,7 @@
           v-for="(studios, index) in allStudios"
           :key="index"
           @showModal="showModal"
-          :index="index"
+          :genreIndex="index"
           :studios="studios"
           :animationNum="index + 4"
         />

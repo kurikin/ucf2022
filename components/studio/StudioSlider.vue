@@ -9,14 +9,14 @@
         src="/icons/left-arrow-black.svg"
         alt=""
         class="swiper-button-prev"
-        :class="'index-' + index"
+        :class="'index-' + genreIndex"
       />
       <swiper class="swiper" :options="swiperOption">
         <swiper-slide
           v-for="studio in studios.studioList"
           :key="studio.teacherName"
         >
-          <StudioCard v-on="$listeners" :studioData="studio" />
+          <StudioCard :studioData="studio" />
         </swiper-slide>
       </swiper>
       <img
@@ -39,7 +39,7 @@ export default {
     studios: {
       type: Object,
     },
-    index: {
+    genreIndex: {
       type: Number,
     },
     animationNum: {

@@ -1,12 +1,9 @@
 export const state = () => ({
   firstLoad: true,
   splashParam: 0.0,
+  studioModalOpen: false,
+  studioModalData: {},
 })
-
-export const getters = {
-  firstLoad: (state) => state.firstLoad,
-  splashParam: (state) => state.splashParam,
-}
 
 export const mutations = {
   toggleFirstLoad(state) {
@@ -14,5 +11,11 @@ export const mutations = {
   },
   changeSplashParam(state) {
     state.splashParam = Math.random()
+  },
+  toggleStudioModal(state) {
+    state.studioModalOpen = !state.studioModalOpen
+  },
+  setStudioModalData(state, data) {
+    state.studioModalData = data
   },
 }
