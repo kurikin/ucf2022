@@ -21,6 +21,9 @@ export const mutations = {
   toggleImageModal(state) {
     state.imageModalOpen = !state.imageModalOpen
   },
+  toggleApplyModal(state) {
+    state.applyModalOpen = !state.applyModalOpen
+  },
   setStudioModalData(state, data) {
     state.studioModalData = data
   },

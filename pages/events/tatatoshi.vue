@@ -9,7 +9,7 @@
             自分の周りの都市・地域を見つめなおしてみませんか？<br />
             自分の知らない都市・地域を知ってみませんか？
           </p>
-          <button class="primary-button how-to-apply">
+          <button class="primary-button how-to-apply" @click="toggleApplyModal">
             参加方法はこちら！
           </button>
         </div>
@@ -35,10 +35,13 @@ import Footer from '~/components/Footer.vue'
 import ImageGallery from '../../components/event/ImageGallery.vue'
 import ImageModal from '~/components/event/ImageModal.vue'
 import ApplyModal from '~/components/event/ApplyModal.vue'
-import { mapState } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 
 export default {
   components: { Footer, ImageGallery, ImageModal, ApplyModal },
+  methods: {
+    ...mapMutations(['toggleApplyModal']),
+  },
   computed: {
     ...mapState(['imageModalOpen', 'applyModalOpen']),
   },

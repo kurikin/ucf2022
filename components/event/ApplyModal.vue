@@ -1,8 +1,8 @@
 <template>
-  <BaseModal :modalOpen="modalOpen">
+  <BaseModal :modalOpen="applyModalOpen">
     <div class="modal-content">
       <h1 class="modal-title">参加方法</h1>
-      <button class="close-modal-button" @click="closeApplyModal">
+      <button class="close-modal-button" @click="toggleApplyModal">
         <span class="close-text">閉じる</span
         ><img class="close-icon" src="/icons/close.svg" alt="" />
       </button>
@@ -31,19 +31,15 @@
 
 <script>
 import BaseModal from '~/components/BaseModal.vue'
+import { mapState, mapMutations } from 'vuex'
 
 export default {
   components: { BaseModal },
-  props: {
-    modalOpen: {
-      type: Boolean,
-      default: false,
-    },
+  computed: {
+    ...mapState(['applyModalOpen']),
   },
   methods: {
-    closeApplyModal() {
-      this.$emit('closeApplyModal')
-    },
+    ...mapMutations(['toggleApplyModal']),
   },
 }
 </script>
