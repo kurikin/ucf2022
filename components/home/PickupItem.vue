@@ -29,7 +29,7 @@ export default {
     },
     imageUri: {
       type: String,
-      default: 'comingsoon.jpeg',
+      default: 'comingsoon.svg',
     },
   },
 }

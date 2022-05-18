@@ -37,7 +37,7 @@ export default {
       if (studioData.hasStudioImage) {
         return `/studios/${studioData.englishName}.jpeg`
       } else {
-        return '/comingsoon.jpeg'
+        return '/comingsoon.svg'
       }
     },
   },

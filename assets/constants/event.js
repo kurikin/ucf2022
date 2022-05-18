@@ -93,7 +93,7 @@ export const events = [
     hasSubtitle: false,
     theme: 'tatazumu',
     format: 'youtube-live',
-    thumbnail: 'comingsoon.jpeg',
+    thumbnail: 'comingsoon.svg',
     description:
       'SDGsの普及とともに近年話題となっている「ソーシャルビジネス」。その重要性や期待は急激に高まっています。この企画では、ソーシャルビジネスの最前線で活躍する現役横国生を迎え、皆さんに知ってほしいプロジェクトの魅力や今後のビジョンを語り尽くします！',
     firstButtonText: '登壇者を見る',
@@ -198,7 +198,7 @@ export const events = [
     hasSubtitle: true,
     theme: 'tatazumu',
     format: 'on-demand',
-    thumbnail: 'comingsoon.jpeg',
+    thumbnail: 'comingsoon.svg',
     description:
       '散歩のとき、通学のとき、帰省のとき……様々な足跡、足音を音楽と結び付けて共有する企画です。都市文化祭テーマである「雑踏」などからあなたが自由に連想した曲をアンケートから教えてください。Spotifyにてプレイリスト化します。その曲にまつわる思い出や言葉も一緒に紹介していただけると嬉しいです。何度でも参加可能です。',
     firstButtonText: '企画ページを見る',
