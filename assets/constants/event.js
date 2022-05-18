@@ -82,7 +82,7 @@ export const events = [
     secondButtonText: '',
     firstButtonLink: 'https://forms.gle/UR4CiGUXJcMPpk8cA',
     secondButtonLink: '',
-    firstButtonOpenModal: true,
+    firstButtonOpenModal: false,
     secondButtonOpenModal: false,
     hasSecondButton: false,
     speakers: [],

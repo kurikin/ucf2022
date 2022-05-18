@@ -33,6 +33,9 @@
       </div>
     </div>
     <div class="divider" />
+    <p class="supplement">
+      ※YouTubeライブ配信企画は都市104スタジオで観覧、都市201教室（休憩室）で視聴ができます。
+    </p>
   </div>
 </template>
 
@@ -186,6 +189,21 @@ export default {
     @include mq(sm) {
       font-size: 20px;
     }
+  }
+}
+
+.supplement {
+  color: $white;
+  font-size: 18px;
+  margin-top: -10px;
+  line-height: 1.58;
+
+  @include mq() {
+    font-size: 20px;
+  }
+
+  @include mq(lg) {
+    text-align: right;
   }
 }
 </style>
