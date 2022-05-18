@@ -38,7 +38,7 @@ export const mutations = {
   setImageModalData(state, data) {
     state.imageModalData = data
   },
-  setSpeakersModalData(state, eventName, speakers) {
+  setSpeakersModalData(state, { eventName, speakers }) {
     state.speakersModalData.eventName = eventName
     state.speakersModalData.speakers = speakers
   },

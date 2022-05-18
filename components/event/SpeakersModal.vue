@@ -6,6 +6,12 @@
         <span class="close-text">閉じる</span
         ><img class="close-icon" src="/icons/close.svg" alt="" />
       </button>
+      <ul class="speakers-list">
+        <li v-for="(speaker, index) in speakers" :key="index" class="speaker">
+          <p class="name">{{ speaker.name }}</p>
+          <p class="belong">{{ speaker.belong }}</p>
+        </li>
+      </ul>
     </div>
   </BaseModal>
 </template>
@@ -21,6 +27,9 @@ export default {
     ...mapMutations(['toggleSpeakersModal']),
   },
   computed: {
+    speakers() {
+      return this.speakersModalData.speakers
+    },
     ...mapState(['speakersModalOpen', 'speakersModalData']),
   },
 }
