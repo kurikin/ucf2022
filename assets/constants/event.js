@@ -93,7 +93,7 @@ export const events = [
     hasSubtitle: false,
     theme: 'tatazumu',
     format: 'youtube-live',
-    thumbnail: 'comingsoon.svg',
+    thumbnail: 'business.jpeg',
     description:
       'SDGsの普及とともに近年話題となっている「ソーシャルビジネス」。その重要性や期待は急激に高まっています。この企画では、ソーシャルビジネスの最前線で活躍する現役横国生を迎え、皆さんに知ってほしいプロジェクトの魅力や今後のビジョンを語り尽くします！',
     firstButtonText: '登壇者を見る',
