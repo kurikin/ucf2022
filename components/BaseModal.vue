@@ -1,6 +1,6 @@
 <template>
   <div class="overlay">
-    <div class="content" v-scroll-lock="modalOpen">
+    <div class="modal-content" v-scroll-lock="modalOpen">
       <slot />
     </div>
   </div>
@@ -32,7 +32,7 @@ export default {
   align-items: center;
 }
 
-.content {
+.modal-content {
   width: 90%;
   max-width: 1000px;
   max-height: 95%;

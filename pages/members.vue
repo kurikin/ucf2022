@@ -7,9 +7,10 @@
       <div class="container">
         <div class="members-container">
           <div
-            v-for="department in members"
-            :key="department.departmentName"
-            class="department"
+            v-for="(department, index) in members"
+            :key="index"
+            class="department fadeUp"
+            :class="'animation-' + (index + 2)"
           >
             <h2 class="department-name">{{ department.departmentName }}</h2>
             <div class="leaders-box">

@@ -9,7 +9,9 @@
       <p class="description fadeIn animation-2">
         <slot name="description"></slot>
       </p>
-      <slot name="custom"></slot>
+      <div class="fadeIn animation-2">
+        <slot name="custom"></slot>
+      </div>
     </div>
   </header>
 </template>

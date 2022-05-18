@@ -114,7 +114,7 @@ export default {
 .lines {
   position: fixed;
   top: 30px;
-  right: 20px;
+  right: 25px;
   z-index: 10000;
 
   height: 22px;
