@@ -146,7 +146,7 @@ export const events = [
     thumbnail: 'bookshelf.jpeg',
     description:
       '本棚には、持ち主の個性が展開されている。そんな皆さんの、個性あふれる本棚の一角を覗かせていただけませんか？本の種類は小説から教科書、実用書まで何でもOK。また好きな本1~3冊ほどをエピソード等とともにご紹介していただきたいです！お待ちしております！！ ',
-    firstButtonText: '登壇者を見る',
+    firstButtonText: '本棚を見る',
     secondButtonText: '',
     firstButtonLink: '',
     secondButtonLink: '',

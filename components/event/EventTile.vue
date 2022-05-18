@@ -14,9 +14,14 @@
     <p class="description">
       {{ eventData.description }}
     </p>
-    <div class="button-box">
-      <button class="action-button">プレイリストを見る</button>
-      <button class="action-button">ボタン2</button>
+    <div
+      class="button-box"
+      :class="{ 'one-button': !eventData.hasSecondButton }"
+    >
+      <button class="action-button">{{ eventData.firstButtonText }}</button>
+      <button class="action-button" v-if="eventData.hasSecondButton">
+        {{ eventData.secondButtonText }}
+      </button>
     </div>
   </div>
 </template>
@@ -149,8 +154,13 @@ export default {
     justify-content: space-between;
     gap: 0;
 
-    &.one-item {
+    &.one-button {
       justify-content: center;
+
+      @include mq(lg) {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      }
     }
   }
 
