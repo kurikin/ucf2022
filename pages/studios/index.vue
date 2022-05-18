@@ -15,16 +15,18 @@
     </WhiteHeader>
     <div class="content">
       <AnalyzeButton class="fadeUp animation-3" />
-      <div class="studio-container fadeUp animation-4">
+      <div class="studio-container">
+        <!-- Fade up animation index 4 ~ 7 -->
         <StudioSlider
           v-for="(studios, index) in allStudios"
           :key="index"
           @showModal="showModal"
           :index="index"
           :studios="studios"
+          :animationNum="index + 4"
         />
       </div>
-      <AnalyzeButton class="fadeUp animation-4" />
+      <AnalyzeButton class="fadeUp animation-8" />
     </div>
     <transition name="component-fade">
       <StudioModal

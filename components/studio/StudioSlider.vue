@@ -1,5 +1,8 @@
 <template>
-  <div class="studio-slider container">
+  <div
+    class="studio-slider container fadeUp"
+    :class="'animation-' + animationNum"
+  >
     <h1 class="studio-name">{{ studios.title }}</h1>
     <div class="card-container">
       <img
@@ -38,6 +41,10 @@ export default {
     },
     index: {
       type: Number,
+    },
+    animationNum: {
+      type: Number,
+      default: 0,
     },
   },
   data() {

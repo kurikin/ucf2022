@@ -15,7 +15,7 @@
       {{ eventData.description }}
     </p>
     <div class="button-box">
-      <button class="action-button">ボタン1</button>
+      <button class="action-button">プレイリストを見る</button>
       <button class="action-button">ボタン2</button>
     </div>
   </div>
@@ -140,13 +140,23 @@ export default {
 
 .button-box {
   display: flex;
+  flex-direction: column;
   gap: 20px;
   grid-column: 1 / -1;
+
+  @include mq(sm) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+
+    &.one-item {
+      justify-content: center;
+    }
+  }
 
   @include mq(lg) {
     grid-row: 3;
     grid-column: 2 / 4;
-    gap: 48px;
     align-self: flex-end;
   }
 }
@@ -158,22 +168,23 @@ export default {
   font-weight: 700;
   background-color: $primary;
   border-radius: 28px;
-  padding: 8px 28px;
+  padding: 10px 0;
   border: none;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 
   @include mq(xs) {
-    flex: 1;
+    width: 100%;
   }
 
   @include mq(sm) {
-    padding: 10px 24px;
-    flex: 1;
+    width: 48%;
+    padding: 12px 0;
   }
 
   @include mq() {
+    width: 47%;
     font-size: 20px;
-    padding: 10px 64px;
+    padding: 12px 0;
     border-radius: 32px;
   }
 }
@@ -199,13 +210,12 @@ export default {
   font-size: 16px;
 
   @include mq(sm) {
-    font-size: 18px;
+    font-size: 20px;
+    line-height: 1.6;
   }
 
   @include mq() {
     grid-column: 1 / -1;
-    font-size: 20px;
-    line-height: 1.6;
   }
 
   @include mq(lg) {
