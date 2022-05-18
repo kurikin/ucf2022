@@ -80,7 +80,7 @@ export const events = [
       '大学って本当に色んな人がいますよね！そして色んな所から来てる人がいると思います。そんな皆さんの地元のお話をお聞きします！一体どんなことが聞けるのでしょうか…？新入生・受験生も必見の情報もあるかも！？',
     firstButtonText: 'アンケートに答える',
     secondButtonText: '',
-    firstButtonLink: '',
+    firstButtonLink: 'https://forms.gle/UR4CiGUXJcMPpk8cA',
     secondButtonLink: '',
     firstButtonOpenModal: true,
     secondButtonOpenModal: false,
@@ -105,20 +105,17 @@ export const events = [
     hasSecondButton: false,
     members: [
       {
-        name: '日比野 莉良',
-        belong: '都市社会共生学科 ３年',
+        name: '渡辺 洋平',
+        belong: '経営学部 経営学科 ４年　ディアベリー株式会社',
       },
       {
-        name: '織田 可久瑠',
-        belong: '建築学科 ３年',
+        name: '村瀬 悠',
+        belong:
+          '都市科学部 都市社会共生学科 ３年　認定NPO法人 ミタイ・ミタクニャイ子ども基金',
       },
       {
-        name: '宮内 爽太',
-        belong: '都市基盤学科 ３年',
-      },
-      {
-        name: '田中 怜',
-        belong: '環境リスク共生学科 ３年',
+        name: '入江 遥斗',
+        belong: '都市科学部 都市社会共生学科 ３年　一般社団法人ACTPORT',
       },
     ],
   },
@@ -131,31 +128,14 @@ export const events = [
     thumbnail: 'comingsoon.jpeg',
     description:
       'この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために',
-    firstButtonText: '登壇者を見る',
+    firstButtonText: '申し込み',
     secondButtonText: '',
     firstButtonLink: '',
     secondButtonLink: '',
-    firstButtonOpenModal: true,
+    firstButtonOpenModal: false,
     secondButtonOpenModal: false,
     hasSecondButton: false,
-    members: [
-      {
-        name: '日比野 莉良',
-        belong: '都市社会共生学科 ３年',
-      },
-      {
-        name: '織田 可久瑠',
-        belong: '建築学科 ３年',
-      },
-      {
-        name: '宮内 爽太',
-        belong: '都市基盤学科 ３年',
-      },
-      {
-        name: '田中 怜',
-        belong: '環境リスク共生学科 ３年',
-      },
-    ],
+    members: [],
   },
   {
     title: '本棚の片隅、覗かせてください',
@@ -170,27 +150,10 @@ export const events = [
     secondButtonText: '',
     firstButtonLink: '',
     secondButtonLink: '',
-    firstButtonOpenModal: true,
+    firstButtonOpenModal: false,
     secondButtonOpenModal: false,
     hasSecondButton: false,
-    members: [
-      {
-        name: '日比野 莉良',
-        belong: '都市社会共生学科 ３年',
-      },
-      {
-        name: '織田 可久瑠',
-        belong: '建築学科 ３年',
-      },
-      {
-        name: '宮内 爽太',
-        belong: '都市基盤学科 ３年',
-      },
-      {
-        name: '田中 怜',
-        belong: '環境リスク共生学科 ３年',
-      },
-    ],
+    members: [],
   },
   {
     title: '記憶と歩みの友',
@@ -201,31 +164,15 @@ export const events = [
     thumbnail: 'playlist.jpeg',
     description:
       '散歩のとき、通学のとき、帰省のとき……様々な足跡、足音を音楽と結び付けて共有する企画です。都市文化祭テーマである「雑踏」などからあなたが自由に連想した曲をアンケートから教えてください。Spotifyにてプレイリスト化します。その曲にまつわる思い出や言葉も一緒に紹介していただけると嬉しいです。何度でも参加可能です。',
-    firstButtonText: '登壇者を見る',
-    secondButtonText: '',
-    firstButtonLink: '',
-    secondButtonLink: '',
-    firstButtonOpenModal: true,
+    firstButtonText: '曲を投稿する',
+    secondButtonText: 'プレイリストを見る',
+    firstButtonLink: 'https://forms.gle/zB77UL9ToPw2QQvX7',
+    secondButtonLink:
+      'https://open.spotify.com/playlist/6YTlcpUE1IBzMItMwVqdVg',
+    firstButtonOpenModal: false,
     secondButtonOpenModal: false,
-    hasSecondButton: false,
-    members: [
-      {
-        name: '日比野 莉良',
-        belong: '都市社会共生学科 ３年',
-      },
-      {
-        name: '織田 可久瑠',
-        belong: '建築学科 ３年',
-      },
-      {
-        name: '宮内 爽太',
-        belong: '都市基盤学科 ３年',
-      },
-      {
-        name: '田中 怜',
-        belong: '環境リスク共生学科 ３年',
-      },
-    ],
+    hasSecondButton: true,
+    members: [],
   },
   {
     title: 'たたずみたい都市',
@@ -236,31 +183,14 @@ export const events = [
     thumbnail: 'tatatoshi.jpeg',
     description:
       'みなさんが「たたずみたい」と思う都市の写真を集める企画です！自分の周りの都市・地域を見つめなおしてみませんか？自分の知らない都市・地域を知ってみませんか？Twitter、Instagram、Googleフォームから何回でも投稿可能です。',
-    firstButtonText: '登壇者を見る',
-    secondButtonText: '',
-    firstButtonLink: '',
-    secondButtonLink: '',
-    firstButtonOpenModal: true,
+    firstButtonText: '写真を投稿する',
+    secondButtonText: '写真を見る',
+    firstButtonLink: 'https://forms.gle/edwn2nTkRX84DHaU8',
+    secondButtonLink: '/events/tatatoshi',
+    firstButtonOpenModal: false,
     secondButtonOpenModal: false,
-    hasSecondButton: false,
-    members: [
-      {
-        name: '日比野 莉良',
-        belong: '都市社会共生学科 ３年',
-      },
-      {
-        name: '織田 可久瑠',
-        belong: '建築学科 ３年',
-      },
-      {
-        name: '宮内 爽太',
-        belong: '都市基盤学科 ３年',
-      },
-      {
-        name: '田中 怜',
-        belong: '環境リスク共生学科 ３年',
-      },
-    ],
+    hasSecondButton: true,
+    members: [],
   },
   {
     title: '優しさの街',
@@ -271,31 +201,14 @@ export const events = [
     thumbnail: 'comingsoon.jpeg',
     description:
       '散歩のとき、通学のとき、帰省のとき……様々な足跡、足音を音楽と結び付けて共有する企画です。都市文化祭テーマである「雑踏」などからあなたが自由に連想した曲をアンケートから教えてください。Spotifyにてプレイリスト化します。その曲にまつわる思い出や言葉も一緒に紹介していただけると嬉しいです。何度でも参加可能です。',
-    firstButtonText: '登壇者を見る',
+    firstButtonText: '企画ページを見る',
     secondButtonText: '',
     firstButtonLink: '',
     secondButtonLink: '',
-    firstButtonOpenModal: true,
+    firstButtonOpenModal: false,
     secondButtonOpenModal: false,
     hasSecondButton: false,
-    members: [
-      {
-        name: '日比野 莉良',
-        belong: '都市社会共生学科 ３年',
-      },
-      {
-        name: '織田 可久瑠',
-        belong: '建築学科 ３年',
-      },
-      {
-        name: '宮内 爽太',
-        belong: '都市基盤学科 ３年',
-      },
-      {
-        name: '田中 怜',
-        belong: '環境リスク共生学科 ３年',
-      },
-    ],
+    members: [],
   },
   {
     title: 'としかがラジオ！',
@@ -306,31 +219,14 @@ export const events = [
     thumbnail: 'radio.jpeg',
     description:
       '都市科学部の学生が、それぞれの学びを自分の言葉で話します。学部や学科の枠に捉われない独自の活動から、都市科学の可能性を探っていきます。あなたに合う都市をぜひ見つけてみてください',
-    firstButtonText: '登壇者を見る',
+    firstButtonText: '企画ページを見る',
     secondButtonText: '',
     firstButtonLink: '',
     secondButtonLink: '',
-    firstButtonOpenModal: true,
+    firstButtonOpenModal: false,
     secondButtonOpenModal: false,
     hasSecondButton: false,
-    members: [
-      {
-        name: '日比野 莉良',
-        belong: '都市社会共生学科 ３年',
-      },
-      {
-        name: '織田 可久瑠',
-        belong: '建築学科 ３年',
-      },
-      {
-        name: '宮内 爽太',
-        belong: '都市基盤学科 ３年',
-      },
-      {
-        name: '田中 怜',
-        belong: '環境リスク共生学科 ３年',
-      },
-    ],
+    members: [],
   },
   {
     title: '裏道探索',
@@ -341,30 +237,13 @@ export const events = [
     thumbnail: 'uramichi.jpeg',
     description:
       '横浜国立大学には多くの道がある。通学のとき、昼休み、はたまた考えに行き詰まった時。あなたの道は誰かにとって出会いになるかもしれない。あなたの知らない楽しい道を誰かは知っているかもしれない。裏道を通して横浜国立大学の新たな一面を探しにいきましょう。',
-    firstButtonText: '登壇者を見る',
+    firstButtonText: '企画ページを見る',
     secondButtonText: '',
     firstButtonLink: '',
     secondButtonLink: '',
-    firstButtonOpenModal: true,
+    firstButtonOpenModal: false,
     secondButtonOpenModal: false,
     hasSecondButton: false,
-    members: [
-      {
-        name: '日比野 莉良',
-        belong: '都市社会共生学科 ３年',
-      },
-      {
-        name: '織田 可久瑠',
-        belong: '建築学科 ３年',
-      },
-      {
-        name: '宮内 爽太',
-        belong: '都市基盤学科 ３年',
-      },
-      {
-        name: '田中 怜',
-        belong: '環境リスク共生学科 ３年',
-      },
-    ],
+    members: [],
   },
 ]
