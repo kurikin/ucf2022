@@ -1,12 +1,14 @@
 <template>
   <BaseModal :modalOpen="modalOpen">
-    <h1 class="studio-name">{{ lastName }}スタジオ</h1>
-    <button class="close-modal-button" @click="closeModal">
-      <span class="close-text">閉じる</span
-      ><img class="close-icon" src="/icons/close.svg" alt="" />
-    </button>
-    <img :src="imageUrl(studioData)" alt="" class="studio-img" />
-    <p class="description">{{ studioData.description }}</p>
+    <div class="modal-content">
+      <h1 class="studio-name">{{ lastName }}スタジオ</h1>
+      <button class="close-modal-button" @click="closeModal">
+        <span class="close-text">閉じる</span
+        ><img class="close-icon" src="/icons/close.svg" alt="" />
+      </button>
+      <img :src="imageUrl(studioData)" alt="" class="studio-img" />
+      <p class="description">{{ studioData.description }}</p>
+    </div>
   </BaseModal>
 </template>
 
@@ -90,6 +92,26 @@ export default {
     font-size: 18px;
     grid-column: 2;
     line-height: 1.6;
+  }
+}
+
+.modal-content {
+  display: grid;
+  gap: 20px;
+  overflow: scroll;
+
+  @include mq(sm) {
+    gap: 24px;
+    align-items: start;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+  }
+
+  @include mq() {
+    column-gap: 32px;
+    row-gap: 32px;
+    align-items: flex-start;
+    grid-template-columns: 60fr 40fr;
   }
 }
 </style>

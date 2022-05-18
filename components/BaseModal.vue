@@ -1,6 +1,6 @@
 <template>
-  <div class="overlay">
-    <div class="modal-content" v-scroll-lock="modalOpen">
+  <div class="modal-overlay">
+    <div class="modal-container" v-scroll-lock="modalOpen">
       <slot />
     </div>
   </div>
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.overlay {
+.modal-overlay {
   position: fixed;
   z-index: 101;
   top: 0;
@@ -32,7 +32,7 @@ export default {
   align-items: center;
 }
 
-.modal-content {
+.modal-container {
   width: 90%;
   max-width: 1000px;
   max-height: 95%;
@@ -40,25 +40,12 @@ export default {
   border-radius: $radius-sm;
   padding: 20px;
   display: grid;
-  gap: 20px;
   align-items: center;
-  overflow: scroll;
 
   @include mq(sm) {
     width: 80%;
-    gap: 24px;
     height: auto;
     padding: 24px;
-    align-items: start;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto auto;
-  }
-
-  @include mq() {
-    column-gap: 32px;
-    row-gap: 32px;
-    align-items: flex-start;
-    grid-template-columns: 60fr 40fr;
   }
 
   @include mq(lg) {

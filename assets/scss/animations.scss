@@ -35,6 +35,10 @@
   animation-delay: calc(8 * $animation-interval);
 }
 
+.animation-10 {
+  animation-delay: calc(9 * $animation-interval);
+}
+
 // アニメーション
 .fadeIn {
   animation-name: fadeInAnime;

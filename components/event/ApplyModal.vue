@@ -1,27 +1,31 @@
 <template>
   <BaseModal :modalOpen="modalOpen">
-    <h1 class="modal-title">参加方法</h1>
-    <button class="close-modal-button" @click="closeApplyModal">
-      <span class="close-text">閉じる</span
-      ><img class="close-icon" src="/icons/close.svg" alt="" />
-    </button>
-    <div class="sns-apply-box">
-      <h2 class="apply-heading">1. Twitter/Instagramで参加</h2>
-      <p class="description">
-        Twitter/Instagramで、<br />
-        ① ハッシュタグ「#都市文化祭2022」「#たたとし」② 撮影場所
-        ③コメント（任意）
-        をつけて投稿すると、都市文化祭ホームページに写真が掲載されます。<br />
-        <span>
-          ※アカウント名がニックネームとして掲載されます。あらかじめご了承ください。</span
-        >
-      </p>
+    <div class="modal-content">
+      <h1 class="modal-title">参加方法</h1>
+      <button class="close-modal-button" @click="closeApplyModal">
+        <span class="close-text">閉じる</span
+        ><img class="close-icon" src="/icons/close.svg" alt="" />
+      </button>
+      <div class="sns-apply-box">
+        <h2 class="apply-heading">1. Twitter/Instagramで参加</h2>
+        <p class="description">
+          Twitter/Instagramで、<br />
+          ① ハッシュタグ「#都市文化祭2022」「#たたとし」② 撮影場所
+          ③コメント（任意）
+          をつけて投稿すると、都市文化祭ホームページに写真が掲載されます。<br />
+          <span>
+            ※アカウント名がニックネームとして掲載されます。あらかじめご了承ください。</span
+          >
+        </p>
+      </div>
+      <div class="form-apply-box">
+        <h2 class="apply-heading">2. Googleフォームで参加</h2>
+        <p class="description">
+          参加用Googleフォームからも写真を投稿できます。
+        </p>
+      </div>
+      <button class="primary-button google-form-button">Googleフォーム</button>
     </div>
-    <div class="form-apply-box">
-      <h2 class="apply-heading">2. Googleフォームで参加</h2>
-      <p class="description">参加用Googleフォームからも写真を投稿できます。</p>
-    </div>
-    <button class="primary-button google-form-button">Googleフォーム</button>
   </BaseModal>
 </template>
 
@@ -113,6 +117,26 @@ export default {
     align-self: center;
     justify-self: end;
     margin: 0;
+  }
+}
+
+.modal-content {
+  display: grid;
+  overflow: scroll;
+  gap: 20px;
+
+  @include mq(sm) {
+    gap: 24px;
+    align-items: start;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+  }
+
+  @include mq() {
+    column-gap: 32px;
+    row-gap: 32px;
+    align-items: flex-start;
+    grid-template-columns: 60fr 40fr;
   }
 }
 </style>
