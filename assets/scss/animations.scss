@@ -54,3 +54,21 @@
   animation-fill-mode: forwards;
   opacity: 0;
 }
+
+.image-fadeIn {
+  animation-name: fadeInAnime;
+  animation-timing-function: ease;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+// モーダル用 トランジション
+.component-fade-enter-active,
+.component-fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.component-fade-enter,
+.component-fade-leave-to {
+  opacity: 0;
+}

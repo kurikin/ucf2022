@@ -6,7 +6,11 @@
         <span class="close-text">閉じる</span
         ><img class="close-icon" src="/icons/close.svg" alt="" />
       </button>
-      <img :src="imageUrl(studioModalData)" alt="" class="studio-img" />
+      <img
+        :src="imageUrl(studioModalData)"
+        alt=""
+        class="studio-img image-fadeIn"
+      />
       <p class="description">{{ studioModalData.description }}</p>
     </div>
   </BaseModal>
@@ -23,6 +27,7 @@ export default {
       return teacherName.substring(0, teacherName.indexOf(' '))
     },
     ...mapState(['studioModalData', 'studioModalOpen']),
+    ...mapMutations(['setStudioModalData']),
   },
   methods: {
     closeModal() {
@@ -42,12 +47,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-//  - Font sizes (px)
-//  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
-
-// - Spacing system (px)
-// 2 / 4 / 8 / 12 / 16 / 20 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-
 .studio-name {
   color: $black;
   letter-spacing: 2px;
