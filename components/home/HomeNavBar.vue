@@ -34,7 +34,7 @@ export default {}
 .home-nav-bar {
   display: none;
   background-color: $white;
-  border-radius: $radius-xs;
+  border-radius: 24px;
   height: 65px;
   margin-top: 80px;
 

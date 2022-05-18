@@ -95,6 +95,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-radius: 24px;
   }
 }
 
