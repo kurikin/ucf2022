@@ -125,7 +125,7 @@ export const events = [
     hasSubtitle: false,
     theme: 'nomareru',
     format: 'f2f',
-    thumbnail: 'comingsoon.jpeg',
+    thumbnail: 'earth.jpeg',
     description:
       'この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために',
     firstButtonText: '申し込み',

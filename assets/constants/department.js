@@ -47,7 +47,7 @@ export const departments = [
       '人間から都市、生態系、地球まで大小さまざまなスケールの環境システムについて理解し、豊かさと表裏一体で生じる多様なリスクのバランスを適切にマネジメントしようとする「リスク共生」の考え方を学ぶ学科です。',
       '自然環境と社会環境の両面からリスクの基礎理論やリスクが生じるメカニズムを学ぶだけでなく、フィールドワークなどの実践的演習科目も取り入れることで、リスクと上手く付き合う「リスク共生」のアプローチを身につけ、高度化・複合化した現代社会における問題解決能力を育成します。',
     ],
-    imagePath: '/departments/dep1.jpg',
+    imagePath: '/departments/dep4.jpg',
     showSecondaryButton: false,
     primaryButtonText: '環境リスク共生学科 公式HP',
     secondaryButtonText: '',

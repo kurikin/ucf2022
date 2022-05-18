@@ -98,7 +98,7 @@ export const members = [
       {
         name: '村瀬 悠',
         fileName: 'murase.png',
-        position: 'システム部部長',
+        position: 'システム部長',
         belong: '都市科学部 都市社会共生学科３年',
       },
       {

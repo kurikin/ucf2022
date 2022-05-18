@@ -69,7 +69,7 @@ export default {
 
   @include mq(lg) {
     grid-template-columns: 65fr 35fr;
-    column-gap: 48px;
+    column-gap: 64px;
     row-gap: 96px;
   }
 
@@ -106,10 +106,13 @@ export default {
     grid-column: 2;
     grid-row: 1 / 3;
     margin-bottom: 0;
-    border-radius: $radius-md;
-
+    border-radius: $radius-sm;
     max-height: none;
-    height: 100%;
+    width: 100%;
+  }
+
+  @include mq(lg) {
+    min-height: 450px;
   }
 }
 
@@ -171,6 +174,7 @@ export default {
     grid-column: 1;
     grid-row: 2;
     align-items: flex-start;
+    align-self: flex-end;
   }
 
   &.--has-two-buttons {
