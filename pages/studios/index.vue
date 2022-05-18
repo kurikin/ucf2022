@@ -1,6 +1,6 @@
 <template>
   <div class="white-background">
-    <WhiteHeader :hideHamburger="modalOpen">
+    <WhiteHeader :hideHamburger="studioModalOpen">
       <template v-slot:page-title>ス<span>タ</span>ジオ紹介</template>
       <template v-slot:description
         >都市社会共生学科では２年次以降、<br class="show-over-sm" />
@@ -20,8 +20,7 @@
         <StudioSlider
           v-for="(studios, index) in allStudios"
           :key="index"
-          @showModal="showModal"
-          :genreIndex="index"
+          :index="index"
           :studios="studios"
           :animationNum="index + 4"
         />
@@ -29,12 +28,7 @@
       <AnalyzeButton class="fadeUp animation-8" />
     </div>
     <transition name="component-fade">
-      <StudioModal
-        v-show="modalOpen"
-        @closeModal="closeModal"
-        :studioData="modalData"
-        :modalOpen="modalOpen"
-      />
+      <StudioModal v-show="studioModalOpen" />
     </transition>
     <Footer />
   </div>
@@ -46,29 +40,16 @@ import AnalyzeButton from '@/components/studio/AnalyzeButton.vue'
 import StudioSlider from '~/components/studio/StudioSlider.vue'
 import { allStudios } from '@/assets/constants/studio'
 import StudioModal from '~/components/studio/StudioModal.vue'
+import { mapState } from 'vuex'
 
 export default {
-  data() {
-    return {
-      modalOpen: false,
-      modalData: {},
-    }
-  },
   computed: {
     allStudios() {
       return allStudios
     },
+    ...mapState(['studioModalOpen']),
   },
   components: { WhiteHeader, AnalyzeButton, StudioSlider, StudioModal },
-  methods: {
-    showModal(studioData) {
-      this.modalData = studioData
-      this.modalOpen = true
-    },
-    closeModal() {
-      this.modalOpen = false
-    },
-  },
 }
 </script>
 

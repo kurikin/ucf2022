@@ -1,29 +1,32 @@
 <template>
-  <BaseModal :modalOpen="modalOpen">
+  <BaseModal :modalOpen="studioModalOpen">
     <div class="modal-content">
       <h1 class="studio-name">{{ lastName }}スタジオ</h1>
       <button class="close-modal-button" @click="closeModal">
         <span class="close-text">閉じる</span
         ><img class="close-icon" src="/icons/close.svg" alt="" />
       </button>
-      <img :src="imageUrl(studioData)" alt="" class="studio-img" />
-      <p class="description">{{ studioData.description }}</p>
+      <img :src="imageUrl(studioModalData)" alt="" class="studio-img" />
+      <p class="description">{{ studioModalData.description }}</p>
     </div>
   </BaseModal>
 </template>
 
 <script>
 import BaseModal from '~/components/BaseModal.vue'
+import { mapMutations, mapState } from 'vuex'
+
 export default {
   computed: {
     lastName() {
-      const teacherName = new String(this.studioData.teacherName)
+      const teacherName = new String(this.studioModalData.teacherName)
       return teacherName.substring(0, teacherName.indexOf(' '))
     },
+    ...mapState(['studioModalData', 'studioModalOpen']),
   },
   methods: {
     closeModal() {
-      this.$emit('closeModal')
+      this.toggleStudioModal()
     },
     imageUrl(studioData) {
       if (studioData.hasStudioImage) {
@@ -32,6 +35,7 @@ export default {
         return '/comingsoon.svg'
       }
     },
+    ...mapMutations(['toggleStudioModal']),
   },
   components: { BaseModal },
 }

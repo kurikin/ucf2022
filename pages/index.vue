@@ -18,7 +18,7 @@ import HomeHeader from '~/components/home/HomeHeader.vue'
 import News from '~/components/home/News.vue'
 import Pickup from '~/components/home/Pickup.vue'
 import Splash from '~/components/Splash.vue'
-import { mapGetters, mapMutations } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 
 export default {
   name: 'IndexPage',

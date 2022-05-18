@@ -9,7 +9,7 @@
         src="/icons/left-arrow-black.svg"
         alt=""
         class="swiper-button-prev"
-        :class="'index-' + genreIndex"
+        :class="'index-' + index"
       />
       <swiper class="swiper" :options="swiperOption">
         <swiper-slide
@@ -39,7 +39,7 @@ export default {
     studios: {
       type: Object,
     },
-    genreIndex: {
+    index: {
       type: Number,
     },
     animationNum: {
