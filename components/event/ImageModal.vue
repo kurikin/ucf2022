@@ -1,8 +1,8 @@
 <template>
-  <BaseModal :modalOpen="modalOpen">
+  <BaseModal :modalOpen="imageModalOpen">
     <div class="modal-content">
       <img class="image" :src="imageModalData.image.url" alt="" />
-      <button class="close-modal-button" @click="closeImageModal">
+      <button class="close-modal-button" @click="toggleImageModal">
         <span class="close-text">閉じる</span
         ><img class="close-icon" src="/icons/close.svg" alt="" />
       </button>
@@ -25,24 +25,16 @@
 
 <script>
 import BaseModal from '~/components/BaseModal.vue'
+import { mapState, mapMutations } from 'vuex'
 
 export default {
-  components: { BaseModal },
-  props: {
-    modalOpen: {
-      type: Boolean,
-      default: false,
-    },
-    imageModalData: {
-      type: Object,
-      default: () => ({}),
-    },
+  computed: {
+    ...mapState(['imageModalOpen', 'imageModalData']),
   },
   methods: {
-    closeImageModal() {
-      this.$emit('closeImageModal')
-    },
+    ...mapMutations(['toggleImageModal']),
   },
+  components: { BaseModal },
 }
 </script>
 

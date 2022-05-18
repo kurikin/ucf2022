@@ -9,30 +9,21 @@
             自分の周りの都市・地域を見つめなおしてみませんか？<br />
             自分の知らない都市・地域を知ってみませんか？
           </p>
-          <button class="primary-button how-to-apply" @click="showApplyModal">
+          <button class="primary-button how-to-apply">
             参加方法はこちら！
           </button>
         </div>
       </template>
     </WhiteHeader>
     <div class="content">
-      <ImageGallery :contents="contents" @showImageModal="showImageModal" />
+      <ImageGallery :contents="contents" />
 
       <!-- モーダル -->
       <transition name="component-fade">
-        <ImageModal
-          v-if="imageModalOpen"
-          :modalOpen="imageModalOpen"
-          :imageModalData="imageModalData"
-          @closeImageModal="closeImageModal"
-        />
+        <ImageModal v-if="imageModalOpen" />
       </transition>
       <transition name="component-fade">
-        <ApplyModal
-          v-show="applyModalOpen"
-          :modalOpen="applyModalOpen"
-          @closeApplyModal="closeApplyModal"
-        />
+        <ApplyModal v-if="applyModalOpen" />
       </transition>
     </div>
     <Footer />
@@ -44,35 +35,12 @@ import Footer from '~/components/Footer.vue'
 import ImageGallery from '../../components/event/ImageGallery.vue'
 import ImageModal from '~/components/event/ImageModal.vue'
 import ApplyModal from '~/components/event/ApplyModal.vue'
+import { mapState } from 'vuex'
 
 export default {
   components: { Footer, ImageGallery, ImageModal, ApplyModal },
-  data() {
-    return {
-      modalContentIndex: 0,
-      imageModalOpen: false,
-      applyModalOpen: false,
-    }
-  },
   computed: {
-    imageModalData() {
-      return this.contents[this.modalContentIndex]
-    },
-  },
-  methods: {
-    showImageModal(index) {
-      this.modalContentIndex = index
-      this.imageModalOpen = true
-    },
-    closeImageModal() {
-      this.imageModalOpen = false
-    },
-    showApplyModal() {
-      this.applyModalOpen = true
-    },
-    closeApplyModal() {
-      this.applyModalOpen = false
-    },
+    ...mapState(['imageModalOpen', 'applyModalOpen']),
   },
   async asyncData({ $microcms }) {
     const images = await $microcms.get({

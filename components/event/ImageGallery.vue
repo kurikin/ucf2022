@@ -2,11 +2,11 @@
   <div class="container">
     <div class="grid image-gallery fadeIn animation-3">
       <img
-        v-for="(content, index) in contents"
-        @click="showImageModal(index)"
+        v-for="content in contents"
         class="image"
         :src="content.image.url"
         :key="content.id"
+        @click="showModal(content)"
         alt=""
         v-lazy-load
       />
@@ -15,12 +15,16 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 export default {
   props: ['contents'],
   methods: {
-    showImageModal(index) {
-      this.$emit('showImageModal', index)
+    showModal(content) {
+      this.setImageModalData(content)
+      this.toggleImageModal()
     },
+    ...mapMutations(['toggleImageModal', 'setImageModalData']),
   },
 }
 </script>

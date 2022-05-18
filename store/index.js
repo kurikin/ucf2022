@@ -2,7 +2,10 @@ export const state = () => ({
   firstLoad: true,
   splashParam: 0.0,
   studioModalOpen: false,
+  imageModalOpen: false,
+  applyModalOpen: false,
   studioModalData: {},
+  imageModalData: {},
 })
 
 export const mutations = {
@@ -15,7 +18,13 @@ export const mutations = {
   toggleStudioModal(state) {
     state.studioModalOpen = !state.studioModalOpen
   },
+  toggleImageModal(state) {
+    state.imageModalOpen = !state.imageModalOpen
+  },
   setStudioModalData(state, data) {
     state.studioModalData = data
+  },
+  setImageModalData(state, data) {
+    state.imageModalData = data
   },
 }

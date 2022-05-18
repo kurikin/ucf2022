@@ -28,7 +28,7 @@
       <AnalyzeButton class="fadeUp animation-8" />
     </div>
     <transition name="component-fade">
-      <StudioModal v-show="studioModalOpen" />
+      <StudioModal v-if="studioModalOpen" />
     </transition>
     <Footer />
   </div>
