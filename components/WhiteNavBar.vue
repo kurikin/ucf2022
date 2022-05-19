@@ -5,29 +5,54 @@
       :class="{ 'white-nav-bar--hidden': !showNavBar }"
     >
       <ul class="nav-list">
-        <li class="list-item">
+        <li class="list-item" :class="{ current: pathMatch('/') }">
           <nuxt-link to="/">
             <img class="logo-img" src="/logos/logo-black.png" alt="" />
           </nuxt-link>
         </li>
         <li class="list-item">
-          <nuxt-link class="nav-link" to="/">ホーム</nuxt-link>
+          <nuxt-link
+            class="nav-link"
+            :class="{ current: pathMatch('/') }"
+            to="/"
+            >ホーム</nuxt-link
+          >
         </li>
         <div class="divider"></div>
         <li class="list-item">
-          <nuxt-link class="nav-link" to="/about">都市文化祭とは</nuxt-link>
+          <nuxt-link
+            class="nav-link"
+            :class="{ current: pathMatch('/about') }"
+            to="/about"
+            >都市文化祭とは</nuxt-link
+          >
         </li>
         <div class="divider"></div>
         <li class="list-item">
-          <nuxt-link class="nav-link" to="/events">企画一覧</nuxt-link>
+          <nuxt-link
+            class="nav-link"
+            :class="{ current: pathMatch('/events') }"
+            to="/events"
+            >企画一覧</nuxt-link
+          >
         </li>
         <div class="divider"></div>
         <li class="list-item">
-          <nuxt-link class="nav-link" to="/departments">学科紹介</nuxt-link>
+          <nuxt-link
+            class="nav-link"
+            :class="{ current: pathMatch('/departments') }"
+            to="/departments"
+            >学科紹介</nuxt-link
+          >
         </li>
         <div class="divider"></div>
         <li class="list-item">
-          <nuxt-link class="nav-link" to="/studios">スタジオ紹介</nuxt-link>
+          <nuxt-link
+            class="nav-link"
+            :class="{ current: pathMatch('/studios') }"
+            to="/studios"
+            >スタジオ紹介</nuxt-link
+          >
         </li>
       </ul>
     </nav>
@@ -48,6 +73,9 @@ export default {
     window.removeEventListener('scroll', this.onScroll)
   },
   methods: {
+    pathMatch(path) {
+      return path === this.$route.path
+    },
     onScroll() {
       const currentScrollPosition =
         window.pageYOffset || document.documentElement.scrollTop
@@ -123,6 +151,7 @@ export default {
     flex: 0.8;
   }
 }
+
 .nav-link:link,
 .nav-link:visited {
   flex: 1;
@@ -131,6 +160,10 @@ export default {
   font-weight: 700;
   color: $black;
   transition: all 0.3s;
+
+  &.current {
+    color: $primary;
+  }
 
   @include mq(lg) {
     font-size: 20px;

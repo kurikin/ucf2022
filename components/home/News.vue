@@ -5,9 +5,12 @@
       <li class="list-item" v-for="content in contents" :key="content.id">
         <nuxt-link class="item-link" to="#">
           <span class="date">{{
-            $dateFns.format(content.createdAt, 'yyyy/MM/dd')
+            $dateFns.format(content.updatedAt, 'yyyy/MM/dd')
           }}</span>
           <p class="title">{{ content.title }}</p>
+          <div class="category" :class="categoryColor(content.category)">
+            {{ content.category }}
+          </div>
         </nuxt-link>
       </li>
     </ul>
@@ -17,6 +20,11 @@
 <script>
 export default {
   props: ['contents'],
+  methods: {
+    categoryColor() {
+      return 'primary'
+    },
+  },
 }
 </script>
 
@@ -48,6 +56,7 @@ export default {
     gap: 18px;
   }
 }
+
 .list-item {
   &:not(:last-child) {
     border-bottom: 0.5px solid $lightgray;
@@ -61,21 +70,39 @@ export default {
 
 .item-link {
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  text-align: left;
+  grid-template-columns: 30fr 70fr;
   font-size: 16px;
-  gap: 16px;
+  column-gap: 16px;
+  row-gap: 8px;
+  align-items: flex-start;
+  justify-items: center;
 
   @include mq() {
     font-size: 18px;
   }
 
+  @include mq(lg) {
+    font-size: 20px;
+  }
+
   .date {
-    color: $gray;
+    color: $black;
+    font-weight: 600;
   }
 
   .title {
     color: $black;
+    text-align: left;
+    grid-column: 2;
+    grid-row: 1 / 3;
+  }
+
+  .category {
+    color: $white;
+    background-color: $primary;
+    padding: 4px 0;
+    border-radius: 8px;
+    font-weight: 600;
   }
 }
 </style>
