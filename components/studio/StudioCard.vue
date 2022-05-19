@@ -42,6 +42,7 @@ export default {
 .studio-card {
   display: flex;
   width: 100%;
+  height: 100%;
   padding: 8px;
   overflow: hidden;
   background-color: #fff;
@@ -59,7 +60,7 @@ export default {
 
 .text-box {
   display: flex;
-  padding: 16px 20px;
+  padding: 16px 0px;
   flex-direction: column;
   gap: 12px;
 }
@@ -87,6 +88,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   column-gap: 8px;
+  padding: 0 16px;
 
   @include mq() {
     column-gap: 12px;

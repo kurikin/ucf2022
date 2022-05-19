@@ -7,10 +7,10 @@ export const allStudios = [
         englishName: 'komiya',
         hasStudioImage: true,
         hashtags: [
-          '#オーストラリア',
           '#モーツァルト',
-          '#中世ヨーロッパ',
           '#市民革命',
+          '#オーストラリア',
+          '#中世ヨーロッパ',
           '#市民台頭の歴史',
           '#ファッション',
         ],
@@ -104,8 +104,8 @@ export const allStudios = [
         hasStudioImage: false,
         hashtags: [
           '#レコード音楽',
-          '#音響メディア史',
           '#マニアック',
+          '#音響メディア史',
           '#メディアの歴史',
           '#エジソンから現代まで',
         ],
