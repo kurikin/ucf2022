@@ -42,6 +42,7 @@ export default {
 .studio-card {
   display: flex;
   width: 100%;
+  padding: 8px;
   overflow: hidden;
   background-color: #fff;
   flex-direction: column;
@@ -66,6 +67,8 @@ export default {
 .teacher-img {
   width: 100%;
   object-fit: cover;
+  border-top-left-radius: $radius-sm;
+  border-top-right-radius: $radius-sm;
   border-bottom-left-radius: $radius-xxs;
   border-bottom-right-radius: $radius-xxs;
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="white-background">
-    <WhiteHeader>
+    <WhiteHeader class="studio-header">
       <template v-slot:page-title>ス<span>タ</span>ジオ診断</template>
     </WhiteHeader>
     <div class="content">
@@ -45,7 +45,7 @@
         </div>
       </div>
     </div>
-    <Footer />
+    <Footer class="custom-footer" />
   </div>
 </template>
 
@@ -172,5 +172,9 @@ export default {
     border-radius: 32px;
     min-width: 320px;
   }
+}
+
+.custom-footer {
+  margin-top: -100px;
 }
 </style>

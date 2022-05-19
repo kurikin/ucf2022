@@ -70,12 +70,17 @@ export default {
 
 .item-link {
   display: grid;
-  grid-template-columns: 30fr 70fr;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
   font-size: 16px;
-  column-gap: 16px;
+  column-gap: 24px;
   row-gap: 8px;
   align-items: flex-start;
-  justify-items: center;
+  justify-items: flex-start;
+
+  @include mq(sm) {
+    grid-template-columns: auto auto 1fr;
+  }
 
   @include mq() {
     font-size: 18px;
@@ -94,15 +99,25 @@ export default {
     color: $black;
     text-align: left;
     grid-column: 2;
+    line-height: 1.6;
     grid-row: 1 / 3;
+
+    @include mq(sm) {
+      grid-column: 3;
+    }
   }
 
   .category {
     color: $white;
     background-color: $primary;
-    padding: 4px 0;
+    font-size: 16px;
+    padding: 2px 20px;
     border-radius: 8px;
     font-weight: 600;
+
+    @include mq(sm) {
+      grid-column: 2;
+    }
   }
 }
 </style>

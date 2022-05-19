@@ -92,7 +92,7 @@ export default {
 }
 
 .studio-name {
-  color: $black;
+  color: $white;
   font-size: 28px;
   letter-spacing: 3px;
   font-weight: 500;
