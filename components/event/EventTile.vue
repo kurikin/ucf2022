@@ -18,15 +18,18 @@
       class="button-box"
       :class="{ 'one-button': !eventData.hasSecondButton }"
     >
-      <button class="action-button" @click="firstButtonClicked">
-        {{ eventData.firstButtonText }}
+      <button
+        class="action-button"
+        @click="buttonClicked(eventData.firstButtonData)"
+      >
+        {{ eventData.firstButtonData.text }}
       </button>
       <button
         class="action-button"
-        @click="secondButtonClicked"
+        @click="buttonClicked(eventData.secondButtonData)"
         v-if="eventData.hasSecondButton"
       >
-        {{ eventData.secondButtonText }}
+        {{ eventData.secondButtonData.text }}
       </button>
     </div>
   </div>
@@ -43,13 +46,20 @@ export default {
     },
   },
   methods: {
-    firstButtonClicked() {
-      if (this.eventData.firstButtonOpenModal) {
-        this.setSpeakersModalData({
-          eventName: this.eventData.title,
-          speakers: this.eventData.speakers,
-        })
-        this.toggleSpeakersModal()
+    buttonClicked(buttonData) {
+      switch (buttonData.type) {
+        case 'modal':
+          this.setSpeakersModalData({
+            eventName: this.eventData.title,
+            speakers: this.eventData.speakers,
+          })
+          this.toggleSpeakersModal()
+          break
+        case 'link':
+          window.open(buttonData.link, '_blank')
+          break
+        case 'route':
+          this.$router.push(buttonData.link)
       }
     },
     secondButtonClicked() {},
