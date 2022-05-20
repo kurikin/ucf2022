@@ -187,15 +187,18 @@ export default { components: { HomeNavBar } }
   @include mq(sm) {
     height: 150px;
     margin: 48px auto;
+    margin-bottom: 12px;
   }
 
   @include mq() {
     height: 160px;
     margin: 64px auto;
+    margin-bottom: 12px;
   }
 
   @include mq(lg) {
     height: 180px;
+    margin-bottom: 12px;
   }
 }
 </style>
