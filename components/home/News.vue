@@ -84,10 +84,12 @@ export default {
 
   @include mq() {
     font-size: 18px;
+    column-gap: 32px;
   }
 
   @include mq(lg) {
     font-size: 20px;
+    column-gap: 48px;
   }
 
   .date {
@@ -117,6 +119,16 @@ export default {
 
     @include mq(sm) {
       grid-column: 2;
+      padding: 2px 20px;
+    }
+
+    @include mq() {
+      font-size: 18px;
+      padding: 4px 24px;
+    }
+
+    @include mq(lg) {
+      padding: 4px 28px;
     }
   }
 }

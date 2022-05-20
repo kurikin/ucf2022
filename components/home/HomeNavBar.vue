@@ -45,7 +45,7 @@ export default {}
   }
 
   @include mq(lg) {
-    margin-top: 128px;
+    margin-top: 110px;
   }
 }
 

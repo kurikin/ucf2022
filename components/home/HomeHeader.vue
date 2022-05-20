@@ -32,11 +32,7 @@
       </div>
     </div>
     <HomeNavBar class="fadeIn animation-3" />
-    <img
-      class="down-arrow fadeIn animation-3"
-      src="/icons/down-arrow-white.svg"
-      alt=""
-    />
+    <div class="center-line fadeIn animation-3" />
   </header>
 </template>
 
@@ -53,7 +49,7 @@ export default { components: { HomeNavBar } }
 .home-header {
   width: 100%;
   padding-top: 32px;
-  padding-bottom: 24px;
+  padding-bottom: 12px;
   margin-bottom: 24px;
   display: flex;
   flex-direction: column;
@@ -85,13 +81,12 @@ export default { components: { HomeNavBar } }
 
     background-position: center;
     padding-top: 64px;
-    padding-bottom: 48px;
     margin-bottom: 64px;
+    padding-bottom: 0;
   }
 
   @include mq(lg) {
     padding-top: 80px;
-    padding-bottom: 64px;
   }
 }
 
@@ -183,22 +178,24 @@ export default { components: { HomeNavBar } }
   }
 }
 
-.down-arrow {
-  margin-top: 32px;
-  height: 18px;
+.center-line {
+  width: 1px;
+  height: 100px;
+  background-color: $white;
+  margin: 24px auto;
 
   @include mq(sm) {
-    margin-top: 48px;
-    height: 20px;
+    height: 150px;
+    margin: 48px auto;
   }
 
   @include mq() {
-    margin-top: 64px;
+    height: 160px;
+    margin: 64px auto;
   }
 
   @include mq(lg) {
-    margin-top: 80px;
-    height: 24px;
+    height: 180px;
   }
 }
 </style>

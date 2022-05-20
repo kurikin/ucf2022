@@ -4,7 +4,7 @@ export const members = [
     leaders: [
       {
         name: '池田 瑞季',
-        fileName: 'ikeda.png',
+        fileName: 'ikeda-sunglasses2.png',
         position: '総務部長',
         belong: '都市科学部 都市社会共生学科３年',
       },
