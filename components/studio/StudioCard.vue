@@ -94,6 +94,10 @@ export default {
     column-gap: 12px;
     row-gap: 4px;
   }
+
+  @include mq(lg) {
+    column-gap: 16px;
+  }
 }
 
 .hashtag {
