@@ -42,6 +42,7 @@ export default {
 .studio-card {
   display: flex;
   width: 100%;
+  max-width: 270px;
   height: 100%;
   padding: 8px;
   overflow: hidden;
@@ -53,8 +54,21 @@ export default {
     cursor: pointer;
   }
 
+  @include mq(xs) {
+    max-width: 471px;
+  }
+
   @include mq(sm) {
     border-radius: $radius-md;
+    max-width: 313.5px;
+  }
+
+  @include mq() {
+    max-width: 408.5px;
+  }
+
+  @include mq(lg) {
+    max-width: 311.3px;
   }
 }
 
