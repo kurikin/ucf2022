@@ -34,11 +34,7 @@
       </div>
       <div class="countdown-box">
         <p class="title">ホームページ公開まで...</p>
-        <countdown
-          class="counter"
-          :transform="transform"
-          :time="2 * 24 * 60 * 60 * 1000"
-        >
+        <countdown class="counter" :transform="transform" :time="time">
           <template slot-scope="props"
             ><span class="value">{{ props.days }}</span>
             <span class="unit">日</span>
@@ -57,6 +53,14 @@
 
 <script>
 export default {
+  data() {
+    const now = new Date()
+    const release = new Date('2022-06-01T00:00:00.000+09:00')
+
+    return {
+      time: release - now,
+    }
+  },
   methods: {
     transform(props) {
       Object.entries(props).forEach(([key, value]) => {
@@ -133,15 +137,12 @@ export default {
 
   @include mq(xs) {
     width: 92%;
-    max-width: 380px;
-  }
-
-  @include mq(sm) {
-    justify-self: start;
+    max-width: 300px;
   }
 
   @include mq() {
-    max-width: 550px;
+    justify-self: start;
+    max-width: 530px;
     margin-top: 0;
     grid-row: 1 / 3;
     grid-column: 1;
