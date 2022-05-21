@@ -46,11 +46,10 @@ export default {}
 .countdown {
   width: 100%;
   height: 100vh;
-  padding-top: 32px;
-  padding-bottom: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   background: linear-gradient(
       to bottom,
@@ -62,10 +61,6 @@ export default {}
     url('/header-back.jpg');
   background-position: center;
 
-  @include mq(sm) {
-    padding-top: 48px;
-  }
-
   @include mq() {
     background: linear-gradient(
         to bottom,
@@ -76,17 +71,10 @@ export default {}
       url('/header-back.jpg');
 
     background-position: center;
-    padding-top: 64px;
-    padding-bottom: 0;
-  }
-
-  @include mq(lg) {
-    padding-top: 80px;
   }
 }
 
 .logo {
-  width: auto;
   height: 180px;
   display: block;
   object-fit: contain;

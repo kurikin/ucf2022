@@ -44,6 +44,13 @@ export default { components: { HomeNavBar } }
 <style lang="scss" scoped>
 .grid {
   gap: 48px;
+
+  @include mq() {
+    align-content: center;
+    grid-template-columns: 45fr 55fr;
+    grid-template-rows: auto 1fr;
+    gap: 0;
+  }
 }
 
 .home-header {
@@ -121,6 +128,15 @@ export default { components: { HomeNavBar } }
 
 .sns {
   display: none;
+
+  @include mq() {
+    display: flex;
+    gap: 48px;
+    grid-row: 1;
+    grid-column: 2;
+    justify-self: end;
+    align-self: start;
+  }
 }
 
 .description {
@@ -152,27 +168,15 @@ export default { components: { HomeNavBar } }
   }
 }
 
-@include mq() {
-  .grid {
-    align-content: center;
-    grid-template-columns: 45fr 55fr;
-    grid-template-rows: auto 1fr;
-    gap: 0;
-  }
-
-  .sns {
-    display: flex;
-    gap: 48px;
-    grid-row: 1;
-    grid-column: 2;
-    justify-self: end;
-    align-self: start;
-  }
-  .sns-link {
+.sns-link {
+  @include mq() {
     width: 32px;
     height: 32px;
   }
-  .sns-logo {
+}
+
+.sns-logo {
+  @include mq() {
     width: 100%;
     height: 100%;
   }
