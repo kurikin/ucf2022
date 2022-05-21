@@ -77,16 +77,13 @@ export default {
 
 <style lang="scss" scoped>
 .grid {
-  grid-template-rows: 1.4fr 1fr 1fr;
+  grid-template-rows: auto 1.3fr 1fr 1fr;
   align-items: center;
   height: 100%;
   margin: 32px 0;
 
   @include mq() {
     align-content: center;
-    grid-template-columns: 45fr 55fr;
-    grid-template-rows: auto 1fr;
-    gap: 0;
   }
 }
 
@@ -132,10 +129,6 @@ export default {
     max-width: 380px;
   }
 
-  @include mq(sm) {
-    height: 330px;
-  }
-
   @include mq() {
     height: 260px;
     margin-top: 0;
@@ -149,13 +142,16 @@ export default {
 }
 
 .sns {
-  display: none;
+  display: flex;
+  gap: 32px;
+  justify-self: end;
+  align-self: start;
+  grid-row: 1;
+  margin: 12px 0;
 
-  @include mq() {
-    display: flex;
+  @include mq(sm) {
     gap: 48px;
-    justify-self: end;
-    align-self: start;
+    margin: 20px 0;
   }
 }
 
@@ -183,22 +179,24 @@ export default {
     grid-row: 2;
     grid-column: 2;
   }
+}
 
-  .date {
-    .unit {
-      @include mq(xs) {
-        margin-left: 1px;
-      }
+.date {
+  .unit {
+    font-size: 24px;
+
+    @include mq(xs) {
+      margin-left: 1px;
     }
+  }
 
-    .value {
-      font-size: 30px;
-      font-weight: 700;
-      margin-right: 1px;
+  .value {
+    font-size: 30px;
+    font-weight: 700;
+    margin-right: 1px;
 
-      @include mq(xs) {
-        font-size: 36px;
-      }
+    @include mq(xs) {
+      font-size: 36px;
     }
   }
 }
@@ -206,6 +204,11 @@ export default {
 .sns-link {
   width: 24px;
   height: 24px;
+
+  @include mq(sm) {
+    height: 28px;
+    width: 28px;
+  }
 }
 
 .sns-logo {
@@ -236,6 +239,10 @@ export default {
 
     .unit {
       font-size: 20px;
+
+      @include mq(sm) {
+        font-size: 24px;
+      }
     }
 
     .value {
@@ -245,6 +252,11 @@ export default {
       @include mq(xs) {
         font-size: 36px;
         width: 38px;
+      }
+
+      @include mq(sm) {
+        font-size: 44px;
+        width: 46px;
       }
     }
   }
