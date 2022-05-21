@@ -33,9 +33,9 @@
         </p>
       </div>
       <div class="countdown-box">
-        <p class="countdown-title">ホームページ公開まで...</p>
+        <p class="title">ホームページ公開まで...</p>
         <countdown
-          class="countdown-content"
+          class="counter"
           :transform="transform"
           :time="2 * 24 * 60 * 60 * 1000"
         >
@@ -76,17 +76,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.grid {
-  grid-template-rows: auto 1.3fr 1fr 1fr;
-  align-items: center;
-  height: 100%;
-  margin: 32px 0;
-
-  @include mq() {
-    align-content: center;
-  }
-}
-
 .countdown {
   width: 100%;
   height: 100vh;
@@ -118,6 +107,20 @@ export default {
   }
 }
 
+.grid {
+  grid-template-rows: auto 1.3fr 1fr 1fr;
+  align-items: center;
+  height: 100%;
+  margin: 32px 0;
+
+  @include mq() {
+    height: auto;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    row-gap: 80px;
+  }
+}
+
 .logo {
   display: block;
   width: 285px;
@@ -129,15 +132,16 @@ export default {
     max-width: 380px;
   }
 
-  @include mq() {
-    height: 260px;
-    margin-top: 0;
-    grid-row: 1 / -1;
-    margin-bottom: 0;
+  @include mq(sm) {
+    justify-self: start;
   }
 
-  @include mq(lg) {
-    height: 320px;
+  @include mq() {
+    max-width: 550px;
+    margin-top: 0;
+    grid-row: 1 / 3;
+    grid-column: 1;
+    margin-bottom: 0;
   }
 }
 
@@ -152,6 +156,11 @@ export default {
   @include mq(sm) {
     gap: 48px;
     margin: 20px 0;
+  }
+
+  @include mq() {
+    grid-row: 1;
+    grid-column: 2;
   }
 }
 
@@ -174,8 +183,8 @@ export default {
 
   @include mq() {
     text-align: right;
-    justify-content: end;
-    align-content: end;
+    align-self: flex-end;
+
     grid-row: 2;
     grid-column: 2;
   }
@@ -222,7 +231,12 @@ export default {
   align-items: center;
   gap: 4px;
 
-  .countdown-title {
+  @include mq() {
+    grid-column: 1 / -1;
+    gap: 8px;
+  }
+
+  .title {
     color: $white;
     font-family: 'Zen Antique';
     font-size: 20px;
@@ -230,18 +244,25 @@ export default {
     @include mq(xs) {
       font-size: 24px;
     }
+
+    @include mq() {
+      font-size: 30px;
+    }
   }
 
-  .countdown-content {
+  .counter {
     color: $white;
-    font-size: 30px;
-    font-family: 'Zen Antique', monospace;
+    font-family: 'Zen Antique';
 
     .unit {
       font-size: 20px;
 
       @include mq(sm) {
         font-size: 24px;
+      }
+
+      @include mq() {
+        font-size: 36px;
       }
     }
 
@@ -256,7 +277,12 @@ export default {
 
       @include mq(sm) {
         font-size: 44px;
-        width: 46px;
+        width: 48px;
+      }
+
+      @include mq() {
+        font-size: 62px;
+        width: 72px;
       }
     }
   }
