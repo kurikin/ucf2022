@@ -30,6 +30,9 @@
           横浜国立大学都市科学部<br />オープンキャンパス同時開催
         </p>
       </div>
+      <div class="countdown">
+        <p class="countdown-title"></p>
+      </div>
     </div>
   </div>
 </template>
@@ -41,6 +44,13 @@ export default {}
 <style lang="scss" scoped>
 .grid {
   gap: 48px;
+
+  @include mq() {
+    align-content: center;
+    grid-template-columns: 45fr 55fr;
+    grid-template-rows: auto 1fr;
+    gap: 0;
+  }
 }
 
 .countdown {
@@ -104,6 +114,15 @@ export default {}
 
 .sns {
   display: none;
+
+  @include mq() {
+    display: flex;
+    gap: 48px;
+    grid-row: 1;
+    grid-column: 2;
+    justify-self: end;
+    align-self: start;
+  }
 }
 
 .description {
@@ -135,29 +154,41 @@ export default {}
   }
 }
 
-@include mq() {
-  .grid {
-    align-content: center;
-    grid-template-columns: 45fr 55fr;
-    grid-template-rows: auto 1fr;
-    gap: 0;
-  }
-
-  .sns {
-    display: flex;
-    gap: 48px;
-    grid-row: 1;
-    grid-column: 2;
-    justify-self: end;
-    align-self: start;
-  }
-  .sns-link {
+.sns-link {
+  @include mq() {
     width: 32px;
     height: 32px;
   }
-  .sns-logo {
+}
+
+.sns-logo {
+  @include mq() {
     width: 100%;
     height: 100%;
+  }
+}
+
+.center-line {
+  width: 1px;
+  height: 100px;
+  background-color: $white;
+  margin: 24px auto;
+
+  @include mq(sm) {
+    height: 150px;
+    margin: 48px auto;
+    margin-bottom: 12px;
+  }
+
+  @include mq() {
+    height: 160px;
+    margin: 64px auto;
+    margin-bottom: 12px;
+  }
+
+  @include mq(lg) {
+    height: 180px;
+    margin-bottom: 12px;
   }
 }
 </style>
