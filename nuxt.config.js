@@ -19,7 +19,7 @@ export default {
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Zen+Antique&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Zen+Antique&family=Zen+Kaku+Gothic+New:wght@400;700&family=Zen+Old+Mincho&display=swap',
       },
     ],
   },
@@ -39,7 +39,7 @@ export default {
     { src: '@/plugins/swiper', ssr: false },
     { src: '@/plugins/modal' },
     { src: '@/plugins/scroll_lock' },
-    { src: '@/plugins/countdown' },
+    { src: '@/plugins/countdown', ssr: false },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

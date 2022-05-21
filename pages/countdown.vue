@@ -30,8 +30,20 @@
           横浜国立大学都市科学部<br />オープンキャンパス同時開催
         </p>
       </div>
-      <div class="countdown">
-        <p class="countdown-title"></p>
+      <div class="countdown-box">
+        <p class="title">ホームページ公開まで...</p>
+        <countdown class="content" :time="2 * 24 * 60 * 60 * 1000">
+          <template slot-scope="props"
+            ><span class="value">{{ props.days }}</span>
+            <span class="unit">日</span>
+            <span class="value">{{ props.hours }}</span>
+            <span class="unit">時間</span>
+            <span class="value">{{ props.minutes }}</span>
+            <span class="unit">分</span>
+            <span class="value">{{ props.seconds }}</span>
+            <span class="unit">秒</span></template
+          >
+        </countdown>
       </div>
     </div>
   </div>
@@ -189,6 +201,34 @@ export default {}
   @include mq(lg) {
     height: 180px;
     margin-bottom: 12px;
+  }
+}
+
+.countdown-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+
+  .title {
+    color: $white;
+    font-family: 'Zen Antique';
+    font-size: 20px;
+  }
+
+  .content {
+    color: $white;
+    font-size: 30px;
+    font-family: 'Zen Antique', monospace;
+
+    .unit {
+      font-size: 20px;
+    }
+
+    .value {
+      display: inline-block;
+      width: 30px;
+    }
   }
 }
 </style>
