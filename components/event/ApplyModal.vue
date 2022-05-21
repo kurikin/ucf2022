@@ -45,6 +45,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.modal-content {
+  display: grid;
+  overflow: scroll;
+  gap: 20px;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+
+  @include mq(sm) {
+    gap: 24px;
+    align-items: start;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+  }
+
+  @include mq() {
+    column-gap: 32px;
+    row-gap: 32px;
+    align-items: flex-start;
+    grid-template-columns: 60fr 40fr;
+  }
+}
 .modal-title {
   color: $black;
   letter-spacing: 2px;
@@ -113,26 +134,6 @@ export default {
     align-self: center;
     justify-self: end;
     margin: 0;
-  }
-}
-
-.modal-content {
-  display: grid;
-  overflow: scroll;
-  gap: 20px;
-
-  @include mq(sm) {
-    gap: 24px;
-    align-items: start;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto auto;
-  }
-
-  @include mq() {
-    column-gap: 32px;
-    row-gap: 32px;
-    align-items: flex-start;
-    grid-template-columns: 60fr 40fr;
   }
 }
 </style>
