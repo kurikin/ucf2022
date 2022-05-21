@@ -292,12 +292,12 @@ export default {
 
       @include mq(sm) {
         font-size: 44px;
-        width: 50px;
+        width: 52px;
       }
 
       @include mq() {
         font-size: 52px;
-        width: 58px;
+        width: 60px;
       }
 
       @include mq(lg) {
