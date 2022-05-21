@@ -39,6 +39,7 @@ export default {
     { src: '@/plugins/swiper', ssr: false },
     { src: '@/plugins/modal' },
     { src: '@/plugins/scroll_lock' },
+    { src: '@/plugins/countdown' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
