@@ -14,7 +14,7 @@
           </div>
         </template>
       </WhiteHeader>
-      <img class="footprint" src="/footprint.png" alt="" />
+      <img class="footprint fadeIn animation-1" src="/footprint.png" alt="" />
     </div>
     <Footer />
   </div>
@@ -79,7 +79,7 @@ export default {
 
   @include mq(xs) {
     right: 20px;
-    height: 60vh;
+    height: 53vh;
   }
 
   @include mq(sm) {

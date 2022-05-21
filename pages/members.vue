@@ -152,6 +152,11 @@ export default {
     width: 150px;
     height: 150px;
   }
+
+  @include mq(lg) {
+    width: 160px;
+    height: 160px;
+  }
 }
 
 .text-box {
