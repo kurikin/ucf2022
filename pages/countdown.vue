@@ -119,6 +119,10 @@ export default {
     grid-template-rows: auto auto;
     row-gap: 80px;
   }
+
+  @include mq(lg) {
+    row-gap: 96px;
+  }
 }
 
 .logo {
@@ -218,6 +222,11 @@ export default {
     height: 28px;
     width: 28px;
   }
+
+  @include mq() {
+    height: 32px;
+    width: 32px;
+  }
 }
 
 .sns-logo {
@@ -230,6 +239,7 @@ export default {
   flex-direction: column;
   align-items: center;
   gap: 4px;
+  font-family: 'Zen Antique';
 
   @include mq() {
     grid-column: 1 / -1;
@@ -238,7 +248,6 @@ export default {
 
   .title {
     color: $white;
-    font-family: 'Zen Antique';
     font-size: 20px;
 
     @include mq(xs) {
@@ -252,7 +261,6 @@ export default {
 
   .counter {
     color: $white;
-    font-family: 'Zen Antique';
 
     .unit {
       font-size: 20px;
@@ -262,27 +270,38 @@ export default {
       }
 
       @include mq() {
+        font-size: 30px;
+      }
+
+      @include mq(lg) {
         font-size: 36px;
       }
     }
 
     .value {
       display: inline-block;
-      width: 30px;
+      font-size: 30px;
+      width: 34px;
+      text-align: right;
 
       @include mq(xs) {
         font-size: 36px;
-        width: 38px;
+        width: 40px;
       }
 
       @include mq(sm) {
         font-size: 44px;
-        width: 48px;
+        width: 50px;
       }
 
       @include mq() {
+        font-size: 52px;
+        width: 58px;
+      }
+
+      @include mq(lg) {
         font-size: 62px;
-        width: 72px;
+        width: 82px;
       }
     }
   }
