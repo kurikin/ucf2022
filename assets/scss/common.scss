@@ -95,6 +95,7 @@ a {
 .content {
   flex: 1;
   margin-bottom: 48px;
+  position: relative;
 
   @include mq(sm) {
     margin-bottom: 64px;
@@ -105,8 +106,12 @@ a {
   }
 }
 
-.container {
+.no-margin-content {
+  flex: 1;
   position: relative;
+}
+
+.container {
   width: 100%;
   max-width: 1140px;
   margin: 0 auto;
