@@ -28,9 +28,7 @@
           ><span class="value"> 6</span><span class="unit">月</span
           ><span class="value"> 26</span><span class="unit">日（日）</span>
         </p>
-        <p class="desc">
-          横浜国立大学都市科学部<br />オープンキャンパス同時開催
-        </p>
+        <p>横浜国立大学オープンキャンパス<br />同時開催</p>
       </div>
       <div class="countdown-box">
         <p class="title">ホームページ公開まで...</p>

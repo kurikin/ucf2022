@@ -26,9 +26,7 @@
         <p class="date">
           <span>2022</span>年<span> 6</span>月<span> 26</span>日（日）
         </p>
-        <p class="desc">
-          横浜国立大学都市科学部<br />オープンキャンパス同時開催
-        </p>
+        <p>横浜国立大学オープンキャンパス<br />同時開催</p>
       </div>
     </div>
     <HomeNavBar class="fadeIn animation-3" />
@@ -144,6 +142,7 @@ export default { components: { HomeNavBar } }
   gap: 8px;
   font-size: 18px;
   color: $white;
+  line-height: 1.55;
 
   @include mq(sm) {
     font-size: 24px;
