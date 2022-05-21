@@ -5,7 +5,7 @@
       :class="{ 'white-nav-bar--hidden': !showNavBar }"
     >
       <ul class="nav-list">
-        <li class="list-item" :class="{ current: pathMatch('/') }">
+        <li class="list-item">
           <nuxt-link to="/">
             <img class="logo-img" src="/logos/logo-black.png" alt="" />
           </nuxt-link>
@@ -64,9 +64,11 @@ export default {
     return {
       showNavBar: true,
       lastScrollPosition: 0,
+      path: '',
     }
   },
   mounted() {
+    this.path = this.$route.path
     window.addEventListener('scroll', this.onScroll)
   },
   beforeDestroy() {
@@ -74,7 +76,7 @@ export default {
   },
   methods: {
     pathMatch(path) {
-      return path === this.$route.path
+      return path === this.path
     },
     onScroll() {
       const currentScrollPosition =

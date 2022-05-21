@@ -11,7 +11,7 @@
         class="swiper-button-prev"
         :class="'index-' + index"
       />
-      <swiper class="swiper" :options="swiperOption">
+      <swiper v-show="show" class="swiper" :options="swiperOption">
         <swiper-slide
           v-for="studio in studios.studioList"
           :key="studio.teacherName"
@@ -49,6 +49,7 @@ export default {
   },
   data() {
     return {
+      show: true,
       swiperOption: {
         slidesPerView: 1,
         spaceBetween: 20,
