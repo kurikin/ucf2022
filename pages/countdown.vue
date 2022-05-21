@@ -24,15 +24,21 @@
       </div>
       <div class="description fadeIn animation-2">
         <p class="date">
-          <span>2022</span>年<span> 6</span>月<span> 26</span>日（日）
+          <span class="value">2022</span><span class="unit">年</span
+          ><span class="value"> 6</span><span class="unit">月</span
+          ><span class="value"> 26</span><span class="unit">日（日）</span>
         </p>
         <p class="desc">
           横浜国立大学都市科学部<br />オープンキャンパス同時開催
         </p>
       </div>
       <div class="countdown-box">
-        <p class="title">ホームページ公開まで...</p>
-        <countdown class="content" :time="2 * 24 * 60 * 60 * 1000">
+        <p class="countdown-title">ホームページ公開まで...</p>
+        <countdown
+          class="countdown-content"
+          :transform="transform"
+          :time="2 * 24 * 60 * 60 * 1000"
+        >
           <template slot-scope="props"
             ><span class="value">{{ props.days }}</span>
             <span class="unit">日</span>
@@ -50,12 +56,31 @@
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    transform(props) {
+      Object.entries(props).forEach(([key, value]) => {
+        // Adds leading zero
+        const digits = value < 10 ? `0${value}` : value
+
+        // uses singular form when the value is less than 2
+        const word = value < 2 ? key.replace(/s$/, '') : key
+
+        props[key] = digits
+      })
+
+      return props
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
 .grid {
-  gap: 48px;
+  grid-template-rows: 1.4fr 1fr 1fr;
+  align-items: center;
+  height: 100%;
+  margin: 32px 0;
 
   @include mq() {
     align-content: center;
@@ -97,19 +122,18 @@ export default {}
 }
 
 .logo {
-  height: 180px;
   display: block;
+  width: 285px;
   object-fit: contain;
   justify-self: center;
-  margin-top: 24px;
 
   @include mq(xs) {
-    height: 210px;
+    width: 92%;
+    max-width: 380px;
   }
 
   @include mq(sm) {
     height: 330px;
-    margin-top: 32px;
   }
 
   @include mq() {
@@ -130,8 +154,6 @@ export default {}
   @include mq() {
     display: flex;
     gap: 48px;
-    grid-row: 1;
-    grid-column: 2;
     justify-self: end;
     align-self: start;
   }
@@ -142,6 +164,13 @@ export default {}
   gap: 8px;
   font-size: 18px;
   color: $white;
+  text-align: center;
+  align-items: center;
+
+  @include mq(xs) {
+    font-size: 20px;
+    gap: 12px;
+  }
 
   @include mq(sm) {
     font-size: 24px;
@@ -155,53 +184,33 @@ export default {}
     grid-column: 2;
   }
 
-  .date span {
-    font-size: 30px;
-    font-weight: 700;
-    margin-right: 1px;
+  .date {
+    .unit {
+      @include mq(xs) {
+        margin-left: 1px;
+      }
+    }
 
-    @include mq(sm) {
-      font-size: 36px;
+    .value {
+      font-size: 30px;
+      font-weight: 700;
+      margin-right: 1px;
+
+      @include mq(xs) {
+        font-size: 36px;
+      }
     }
   }
 }
 
 .sns-link {
-  @include mq() {
-    width: 32px;
-    height: 32px;
-  }
+  width: 24px;
+  height: 24px;
 }
 
 .sns-logo {
-  @include mq() {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-.center-line {
-  width: 1px;
-  height: 100px;
-  background-color: $white;
-  margin: 24px auto;
-
-  @include mq(sm) {
-    height: 150px;
-    margin: 48px auto;
-    margin-bottom: 12px;
-  }
-
-  @include mq() {
-    height: 160px;
-    margin: 64px auto;
-    margin-bottom: 12px;
-  }
-
-  @include mq(lg) {
-    height: 180px;
-    margin-bottom: 12px;
-  }
+  width: 100%;
+  height: 100%;
 }
 
 .countdown-box {
@@ -210,13 +219,17 @@ export default {}
   align-items: center;
   gap: 4px;
 
-  .title {
+  .countdown-title {
     color: $white;
     font-family: 'Zen Antique';
     font-size: 20px;
+
+    @include mq(xs) {
+      font-size: 24px;
+    }
   }
 
-  .content {
+  .countdown-content {
     color: $white;
     font-size: 30px;
     font-family: 'Zen Antique', monospace;
@@ -228,6 +241,11 @@ export default {}
     .value {
       display: inline-block;
       width: 30px;
+
+      @include mq(xs) {
+        font-size: 36px;
+        width: 38px;
+      }
     }
   }
 }
