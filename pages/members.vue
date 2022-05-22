@@ -154,8 +154,8 @@ export default {
   }
 
   @include mq(lg) {
-    width: 160px;
-    height: 160px;
+    width: 158px;
+    height: 158px;
   }
 }
 
