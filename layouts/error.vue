@@ -1,27 +1,28 @@
 <template>
   <div class="white-background">
     <div class="no-margin-content container">
-      <WhiteHeader class="upper-element">
+      <ErrorWhiteHeader class="upper-element">
         <template v-slot:page-title>404 Not Found</template>
         <template v-slot:custom>
           <div class="header-bottom-box">
-            <p class="description">
+            <p v-if="error.statusCode === 404" class="description">
               お探しのページは見つかりませんでした。<br />URLに誤りがないかご確認ください。
             </p>
+            <p v-else class="description">エラーが発生しました。</p>
             <button class="primary-button return-to-home" @click="backToHome">
               ホームに戻る
             </button>
           </div>
         </template>
-      </WhiteHeader>
+      </ErrorWhiteHeader>
       <img class="footprint fadeIn animation-1" src="/footprint.png" alt="" />
     </div>
-    <Footer />
   </div>
 </template>
 
 <script>
 export default {
+  props: ['error'],
   methods: {
     backToHome() {
       this.$router.push('/')
@@ -73,18 +74,18 @@ export default {
 
 .footprint {
   position: absolute;
-  height: 50vh;
+  height: 58vh;
   right: 0;
   bottom: 0;
 
   @include mq(xs) {
     right: 20px;
-    height: 53vh;
+    height: 60vh;
   }
 
   @include mq(sm) {
     right: 40px;
-    height: 70vh;
+    height: 75vh;
   }
 
   @include mq() {
