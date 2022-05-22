@@ -237,6 +237,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-self: flex-start;
   gap: 4px;
   font-family: 'Zen Antique';
 
@@ -280,12 +281,12 @@ export default {
     .value {
       display: inline-block;
       font-size: 30px;
-      width: 34px;
+      width: 36px;
       text-align: right;
 
       @include mq(xs) {
         font-size: 36px;
-        width: 40px;
+        width: 42px;
       }
 
       @include mq(sm) {
