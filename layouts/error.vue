@@ -25,7 +25,7 @@ export default {
   props: ['error'],
   methods: {
     backToHome() {
-      this.$router.push('/')
+      this.$router.push('/countdown')
     },
   },
 }
