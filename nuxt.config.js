@@ -79,5 +79,7 @@ export default {
 
   build: {},
 
-  generate: {},
+  generate: {
+    fallback: true,
+  },
 }
