@@ -30,7 +30,7 @@
         </p>
         <p>横浜国立大学オープンキャンパス<br />同時開催</p>
       </div>
-      <div class="countdown-box">
+      <div class="countdown-box fadeIn animation-3">
         <p class="title">ホームページ公開まで...</p>
         <countdown class="counter" :transform="transform" :time="time">
           <template slot-scope="props"
