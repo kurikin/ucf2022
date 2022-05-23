@@ -20,10 +20,15 @@
               alt=""
             />
             <div class="button-box">
-              <button @click="showStudioModal(studioData)">
+              <button
+                class="result-button"
+                @click="showStudioModal(studioData)"
+              >
                 スタジオの詳細を見る
               </button>
-              <button @click="analyzeAgain()">もう一度診断する</button>
+              <button class="result-button" @click="analyzeAgain()">
+                もう一度診断する
+              </button>
             </div>
           </div>
         </div>
@@ -48,7 +53,7 @@ export default {
       this.toggleStudioModal()
     },
     analyzeAgain() {
-      this.$router.push('/studios/analyze/questions/1')
+      this.$router.push('/studios/analyze')
     },
     ...mapMutations(['setStudioModalData', 'toggleStudioModal']),
   },
@@ -71,7 +76,7 @@ export default {
 <style lang="scss" scoped>
 .result-box {
   display: grid;
-  gap: 12px;
+  gap: 24px;
 }
 
 .title {
@@ -79,7 +84,6 @@ export default {
   color: $black;
   text-align: center;
   letter-spacing: 4px;
-  margin-bottom: 20px;
 }
 
 .result-text {
@@ -108,5 +112,21 @@ export default {
   height: 100%;
   width: 100%;
   border-radius: $radius-sm;
+}
+
+.button-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.result-button {
+  background-color: $secondary;
+  color: $white;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 24px;
+  padding: 4px 0;
 }
 </style>
