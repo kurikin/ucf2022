@@ -12,8 +12,13 @@
             <h2 class="title">診断結果</h2>
             <div class="result-text">
               <p class="leading">あなたにおすすめのスタジオは...</p>
-              <h3 class="studio-name">{{ studioData }}</h3>
+              <h3 class="studio-name">{{ studioData.lastName }}スタジオ</h3>
             </div>
+            <img
+              class="teacher-img"
+              :src="'/teachers/' + studioData.englishName + '.jpeg'"
+              alt=""
+            />
           </div>
         </div>
       </div>
@@ -27,7 +32,7 @@ import { getStudioByName } from '~/assets/constants/studio'
 export default {
   computed: {
     studioData() {
-      return getStudioByName(this.name)
+      return getStudioByName(this.name)[0]
     },
   },
   async asyncData({ params }) {
@@ -48,7 +53,7 @@ export default {
   color: $black;
   text-align: center;
   letter-spacing: 4px;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 }
 
 .result-text {
@@ -66,9 +71,16 @@ export default {
   .studio-name {
     font-family: 'Zen Kaku Gothic New';
     text-align: center;
-    font-size: 32px;
+    font-size: 30px;
     color: $primary;
     font-weight: 600;
   }
+}
+
+.teacher-img {
+  aspect-ratio: 1 / 1;
+  height: 100%;
+  width: 100%;
+  border-radius: $radius-xs;
 }
 </style>
