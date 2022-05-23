@@ -19,6 +19,12 @@
               :src="'/teachers/' + studioData.englishName + '.jpeg'"
               alt=""
             />
+            <div class="button-box">
+              <button @click="showStudioModal(studioData)">
+                スタジオの詳細を見る
+              </button>
+              <button @click="analyzeAgain()">もう一度診断する</button>
+            </div>
           </div>
         </div>
       </div>
@@ -32,7 +38,7 @@
 
 <script>
 import { getStudioByName } from '~/assets/constants/studio'
-import { mapState } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 import StudioModal from '~/components/studio/StudioModal.vue'
 
 export default {
@@ -40,6 +46,9 @@ export default {
     showStudioModal(studioData) {
       this.setStudioModalData(studioData)
       this.toggleStudioModal()
+    },
+    analyzeAgain() {
+      this.$router.push('/studios/analyze/questions/1')
     },
     ...mapMutations(['setStudioModalData', 'toggleStudioModal']),
   },
