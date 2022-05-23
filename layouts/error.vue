@@ -2,7 +2,10 @@
   <div class="white-background">
     <div class="no-margin-content container">
       <ErrorWhiteHeader class="upper-element">
-        <template v-slot:page-title>404 Not Found</template>
+        <template v-if="error.statusCode === 404" v-slot:page-title
+          >404 Not Found</template
+        >
+        <template v-else v-slot:page-title>Error :(</template>
         <template v-slot:custom>
           <div class="header-bottom-box">
             <p v-if="error.statusCode === 404" class="description">
