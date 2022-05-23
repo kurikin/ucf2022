@@ -24,8 +24,10 @@
 
 <script>
 export default {
-  mounted() {
-    console.log(this.$slots.description)
+  computed: {
+    hasDescription() {
+      return this.$slots.description !== undefined
+    },
   },
   props: {
     hideHamburger: {
