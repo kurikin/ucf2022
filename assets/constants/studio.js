@@ -1,4 +1,4 @@
-export const allStudios = [
+export const studiosByCategory = [
   {
     title: '海外研究スタジオ',
     studioList: [
@@ -317,3 +317,11 @@ export const allStudios = [
     ],
   },
 ]
+
+export const getStudioByName = (englishName) => {
+  const allStudios = []
+
+  studiosByCategory.forEach((e) => allStudios.push(...e.studioList))
+
+  return allStudios.filter((e) => e.englishName === englishName)
+}

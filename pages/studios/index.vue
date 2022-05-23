@@ -17,7 +17,7 @@
       <div class="studio-container">
         <!-- Fade up animation index 4 ~ 7 -->
         <StudioSlider
-          v-for="(studios, index) in allStudios"
+          v-for="(studios, index) in studiosByCategory"
           :key="index"
           :index="index"
           :studios="studios"
@@ -37,14 +37,14 @@
 import WhiteHeader from '@/components/WhiteHeader.vue'
 import AnalyzeButton from '@/components/studio/AnalyzeButton.vue'
 import StudioSlider from '~/components/studio/StudioSlider.vue'
-import { allStudios } from '@/assets/constants/studio'
+import { studiosByCategory } from '@/assets/constants/studio'
 import StudioModal from '~/components/studio/StudioModal.vue'
 import { mapState } from 'vuex'
 
 export default {
   computed: {
-    allStudios() {
-      return allStudios
+    studiosByCategory() {
+      return studiosByCategory
     },
     ...mapState(['studioModalOpen']),
   },

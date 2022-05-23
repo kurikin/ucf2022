@@ -101,7 +101,7 @@ export default { components: { HomeNavBar } }
   display: block;
   object-fit: contain;
   justify-self: center;
-  margin-top: 24px;
+  margin-top: 32px;
 
   @include mq(xs) {
     height: 210px;
