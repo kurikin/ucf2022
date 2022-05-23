@@ -1,7 +1,9 @@
 <template>
   <div class="expand">
     <WhiteHeader>
-      <template v-slot:page-title>ス<span>タ</span>ジオ診断</template>
+      <template v-slot:no-animation-page-title
+        >ス<span>タ</span>ジオ診断</template
+      >
     </WhiteHeader>
   </div>
 </template>

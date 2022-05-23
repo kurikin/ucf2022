@@ -31,7 +31,10 @@
 export default {
   computed: {
     hasDescription() {
-      return this.$slots['description'] !== undefined
+      return (
+        this.$slots['description'] !== undefined ||
+        this.$slots['custom'] !== undefined
+      )
     },
   },
   props: {
