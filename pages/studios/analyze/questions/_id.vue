@@ -3,7 +3,7 @@
     <WhiteHeader class="studio-header">
       <template v-slot:page-title>ス<span>タ</span>ジオ診断</template>
     </WhiteHeader>
-    <div class="content">
+    <div class="no-margin-content">
       <div class="container">
         <div class="analyze-background">
           <div v-if="!question.longChoice" class="question-box short-choice">
@@ -45,7 +45,7 @@
         </div>
       </div>
     </div>
-    <Footer class="custom-footer" />
+    <Footer />
   </div>
 </template>
 
@@ -172,9 +172,5 @@ export default {
     border-radius: 32px;
     min-width: 320px;
   }
-}
-
-.custom-footer {
-  margin-top: -100px;
 }
 </style>

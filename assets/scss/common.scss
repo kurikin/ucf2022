@@ -241,23 +241,26 @@ a {
   background-color: #fff;
   width: 100%;
   min-height: 200px;
-  padding: 24px;
-  margin: 48px 0;
+  padding: 20px;
   border-radius: $radius-xs;
+  margin-top: -24px;
+  margin-bottom: 24px;
 
   @include mq(sm) {
     border-radius: $radius-sm;
     padding: 32px;
+    margin-bottom: 32px;
   }
 
   @include mq() {
     min-height: 250px;
-    margin-bottom: 48px;
     padding: 48px;
+    margin-top: -48px;
+    margin-bottom: 48px;
   }
 
   @include mq(lg) {
+    margin-top: -48px;
     min-height: 350px;
-    margin-bottom: 64px;
   }
 }
