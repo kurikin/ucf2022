@@ -1,7 +1,7 @@
 <template>
   <BaseModal :modalOpen="studioModalOpen">
     <div class="modal-content">
-      <h1 class="studio-name">{{ lastName }}スタジオ</h1>
+      <h1 class="studio-name">{{ studioModalData.lastName }}スタジオ</h1>
       <button class="close-modal-button" @click="closeModal">
         <span class="close-text">閉じる</span
         ><img class="close-icon" src="/icons/close.svg" alt="" />
@@ -22,10 +22,6 @@ import { mapMutations, mapState } from 'vuex'
 
 export default {
   computed: {
-    lastName() {
-      const teacherName = new String(this.studioModalData.teacherName)
-      return teacherName.substring(0, teacherName.indexOf(' '))
-    },
     ...mapState(['studioModalData', 'studioModalOpen']),
     ...mapMutations(['setStudioModalData']),
   },
