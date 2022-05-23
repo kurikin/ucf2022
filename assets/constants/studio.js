@@ -5,6 +5,7 @@ export const studiosByCategory = [
       {
         teacherName: '小宮 正安',
         englishName: 'komiya',
+        lastName: '小宮',
         hasStudioImage: true,
         hashtags: [
           '#市民革命',
@@ -19,6 +20,7 @@ export const studiosByCategory = [
       {
         teacherName: '辻 大和',
         englishName: 'tsuji',
+        lastName: '辻',
         hasStudioImage: true,
         hashtags: [
           '#東アジア史',
@@ -34,6 +36,7 @@ export const studiosByCategory = [
       {
         teacherName: '大須賀 史和',
         englishName: 'osuka',
+        lastName: '大須賀',
         hasStudioImage: false,
         hashtags: [
           '#哲学',
@@ -48,6 +51,7 @@ export const studiosByCategory = [
       {
         teacherName: '朴 祥美',
         englishName: 'park',
+        lastName: '朴',
         hasStudioImage: true,
         hashtags: [
           '#韓国',
@@ -63,6 +67,7 @@ export const studiosByCategory = [
       {
         teacherName: '長谷川 秀樹',
         englishName: 'hasegawa',
+        lastName: '長谷川',
         hasStudioImage: true,
         hashtags: [
           '#フランス',
@@ -78,6 +83,7 @@ export const studiosByCategory = [
       {
         teacherName: '藤掛 洋子',
         englishName: 'fujikake',
+        lastName: '藤掛',
         hasStudioImage: false,
         hashtags: [
           '#パラグアイ',
@@ -97,6 +103,7 @@ export const studiosByCategory = [
       {
         teacherName: '中川 克志',
         englishName: 'nakagawa',
+        lastName: '中川',
         hasStudioImage: false,
         hashtags: [
           '#レコード音楽',
@@ -110,6 +117,7 @@ export const studiosByCategory = [
       {
         teacherName: '清田 友則',
         englishName: 'kiyota',
+        lastName: '清田',
         hasStudioImage: true,
         hashtags: [
           '#精神分析',
@@ -124,6 +132,7 @@ export const studiosByCategory = [
       {
         teacherName: '高橋 弘司',
         englishName: 'takahashi',
+        lastName: '高橋',
         hasStudioImage: true,
         hashtags: [
           '#ジャーナリズム',
@@ -139,6 +148,7 @@ export const studiosByCategory = [
       {
         teacherName: '彦江 智弘',
         englishName: 'hikoe',
+        lastName: '彦江',
         hasStudioImage: false,
         hashtags: [
           '#ZINE',
@@ -160,6 +170,7 @@ export const studiosByCategory = [
       {
         teacherName: '鎌原 勇太',
         englishName: 'kamahara',
+        lastName: '鎌原',
         hasStudioImage: false,
         hashtags: [
           '#内戦研究',
@@ -174,6 +185,7 @@ export const studiosByCategory = [
       {
         teacherName: '齊藤 麻人',
         englishName: 'saito',
+        lastName: '齊藤',
         hasStudioImage: false,
         hashtags: [
           '#都市社会学',
@@ -190,6 +202,7 @@ export const studiosByCategory = [
       {
         teacherName: '佐藤 峰',
         englishName: 'sato',
+        lastName: '佐藤',
         hasStudioImage: false,
         hashtags: [
           '#開発',
@@ -205,6 +218,7 @@ export const studiosByCategory = [
       {
         teacherName: '松本 尚久',
         englishName: 'matsumoto',
+        lastName: '松本',
         hasStudioImage: false,
         hashtags: [
           '#文化人類学',
@@ -220,6 +234,7 @@ export const studiosByCategory = [
       {
         teacherName: '三浦 倫平',
         englishName: 'miura',
+        lastName: '三浦',
         hasStudioImage: false,
         hashtags: [
           '#都市社会学',
@@ -236,6 +251,7 @@ export const studiosByCategory = [
       {
         teacherName: '平野 恵子',
         englishName: 'hirano',
+        lastName: '平野',
         hasStudioImage: false,
         hashtags: [
           '#国際協力',
@@ -256,6 +272,7 @@ export const studiosByCategory = [
       {
         teacherName: '須川 亜紀子',
         englishName: 'sugawa',
+        lastName: '須川',
         hasStudioImage: false,
         hashtags: [
           '#ポップカルチャー',
@@ -271,6 +288,7 @@ export const studiosByCategory = [
       {
         teacherName: '平倉 圭',
         englishName: 'hirakura',
+        lastName: '平倉',
         hasStudioImage: true,
         hashtags: [
           '#近現代美術',
@@ -286,6 +304,7 @@ export const studiosByCategory = [
       {
         teacherName: 'ファビアン カルパントラ',
         englishName: 'fabien',
+        lastName: 'ファビアン',
         hasStudioImage: true,
         hashtags: [
           '#映像研究',
@@ -301,6 +320,7 @@ export const studiosByCategory = [
       {
         teacherName: '榑沼 範久',
         englishName: 'kurenuma',
+        lastName: '榑沼',
         hasStudioImage: true,
         hashtags: [
           '#近現代思想',
