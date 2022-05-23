@@ -11,9 +11,9 @@
         <slot name="page-title"></slot>
       </h1>
       <h1
-        v-if="this.$slots['no-animation-page-title']"
         class="page-title"
         :class="{ 'has-description': hasDescription }"
+        v-if="this.$slots['no-animation-page-title']"
       >
         <slot name="no-animation-page-title"></slot>
       </h1>
@@ -29,7 +29,7 @@
 
 <script>
 export default {
-  methods: {
+  computed: {
     hasDescription() {
       return this.$slots['description'] !== undefined
     },

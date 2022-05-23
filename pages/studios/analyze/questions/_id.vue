@@ -1,6 +1,6 @@
 <template>
   <div class="white-background">
-    <WhiteHeader class="studio-header">
+    <WhiteHeader>
       <template v-slot:no-animation-page-title
         >ス<span>タ</span>ジオ診断</template
       >
