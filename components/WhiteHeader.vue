@@ -9,6 +9,9 @@
       >
         <slot name="page-title"></slot>
       </h1>
+      <h1 class="page-title" :class="{ 'has-description': hasDescription }">
+        <slot name="no-animation-page-title"></slot>
+      </h1>
       <p class="description fadeIn animation-2">
         <slot name="description"></slot>
       </p>
@@ -21,6 +24,9 @@
 
 <script>
 export default {
+  mounted() {
+    console.log(this.$slots.description)
+  },
   props: {
     hideHamburger: {
       type: Boolean,
@@ -56,18 +62,21 @@ export default {
   color: $black;
   font-family: 'Zen Antique';
   text-align: left;
-  margin-bottom: 32px;
 
   span {
     color: $primary;
   }
 
-  @include mq(sm) {
-    margin-bottom: 48px;
-  }
-
   @include mq() {
     margin-top: 140px;
+  }
+
+  &.has-description {
+    margin-bottom: 32px;
+
+    @include mq(sm) {
+      margin-bottom: 48px;
+    }
   }
 }
 
