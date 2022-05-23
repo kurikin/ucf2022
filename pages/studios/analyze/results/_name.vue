@@ -23,21 +23,38 @@
         </div>
       </div>
     </div>
+    <transition name="component-fade">
+      <StudioModal v-if="studioModalOpen" />
+    </transition>
+    <Footer />
   </div>
 </template>
 
 <script>
 import { getStudioByName } from '~/assets/constants/studio'
+import { mapState } from 'vuex'
+import StudioModal from '~/components/studio/StudioModal.vue'
 
 export default {
+  methods: {
+    showStudioModal(studioData) {
+      this.setStudioModalData(studioData)
+      this.toggleStudioModal()
+    },
+    ...mapMutations(['setStudioModalData', 'toggleStudioModal']),
+  },
   computed: {
     studioData() {
       return getStudioByName(this.name)[0]
     },
+    ...mapState(['studioModalOpen']),
   },
   async asyncData({ params }) {
     const name = params.name
     return { name }
+  },
+  components: {
+    StudioModal,
   },
 }
 </script>
@@ -81,6 +98,6 @@ export default {
   aspect-ratio: 1 / 1;
   height: 100%;
   width: 100%;
-  border-radius: $radius-xs;
+  border-radius: $radius-sm;
 }
 </style>
