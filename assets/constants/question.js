@@ -131,7 +131,7 @@ export const questions = {
     questionText: 'どっちが好き？',
     longChoice: true,
     firstChoice: 'A. 何かを分析したい',
-    secondChoice: 'A. 自分で表現したい',
+    secondChoice: 'B. 自分で表現したい',
     firstChoiceNextPath: 'questions/18',
     secondChoiceNextPath: 'questions/24',
   },

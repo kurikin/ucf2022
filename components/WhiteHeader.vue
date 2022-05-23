@@ -6,10 +6,15 @@
       <h1
         class="page-title fadeIn animation-1"
         :class="{ 'has-description': hasDescription }"
+        v-if="this.$slots['page-title']"
       >
         <slot name="page-title"></slot>
       </h1>
-      <h1 class="page-title" :class="{ 'has-description': hasDescription }">
+      <h1
+        v-if="this.$slots['no-animation-page-title']"
+        class="page-title"
+        :class="{ 'has-description': hasDescription }"
+      >
         <slot name="no-animation-page-title"></slot>
       </h1>
       <p class="description fadeIn animation-2">
@@ -26,7 +31,7 @@
 export default {
   computed: {
     hasDescription() {
-      return this.$slots.description !== undefined
+      return this.$slots['description'] !== undefined
     },
   },
   props: {
