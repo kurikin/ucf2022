@@ -104,7 +104,7 @@ export const studiosByCategory = [
         teacherName: '中川 克志',
         englishName: 'nakagawa',
         lastName: '中川',
-        hasStudioImage: false,
+        hasStudioImage: true,
         hashtags: [
           '#レコード音楽',
           '#マニアック',
@@ -149,7 +149,7 @@ export const studiosByCategory = [
         teacherName: '彦江 智弘',
         englishName: 'hikoe',
         lastName: '彦江',
-        hasStudioImage: false,
+        hasStudioImage: true,
         hashtags: [
           '#ZINE',
           '#雑誌デザイン',
@@ -252,7 +252,7 @@ export const studiosByCategory = [
         teacherName: '平野 恵子',
         englishName: 'hirano',
         lastName: '平野',
-        hasStudioImage: false,
+        hasStudioImage: true,
         hashtags: [
           '#国際協力',
           '#パラグアイ',
@@ -273,7 +273,7 @@ export const studiosByCategory = [
         teacherName: '須川 亜紀子',
         englishName: 'sugawa',
         lastName: '須川',
-        hasStudioImage: false,
+        hasStudioImage: true,
         hashtags: [
           '#ポップカルチャー',
           '#2.5次元',

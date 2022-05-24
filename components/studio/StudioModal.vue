@@ -35,7 +35,7 @@ export default {
       if (studioData.hasStudioImage) {
         return `/studios/${studioData.englishName}.jpeg`
       } else {
-        return '/comingsoon.svg'
+        return `/teachers/${studioData.englishName}.jpeg`
       }
     },
     ...mapMutations(['toggleStudioModal']),
