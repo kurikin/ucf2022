@@ -77,13 +77,29 @@ export default {
 .result-box {
   display: grid;
   gap: 24px;
+
+  @include mq(sm) {
+    gap: 32px;
+  }
+
+  @include mq() {
+    gap: 48px;
+  }
 }
 
 .title {
-  font-size: 32px;
+  font-size: 30px;
   color: $black;
   text-align: center;
   letter-spacing: 4px;
+
+  @include mq(sm) {
+    font-size: 36px;
+  }
+
+  @include mq() {
+    font-size: 44px;
+  }
 }
 
 .result-text {
@@ -96,6 +112,14 @@ export default {
     color: $black;
     text-align: center;
     font-weight: 500;
+
+    @include mq(sm) {
+      font-size: 20px;
+    }
+
+    @include mq() {
+      font-size: 24px;
+    }
   }
 
   .studio-name {
@@ -104,6 +128,14 @@ export default {
     font-size: 30px;
     color: $primary;
     font-weight: 600;
+
+    @include mq(sm) {
+      font-size: 36px;
+    }
+
+    @include mq() {
+      font-size: 44px;
+    }
   }
 }
 
@@ -112,12 +144,20 @@ export default {
   height: 100%;
   width: 100%;
   border-radius: $radius-sm;
+
+  @include mq() {
+    width: 500px;
+  }
 }
 
 .button-box {
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  @include mq() {
+    gap: 32px;
+  }
 }
 
 .result-button {
@@ -127,6 +167,10 @@ export default {
   font-size: 20px;
   font-weight: 500;
   border-radius: 24px;
-  padding: 4px 0;
+  padding: 8px 0;
+
+  @include mq(sm) {
+    font-size: 24px;
+  }
 }
 </style>
