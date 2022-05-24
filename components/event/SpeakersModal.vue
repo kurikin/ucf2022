@@ -1,6 +1,6 @@
 <template>
   <BaseModal :modalOpen="speakersModalOpen">
-    <div class="modal-content">
+    <div class="modal-content" v-scroll-lock="speakersModalOpen">
       <h1 class="event-name">{{ speakersModalData.eventName }}</h1>
       <button class="close-modal-button" @click="closeModal">
         <span class="close-text">閉じる</span

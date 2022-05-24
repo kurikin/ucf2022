@@ -106,8 +106,12 @@ export default {
   @include mq() {
     font-size: 18px;
     line-height: 1.6;
-    max-height: 400px;
     grid-column: 2;
+    max-height: none;
+  }
+
+  @include mq(lg) {
+    font-size: 20px;
   }
 }
 </style>

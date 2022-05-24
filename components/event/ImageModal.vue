@@ -1,6 +1,6 @@
 <template>
   <BaseModal :modalOpen="imageModalOpen">
-    <div class="modal-content">
+    <div class="modal-content" v-scroll-lock="imageModalOpen">
       <img class="image" :src="imageModalData.image.url" alt="" />
       <button class="close-modal-button" @click="toggleImageModal">
         <span class="close-text">閉じる</span
