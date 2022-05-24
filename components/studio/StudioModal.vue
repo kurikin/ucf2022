@@ -95,6 +95,7 @@ export default {
 
 .description-box {
   height: 100%;
+  -webkit-overflow-scrolling: touch;
 
   @include mq(sm) {
     grid-column: 1 / -1;
@@ -110,7 +111,6 @@ export default {
   font-size: 16px;
   overflow: scroll;
   max-height: 200px;
-  -webkit-overflow-scrolling: touch;
 
   @include mq() {
     font-size: 18px;
