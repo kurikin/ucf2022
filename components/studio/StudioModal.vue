@@ -11,7 +11,9 @@
         alt=""
         class="studio-img image-fadeIn"
       />
-      <p class="description">{{ studioModalData.description }}</p>
+      <div class="description-box">
+        <p class="description">{{ studioModalData.description }}</p>
+      </div>
     </div>
   </BaseModal>
 </template>
@@ -43,6 +45,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.modal-content {
+  display: grid;
+  gap: 20px;
+  height: 100%;
+
+  @include mq(sm) {
+    gap: 24px;
+    align-items: start;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+  }
+
+  @include mq() {
+    column-gap: 32px;
+    row-gap: 32px;
+    align-items: flex-start;
+    grid-template-columns: 50fr 50fr;
+  }
+}
 .studio-name {
   color: $black;
   letter-spacing: 2px;
@@ -68,41 +89,32 @@ export default {
 
   @include mq() {
     grid-column: 1;
+    height: 400px;
   }
 }
 
-.description {
-  color: $black;
-  font-size: 16px;
+.description-box {
+  height: 100%;
 
   @include mq(sm) {
     grid-column: 1 / -1;
   }
 
   @include mq() {
-    font-size: 18px;
     grid-column: 2;
-    line-height: 1.6;
   }
 }
 
-.modal-content {
-  display: grid;
-  gap: 20px;
+.description {
+  color: $black;
+  font-size: 16px;
   overflow: scroll;
-
-  @include mq(sm) {
-    gap: 24px;
-    align-items: start;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto auto;
-  }
+  max-height: 200px;
 
   @include mq() {
-    column-gap: 32px;
-    row-gap: 32px;
-    align-items: flex-start;
-    grid-template-columns: 50fr 50fr;
+    font-size: 18px;
+    line-height: 1.6;
+    max-height: 400px;
   }
 }
 </style>
