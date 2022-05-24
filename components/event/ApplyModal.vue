@@ -1,6 +1,6 @@
 <template>
   <BaseModal :modalOpen="applyModalOpen">
-    <div class="modal-content">
+    <div v-scroll-lock="applyModalOpen" class="modal-content">
       <h1 class="modal-title">参加方法</h1>
       <button class="close-modal-button" @click="toggleApplyModal">
         <span class="close-text">閉じる</span
@@ -10,9 +10,12 @@
         <h2 class="apply-heading">1. Twitter/Instagramで参加</h2>
         <p class="description">
           Twitter/Instagramで、<br />
-          ① ハッシュタグ「#都市文化祭2022」「#たたとし」② 撮影場所
-          ③コメント（任意）
-          をつけて投稿すると、都市文化祭ホームページに写真が掲載されます。<br />
+          ① ハッシュタグ「#都市文化祭2022」「#たたとし」<br
+            class="show-over-sm"
+          />② 撮影場所 <br class="show-over-sm" />③ コメント（任意）
+          <br
+            class="show-over-sm"
+          />をつけて投稿すると、都市文化祭ホームページに写真が掲載されます。<br />
           <span>
             ※アカウント名がニックネームとして掲載されます。あらかじめご了承ください。</span
           >

@@ -189,6 +189,10 @@ export default {
   flex-direction: column;
   gap: 16px;
 
+  @include mq(sm) {
+    gap: 24px;
+  }
+
   @include mq() {
     gap: 32px;
   }
