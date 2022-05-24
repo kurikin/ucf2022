@@ -77,6 +77,8 @@ export default {
 .result-box {
   display: grid;
   gap: 24px;
+  width: 100%;
+  justify-content: center;
 
   @include mq(sm) {
     gap: 32px;
@@ -84,6 +86,12 @@ export default {
 
   @include mq() {
     gap: 48px;
+  }
+
+  @include mq(lg) {
+    grid-template-columns: auto 1fr;
+    row-gap: 64px;
+    column-gap: 80px;
   }
 }
 
@@ -100,12 +108,22 @@ export default {
   @include mq() {
     font-size: 44px;
   }
+
+  @include mq(lg) {
+    grid-column: 1 / -1;
+    font-size: 52px;
+  }
 }
 
 .result-text {
   display: flex;
   flex-direction: column;
   gap: 4px;
+
+  @include mq(lg) {
+    align-items: flex-start;
+    gap: 12px;
+  }
 
   .leading {
     font-size: 18px;
@@ -119,6 +137,11 @@ export default {
 
     @include mq() {
       font-size: 24px;
+    }
+
+    @include mq(lg) {
+      font-size: 30px;
+      grid-row: 2;
     }
   }
 
@@ -136,6 +159,10 @@ export default {
     @include mq() {
       font-size: 44px;
     }
+
+    @include mq(lg) {
+      font-size: 52px;
+    }
   }
 }
 
@@ -144,9 +171,16 @@ export default {
   height: 100%;
   width: 100%;
   border-radius: $radius-sm;
+  max-width: 400px;
 
   @include mq() {
-    width: 500px;
+    max-width: 500px;
+  }
+
+  @include mq(lg) {
+    grid-column: 1;
+    grid-row: 2 / 4;
+    width: 330px;
   }
 }
 
@@ -157,6 +191,13 @@ export default {
 
   @include mq() {
     gap: 32px;
+  }
+
+  @include mq(lg) {
+    grid-column: 2;
+    grid-row: 3;
+    flex-direction: row;
+    align-self: flex-end;
   }
 }
 
@@ -171,6 +212,7 @@ export default {
 
   @include mq(sm) {
     font-size: 24px;
+    padding: 8px 16px;
   }
 }
 </style>

@@ -65,6 +65,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.question-box {
+  width: 100%;
+}
+
 .question-text {
   color: $black;
   font-family: 'Zen Kaku Gothic New';
@@ -158,21 +162,23 @@ export default {
   font-weight: 600;
   background-color: $primary;
   border-radius: 24px;
-  padding: 8px 32px;
+  padding: 8px 0px;
   border: none;
   letter-spacing: 1px;
   min-width: 230px;
   text-align: center;
 
   @include mq(sm) {
-    padding: 6px 24px;
+    padding: 6px 0px;
+    width: 100%;
+    min-width: auto;
   }
 
   @include mq() {
     font-size: 20px;
-    padding: 10px 24px;
+    padding: 12px 0px;
     border-radius: 32px;
-    min-width: 320px;
+    max-width: 350px;
   }
 }
 </style>
