@@ -11,9 +11,9 @@
         alt=""
         class="studio-img image-fadeIn"
       />
-      <div class="description-box">
-        <p class="description">{{ studioModalData.description }}</p>
-      </div>
+      <p class="description" v-scroll-lock="studioModalOpen">
+        {{ studioModalData.description }}
+      </p>
     </div>
   </BaseModal>
 </template>
@@ -93,29 +93,21 @@ export default {
   }
 }
 
-.description-box {
-  height: 100%;
-  -webkit-overflow-scrolling: touch;
-
-  @include mq(sm) {
-    grid-column: 1 / -1;
-  }
-
-  @include mq() {
-    grid-column: 2;
-  }
-}
-
 .description {
   color: $black;
   font-size: 16px;
   overflow: scroll;
   max-height: 200px;
 
+  @include mq(sm) {
+    grid-column: 1 / -1;
+  }
+
   @include mq() {
     font-size: 18px;
     line-height: 1.6;
     max-height: 400px;
+    grid-column: 2;
   }
 }
 </style>

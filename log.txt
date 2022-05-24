@@ -3629,3 +3629,41 @@ t=2022-05-19T19:26:15+0900 lvl=info msg="Got quit command" obj=consoleui
 t=2022-05-19T19:26:15+0900 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
 t=2022-05-19T19:26:15+0900 lvl=info msg="session closing" obj=tunnels.session err=nil
 t=2022-05-19T19:26:15+0900 lvl=info msg="accept failed" obj=csess id=36b947651966 err="reconnecting session closed"
+t=2022-05-24T15:29:00+0900 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040
+t=2022-05-24T15:29:00+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-24T15:29:00+0900 lvl=info msg="client session established" obj=csess id=133eb89ab125
+t=2022-05-24T15:29:00+0900 lvl=info msg="started tunnel" obj=tunnels name="command_line (http)" addr=http://localhost:3000 url=http://bb3f-133-34-240-154.jp.ngrok.io
+t=2022-05-24T15:29:00+0900 lvl=info msg="started tunnel" obj=tunnels name=command_line addr=http://localhost:3000 url=https://bb3f-133-34-240-154.jp.ngrok.io
+t=2022-05-24T15:31:10+0900 lvl=info msg="join connections" obj=join id=bbadb8591c5c l=127.0.0.1:3000 r=133.34.227.94:53853
+t=2022-05-24T15:31:11+0900 lvl=info msg="join connections" obj=join id=72341ef94fd2 l=127.0.0.1:3000 r=133.34.227.94:53851
+t=2022-05-24T15:31:11+0900 lvl=info msg="join connections" obj=join id=678a9b3ef36d l=127.0.0.1:3000 r=133.34.227.94:53853
+t=2022-05-24T15:31:11+0900 lvl=info msg="join connections" obj=join id=2daa27e072ae l=127.0.0.1:3000 r=133.34.227.94:53854
+t=2022-05-24T15:31:11+0900 lvl=info msg="join connections" obj=join id=128632493408 l=127.0.0.1:3000 r=133.34.227.94:53856
+t=2022-05-24T15:31:11+0900 lvl=info msg="join connections" obj=join id=0d96dd2a191c l=127.0.0.1:3000 r=133.34.227.94:53855
+t=2022-05-24T15:31:17+0900 lvl=info msg="join connections" obj=join id=6a95aba7aed0 l=127.0.0.1:3000 r=133.34.227.94:53853
+t=2022-05-24T15:31:17+0900 lvl=info msg="join connections" obj=join id=705472c2ff12 l=127.0.0.1:3000 r=133.34.227.94:53851
+t=2022-05-24T15:31:18+0900 lvl=info msg="join connections" obj=join id=90dfbb1645a6 l=127.0.0.1:3000 r=133.34.227.94:53855
+t=2022-05-24T15:31:18+0900 lvl=info msg="join connections" obj=join id=d5cd950accd1 l=127.0.0.1:3000 r=133.34.227.94:53854
+t=2022-05-24T15:31:22+0900 lvl=info msg="join connections" obj=join id=9784c96fb530 l=127.0.0.1:3000 r=133.34.227.94:53854
+t=2022-05-24T15:31:22+0900 lvl=info msg="join connections" obj=join id=e863c7bc5db5 l=127.0.0.1:3000 r=133.34.227.94:53855
+t=2022-05-24T15:31:23+0900 lvl=info msg="join connections" obj=join id=d3b1168d4e61 l=127.0.0.1:3000 r=133.34.227.94:53855
+t=2022-05-24T15:31:24+0900 lvl=info msg="join connections" obj=join id=7fbb37c3dee4 l=127.0.0.1:3000 r=133.34.227.94:53852
+t=2022-05-24T15:31:24+0900 lvl=info msg="join connections" obj=join id=4b4eaf052f0d l=127.0.0.1:3000 r=133.34.227.94:53854
+t=2022-05-24T15:31:24+0900 lvl=info msg="join connections" obj=join id=0c1086ed372a l=127.0.0.1:3000 r=133.34.227.94:53854
+t=2022-05-24T15:31:24+0900 lvl=info msg="join connections" obj=join id=343a47abc4f8 l=127.0.0.1:3000 r=133.34.227.94:53856
+t=2022-05-24T15:31:24+0900 lvl=info msg="join connections" obj=join id=445ccc8076d0 l=127.0.0.1:3000 r=133.34.227.94:53854
+t=2022-05-24T15:31:53+0900 lvl=info msg="join connections" obj=join id=01eeacd91919 l=127.0.0.1:3000 r=133.34.227.94:53852
+t=2022-05-24T15:32:07+0900 lvl=info msg="join connections" obj=join id=f4395fbe4b21 l=127.0.0.1:3000 r=133.34.227.94:53852
+t=2022-05-24T15:34:07+0900 lvl=info msg="join connections" obj=join id=36fa4751e7b4 l=127.0.0.1:3000 r=133.34.227.94:53862
+t=2022-05-24T15:34:17+0900 lvl=info msg="join connections" obj=join id=f477d1cf89f5 l=127.0.0.1:3000 r=133.34.227.94:53862
+t=2022-05-24T15:34:55+0900 lvl=info msg="join connections" obj=join id=abdf6b1b4b7e l=127.0.0.1:3000 r=133.34.227.94:53863
+t=2022-05-24T15:35:28+0900 lvl=info msg="join connections" obj=join id=e8203d180b9c l=127.0.0.1:3000 r=133.34.227.94:53864
+t=2022-05-24T15:36:06+0900 lvl=info msg="join connections" obj=join id=23fcb2b659cb l=127.0.0.1:3000 r=133.34.227.94:53865
+t=2022-05-24T15:36:43+0900 lvl=info msg="join connections" obj=join id=7103dad380b0 l=127.0.0.1:3000 r=133.34.227.94:53866
+t=2022-05-24T15:37:28+0900 lvl=info msg="join connections" obj=join id=91f3132986ed l=127.0.0.1:3000 r=133.34.227.94:53867
+t=2022-05-24T15:41:06+0900 lvl=info msg="join connections" obj=join id=c895664d232e l=127.0.0.1:3000 r=133.34.227.94:53869
+t=2022-05-24T15:41:27+0900 lvl=info msg="join connections" obj=join id=4db198946de7 l=127.0.0.1:3000 r=133.34.227.94:53869
+t=2022-05-24T15:42:20+0900 lvl=info msg="Got quit command" obj=consoleui
+t=2022-05-24T15:42:20+0900 lvl=info msg="received stop request" obj=app stopReq="{err:<nil> restart:false}"
+t=2022-05-24T15:42:20+0900 lvl=info msg="session closing" obj=tunnels.session err=nil
+t=2022-05-24T15:42:20+0900 lvl=info msg="accept failed" obj=csess id=133eb89ab125 err="reconnecting session closed"

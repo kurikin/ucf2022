@@ -1,20 +1,13 @@
 <template>
   <div class="modal-overlay">
-    <div class="modal-container" v-scroll-lock="modalOpen">
+    <div class="modal-container">
       <slot />
     </div>
   </div>
 </template>
 
 <script>
-export default {
-  props: {
-    modalOpen: {
-      type: Boolean,
-      default: false,
-    },
-  },
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>
