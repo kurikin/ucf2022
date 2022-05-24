@@ -110,6 +110,7 @@ export default {
   font-size: 16px;
   overflow: scroll;
   max-height: 200px;
+  -webkit-overflow-scrolling: touch;
 
   @include mq() {
     font-size: 18px;
