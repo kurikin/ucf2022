@@ -64,11 +64,10 @@ export default {
     return {
       showNavBar: true,
       lastScrollPosition: 0,
-      path: '',
     }
   },
   mounted() {
-    this.path = this.$route.path
+    console.log(this.$route.path)
     window.addEventListener('scroll', this.onScroll)
   },
   beforeDestroy() {
@@ -76,7 +75,7 @@ export default {
   },
   methods: {
     pathMatch(path) {
-      return path === this.path
+      return path === this.$route.path.replace(/\/$/, '')
     },
     onScroll() {
       const currentScrollPosition =
