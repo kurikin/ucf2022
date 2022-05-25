@@ -22,18 +22,30 @@ export const events = [
     speakers: [
       {
         name: '日比野 莉良',
+        hasLink: false,
+        linkFileName: '',
+        linkURL: '',
         belongs: ['都市社会共生学科 ３年'],
       },
       {
         name: '織田 可久瑠',
+        hasLink: false,
+        linkFileName: '',
+        linkURL: '',
         belongs: ['建築学科 ３年'],
       },
       {
         name: '宮内 爽太',
+        hasLink: false,
+        linkFileName: '',
+        linkURL: '',
         belongs: ['都市基盤学科 ３年'],
       },
       {
         name: '田中 怜',
+        hasLink: false,
+        linkFileName: '',
+        linkURL: '',
         belongs: ['環境リスク共生学科 ３年'],
       },
     ],
@@ -61,18 +73,30 @@ export const events = [
     speakers: [
       {
         name: '日比野 莉良',
+        hasLink: false,
+        linkFileName: '',
+        linkURL: '',
         belongs: ['都市社会共生学科 ３年'],
       },
       {
         name: '織田 可久瑠',
+        hasLink: false,
+        linkFileName: '',
+        linkURL: '',
         belongs: ['建築学科 ３年'],
       },
       {
         name: '宮内 爽太',
+        hasLink: false,
+        linkFileName: '',
+        linkURL: '',
         belongs: ['都市基盤学科 ３年'],
       },
       {
         name: '田中 怜',
+        hasLink: false,
+        linkFileName: '',
+        linkURL: '',
         belongs: ['環境リスク共生学科 ３年'],
       },
     ],
@@ -122,10 +146,16 @@ export const events = [
     speakers: [
       {
         name: '渡辺 洋平',
+        hasLink: true,
+        linkFileName: 'linktree-navy.svg',
+        linkURL: 'https://linktr.ee/okyohe',
         belongs: ['経営学部 経営学科 ４年', 'ディアベリー株式会社'],
       },
       {
         name: '村瀬 悠',
+        hasLink: true,
+        linkFileName: 'linktree-navy.svg',
+        linkURL: 'https://linktr.ee/yumurase',
         belongs: [
           '都市科学部 都市社会共生学科 ３年',
           '認定NPO法人 ミタイ・ミタクニャイ子ども基金',
@@ -133,6 +163,9 @@ export const events = [
       },
       {
         name: '入江 遥斗',
+        hasLink: true,
+        linkURL: 'https://www.instagram.com/irieharuto',
+        linkFileName: 'instagram-navy.svg',
         belongs: ['都市科学部 都市社会共生学科 ３年', '一般社団法人ACTPORT'],
       },
     ],

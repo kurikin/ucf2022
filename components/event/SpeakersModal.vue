@@ -8,7 +8,15 @@
       </button>
       <ul class="speakers-list">
         <li v-for="(speaker, index) in speakers" :key="index" class="speaker">
-          <p class="name">{{ speaker.name }}</p>
+          <div class="name-box">
+            <p class="name">{{ speaker.name }}</p>
+            <img
+              v-if="speaker.hasLink"
+              :src="'/logos/' + speaker.linkFileName"
+              alt=""
+              class="link-img"
+            />
+          </div>
           <div class="belongs-box">
             <p
               v-for="(belong, index) in speaker.belongs"
@@ -93,24 +101,50 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 4px;
+}
+
+.name-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  @include mq() {
+    gap: 24px;
+  }
 
   .name {
     color: $black;
     font-size: 24px;
+
+    @include mq() {
+      font-size: 28px;
+    }
   }
-}
 
-.belong {
-  color: $secondary;
-  font-size: 16px;
+  .link-img {
+    display: inline-block;
+    height: 22px;
+    width: 22px;
 
-  @include mq() {
-    font-size: 20px;
+    @include mq() {
+      height: 26px;
+      width: 26px;
+    }
   }
 }
 
 .belongs-box {
   display: flex;
   flex-direction: column;
+  gap: 2px;
+
+  .belong {
+    color: $secondary;
+    font-size: 16px;
+
+    @include mq() {
+      font-size: 18px;
+    }
+  }
 }
 </style>
