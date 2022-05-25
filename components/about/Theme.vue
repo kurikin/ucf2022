@@ -93,6 +93,10 @@ export default {}
   width: 220px;
   height: 220px;
   margin: 0 auto;
+
+  @include mq(sm) {
+    margin: 0;
+  }
 }
 
 .title {
@@ -141,6 +145,14 @@ export default {}
   gap: 0px;
   font-family: 'Zen Antique';
 
+  @include mq(xs) {
+    gap: 16px;
+  }
+
+  @include mq(sm) {
+    gap: 0;
+  }
+
   .item-left {
     color: $secondary;
   }
@@ -155,14 +167,6 @@ export default {}
     .text {
       font-size: 30px;
     }
-  }
-
-  .logo {
-    margin: 0;
-  }
-
-  .list-item {
-    font-size: 30px;
   }
 
   .main-theme {

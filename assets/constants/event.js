@@ -22,19 +22,19 @@ export const events = [
     speakers: [
       {
         name: '日比野 莉良',
-        belong: '都市社会共生学科 ３年',
+        belongs: ['都市社会共生学科 ３年'],
       },
       {
         name: '織田 可久瑠',
-        belong: '建築学科 ３年',
+        belongs: ['建築学科 ３年'],
       },
       {
         name: '宮内 爽太',
-        belong: '都市基盤学科 ３年',
+        belongs: ['都市基盤学科 ３年'],
       },
       {
         name: '田中 怜',
-        belong: '環境リスク共生学科 ３年',
+        belongs: ['環境リスク共生学科 ３年'],
       },
     ],
   },
@@ -61,19 +61,19 @@ export const events = [
     speakers: [
       {
         name: '日比野 莉良',
-        belong: '都市社会共生学科 ３年',
+        belongs: ['都市社会共生学科 ３年'],
       },
       {
         name: '織田 可久瑠',
-        belong: '建築学科 ３年',
+        belongs: ['建築学科 ３年'],
       },
       {
         name: '宮内 爽太',
-        belong: '都市基盤学科 ３年',
+        belongs: ['都市基盤学科 ３年'],
       },
       {
         name: '田中 怜',
-        belong: '環境リスク共生学科 ３年',
+        belongs: ['環境リスク共生学科 ３年'],
       },
     ],
   },
@@ -122,16 +122,18 @@ export const events = [
     speakers: [
       {
         name: '渡辺 洋平',
-        belong: '経営学部 経営学科 ４年　ディアベリー株式会社',
+        belongs: ['経営学部 経営学科 ４年', 'ディアベリー株式会社'],
       },
       {
         name: '村瀬 悠',
-        belong:
-          '都市科学部 都市社会共生学科 ３年　認定NPO法人 ミタイ・ミタクニャイ子ども基金',
+        belongs: [
+          '都市科学部 都市社会共生学科 ３年',
+          '認定NPO法人 ミタイ・ミタクニャイ子ども基金',
+        ],
       },
       {
         name: '入江 遥斗',
-        belong: '都市科学部 都市社会共生学科 ３年　一般社団法人ACTPORT',
+        belongs: ['都市科学部 都市社会共生学科 ３年', '一般社団法人ACTPORT'],
       },
     ],
   },

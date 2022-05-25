@@ -41,7 +41,7 @@ export default {
         setTimeout(() => {
           this.$emit('closeSplash')
           this.toggleFirstLoad()
-        }, 1750)
+        }, 1600)
     })
   },
 }
