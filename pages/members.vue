@@ -19,12 +19,16 @@
                 :key="leader.name"
                 class="leader"
               >
-                <img
-                  v-if="index === 0"
-                  :src="'/portraits/' + ikedaFileName"
-                  alt=""
-                  class="portrait"
-                />
+                <div v-if="index === 0" class="portrait">
+                  <transition name="fade">
+                    <img
+                      :src="'/portraits/' + ikedaFileName"
+                      class="absolute-img"
+                      :key="ikedaFileName"
+                      alt=""
+                    />
+                  </transition>
+                </div>
                 <img
                   v-else
                   :src="'/portraits/' + leader.fileName"
@@ -164,6 +168,7 @@ export default {
 .portrait {
   width: 120px;
   height: 120px;
+  position: relative;
 
   @include mq(sm) {
     width: 130px;
@@ -226,5 +231,11 @@ export default {
   @include mq() {
     font-size: 20px;
   }
+}
+
+.absolute-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 </style>
