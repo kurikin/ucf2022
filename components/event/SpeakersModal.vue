@@ -9,7 +9,15 @@
       <ul class="speakers-list">
         <li v-for="(speaker, index) in speakers" :key="index" class="speaker">
           <p class="name">{{ speaker.name }}</p>
-          <p class="belong">{{ speaker.belong }}</p>
+          <div class="belongs-box">
+            <p
+              v-for="(belong, index) in speaker.belongs"
+              :key="index"
+              class="belong"
+            >
+              {{ belong }}
+            </p>
+          </div>
         </li>
       </ul>
     </div>
@@ -90,14 +98,19 @@ export default {
     color: $black;
     font-size: 24px;
   }
+}
 
-  .belong {
-    color: $secondary;
-    font-size: 16px;
+.belong {
+  color: $secondary;
+  font-size: 16px;
 
-    @include mq() {
-      font-size: 20px;
-    }
+  @include mq() {
+    font-size: 20px;
   }
+}
+
+.belongs-box {
+  display: flex;
+  flex-direction: column;
 }
 </style>
