@@ -2,10 +2,10 @@
   <section class="news container fadeUp animation-4">
     <h2 class="section-heading">新着情報</h2>
     <ul class="news-list">
-      <li class="list-item" v-for="content in contents" :key="content.id">
+      <li class="list-item" v-for="(content, index) in contents" :key="index">
         <nuxt-link class="item-link" to="#">
           <span class="date">{{
-            $dateFns.format(content.updatedAt, 'yyyy/MM/dd')
+            $dateFns.format(content.createdAt, 'yyyy/MM/dd')
           }}</span>
           <p class="title">{{ content.title }}</p>
           <div class="category" :class="categoryColor(content.category)">
@@ -21,8 +21,12 @@
 export default {
   props: ['contents'],
   methods: {
-    categoryColor() {
-      return 'primary'
+    categoryColor(category) {
+      if (category === '全体') {
+        return 'primary'
+      } else {
+        return 'secondary'
+      }
     },
   },
 }
@@ -111,11 +115,18 @@ export default {
 
   .category {
     color: $white;
-    background-color: $primary;
     font-size: 16px;
     padding: 2px 20px;
     border-radius: 8px;
     font-weight: 600;
+
+    &.primary {
+      background-color: $primary;
+    }
+
+    &.secondary {
+      background-color: $secondary;
+    }
 
     @include mq(sm) {
       grid-column: 2;
