@@ -50,6 +50,7 @@ export default {
       endpoint: 'news',
       queries: { limit: 20 },
     })
+    console.log(data)
     return data
   },
 }
