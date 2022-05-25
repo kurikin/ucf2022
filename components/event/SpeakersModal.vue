@@ -10,12 +10,18 @@
         <li v-for="(speaker, index) in speakers" :key="index" class="speaker">
           <div class="name-box">
             <p class="name">{{ speaker.name }}</p>
-            <img
+            <a
+              class="link"
+              target="_blank"
               v-if="speaker.hasLink"
-              :src="'/logos/' + speaker.linkFileName"
-              alt=""
-              class="link-img"
-            />
+              :href="speaker.linkURL"
+            >
+              <img
+                :src="'/logos/' + speaker.linkFileName"
+                alt=""
+                class="link-img"
+              />
+            </a>
           </div>
           <div class="belongs-box">
             <p
@@ -121,14 +127,18 @@ export default {
     }
   }
 
-  .link-img {
-    display: inline-block;
+  .link {
     height: 22px;
     width: 22px;
 
     @include mq() {
       height: 26px;
       width: 26px;
+    }
+
+    .link-img {
+      height: 100%;
+      width: 100%;
     }
   }
 }
