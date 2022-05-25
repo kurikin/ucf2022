@@ -20,6 +20,13 @@
                 class="leader"
               >
                 <img
+                  v-if="index === 0"
+                  :src="'/portraits/' + ikedaFileName"
+                  alt=""
+                  class="portrait"
+                />
+                <img
+                  v-else
                   :src="'/portraits/' + leader.fileName"
                   alt=""
                   class="portrait"
@@ -68,6 +75,21 @@ import { members } from '~/assets/constants/member'
 
 export default {
   components: { WhiteHeader, Footer },
+  mounted() {
+    window.addEventListener('keypress', this.onKeyPress)
+  },
+  methods: {
+    onKeyPress(e) {
+      if (e.code === 'KeyP') {
+        this.ikedaFileName = 'ikeda-pink.png'
+      }
+    },
+  },
+  data() {
+    return {
+      ikedaFileName: 'ikeda.png',
+    }
+  },
   computed: {
     members() {
       return members
