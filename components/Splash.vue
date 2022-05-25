@@ -1,6 +1,14 @@
 <template>
   <div class="background">
-    <img id="splash" class="splash" src="/background.png" alt="" />
+    <transition name="fade">
+      <img
+        v-show="showSplash"
+        id="splash"
+        class="splash"
+        src="/background.png"
+        alt=""
+      />
+    </transition>
   </div>
 </template>
 
@@ -11,7 +19,13 @@ export default {
   computed: {
     ...mapState(['splashParam']),
   },
+  data() {
+    return {
+      showSplash: true,
+    }
+  },
   methods: {
+    hideSplash() {},
     ...mapMutations(['toggleFirstLoad']),
   },
   mounted() {
@@ -22,9 +36,12 @@ export default {
 
     this.$nextTick(function () {
       setTimeout(() => {
-        this.$emit('closeSplash')
-        this.toggleFirstLoad()
-      }, 1800)
+        this.showSplash = false
+      }, 1350),
+        setTimeout(() => {
+          this.$emit('closeSplash')
+          this.toggleFirstLoad()
+        }, 1750)
     })
   },
 }

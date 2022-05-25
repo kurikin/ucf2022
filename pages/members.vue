@@ -20,7 +20,7 @@
                 class="leader"
               >
                 <div v-if="index === 0" class="portrait">
-                  <transition name="fade">
+                  <transition name="component-fade-4">
                     <img
                       :src="'/portraits/' + ikedaFileName"
                       class="absolute-img"
