@@ -17,7 +17,7 @@
 import Footer from '~/components/Footer.vue'
 export default {
   async asyncData({ $microcms, params }) {
-    const id = params.id
+    const id = params.id - 1
     const data = await $microcms.get({
       endpoint: 'news',
       queries: { limit: 20 },

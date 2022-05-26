@@ -3,7 +3,7 @@
     <h2 class="section-heading">新着情報</h2>
     <ul class="news-list">
       <li class="list-item" v-for="(content, index) in contents" :key="index">
-        <nuxt-link class="item-link" to="#">
+        <nuxt-link class="item-link" :to="'/news/' + (index + 1)">
           <span class="date">{{
             $dateFns.format(content.createdAt, 'yyyy/MM/dd')
           }}</span>
@@ -40,7 +40,9 @@ export default {
 
 .news-list {
   background-color: $white;
-  display: grid;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
   gap: 12px;
   width: 100%;
   padding: 20px;
@@ -62,7 +64,7 @@ export default {
 }
 
 .list-item {
-  &:not(:last-child) {
+  &:not(:first-child) {
     border-bottom: 0.5px solid $lightgray;
     padding-bottom: 12px;
 
@@ -78,7 +80,6 @@ export default {
   grid-template-rows: auto 1fr;
   font-size: 16px;
   column-gap: 24px;
-  row-gap: 8px;
   align-items: flex-start;
   justify-items: flex-start;
 
