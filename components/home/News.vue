@@ -75,11 +75,13 @@ export default {
   grid-template-rows: auto 1fr;
   font-size: 16px;
   column-gap: 24px;
+  row-gap: 4px;
   align-items: flex-start;
   justify-items: flex-start;
 
   @include mq(sm) {
     grid-template-columns: auto auto 1fr;
+    row-gap: 0;
   }
 
   @include mq() {
