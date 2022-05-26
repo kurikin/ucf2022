@@ -31,6 +31,14 @@ export default {}
   justify-content: space-between;
   gap: 12px;
   background-color: $blue;
+
+  @include mq(xs) {
+    gap: 24px;
+  }
+
+  @include mq(sm) {
+    display: none;
+  }
 }
 
 .twitter-icon {
@@ -40,8 +48,8 @@ export default {}
 }
 
 .close-icon {
-  height: 18px;
-  width: 18px;
+  height: 16px;
+  width: 16px;
   display: inline-block;
 }
 
@@ -50,7 +58,6 @@ export default {}
   display: flex;
   flex: 1;
   flex-direction: column;
-  justify-content: flex-start;
   gap: 4px;
 }
 

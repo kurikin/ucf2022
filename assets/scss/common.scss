@@ -41,6 +41,12 @@ body.side-nav-open {
   }
 }
 
+.hide-over-sm {
+  @include mq(sm) {
+    display: none;
+  }
+}
+
 .show-over-xs {
   display: none;
 
