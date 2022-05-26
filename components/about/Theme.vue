@@ -44,11 +44,6 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-//  - Font sizes (px)
-//  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
-
-// - Spacing system (px)
-// 2 / 4 / 8 / 12 / 16 / 20 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 .theme {
   margin-bottom: 20px;
 
@@ -86,6 +81,10 @@ export default {}
     flex-direction: row;
     gap: 32px;
   }
+
+  @include mq() {
+    gap: 64px;
+  }
 }
 
 .logo {
@@ -97,6 +96,11 @@ export default {}
   @include mq(sm) {
     margin: 0;
   }
+
+  @include mq() {
+    width: 250px;
+    height: 250px;
+  }
 }
 
 .title {
@@ -104,8 +108,21 @@ export default {}
   gap: 2px;
   margin-bottom: 48px;
 
+  @include mq() {
+    margin-bottom: 32px;
+    gap: 4px;
+  }
+
+  @include mq(lg) {
+    margin-bottom: 44px;
+  }
+
   .text {
     font-size: 20px;
+
+    @include mq(sm) {
+      font-size: 30px;
+    }
   }
 
   .underline {
@@ -137,6 +154,15 @@ export default {}
   flex-direction: column;
   align-items: center;
   gap: 18px;
+
+  @include mq(sm) {
+    align-items: flex-start;
+    height: 220px;
+  }
+
+  @include mq() {
+    height: 250px;
+  }
 }
 
 .list-item {
@@ -153,6 +179,16 @@ export default {}
     gap: 0;
   }
 
+  @include mq() {
+    font-size: 36px;
+    gap: 32px;
+  }
+
+  @include mq(lg) {
+    font-size: 44px;
+    gap: 48px;
+  }
+
   .item-left {
     color: $secondary;
   }
@@ -162,68 +198,10 @@ export default {}
   }
 }
 
-@include mq(sm) {
-  .title {
-    .text {
-      font-size: 30px;
-    }
-  }
-
-  .main-theme {
+.main-theme,
+.sub-theme {
+  @include mq(sm) {
     flex: 1;
-  }
-
-  .sub-theme {
-    flex: 1;
-  }
-
-  .sub-theme-list {
-    align-items: flex-start;
-    height: 220px;
-  }
-}
-
-@include mq() {
-  .title {
-    margin-bottom: 32px;
-    gap: 4px;
-
-    .text {
-      font-size: 30px;
-    }
-  }
-
-  .list-item {
-    font-size: 36px;
-    gap: 32px;
-  }
-
-  .main-theme,
-  .sub-theme {
-    flex: 1;
-  }
-
-  .logo {
-    width: 250px;
-    height: 250px;
-  }
-
-  .theme-box {
-    gap: 64px;
-  }
-
-  .sub-theme-list {
-    height: 250px;
-  }
-}
-
-@include mq(lg) {
-  .title {
-    margin-bottom: 44px;
-  }
-  .list-item {
-    font-size: 44px;
-    gap: 48px;
   }
 }
 </style>

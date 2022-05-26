@@ -91,7 +91,7 @@ export default {
 
   @include mq(lg) {
     font-size: 20px;
-    column-gap: 48px;
+    column-gap: 56px;
   }
 
   .date {
@@ -137,7 +137,7 @@ export default {
     }
 
     @include mq(lg) {
-      padding: 4px 28px;
+      padding: 4px 32px;
     }
   }
 }
