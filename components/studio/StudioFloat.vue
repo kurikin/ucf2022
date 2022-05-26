@@ -42,11 +42,11 @@ export default {
   width: 94%;
   position: fixed;
   top: 100vh;
-  transform: translate(3%, calc(-100% - 25px));
+  transform: translate(3%, calc(-100% - env(safe-area-inset-bottom) - 44px));
 
   z-index: 100;
   padding: 10px 18px;
-  border-radius: 20px;
+  border-radius: 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -65,6 +65,7 @@ export default {
 
   @include mq(xs) {
     gap: 24px;
+    // transform: translate(3%, calc(-100% - 44px));
   }
 
   @include mq(sm) {
