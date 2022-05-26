@@ -91,7 +91,7 @@ export default {
   }
 
   @include mq(lg) {
-    grid-template-columns: 1.2fr 1fr auto;
+    grid-template-columns: 45fr 55fr;
     column-gap: 48px;
     row-gap: 32px;
   }
@@ -156,7 +156,7 @@ export default {
 
   @include mq(lg) {
     grid-row: 1;
-    grid-column: 3;
+    grid-column: 2;
     // タイトルとアイコンの間隔を詰める
     margin-left: -32px;
   }
@@ -196,8 +196,8 @@ export default {
   }
 
   @include mq(lg) {
+    grid-column: 2;
     grid-row: 3;
-    grid-column: 2 / 4;
     align-self: flex-end;
   }
 }
@@ -241,9 +241,10 @@ export default {
   }
 
   @include mq(lg) {
-    grid-column: 1 / 2;
+    grid-column: 1;
     grid-row: 2 / 4;
-    aspect-ratio: 4 / 3;
+    height: 300px;
+    aspect-ratio: auto;
   }
 }
 
@@ -260,7 +261,7 @@ export default {
   }
 
   @include mq(lg) {
-    grid-column: 2 / 4;
+    grid-column: 2;
     grid-row: 2;
     align-self: flex-start;
   }

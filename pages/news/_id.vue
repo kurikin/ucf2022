@@ -29,16 +29,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.news {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .title {
   color: $secondary;
   font-family: 'Zen Kaku Gothic New';
   font-size: 24px;
   font-weight: 600;
-}
-
-.news {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
 }
 </style>

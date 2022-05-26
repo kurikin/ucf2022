@@ -3,8 +3,8 @@
     <BlackHeader
       ><template v-slot:page-title>企<span>画</span>一覧</template></BlackHeader
     >
-    <div class="content">
-      <div class="container">
+    <div class="container">
+      <div class="content">
         <EventListHeader
           :selectedThemeIndex="selectedThemeIndex"
           @themeChange="themeChange"
@@ -85,13 +85,16 @@ export default {
   }
 }
 
-.list-enter-active,
-.list-leave-active {
-  transition: all 1.2s ease;
+.list-enter-active {
+  transition: opacity 1.2s ease;
 }
 
 .list-leave-active {
   position: absolute;
+  top: 0;
+  transition-property: opacity transform;
+  transition-duration: 1.2s;
+  transition-timing-function: ease;
 }
 
 .list-leave-to {
@@ -102,6 +105,11 @@ export default {
 .list-enter {
   opacity: 0;
   transform: translateX(-10px);
+}
+
+.list-enter-to {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .list-move {

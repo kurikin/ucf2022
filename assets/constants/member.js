@@ -45,7 +45,7 @@ export const members = [
     members: [
       {
         name: '天野 雄浩',
-        position: 'たたずみたい都市',
+        position: '協力スタッフ',
         belong: '都市科学部 都市基盤学科３年',
       },
       {
