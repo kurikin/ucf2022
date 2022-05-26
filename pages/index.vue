@@ -48,7 +48,7 @@ export default {
   async asyncData({ $microcms }) {
     const data = await $microcms.get({
       endpoint: 'news',
-      queries: { limit: 20 },
+      queries: { limit: 20, orders: '-publishedAt' },
     })
     return data
   },

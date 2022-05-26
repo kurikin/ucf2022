@@ -5,7 +5,7 @@
       <li class="list-item" v-for="(content, index) in contents" :key="index">
         <nuxt-link class="item-link" :to="'/news/' + content.index">
           <span class="date">{{
-            $dateFns.format(content.createdAt, 'yyyy/MM/dd')
+            $dateFns.format(content.publishedAt, 'yyyy/MM/dd')
           }}</span>
           <p class="title">{{ content.title }}</p>
           <div class="category" :class="categoryColor(content.category)">
@@ -41,9 +41,9 @@ export default {
 .news-list {
   background-color: $white;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: center;
-  gap: 12px;
+  gap: 20px;
   width: 100%;
   padding: 20px;
   border-radius: $radius-xs;
@@ -59,18 +59,13 @@ export default {
 
   @include mq(lg) {
     padding: 32px;
-    gap: 18px;
   }
 }
 
 .list-item {
-  &:not(:first-child) {
+  &:not(:last-child) {
     border-bottom: 0.5px solid $lightgray;
-    padding-bottom: 12px;
-
-    @include mq(lg) {
-      padding-bottom: 18px;
-    }
+    padding-bottom: 20px;
   }
 }
 
