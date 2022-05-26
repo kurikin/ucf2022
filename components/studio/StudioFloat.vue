@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div class="studio-float"></div>
 </template>
 
 <script>
