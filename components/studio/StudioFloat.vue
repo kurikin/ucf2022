@@ -21,16 +21,17 @@ export default {}
   width: 94%;
   position: fixed;
   top: 100vh;
-  transform: translate(3%, calc(-100% - 30px));
+  transform: translate(3%, calc(-100% - 20px));
 
   z-index: 100;
-  padding: 12px 20px;
+  padding: 10px 18px;
   border-radius: 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
   background-color: $blue;
+  box-shadow: 0px 5px 10px hsla(0, 0%, 0%, 0.3);
 
   @include mq(xs) {
     gap: 24px;
