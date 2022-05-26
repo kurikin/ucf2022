@@ -1,5 +1,5 @@
 <template>
-  <div class="studio-float">
+  <div class="studio-float" :class="{ hide: hideFloat }">
     <img class="twitter-icon" src="/logos/twitter.svg" alt="" />
     <div class="text-box">
       <p class="title"><span>スクショ</span>を<span>ツイート</span>しよう！</p>
@@ -8,12 +8,33 @@
         <span class="hashtag">#都市文化祭2022</span>
       </div>
     </div>
-    <img src="/icons/close.svg" alt="" class="close-icon" />
+    <img
+      @click="toggleFloat"
+      src="/icons/close.svg"
+      alt=""
+      class="close-icon"
+    />
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  mounted() {
+    setTimeout(() => {
+      this.hideFloat = false
+    }, 1000)
+  },
+  data() {
+    return {
+      hideFloat: true,
+    }
+  },
+  methods: {
+    toggleFloat() {
+      this.hideFloat = !this.hideFloat
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -21,17 +42,26 @@ export default {}
   width: 94%;
   position: fixed;
   top: 100vh;
-  transform: translate(3%, calc(-100% - 20px));
+  transform: translate(3%, calc(-100% - 25px));
 
   z-index: 100;
   padding: 10px 18px;
-  border-radius: 18px;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
   background-color: $blue;
   box-shadow: 0px 5px 10px hsla(0, 0%, 0%, 0.3);
+
+  transition-property: transform opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+
+  &.hide {
+    transform: translate(3%, 0);
+    opacity: 0.3;
+  }
 
   @include mq(xs) {
     gap: 24px;
@@ -46,6 +76,11 @@ export default {}
   height: 24px;
   width: 24px;
   display: inline-block;
+
+  @include mq(xs) {
+    height: 28px;
+    width: 28px;
+  }
 }
 
 .close-icon {
