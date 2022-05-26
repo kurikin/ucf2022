@@ -66,6 +66,7 @@ h3 {
 }
 
 .black-background {
+  position: relative;
   background-color: $black;
   display: flex;
   flex-direction: column;
@@ -73,6 +74,7 @@ h3 {
 }
 
 .white-background {
+  position: relative;
   background: $white;
   display: flex;
   flex-direction: column;

@@ -37,6 +37,7 @@
     <transition name="component-fade">
       <StudioModal v-if="studioModalOpen" />
     </transition>
+    <StudioFloat />
     <Footer />
   </div>
 </template>
@@ -45,6 +46,7 @@
 import { getStudioByName } from '~/assets/constants/studio'
 import { mapState, mapMutations } from 'vuex'
 import StudioModal from '~/components/studio/StudioModal.vue'
+import StudioFloat from '~/components/studio/StudioFloat.vue'
 
 export default {
   methods: {
@@ -69,6 +71,7 @@ export default {
   },
   components: {
     StudioModal,
+    StudioFloat,
   },
 }
 </script>
