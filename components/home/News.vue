@@ -3,7 +3,7 @@
     <h2 class="section-heading">新着情報</h2>
     <ul class="news-list">
       <li class="list-item" v-for="(content, index) in contents" :key="index">
-        <nuxt-link class="item-link" :to="'/news/' + content.index">
+        <nuxt-link class="item-link" :to="'/news/' + content.id">
           <span class="date">{{
             $dateFns.format(content.publishedAt, 'yyyy/MM/dd')
           }}</span>

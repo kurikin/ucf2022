@@ -22,14 +22,13 @@
 import Footer from '~/components/Footer.vue'
 export default {
   async asyncData({ $microcms, params }) {
-    const index = params.index
     const data = await $microcms.get({
-      endpoint: 'news',
-      queries: { limit: 20, filters: `index[equals]${index}` },
+      endpoint: `news/${params.slug}`,
     })
 
-    return data.contents[0]
+    return data
   },
+
   components: { Footer },
 }
 </script>
