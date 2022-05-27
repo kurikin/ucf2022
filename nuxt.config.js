@@ -1,8 +1,8 @@
+import axios from 'axios'
+
 export default {
-  // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
-  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'ucf2022',
     htmlAttrs: {
@@ -27,7 +27,6 @@ export default {
     ],
   },
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '~/assets/scss/common.scss',
     '~/assets/scss/animations.scss',
@@ -84,5 +83,18 @@ export default {
 
   generate: {
     fallback: true,
+    async routes() {
+      const pages = await axios
+        .get('https://ucf2022.microcms.io/api/v1/news?limit=100', {
+          headers: { 'X-MICROCMS-API-KEY': process.env.API_KEY },
+        })
+        .then((res) =>
+          res.data.contents.map((content) => ({
+            route: `/news/${content.id}`,
+            payload: content,
+          }))
+        )
+      return pages
+    },
   },
 }
