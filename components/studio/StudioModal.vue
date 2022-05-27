@@ -107,7 +107,7 @@ export default {
     font-size: 18px;
     line-height: 1.6;
     grid-column: 2;
-    max-height: none;
+    max-height: 500px;
   }
 
   @include mq(lg) {

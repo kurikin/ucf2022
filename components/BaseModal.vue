@@ -27,7 +27,7 @@ export default {}
 
 .modal-container {
   width: 90%;
-  max-width: 1000px;
+  max-width: 1030px;
   max-height: 95%;
   background-color: $white;
   border-radius: $radius-sm;
@@ -36,9 +36,13 @@ export default {}
   align-items: center;
 
   @include mq(sm) {
-    width: 80%;
+    width: 85%;
     height: auto;
     padding: 24px;
+  }
+
+  @include mq() {
+    width: 90%;
   }
 
   @include mq(lg) {
