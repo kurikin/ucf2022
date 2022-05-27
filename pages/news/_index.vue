@@ -3,13 +3,16 @@
     <WhiteHeader>
       <template v-slot:page-title>新<span>着</span>情報</template>
     </WhiteHeader>
-    <div class="content">
-      <div class="container">
-        <div class="news">
-          <h2 class="title">{{ this.title }}</h2>
-          <p class="body">{{ this.body }}</p>
-        </div>
+    <div class="content container">
+      <div class="news">
+        <h2 class="title">{{ this.title }}</h2>
+        <p class="body">{{ this.body }}</p>
       </div>
+      <img
+        class="footprint fadeIn animation-1 show-over-md"
+        src="/footprint.png"
+        alt=""
+      />
     </div>
     <Footer />
   </div>
@@ -77,5 +80,13 @@ export default {
   @include mq() {
     font-size: 18px;
   }
+}
+
+.footprint {
+  position: absolute;
+  right: 50px;
+  bottom: 0;
+  transform: translateY(62px);
+  height: 68vh;
 }
 </style>

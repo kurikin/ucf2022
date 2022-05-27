@@ -63,6 +63,14 @@ body.side-nav-open {
   }
 }
 
+.show-over-md {
+  display: none;
+
+  @include mq() {
+    display: block;
+  }
+}
+
 h1,
 h2,
 h3 {

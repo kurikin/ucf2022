@@ -96,6 +96,7 @@ export default {}
     letter-spacing: 6px;
   }
 }
+
 .right-arrow {
   height: 20px;
   width: 20px;
