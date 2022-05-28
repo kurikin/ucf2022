@@ -27,7 +27,7 @@
           </div>
           <div class="activity-list">
             <div class="activity-tile">
-              <h2 class="activity-title">1. SNS投稿</h2>
+              <h2 class="activity-name">1. SNS投稿</h2>
               <p class="description">
                 私たちの主な活動場所はInstagramなどのSNS！土木構造物や工事現場の様子を投稿しています。
               </p>
@@ -42,11 +42,18 @@
 
 <script>
 import YasashisaLinks from '../../components/event/YasashisaLinks.vue'
+import { dataList } from '~/assets/constants/yasashisa'
+
 export default {
   data() {
     return {
       videoId: 'n0dMgDM9OY0',
     }
+  },
+  computed: {
+    data() {
+      return dataList
+    },
   },
   components: { YasashisaLinks },
 }
@@ -95,11 +102,17 @@ export default {
   line-height: 1.58;
 }
 
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .activity-tile {
   display: grid;
   gap: 12px;
 
-  .activity-title {
+  .activity-name {
     color: $black;
     font-size: 24px;
     letter-spacing: 5px;
