@@ -85,6 +85,8 @@ export default {
   }
 
   @include mq() {
+    font-size: 30px;
+    margin-top: -32px;
   }
 }
 
@@ -95,6 +97,14 @@ export default {
 
   @include mq(sm) {
     margin-bottom: 32px;
+  }
+
+  @include mq() {
+    margin-bottom: 48px;
+  }
+
+  @include mq(lg) {
+    margin-bottom: 64px;
   }
 
   .youtube {
@@ -116,15 +126,35 @@ export default {
     align-items: center;
     gap: 20px;
     margin-bottom: 32px;
+
+    .description {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @include mq() {
+    margin-bottom: 80px;
+    gap: 28px;
   }
 }
 
 .heading {
   font-size: 24px;
-  color: $black;
+  color: $secondary;
+  letter-spacing: 1.5px;
 
   @include mq(sm) {
     font-size: 30px;
+  }
+
+  @include mq() {
+    font-size: 36px;
+    letter-spacing: 3px;
+  }
+
+  @include mq(lg) {
+    font-size: 44px;
+    letter-spacing: 5px;
   }
 }
 
@@ -133,9 +163,12 @@ export default {
   color: $black;
   line-height: 1.58;
 
-  @include mq(sm) {
-    font-size: 16px;
-    grid-column: 1 / -1;
+  @include mq() {
+    font-size: 18px;
+  }
+
+  @include mq(lg) {
+    font-size: 20px;
   }
 }
 
@@ -147,6 +180,15 @@ export default {
   @include mq(sm) {
     gap: 48px;
   }
+
+  @include mq() {
+    gap: 64px;
+
+    .description {
+      grid-column: 1;
+      grid-row: 2;
+    }
+  }
 }
 
 .activity-tile {
@@ -157,6 +199,19 @@ export default {
     gap: 20px;
   }
 
+  @include mq() {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto 1fr;
+    column-gap: 32px;
+    row-gap: 12px;
+    align-items: flex-start;
+  }
+
+  @include mq(lg) {
+    column-gap: 80px;
+    row-gap: 20px;
+  }
+
   .activity-name {
     color: $black;
     font-size: 24px;
@@ -165,18 +220,42 @@ export default {
     @include mq(sm) {
       font-size: 30px;
     }
+
+    @include mq() {
+      font-size: 36px;
+      letter-spacing: 5px;
+    }
   }
 
   .activity-img {
     width: 100%;
+
+    @include mq() {
+      grid-column: 2;
+      grid-row: 1 / 4;
+      width: 330px;
+      aspect-ratio: 5 / 3;
+      justify-self: flex-end;
+    }
+
+    @include mq(lg) {
+      width: 360px;
+    }
   }
 }
 
 .primary-button {
   margin-top: 16px;
+  margin: 0;
 
   @include mq(sm) {
     padding: 10px 48px;
+  }
+
+  @include mq() {
+    margin-top: 0;
+    grid-row: 3;
+    justify-self: flex-start;
   }
 }
 </style>

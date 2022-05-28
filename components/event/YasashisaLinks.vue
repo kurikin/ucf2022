@@ -26,9 +26,23 @@ export default {}
     grid-column: 2;
   }
 
+  @include mq() {
+    gap: 40px;
+  }
+
   .sns-link {
     width: 24px;
     height: 24px;
+
+    @include mq() {
+      width: 28px;
+      height: 28px;
+    }
+
+    @include mq(lg) {
+      width: 32px;
+      height: 32px;
+    }
   }
 
   .sns-logo {
