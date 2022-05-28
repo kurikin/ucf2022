@@ -31,7 +31,7 @@ export default {
 
 <style lang="scss" scoped>
 .analyze-button {
-  display: inline-block;
+  display: block;
   margin: 0 auto;
   color: $white;
   font-size: 18px;
@@ -49,7 +49,7 @@ export default {
 
   @include mq() {
     font-size: 24px;
-    padding: 12px 48px;
+    padding: 12px 64px;
     border-radius: 32px;
   }
 }

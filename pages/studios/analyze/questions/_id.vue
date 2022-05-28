@@ -9,36 +9,42 @@
       <div class="container">
         <div class="analyze-background">
           <div v-if="!question.longChoice" class="question-box short-choice">
-            <h2 class="question-text">{{ question.questionText }}</h2>
+            <h2 class="question-text fadeIn animation-1">
+              {{ question.questionText }}
+            </h2>
             <div class="button-box">
               <nuxt-link
-                class="choice-button"
+                class="choice-button fadeIn animation-2"
                 :to="'/studios/analyze/' + question.firstChoiceNextPath"
                 >{{ question.firstChoice }}</nuxt-link
               >
               <nuxt-link
-                class="choice-button"
+                class="choice-button fadeIn animation-2"
                 :to="'/studios/analyze/' + question.secondChoiceNextPath"
                 >{{ question.secondChoice }}</nuxt-link
               >
             </div>
           </div>
           <div v-else class="question-box long-choice">
-            <h2 class="question-text">{{ question.questionText }}</h2>
+            <h2 class="question-text fadeIn animation-1">
+              {{ question.questionText }}
+            </h2>
             <div class="choices-box">
-              <p class="choice-text">{{ question.firstChoice }}</p>
-              <p class="choice-text">
+              <p class="choice-text fadeIn animation-2">
+                {{ question.firstChoice }}
+              </p>
+              <p class="choice-text fadeIn animation-2">
                 {{ question.secondChoice }}
               </p>
             </div>
             <div class="button-box">
               <nuxt-link
-                class="choice-button"
+                class="choice-button fadeIn animation-2"
                 :to="'/studios/analyze/' + question.firstChoiceNextPath"
                 >A</nuxt-link
               >
               <nuxt-link
-                class="choice-button"
+                class="choice-button fadeIn animation-2"
                 :to="'/studios/analyze/' + question.secondChoiceNextPath"
                 >B</nuxt-link
               >

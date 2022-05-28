@@ -72,7 +72,7 @@ export default {
   }
 
   @include mq() {
-    margin-top: 140px;
+    margin-top: 110px;
   }
 
   &.has-description {

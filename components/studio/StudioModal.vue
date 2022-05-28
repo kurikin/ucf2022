@@ -47,11 +47,11 @@ export default {
 <style lang="scss" scoped>
 .modal-content {
   display: grid;
-  gap: 20px;
+  gap: 24px;
   height: 100%;
 
   @include mq(sm) {
-    gap: 24px;
+    gap: 28px;
     align-items: start;
     grid-template-columns: 1fr auto;
     grid-template-rows: auto auto;
@@ -69,10 +69,21 @@ export default {
   letter-spacing: 2px;
   font-size: 30px;
   font-weight: 500;
+  margin-top: -12px;
+
+  @include mq(sm) {
+    margin-top: 0;
+  }
 
   @include mq() {
     letter-spacing: 5px;
     font-size: 36px;
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  @include mq(lg) {
+    font-size: 44px;
   }
 }
 
@@ -111,7 +122,7 @@ export default {
   }
 
   @include mq(lg) {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.68;
   }
 }

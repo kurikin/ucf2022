@@ -9,17 +9,17 @@
       <div class="container">
         <div class="analyze-background">
           <div class="result-box">
-            <h2 class="title">診断結果</h2>
-            <div class="result-text">
+            <h2 class="title fadeIn animation-1">診断結果</h2>
+            <div class="result-text fadeIn animation-2">
               <p class="leading">あなたにおすすめのスタジオは...</p>
               <h3 class="studio-name">{{ studioData.lastName }}スタジオ</h3>
             </div>
             <img
-              class="teacher-img"
+              class="teacher-img fadeIn animation-2"
               :src="'/teachers/' + studioData.englishName + '.jpeg'"
               alt=""
             />
-            <div class="button-box">
+            <div class="button-box fadeIn animation-3">
               <button
                 class="result-button"
                 @click="showStudioModal(studioData)"

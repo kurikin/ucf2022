@@ -225,6 +225,7 @@ a {
   border-radius: 20px;
   justify-self: end;
   grid-row: 1;
+  align-self: center;
 
   @include mq(sm) {
     grid-column: 2;
@@ -257,7 +258,6 @@ a {
   justify-content: center;
   background-color: #fff;
   width: 100%;
-  min-height: 200px;
   padding: 20px;
   border-radius: $radius-xs;
   margin-top: -8px;
@@ -271,13 +271,12 @@ a {
   }
 
   @include mq() {
-    min-height: 250px;
     padding: 48px 32px;
     margin-top: -32px;
     margin-bottom: 48px;
   }
 
   @include mq(lg) {
-    min-height: 350px;
+    height: 100%;
   }
 }
