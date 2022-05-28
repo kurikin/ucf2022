@@ -21,9 +21,6 @@ export default {}
   display: flex;
   gap: 32px;
   grid-row: 1;
-  grid-column: 2;
-  justify-self: end;
-  align-self: start;
 
   .sns-link {
     width: 24px;

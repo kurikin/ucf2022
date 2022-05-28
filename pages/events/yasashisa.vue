@@ -18,13 +18,22 @@
           ></youtube>
         </div>
         <section class="about">
-          <div class="heading-box">
+          <div class="about-header">
             <h2 class="heading">「優しさの街」について</h2>
             <YasashisaLinks />
+            <p class="description">
+              「優しさの街」は、都市基盤学科の有志学生による団体です。SNSでの土木紹介やオープンキャンパスの実施を通して、普段土木に馴染みがない人にも土木の魅力を知ってもらいたい！そんな思いで活動しています。さらに、中高生に学生生活の様子を感じてもらいたい！との願いを実現すべく、現役の大学生の私たちだからこそできるフレッシュな発信を心がけています。
+            </p>
           </div>
-          <p class="description">
-            「優しさの街」は、都市基盤学科の有志学生による団体です。SNSでの土木紹介やオープンキャンパスの実施を通して、普段土木に馴染みがない人にも土木の魅力を知ってもらいたい！そんな思いで活動しています。さらに、中高生に学生生活の様子を感じてもらいたい！との願いを実現すべく、現役の大学生の私たちだからこそできるフレッシュな発信を心がけています。
-          </p>
+          <div class="activity-list">
+            <div class="activity-tile">
+              <h2 class="activity-title">1. SNS投稿</h2>
+              <p class="description">
+                私たちの主な活動場所はInstagramなどのSNS！土木構造物や工事現場の様子を投稿しています。
+              </p>
+              <img src="/yasashisa/1.jpeg" alt="" class="activity-img" />
+            </div>
+          </div>
         </section>
       </div>
     </div>
@@ -69,21 +78,35 @@ export default {
   left: 0;
 }
 
-.heading-box {
-  display: flex;
-  flex-direction: column-reverse;
-  gap: 16px;
-  margin-bottom: 16px;
+.about-header {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 24px;
+}
 
-  .heading {
-    font-size: 24px;
-    color: $black;
-  }
+.heading {
+  font-size: 24px;
+  color: $black;
 }
 
 .description {
   font-size: 16px;
   color: $black;
   line-height: 1.58;
+}
+
+.activity-tile {
+  display: grid;
+  gap: 12px;
+
+  .activity-title {
+    color: $black;
+    font-size: 24px;
+    letter-spacing: 5px;
+  }
+
+  .activity-img {
+    width: 100%;
+  }
 }
 </style>
