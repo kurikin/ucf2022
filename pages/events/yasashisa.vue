@@ -20,6 +20,7 @@
         <section class="about">
           <div class="heading-box">
             <h2 class="heading">「優しさの街」について</h2>
+            <YasashisaLinks />
           </div>
           <p class="description">
             「優しさの街」は、都市基盤学科の有志学生による団体です。SNSでの土木紹介やオープンキャンパスの実施を通して、普段土木に馴染みがない人にも土木の魅力を知ってもらいたい！そんな思いで活動しています。さらに、中高生に学生生活の様子を感じてもらいたい！との願いを実現すべく、現役の大学生の私たちだからこそできるフレッシュな発信を心がけています。
@@ -31,12 +32,14 @@
 </template>
 
 <script>
+import YasashisaLinks from '../../components/event/YasashisaLinks.vue'
 export default {
   data() {
     return {
       videoId: 'n0dMgDM9OY0',
     }
   },
+  components: { YasashisaLinks },
 }
 </script>
 

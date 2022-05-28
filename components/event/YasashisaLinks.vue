@@ -1,17 +1,13 @@
 <template>
   <div class="sns fadeIn animation-2">
-    <a class="sns-link" href="https://twitter.com/cus_ucf_oc" target="_blank">
+    <a class="sns-link" href="https://twitter.com/ynu_cvg" target="_blank">
       <img class="sns-logo" src="/logos/twitter-brown.svg" alt="" />
     </a>
-    <a
-      class="sns-link"
-      href="https://www.instagram.com/cus_ucf_oc/?hl=ja"
-      target="_blank"
-    >
-      <img class="sns-logo" src="/logos/facebook-brown.svg" alt="" />
+    <a class="sns-link" href="https://instagram.com/ynu_cvg" target="_blank">
+      <img class="sns-logo" src="/logos/instagram-brown.svg" alt="" />
     </a>
-    <a class="sns-link" href="https://note.com/ucf2022/" target="_blank">
-      <img class="sns-logo" src="/logos/note-brown.svg" alt="" />
+    <a class="sns-link" href="https://facebook.com/ynu.cvg" target="_blank">
+      <img class="sns-logo" src="/logos/facebook-brown.svg" alt="" />
     </a>
   </div>
 </template>
