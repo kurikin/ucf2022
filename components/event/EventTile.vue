@@ -18,7 +18,11 @@
       class="button-box"
       :class="{ 'one-button': !eventData.hasSecondButton }"
     >
+      <button v-if="eventData.comingsoon" class="action-button disabled">
+        後日公開予定
+      </button>
       <button
+        v-else
         class="action-button"
         @click="buttonClicked(eventData.firstButtonData)"
       >
@@ -212,6 +216,16 @@ export default {
   padding: 10px 0;
   border: none;
   letter-spacing: 1px;
+
+  &.disabled {
+    border: 2.5px solid $secondary;
+    color: $secondary;
+    background-color: $white;
+
+    &:hover {
+      cursor: default;
+    }
+  }
 
   @include mq(xs) {
     width: 100%;
