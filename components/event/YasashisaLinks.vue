@@ -22,6 +22,10 @@ export default {}
   gap: 32px;
   grid-row: 1;
 
+  @include mq(sm) {
+    grid-column: 2;
+  }
+
   .sns-link {
     width: 24px;
     height: 24px;
