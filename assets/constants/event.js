@@ -269,8 +269,8 @@ export const events = [
       'こんにちは、「優しさの街」です！優しさの街は都市基盤学科有志学生の団体です。"私たちの学問のすばらしさを知ってほしい！"そんな思いから、街中の「優しさ」をSNSで紹介しています。都市文化祭では活動と学科の紹介をします。動画など力を入れているので、横国生も、受験生の方もふらっと見に来てください！',
     firstButtonData: {
       text: '企画ページを見る',
-      type: '',
-      link: '',
+      type: 'route',
+      link: 'events/yasashisa',
     },
     secondButtonData: {
       link: '',

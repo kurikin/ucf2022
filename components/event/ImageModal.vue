@@ -1,7 +1,7 @@
 <template>
   <BaseModal :modalOpen="imageModalOpen">
     <div class="modal-content" v-scroll-lock="imageModalOpen">
-      <img class="image" :src="imageModalData.image.url" alt="" />
+      <img class="image" :src="imageModalData.image.url + '?w=1000'" alt="" />
       <button class="close-modal-button" @click="toggleImageModal">
         <span class="close-text">閉じる</span
         ><img class="close-icon" src="/icons/close.svg" alt="" />

@@ -4,7 +4,7 @@
       <img
         v-for="content in contents"
         class="image"
-        :src="content.image.url"
+        :src="content.image.url + '?w=1000'"
         :key="content.id"
         @click="showModal(content)"
         alt=""
