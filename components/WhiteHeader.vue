@@ -57,7 +57,7 @@ export default {
   }
 
   @include mq() {
-    margin-bottom: 80px;
+    margin-bottom: 64px;
     padding-top: 48px;
   }
 }
@@ -77,10 +77,6 @@ export default {
 
   &.has-description {
     margin-bottom: 32px;
-
-    @include mq(sm) {
-      margin-bottom: 48px;
-    }
   }
 }
 

@@ -117,4 +117,10 @@ export default {
     grid-template-columns: 60fr 40fr;
   }
 }
+
+.close-modal-button {
+  @include mq(sm) {
+    align-self: flex-start;
+  }
+}
 </style>
