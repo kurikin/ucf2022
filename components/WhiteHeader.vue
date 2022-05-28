@@ -5,7 +5,7 @@
     <div class="container">
       <h1
         class="page-title fadeIn animation-1"
-        :class="{ 'has-description': hasDescription }"
+        :class="{ 'has-description': hasSecondSlot }"
         v-if="this.$slots['page-title']"
       >
         <slot name="page-title"></slot>
@@ -30,7 +30,7 @@
 <script>
 export default {
   computed: {
-    hasDescription() {
+    hasSecondSlot() {
       return (
         this.$slots['description'] !== undefined ||
         this.$slots['custom'] !== undefined

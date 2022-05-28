@@ -270,7 +270,7 @@ export const events = [
     firstButtonData: {
       text: '企画ページを見る',
       type: 'route',
-      link: 'events/yasashisa',
+      link: '/events/yasashisa',
     },
     secondButtonData: {
       link: '',

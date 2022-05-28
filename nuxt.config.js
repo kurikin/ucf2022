@@ -42,6 +42,7 @@ export default {
     { src: '@/plugins/modal' },
     { src: '@/plugins/scroll_lock' },
     { src: '@/plugins/countdown', ssr: false },
+    { src: '@/plugins/youtube', ssr: false },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
