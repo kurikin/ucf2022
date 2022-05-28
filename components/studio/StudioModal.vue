@@ -111,7 +111,8 @@ export default {
   }
 
   @include mq(lg) {
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1.68;
   }
 }
 </style>
