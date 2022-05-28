@@ -262,6 +262,7 @@ a {
   border-radius: $radius-xs;
   margin-top: -8px;
   margin-bottom: 24px;
+  flex: 1;
 
   @include mq(sm) {
     border-radius: $radius-sm;

@@ -8,13 +8,11 @@
         ​まだ見ぬ世界に出会えるかも…！？</template
       >
     </WhiteHeader>
-    <div class="no-margin-content">
-      <div class="container">
-        <div class="analyze-background fadeIn animation-3">
-          <nuxt-link class="analyze-button" to="/studios/analyze/questions/1">
-            スタジオ診断を始める！
-          </nuxt-link>
-        </div>
+    <div class="no-margin-content container">
+      <div class="analyze-background fadeIn animation-3">
+        <nuxt-link class="analyze-button" to="/studios/analyze/questions/1">
+          スタジオ診断を始める！
+        </nuxt-link>
       </div>
     </div>
     <Footer />
@@ -52,5 +50,10 @@ export default {
     padding: 12px 64px;
     border-radius: 32px;
   }
+}
+
+.no-margin-content {
+  display: flex;
+  flex-direction: column;
 }
 </style>
