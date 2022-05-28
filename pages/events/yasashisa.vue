@@ -26,12 +26,20 @@
             </p>
           </div>
           <div class="activity-list">
-            <div class="activity-tile">
-              <h2 class="activity-name">1. SNS投稿</h2>
+            <div
+              v-for="(data, index) in dataList"
+              :key="index"
+              class="activity-tile"
+            >
+              <h2 class="activity-name">{{ data.activityName }}</h2>
               <p class="description">
-                私たちの主な活動場所はInstagramなどのSNS！土木構造物や工事現場の様子を投稿しています。
+                {{ data.description }}
               </p>
-              <img src="/yasashisa/1.jpeg" alt="" class="activity-img" />
+              <img
+                :src="'/yasashisa/' + (index + 1) + '.jpeg'"
+                alt=""
+                class="activity-img"
+              />
             </div>
           </div>
         </section>
@@ -51,7 +59,7 @@ export default {
     }
   },
   computed: {
-    data() {
+    dataList() {
       return dataList
     },
   },
@@ -105,7 +113,7 @@ export default {
 .activity-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 32px;
 }
 
 .activity-tile {
@@ -115,7 +123,7 @@ export default {
   .activity-name {
     color: $black;
     font-size: 24px;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
   }
 
   .activity-img {
