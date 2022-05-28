@@ -72,6 +72,14 @@ export default {
 <style lang="scss" scoped>
 .question-box {
   width: 100%;
+
+  @include mq() {
+    padding: 0 24px;
+  }
+
+  @include mq(lg) {
+    padding: 0 64px;
+  }
 }
 
 .question-text {
@@ -110,25 +118,22 @@ export default {
   gap: 32px;
 
   @include mq(sm) {
-    gap: 48px;
+    gap: 32px;
   }
 
   @include mq() {
-    gap: 64px;
-  }
-
-  @include mq(lg) {
-    gap: 64px;
+    gap: 48px;
   }
 
   .choices-box {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
 
-    @include mq(lg) {
-      flex-direction: row;
-      justify-content: space-around;
+    margin-top: -8px;
+
+    @include mq() {
+      margin-top: -16px;
     }
   }
 
@@ -156,11 +161,7 @@ export default {
   }
 
   @include mq() {
-    gap: 64px;
-  }
-
-  @include mq(lg) {
-    gap: 80px;
+    justify-content: space-between;
   }
 }
 
@@ -182,6 +183,7 @@ export default {
     padding: 6px 0px;
     width: 100%;
     min-width: auto;
+    margin: 0;
   }
 
   @include mq() {

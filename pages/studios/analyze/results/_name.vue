@@ -99,7 +99,7 @@ export default {
 }
 
 .title {
-  font-size: 30px;
+  font-size: 36px;
   color: $black;
   text-align: center;
   letter-spacing: 4px;
@@ -175,6 +175,7 @@ export default {
   width: 100%;
   border-radius: $radius-sm;
   max-width: 400px;
+  object-fit: cover;
 
   @include mq() {
     max-width: 500px;
@@ -190,10 +191,10 @@ export default {
 .button-box {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
 
   @include mq(sm) {
-    gap: 24px;
+    gap: 32px;
   }
 
   @include mq() {
@@ -214,12 +215,16 @@ export default {
   width: 100%;
   font-size: 20px;
   font-weight: 500;
-  border-radius: 24px;
+  border-radius: 28px;
   padding: 8px 0;
 
   @include mq(sm) {
-    font-size: 24px;
+    font-size: 20px;
     padding: 8px 16px;
+  }
+
+  @include mq() {
+    padding: 10px 16px;
   }
 }
 </style>

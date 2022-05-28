@@ -1,15 +1,15 @@
 <template>
   <div class="black-background">
-    <Splash @closeSplash="closeSplash" v-if="showSplash && firstLoad" />
-    <div v-else>
-      <div class="content">
-        <HomeHeader />
-        <News :contents="this.contents" />
-        <Pickup />
-        <Hamburger :baseColor="'white'" />
-      </div>
-      <Footer />
+    <transition name="splash-fade">
+      <Splash v-if="showSplash && firstLoad" />
+    </transition>
+    <div class="content">
+      <HomeHeader />
+      <News :contents="this.contents" />
+      <Pickup />
+      <Hamburger :baseColor="'white'" />
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -30,6 +30,14 @@ export default {
   },
   created() {
     this.changeSplashParam()
+  },
+  mounted() {
+    this.$nextTick(function () {
+      setTimeout(() => {
+        this.showSplash = false
+        this.toggleFirstLoad()
+      }, 1350)
+    })
   },
   data() {
     return {
@@ -55,11 +63,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.fadeIn {
-  animation-name: fadeInAnime;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-</style>
+<style lang="scss" scoped></style>

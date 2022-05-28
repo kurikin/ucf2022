@@ -34,7 +34,7 @@ export default {
   margin-top: 48px;
 
   @include mq(lg) {
-    margin-top: 80px;
+    margin-top: 64px;
   }
 }
 

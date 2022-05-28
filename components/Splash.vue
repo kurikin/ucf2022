@@ -1,14 +1,6 @@
 <template>
   <div class="background">
-    <transition name="fade">
-      <img
-        v-show="showSplash"
-        id="splash"
-        class="splash"
-        src="/background.png"
-        alt=""
-      />
-    </transition>
+    <img id="splash" class="splash" src="/background.png" alt="" />
   </div>
 </template>
 
@@ -33,29 +25,22 @@ export default {
 
     const imageTag = window.document.getElementById('splash')
     imageTag.setAttribute('src', `/splash.gif?${randomValue}`)
-
-    this.$nextTick(function () {
-      setTimeout(() => {
-        this.showSplash = false
-      }, 1350),
-        setTimeout(() => {
-          this.$emit('closeSplash')
-          this.toggleFirstLoad()
-        }, 1600)
-    })
   },
 }
 </script>
 
 <style lang="scss" scoped>
 .background {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: $black;
-  z-index: 1;
+  z-index: 100;
 }
 
 .splash {

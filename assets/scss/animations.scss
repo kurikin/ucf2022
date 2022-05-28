@@ -90,3 +90,12 @@
 .fade-leave-to {
   opacity: 0;
 }
+
+.splash-fade-enter-active,
+.splash-fade-leave-active {
+  transition: opacity 0.42s ease-in;
+}
+
+.splash-fade-leave-to {
+  opacity: 0;
+}
