@@ -63,6 +63,15 @@
   opacity: 0;
 }
 
+.ikeda-fade-enter,
+.ikeda-fade-leave-to {
+  opacity: 0;
+}
+
+.ikeda-fade-enter-active {
+  position: absolute;
+}
+
 // モーダル用 トランジション
 .component-fade-enter-active,
 .component-fade-leave-active {
