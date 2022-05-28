@@ -36,7 +36,7 @@ export default {
       setTimeout(() => {
         this.showSplash = false
         this.toggleFirstLoad()
-      }, 1350)
+      }, 1375)
     })
   },
   data() {

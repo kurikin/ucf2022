@@ -80,13 +80,13 @@ export default {
   text-align: left;
 
   @include mq(sm) {
-    margin-top: -40px;
+    margin-top: -32px;
     font-size: 24px;
   }
 
   @include mq() {
     font-size: 30px;
-    margin-top: -32px;
+    margin-top: -12px;
   }
 }
 
@@ -94,11 +94,9 @@ export default {
   max-width: 800px;
   margin: 0 auto;
   margin-bottom: 24px;
-  margin-top: -8px;
 
   @include mq(sm) {
     margin-bottom: 32px;
-    margin-top: -12px;
   }
 
   @include mq() {

@@ -31,11 +31,11 @@ export default {
 
 <style lang="scss" scoped>
 .background {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
   height: 100vh;
   width: 100vw;
+  top: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
