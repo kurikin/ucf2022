@@ -12,10 +12,10 @@
       </template>
     </BlackHeader>
     <div class="content">
-      <div class="center-line observe-fade-up"></div>
-      <Theme class="observe-fade-up" />
-      <div class="center-line observe-fade-up"></div>
-      <Message class="observe-fade-up" />
+      <div class="center-line fade-up-observe"></div>
+      <Theme class="fade-up-observe" />
+      <div class="center-line fade-up-observe"></div>
+      <Message class="fade-up-observe" />
     </div>
     <Footer />
   </div>
@@ -28,7 +28,7 @@ import { startObserve } from '~/scripts/observe'
 
 export default {
   mounted() {
-    startObserve('observe-fade-up')
+    startObserve('.fade-up-observe')
   },
   components: {
     Theme,

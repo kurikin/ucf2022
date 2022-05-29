@@ -10,7 +10,7 @@
       </template>
     </BlackHeader>
     <div class="content">
-      <div class="center-line observe-fade-up"></div>
+      <div class="center-line fade-up-observe"></div>
       <div class="departments">
         <Department
           v-for="(departmentData, index) in departments"
@@ -33,7 +33,7 @@ import { startObserve } from '~/scripts/observe'
 export default {
   components: { Footer, Department },
   mounted() {
-    startObserve('observe-fade-up')
+    startObserve('.fade-up-observe')
   },
   computed: {
     departments() {

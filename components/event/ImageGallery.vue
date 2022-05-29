@@ -21,7 +21,7 @@ import { startObserve } from '~/scripts/observe'
 export default {
   props: ['contents'],
   mounted() {
-    startObserve('observe-fade-in')
+    startObserve('fade-up-observe')
   },
   methods: {
     showModal(content) {

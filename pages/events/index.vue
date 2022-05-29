@@ -8,12 +8,12 @@
         <EventListHeader
           :selectedThemeIndex="selectedThemeIndex"
           @themeChange="themeChange"
-          class="observe-fade-up"
+          class="fade-up-observe"
         />
         <transition-group
           name="list"
           tag="div"
-          class="event-list observe-fade-up"
+          class="event-list fade-up-observe"
         >
           <EventTile
             v-for="eventData in matchedEvents"
@@ -43,7 +43,7 @@ import { startObserve } from '~/scripts/observe'
 export default {
   components: { Footer, EventListHeader, EventTile, SpeakersModal },
   mounted() {
-    startObserve('observe-fade-up')
+    startObserve('.fade-up-observe')
   },
   data() {
     return {

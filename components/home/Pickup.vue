@@ -1,5 +1,5 @@
 <template>
-  <section class="pickup container observe-fade-up">
+  <section class="pickup container fade-up-observe">
     <h2 class="section-heading">ピックアップ企画</h2>
     <ul class="pickup-list">
       <li class="list-item">
@@ -26,7 +26,7 @@ import PickupItem from './PickupItem.vue'
 import { startObserve } from '~/scripts/observe'
 export default {
   mounted() {
-    startObserve('observe-fade-up')
+    startObserve('.fade-up-observe')
   },
   components: {
     PickupItem,

@@ -9,7 +9,7 @@
           <div
             v-for="(department, index) in members"
             :key="index"
-            class="department observe-fade-up"
+            class="department fade-up-observe"
           >
             <h2 class="department-name">{{ department.departmentName }}</h2>
             <div class="leaders-box">
@@ -81,7 +81,7 @@ export default {
   components: { WhiteHeader, Footer },
   mounted() {
     window.addEventListener('keypress', this.onKeyPress)
-    startObserve('.observe-fade-up')
+    startObserve('.fade-up-observe')
   },
   methods: {
     onKeyPress(e) {

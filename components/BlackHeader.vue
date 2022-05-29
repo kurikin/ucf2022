@@ -9,7 +9,7 @@
         </h1>
       </div>
     </header>
-    <div class="description container observe-fade-up">
+    <div class="description container fade-up-observe">
       <slot name="description"></slot>
     </div>
   </div>
@@ -20,7 +20,7 @@ import { startObserve } from '~/scripts/observe'
 
 export default {
   mounted() {
-    startObserve('observe-fade-up')
+    startObserve('.fade-up-observe')
   },
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="studio-slider container observe-fade-up"
+    class="studio-slider container fade-up-observe"
     :class="'animation-' + animationNum"
   >
     <h1 class="studio-name">{{ studios.title }}</h1>
@@ -37,7 +37,7 @@ import { startObserve } from '~/scripts/observe'
 
 export default {
   mounted() {
-    startObserve('observe-fade-up')
+    startObserve('.fade-up-observe')
   },
   components: { StudioCard, Swiper, SwiperSlide },
   props: {

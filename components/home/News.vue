@@ -1,5 +1,5 @@
 <template>
-  <section class="news container observe-fade-up">
+  <section class="news container fade-up-observe">
     <h2 class="section-heading">新着情報</h2>
     <ul class="news-list">
       <li class="list-item" v-for="(content, index) in contents" :key="index">
@@ -23,7 +23,7 @@ import { startObserve } from '~/scripts/observe'
 export default {
   props: ['contents'],
   mounted() {
-    startObserve('observe-fade-up')
+    startObserve('.fade-up-observe')
   },
   methods: {
     categoryColor(category) {

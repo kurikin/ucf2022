@@ -1,5 +1,5 @@
 <template>
-  <div class="department container observe-fade-up">
+  <div class="department container fade-up-observe">
     <h2 class="section-heading">{{ data.name }}</h2>
     <div class="grid" :class="{ 'left-side-image': !data.rightSideImage }">
       <div class="image-box">
@@ -40,7 +40,7 @@
 import { startObserve } from '~/scripts/observe'
 export default {
   mounted() {
-    startObserve('observe-fade-up')
+    startObserve('.fade-up-observe')
   },
   props: {
     animationNum: {

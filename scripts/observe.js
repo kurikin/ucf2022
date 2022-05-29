@@ -13,7 +13,7 @@ export const startObserve = (targetClass) => {
     })
   }
   var options = {
-    rootMargin: '0px 0px -4% 0px',
+    rootMargin: '0px 0px -2% 0px',
   }
 
   //IntersectionObserver初期化

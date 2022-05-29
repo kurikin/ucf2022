@@ -12,8 +12,8 @@
       >
     </BlackHeader>
     <div class="content">
-      <div class="center-line observe-fade-up"></div>
-      <AnalyzeButton class="observe-fade-up" />
+      <div class="center-line fade-up-observe"></div>
+      <AnalyzeButton class="fade-up-observe" />
       <div class="studio-container">
         <!-- Fade up animation index 4 ~ 7 -->
         <StudioSlider
@@ -24,7 +24,7 @@
           :animationNum="index + 4"
         />
       </div>
-      <AnalyzeButton class="observe-fade-up" />
+      <AnalyzeButton class="fade-up-observe" />
     </div>
     <transition name="component-fade">
       <StudioModal v-if="studioModalOpen" />
@@ -44,7 +44,7 @@ import { startObserve } from '~/scripts/observe'
 
 export default {
   mounted() {
-    startObserve('observe-fade-up')
+    startObserve('.fade-up-observe')
   },
   computed: {
     studiosByCategory() {
