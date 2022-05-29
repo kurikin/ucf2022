@@ -100,13 +100,22 @@
   opacity: 0;
 }
 
-.observe-fadeIn {
+.observe-fadeUp {
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(25px);
   transition: all 1s;
 
   &.show {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.observe-fadeIn {
+  opacity: 0;
+  transition: all 1s;
+
+  &.show {
+    opacity: 1;
   }
 }

@@ -15,10 +15,10 @@
       <!-- <div class="center-line fadeUp animation-3"></div>
       <Theme class="fadeUp animation-4" />
       <div class="center-line fadeUp animation-5"></div> -->
-      <div class="center-line observe-fadeIn"></div>
-      <Theme class="observe-fadeIn" />
-      <div class="center-line observe-fadeIn"></div>
-      <Message class="observe-fadeIn" />
+      <div class="center-line observe-fadeUp"></div>
+      <Theme class="observe-fadeUp" />
+      <div class="center-line observe-fadeUp"></div>
+      <Message class="observe-fadeUp" />
     </div>
     <Footer />
   </div>
@@ -27,32 +27,11 @@
 <script>
 import Theme from '~/components/about/Theme'
 import Message from '~/components/about/Message.vue'
+import { fadeUpObserve } from '~/scripts/observe'
 
 export default {
   mounted() {
-    var targets = document.querySelectorAll('.observe-fadeIn') //監視対象を選択
-    var targetsArray = Array.prototype.slice.call(targets) //監視対象を配列に変換（IE対策）
-
-    //IntersectionObserverに渡すコールバック関数
-    var cb = function (entries, observer) {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          //画面内に入った時に処理開始
-          entry.target.classList.add('show') //画面内に入った要素にshowクラスを付与
-          observer.unobserve(entry.target) //一度発火した後監視を止める
-        }
-      })
-    }
-    var options = {
-      rootMargin: '0px 0px',
-    }
-
-    //IntersectionObserver初期化
-    var io = new IntersectionObserver(cb, options)
-
-    targetsArray.forEach((el) => {
-      io.observe(el)
-    })
+    fadeUpObserve()
   },
   components: {
     Theme,
