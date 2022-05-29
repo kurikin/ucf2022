@@ -21,6 +21,7 @@ export default {}
   display: flex;
   gap: 32px;
   grid-row: 1;
+  justify-content: flex-end;
 
   @include mq(sm) {
     grid-column: 2;

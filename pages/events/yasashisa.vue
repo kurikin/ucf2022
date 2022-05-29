@@ -193,7 +193,7 @@ export default {
 
 .activity-tile {
   display: grid;
-  gap: 12px;
+  gap: 16px;
 
   @include mq(sm) {
     gap: 20px;
@@ -229,6 +229,7 @@ export default {
 
   .activity-img {
     width: 100%;
+    border-radius: 16px;
 
     @include mq() {
       grid-column: 2;
@@ -245,16 +246,17 @@ export default {
 }
 
 .primary-button {
-  margin-top: 16px;
-  margin: 0;
+  margin: 20px 0 0 0;
 
   @include mq(sm) {
     padding: 10px 48px;
+    margin: 20px auto 0;
   }
 
   @include mq() {
     margin-top: 0;
     grid-row: 3;
+    margin: 0;
     justify-self: flex-start;
   }
 }
