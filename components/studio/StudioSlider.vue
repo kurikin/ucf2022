@@ -1,6 +1,6 @@
 <template>
   <div
-    class="studio-slider container fadeUp"
+    class="studio-slider container observe-fade-up"
     :class="'animation-' + animationNum"
   >
     <h1 class="studio-name">{{ studios.title }}</h1>
@@ -33,7 +33,12 @@
 import StudioCard from './StudioCard.vue'
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 import 'swiper/css/swiper.css'
+import { startObserve } from '~/scripts/observe'
+
 export default {
+  mounted() {
+    startObserve('observe-fade-up')
+  },
   components: { StudioCard, Swiper, SwiperSlide },
   props: {
     studios: {

@@ -8,12 +8,12 @@
         <EventListHeader
           :selectedThemeIndex="selectedThemeIndex"
           @themeChange="themeChange"
-          class="fadeUp animation-2"
+          class="observe-fade-up"
         />
         <transition-group
           name="list"
           tag="div"
-          class="event-list fadeUp animation-3"
+          class="event-list observe-fade-up"
         >
           <EventTile
             v-for="eventData in matchedEvents"
@@ -38,9 +38,13 @@ import { events } from '~/assets/constants/event'
 import { themeList } from '~/assets/constants/theme'
 import SpeakersModal from '~/components/event/SpeakersModal.vue'
 import { mapState } from 'vuex'
+import { startObserve } from '~/scripts/observe'
 
 export default {
   components: { Footer, EventListHeader, EventTile, SpeakersModal },
+  mounted() {
+    startObserve('observe-fade-up')
+  },
   data() {
     return {
       selectedThemeIndex: 0,

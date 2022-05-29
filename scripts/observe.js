@@ -1,5 +1,5 @@
-export const fadeUpObserve = () => {
-  var targets = document.querySelectorAll('.observe-fadeUp') // 監視対象を選択
+export const startObserve = (targetClass) => {
+  var targets = document.querySelectorAll(targetClass) // 監視対象を選択
   var targetsArray = Array.prototype.slice.call(targets) // 監視対象を配列に変換（IE対策）
 
   //IntersectionObserverに渡すコールバック関数
@@ -13,7 +13,7 @@ export const fadeUpObserve = () => {
     })
   }
   var options = {
-    rootMargin: '0px 0px',
+    rootMargin: '0px 0px -4% 0px',
   }
 
   //IntersectionObserver初期化

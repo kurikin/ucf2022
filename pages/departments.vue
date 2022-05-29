@@ -10,7 +10,7 @@
       </template>
     </BlackHeader>
     <div class="content">
-      <div class="center-line fadeUp animation-3"></div>
+      <div class="center-line observe-fade-up"></div>
       <div class="departments">
         <Department
           v-for="(departmentData, index) in departments"
@@ -28,9 +28,13 @@
 import Footer from '~/components/Footer.vue'
 import Department from '../components/deparments/department.vue'
 import { departments } from '~/assets/constants/department'
+import { startObserve } from '~/scripts/observe'
 
 export default {
   components: { Footer, Department },
+  mounted() {
+    startObserve('observe-fade-up')
+  },
   computed: {
     departments() {
       return departments

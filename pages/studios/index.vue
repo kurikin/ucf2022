@@ -12,8 +12,8 @@
       >
     </BlackHeader>
     <div class="content">
-      <div class="center-line fadeUp animation-3"></div>
-      <AnalyzeButton class="fadeUp animation-3" />
+      <div class="center-line observe-fade-up"></div>
+      <AnalyzeButton class="observe-fade-up" />
       <div class="studio-container">
         <!-- Fade up animation index 4 ~ 7 -->
         <StudioSlider
@@ -24,7 +24,7 @@
           :animationNum="index + 4"
         />
       </div>
-      <AnalyzeButton class="fadeUp animation-8" />
+      <AnalyzeButton class="observe-fade-up" />
     </div>
     <transition name="component-fade">
       <StudioModal v-if="studioModalOpen" />
@@ -40,8 +40,12 @@ import StudioSlider from '~/components/studio/StudioSlider.vue'
 import { studiosByCategory } from '@/assets/constants/studio'
 import StudioModal from '~/components/studio/StudioModal.vue'
 import { mapState } from 'vuex'
+import { startObserve } from '~/scripts/observe'
 
 export default {
+  mounted() {
+    startObserve('observe-fade-up')
+  },
   computed: {
     studiosByCategory() {
       return studiosByCategory

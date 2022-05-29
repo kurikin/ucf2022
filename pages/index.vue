@@ -3,8 +3,8 @@
     <transition name="splash-fade">
       <Splash v-if="showSplash && firstLoad" />
     </transition>
+    <HomeHeader />
     <div class="content">
-      <HomeHeader />
       <News :contents="this.contents" />
       <Pickup />
       <Hamburger :baseColor="'white'" />

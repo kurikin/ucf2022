@@ -1,5 +1,5 @@
 <template>
-  <div class="sns fadeIn animation-2">
+  <div class="sns observe-fade-in">
     <a class="sns-link" href="https://twitter.com/ynu_cvg" target="_blank">
       <img class="sns-logo" src="/logos/twitter-brown.svg" alt="" />
     </a>
@@ -13,7 +13,12 @@
 </template>
 
 <script>
-export default {}
+import { startObserve } from '~/scripts/observe'
+export default {
+  mounted() {
+    startObserve('observe-fade-in')
+  },
+}
 </script>
 
 <style lang="scss" scoped>

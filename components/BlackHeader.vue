@@ -9,13 +9,21 @@
         </h1>
       </div>
     </header>
-    <div class="description container fadeUp animation-2">
+    <div class="description container observe-fade-up">
       <slot name="description"></slot>
     </div>
   </div>
 </template>
 
-<script></script>
+<script>
+import { startObserve } from '~/scripts/observe'
+
+export default {
+  mounted() {
+    startObserve('observe-fade-up')
+  },
+}
+</script>
 
 <style lang="scss" scoped>
 .header {

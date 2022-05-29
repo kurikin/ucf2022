@@ -9,8 +9,7 @@
           <div
             v-for="(department, index) in members"
             :key="index"
-            class="department fadeUp"
-            :class="'animation-' + (index + 2)"
+            class="department observe-fade-up"
           >
             <h2 class="department-name">{{ department.departmentName }}</h2>
             <div class="leaders-box">
@@ -76,11 +75,13 @@
 import WhiteHeader from '../components/WhiteHeader.vue'
 import Footer from '~/components/Footer.vue'
 import { members } from '~/assets/constants/member'
+import { startObserve } from '~/scripts/observe'
 
 export default {
   components: { WhiteHeader, Footer },
   mounted() {
     window.addEventListener('keypress', this.onKeyPress)
+    startObserve('.observe-fade-up')
   },
   methods: {
     onKeyPress(e) {

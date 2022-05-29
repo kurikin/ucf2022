@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    <div class="grid image-gallery fadeIn animation-3">
+    <div class="grid image-gallery">
       <img
         v-for="content in contents"
-        class="image"
+        class="image observe-fade-in"
         :src="content.image.url + '?w=1000'"
         :key="content.id"
         @click="showModal(content)"
@@ -16,9 +16,13 @@
 
 <script>
 import { mapMutations } from 'vuex'
+import { startObserve } from '~/scripts/observe'
 
 export default {
   props: ['contents'],
+  mounted() {
+    startObserve('observe-fade-in')
+  },
   methods: {
     showModal(content) {
       this.setImageModalData(content)

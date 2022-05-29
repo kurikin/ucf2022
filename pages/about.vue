@@ -12,13 +12,10 @@
       </template>
     </BlackHeader>
     <div class="content">
-      <!-- <div class="center-line fadeUp animation-3"></div>
-      <Theme class="fadeUp animation-4" />
-      <div class="center-line fadeUp animation-5"></div> -->
-      <div class="center-line observe-fadeUp"></div>
-      <Theme class="observe-fadeUp" />
-      <div class="center-line observe-fadeUp"></div>
-      <Message class="observe-fadeUp" />
+      <div class="center-line observe-fade-up"></div>
+      <Theme class="observe-fade-up" />
+      <div class="center-line observe-fade-up"></div>
+      <Message class="observe-fade-up" />
     </div>
     <Footer />
   </div>
@@ -27,11 +24,11 @@
 <script>
 import Theme from '~/components/about/Theme'
 import Message from '~/components/about/Message.vue'
-import { fadeUpObserve } from '~/scripts/observe'
+import { startObserve } from '~/scripts/observe'
 
 export default {
   mounted() {
-    fadeUpObserve()
+    startObserve('observe-fade-up')
   },
   components: {
     Theme,
