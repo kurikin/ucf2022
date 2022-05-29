@@ -26,7 +26,7 @@ export default {}
 }
 
 .modal-container {
-  width: 90%;
+  width: 95%;
   max-width: 1040px;
   max-height: 95%;
   background-color: $white;

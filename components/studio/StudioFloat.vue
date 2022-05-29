@@ -1,19 +1,23 @@
 <template>
-  <div class="studio-float" :class="{ hide: hideFloat }">
-    <img class="twitter-icon" src="/logos/twitter.svg" alt="" />
-    <div class="text-box">
-      <p class="title"><span>スクショ</span>を<span>ツイート</span>しよう！</p>
-      <div class="hashtags">
-        <span class="hashtag">#スタジオ診断</span>
-        <span class="hashtag">#都市文化祭2022</span>
+  <div class="float-wrapper" :class="{ hide: hideFloat }">
+    <div class="studio-float" :class="{ hide: hideFloat }">
+      <img class="twitter-icon" src="/logos/twitter.svg" alt="" />
+      <div class="text-box">
+        <p class="title">
+          <span>スクショ</span>を<span>ツイート</span>しよう！
+        </p>
+        <div class="hashtags">
+          <span class="hashtag">#スタジオ診断</span>
+          <span class="hashtag">#都市文化祭2022</span>
+        </div>
       </div>
+      <img
+        @click="toggleFloat"
+        src="/icons/close.svg"
+        alt=""
+        class="close-icon"
+      />
     </div>
-    <img
-      @click="toggleFloat"
-      src="/icons/close.svg"
-      alt=""
-      class="close-icon"
-    />
   </div>
 </template>
 
@@ -38,13 +42,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.float-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+
+  &.hide {
+    pointer-events: none;
+  }
+}
+
 .studio-float {
   width: 94%;
-  position: fixed;
-  top: 100vh;
-  transform: translate(3%, calc(-100% - env(safe-area-inset-bottom) - 44px));
+  transform: translateX(3%);
 
-  z-index: 100;
+  position: absolute;
+  bottom: 20px;
   padding: 10px 18px;
   border-radius: 18px;
   display: flex;
@@ -59,8 +73,8 @@ export default {
   transition-timing-function: ease-out;
 
   &.hide {
-    transform: translate(3%, 0);
-    opacity: 0.3;
+    bottom: 0;
+    opacity: 0;
   }
 
   @include mq(xs) {
