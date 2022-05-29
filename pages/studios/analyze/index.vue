@@ -22,8 +22,13 @@
 <script>
 import WhiteHeader from '~/components/WhiteHeader.vue'
 import Footer from '~/components/Footer.vue'
+import { startObserve } from '~/scripts/observe'
+
 export default {
   components: { WhiteHeader, Footer },
+  mounted() {
+    startObserve()
+  },
 }
 </script>
 

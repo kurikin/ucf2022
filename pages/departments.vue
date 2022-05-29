@@ -33,7 +33,7 @@ import { startObserve } from '~/scripts/observe'
 export default {
   components: { Footer, Department },
   mounted() {
-    startObserve('.fade-up-observe')
+    startObserve()
   },
   computed: {
     departments() {

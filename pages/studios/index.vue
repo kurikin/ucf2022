@@ -44,7 +44,7 @@ import { startObserve } from '~/scripts/observe'
 
 export default {
   mounted() {
-    startObserve('.fade-up-observe')
+    startObserve()
   },
   computed: {
     studiosByCategory() {

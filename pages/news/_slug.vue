@@ -4,12 +4,12 @@
       <template v-slot:page-title>新<span>着</span>情報</template>
     </WhiteHeader>
     <div class="content container">
-      <div class="news fadeUp animation-1">
+      <div class="news fadeIn animation-1">
         <h2 class="title">{{ this.title }}</h2>
         <div v-html="this.body" class="body" />
       </div>
       <img
-        class="footprint fadeUp animation-1 show-over-md"
+        class="footprint fadeIn animation-1 show-over-md"
         src="/footprint.png"
         alt=""
       />
@@ -20,7 +20,11 @@
 
 <script>
 import Footer from '~/components/Footer.vue'
+import { startObserve } from '~/scripts/observe'
 export default {
+  mounted() {
+    startObserve()
+  },
   async asyncData({ $microcms, params }) {
     const data = await $microcms.get({
       endpoint: `news/${params.slug}`,

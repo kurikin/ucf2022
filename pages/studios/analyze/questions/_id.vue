@@ -58,8 +58,12 @@
 
 <script>
 import { questions } from '~/assets/constants/question'
+import { startObserve } from '~/scripts/observe'
 
 export default {
+  mounted() {
+    startObserve()
+  },
   async asyncData({ params }) {
     const id = params.id
     const question = questions[id]

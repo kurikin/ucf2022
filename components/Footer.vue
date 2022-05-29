@@ -6,7 +6,7 @@
           <nuxt-link class="nav-link" to="/members">実行委員一覧</nuxt-link>
         </li>
         <li><a class="nav-link" to="#">入試情報</a></li>
-        <li><a class="nav-link" to="#">お問合せ</a></li>
+        <li><nuxt-link class="nav-link" to="/contact">お問合せ</nuxt-link></li>
       </ul>
       <p class="copyright">&copy;2022 都市文化祭2022実行委員会</p>
     </footer>

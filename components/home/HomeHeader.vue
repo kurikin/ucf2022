@@ -1,9 +1,9 @@
 <template>
-  <header class="home-header fadeIn animation-1">
-    <div class="container grid">
-      <img class="logo fadeIn animation-1" src="/logos/logo.svg" alt="" />
+  <header class="home-header">
+    <div class="container grid fadeIn animation-1">
+      <img class="logo" src="/logos/logo.svg" alt="" />
       <!-- SNS メニュー ( md 以上の端末で表示 ) -->
-      <div class="sns fadeIn animation-2">
+      <div class="sns">
         <a
           class="sns-link"
           href="https://twitter.com/cus_ucf_oc"
@@ -22,14 +22,14 @@
           <img class="sns-logo" src="/logos/note.svg" alt="" />
         </a>
       </div>
-      <div class="description fadeIn animation-2">
+      <div class="description">
         <p class="date">
           <span>2022</span>年<span> 6</span>月<span> 26</span>日（日）
         </p>
         <p>横浜国立大学オープンキャンパス<br />同時開催</p>
       </div>
     </div>
-    <HomeNavBar class="fadeIn animation-3" />
+    <HomeNavBar class="fadeIn animation-2" />
     <div class="center-line fadeIn animation-3" />
   </header>
 </template>

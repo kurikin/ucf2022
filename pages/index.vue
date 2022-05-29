@@ -33,11 +33,11 @@ export default {
     this.changeSplashParam()
   },
   mounted() {
+    startObserve()
     this.$nextTick(function () {
       setTimeout(() => {
         this.showSplash = false
         this.toggleFirstLoad()
-        startObserve('.fade-up-observe')
       }, 1400)
     })
   },

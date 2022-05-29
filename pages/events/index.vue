@@ -43,7 +43,7 @@ import { startObserve } from '~/scripts/observe'
 export default {
   components: { Footer, EventListHeader, EventTile, SpeakersModal },
   mounted() {
-    startObserve('.fade-up-observe')
+    startObserve()
   },
   data() {
     return {

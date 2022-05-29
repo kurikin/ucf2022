@@ -81,7 +81,7 @@ export default {
   components: { WhiteHeader, Footer },
   mounted() {
     window.addEventListener('keypress', this.onKeyPress)
-    startObserve('.fade-up-observe')
+    startObserve()
   },
   methods: {
     onKeyPress(e) {

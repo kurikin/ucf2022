@@ -47,7 +47,7 @@ export default {
     ...mapState(['imageModalOpen', 'applyModalOpen']),
   },
   mounted() {
-    startObserve('.fade-in-observe, .fade-up-observe')
+    startObserve()
   },
   async asyncData({ $microcms }) {
     const images = await $microcms.get({

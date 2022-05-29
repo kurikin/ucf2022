@@ -47,8 +47,12 @@ import { getStudioByName } from '~/assets/constants/studio'
 import { mapState, mapMutations } from 'vuex'
 import StudioModal from '~/components/studio/StudioModal.vue'
 import StudioFloat from '~/components/studio/StudioFloat.vue'
+import { startObserve } from '~/scripts/observe'
 
 export default {
+  mounted() {
+    startObserve()
+  },
   methods: {
     showStudioModal(studioData) {
       this.setStudioModalData(studioData)
