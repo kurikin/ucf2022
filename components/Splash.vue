@@ -40,7 +40,8 @@ export default {
   align-items: center;
   justify-content: center;
   background-color: $black;
-  z-index: 100;
+  // Larger than hanburder lines by 1
+  z-index: 10001;
 }
 
 .splash {

@@ -68,7 +68,7 @@ export default {
   background-color: $blue;
   box-shadow: 0px 5px 10px hsla(0, 0%, 0%, 0.3);
 
-  transition-property: transform opacity;
+  transition-property: position opacity;
   transition-duration: 0.5s;
   transition-timing-function: ease-out;
 
