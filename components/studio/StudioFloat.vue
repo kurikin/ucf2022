@@ -51,6 +51,10 @@ export default {
   &.hide {
     pointer-events: none;
   }
+
+  @include mq(sm) {
+    display: none;
+  }
 }
 
 .studio-float {

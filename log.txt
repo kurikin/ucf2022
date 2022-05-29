@@ -4354,3 +4354,4 @@ t=2022-05-29T09:36:58+0900 lvl=info msg="join connections" obj=join id=c64f7842d
 t=2022-05-29T09:37:00+0900 lvl=info msg="join connections" obj=join id=263a9e0b6989 l=127.0.0.1:3000 r=150.66.121.220:9098
 t=2022-05-29T09:37:00+0900 lvl=info msg="join connections" obj=join id=094836663b95 l=127.0.0.1:3000 r=150.66.121.220:9097
 t=2022-05-29T09:37:00+0900 lvl=info msg="join connections" obj=join id=cbccd4677f7b l=127.0.0.1:3000 r=150.66.121.220:9096
+t=2022-05-29T09:40:02+0900 lvl=info msg="join connections" obj=join id=5d00021291d1 l=127.0.0.1:3000 r=150.66.121.220:9119
