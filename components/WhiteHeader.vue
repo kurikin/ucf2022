@@ -58,7 +58,7 @@ export default {
 
   @include mq() {
     margin-bottom: 64px;
-    padding-top: 48px;
+    padding-top: 64px;
   }
 }
 

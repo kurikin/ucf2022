@@ -4,9 +4,9 @@ export default {
   target: 'static',
 
   head: {
-    title: 'ucf2022',
+    title: '都市文化祭2022',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'jp',
     },
     meta: [
       { charset: 'utf-8' },

@@ -38,7 +38,7 @@ export const departments = [
     primaryButtonText: '都市基盤学科 公式HP',
     secondaryButtonText: '優しさの街 ～皆を支える都市基盤の魅力を伝える～',
     primaryButtonLink: '#',
-    secondaryButtonLink: '#',
+    secondaryButtonLink: '/events/yasashisa',
     rightSideImage: true,
   },
   {
