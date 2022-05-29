@@ -20,9 +20,6 @@ import { startObserve } from '~/scripts/observe'
 
 export default {
   props: ['contents'],
-  mounted() {
-    startObserve('fade-up-observe')
-  },
   methods: {
     showModal(content) {
       this.setImageModalData(content)

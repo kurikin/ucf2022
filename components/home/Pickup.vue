@@ -23,11 +23,7 @@
 
 <script>
 import PickupItem from './PickupItem.vue'
-import { startObserve } from '~/scripts/observe'
 export default {
-  mounted() {
-    startObserve('.fade-up-observe')
-  },
   components: {
     PickupItem,
   },

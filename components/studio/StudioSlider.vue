@@ -33,12 +33,8 @@
 import StudioCard from './StudioCard.vue'
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 import 'swiper/css/swiper.css'
-import { startObserve } from '~/scripts/observe'
 
 export default {
-  mounted() {
-    startObserve('.fade-up-observe')
-  },
   components: { StudioCard, Swiper, SwiperSlide },
   props: {
     studios: {

@@ -4483,3 +4483,7 @@ t=2022-05-29T13:30:26+0900 lvl=eror msg="failed to reconnect session" obj=csess 
 t=2022-05-29T13:30:35+0900 lvl=eror msg="failed to reconnect session" obj=csess id=33ed57785cd7 err="resolved tunnel.jp.ngrok.com has no records"
 t=2022-05-29T13:30:48+0900 lvl=info msg="tunnel session started" obj=tunnels.session
 t=2022-05-29T13:30:48+0900 lvl=info msg="client session established" obj=csess id=33ed57785cd7
+t=2022-05-29T14:07:08+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=7215f5f5181b clientid=0baf509db3cf1a7517d82199f4c479a5
+t=2022-05-29T14:07:08+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=33ed57785cd7 err="session closed"
+t=2022-05-29T14:07:08+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-29T14:07:09+0900 lvl=info msg="client session established" obj=csess id=33ed57785cd7

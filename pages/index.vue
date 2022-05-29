@@ -19,6 +19,7 @@ import News from '~/components/home/News.vue'
 import Pickup from '~/components/home/Pickup.vue'
 import Splash from '~/components/Splash.vue'
 import { mapState, mapMutations } from 'vuex'
+import { startObserve } from '~/scripts/observe'
 
 export default {
   name: 'IndexPage',
@@ -32,6 +33,7 @@ export default {
     this.changeSplashParam()
   },
   mounted() {
+    startObserve('.fade-up-observe')
     this.$nextTick(function () {
       setTimeout(() => {
         this.showSplash = false

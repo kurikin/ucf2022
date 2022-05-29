@@ -19,26 +19,6 @@
   animation-delay: calc(4 * $animation-interval);
 }
 
-.animation-6 {
-  animation-delay: calc(5 * $animation-interval);
-}
-
-.animation-7 {
-  animation-delay: calc(6 * $animation-interval);
-}
-
-.animation-8 {
-  animation-delay: calc(7 * $animation-interval);
-}
-
-.animation-9 {
-  animation-delay: calc(8 * $animation-interval);
-}
-
-.animation-10 {
-  animation-delay: calc(9 * $animation-interval);
-}
-
 // アニメーション
 .fadeIn {
   animation-name: fadeInAnime;

@@ -18,13 +18,8 @@
 </template>
 
 <script>
-import { startObserve } from '~/scripts/observe'
-
 export default {
   props: ['contents'],
-  mounted() {
-    startObserve('.fade-up-observe')
-  },
   methods: {
     categoryColor(category) {
       if (category === '全体') {

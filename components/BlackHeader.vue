@@ -16,13 +16,7 @@
 </template>
 
 <script>
-import { startObserve } from '~/scripts/observe'
-
-export default {
-  mounted() {
-    startObserve('.fade-up-observe')
-  },
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>
