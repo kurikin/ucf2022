@@ -4487,3 +4487,19 @@ t=2022-05-29T14:07:08+0900 lvl=eror msg="heartbeat timeout, terminating session"
 t=2022-05-29T14:07:08+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=33ed57785cd7 err="session closed"
 t=2022-05-29T14:07:08+0900 lvl=info msg="tunnel session started" obj=tunnels.session
 t=2022-05-29T14:07:09+0900 lvl=info msg="client session established" obj=csess id=33ed57785cd7
+t=2022-05-29T15:52:57+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=843799a5f977 clientid=0baf509db3cf1a7517d82199f4c479a5
+t=2022-05-29T15:52:57+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=33ed57785cd7 err="session closed"
+t=2022-05-29T15:52:57+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-29T15:52:57+0900 lvl=info msg="client session established" obj=csess id=33ed57785cd7
+t=2022-05-29T15:55:51+0900 lvl=eror msg="heartbeat timeout, terminating session" obj=csess id=9dce55f224b8 clientid=0baf509db3cf1a7517d82199f4c479a5
+t=2022-05-29T15:55:51+0900 lvl=eror msg="session closed, starting reconnect loop" obj=csess id=33ed57785cd7 err="session closed"
+t=2022-05-29T15:55:51+0900 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2022-05-29T15:55:51+0900 lvl=info msg="client session established" obj=csess id=33ed57785cd7
+t=2022-05-29T16:16:24+0900 lvl=info msg="join connections" obj=join id=60903cbaa029 l=127.0.0.1:3000 r=175.177.42.113:57782
+t=2022-05-29T16:16:24+0900 lvl=info msg="join connections" obj=join id=767a92ff4046 l=127.0.0.1:3000 r=175.177.42.113:5513
+t=2022-05-29T16:16:24+0900 lvl=info msg="join connections" obj=join id=ab219065b9b4 l=127.0.0.1:3000 r=175.177.42.113:57779
+t=2022-05-29T16:16:24+0900 lvl=info msg="join connections" obj=join id=db9cdd9ff01a l=127.0.0.1:3000 r=175.177.42.113:17349
+t=2022-05-29T16:16:24+0900 lvl=info msg="join connections" obj=join id=9278eb863359 l=127.0.0.1:3000 r=175.177.42.113:54475
+t=2022-05-29T16:16:24+0900 lvl=info msg="join connections" obj=join id=72a2382794b3 l=127.0.0.1:3000 r=175.177.42.113:57781
+t=2022-05-29T16:16:25+0900 lvl=info msg="join connections" obj=join id=e5c01b9b3500 l=127.0.0.1:3000 r=175.177.42.113:17349
+t=2022-05-29T16:16:25+0900 lvl=info msg="join connections" obj=join id=efce559a4747 l=127.0.0.1:3000 r=175.177.42.113:2307

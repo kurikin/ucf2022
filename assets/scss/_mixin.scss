@@ -1,4 +1,4 @@
-$breakpoints: (
+$width-breakpoints: (
   'xs': '(min-width: 375px)',
   'sm': '(min-width: 576px)',
   'md': '(min-width: 768px)',
@@ -8,7 +8,16 @@ $breakpoints: (
 ) !default;
 
 @mixin mq($breakpoint: md) {
-  @media #{map-get($breakpoints, $breakpoint)} {
+  @media #{map-get($width-breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+$height-breakpoints: (
+  'md': '(min-height: 675px)',
+) !default;
+
+@mixin mqh($breakpoint: md) {
+  @media #{map-get($height-breakpoints, $breakpoint)} {
     @content;
   }
 }

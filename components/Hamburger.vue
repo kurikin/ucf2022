@@ -198,6 +198,7 @@ export default {
   position: fixed;
   box-sizing: border-box;
   background-color: $secondary;
+  justify-content: space-around;
   z-index: 1000;
   top: 0;
   right: 0;
@@ -206,7 +207,7 @@ export default {
   flex-direction: column;
   gap: 18px;
 
-  @media (min-height: 570px) {
+  @include mqh() {
     padding-top: 52px;
     gap: 32px;
   }
@@ -233,7 +234,7 @@ export default {
   padding-bottom: 2px;
   margin-bottom: 16px;
 
-  @media (min-height: 570px) {
+  @include mqh() {
     margin-bottom: 24px;
   }
 }
@@ -242,9 +243,9 @@ export default {
   list-style: none;
   color: $white;
   text-align: left;
-  gap: 4px;
+  gap: 8px;
 
-  @media (min-height: 570px) {
+  @include mqh() {
     gap: 12px;
   }
 }
@@ -265,7 +266,7 @@ export default {
   gap: 32px;
   margin-top: 6px;
 
-  @media (min-height: 570px) {
+  @include mqh() {
     margin-top: 12px;
   }
 }
