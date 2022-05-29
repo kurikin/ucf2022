@@ -6,7 +6,7 @@
     <div class="content container">
       <div class="news fadeUp animation-1">
         <h2 class="title">{{ this.title }}</h2>
-        <p class="body">{{ this.body }}</p>
+        <div v-html="this.body" class="body" />
       </div>
       <img
         class="footprint fadeUp animation-1 show-over-md"
@@ -74,7 +74,7 @@ export default {
   line-height: 1.55;
 
   @include mq(sm) {
-    line-height: 1.6;
+    line-height: 1.65;
   }
 
   @include mq() {
