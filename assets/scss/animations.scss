@@ -28,6 +28,13 @@
   opacity: 0;
 }
 
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
 .image-fadeIn {
   animation-name: fadeInAnime;
   animation-timing-function: ease;
@@ -77,6 +84,16 @@
   opacity: 0;
   transform: translateY(20px);
   transition: all 1s;
+
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-observe {
+  opacity: 0;
+  transition: all 0.8s;
 
   &.show {
     opacity: 1;

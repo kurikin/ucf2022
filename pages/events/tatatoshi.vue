@@ -36,6 +36,7 @@ import ImageGallery from '../../components/event/ImageGallery.vue'
 import ImageModal from '~/components/event/ImageModal.vue'
 import ApplyModal from '~/components/event/ApplyModal.vue'
 import { mapState, mapMutations } from 'vuex'
+import { startObserve } from '~/scripts/observe'
 
 export default {
   components: { Footer, ImageGallery, ImageModal, ApplyModal },
@@ -44,6 +45,9 @@ export default {
   },
   computed: {
     ...mapState(['imageModalOpen', 'applyModalOpen']),
+  },
+  mounted() {
+    startObserve('.fade-in-observe, .fade-up-observe')
   },
   async asyncData({ $microcms }) {
     const images = await $microcms.get({

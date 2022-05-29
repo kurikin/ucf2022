@@ -3,7 +3,7 @@
     <div class="grid image-gallery">
       <img
         v-for="content in contents"
-        class="image observe-fade-in"
+        class="image fade-in-observe"
         :src="content.image.url + '?w=1000'"
         :key="content.id"
         @click="showModal(content)"
@@ -16,7 +16,6 @@
 
 <script>
 import { mapMutations } from 'vuex'
-import { startObserve } from '~/scripts/observe'
 
 export default {
   props: ['contents'],

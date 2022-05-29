@@ -4,12 +4,12 @@
       <template v-slot:page-title>新<span>着</span>情報</template>
     </WhiteHeader>
     <div class="content container">
-      <div class="news fadeUp animation-2">
+      <div class="news fadeUp animation-1">
         <h2 class="title">{{ this.title }}</h2>
         <p class="body">{{ this.body }}</p>
       </div>
       <img
-        class="footprint fadeUp animation-2 show-over-md"
+        class="footprint fadeUp animation-1 show-over-md"
         src="/footprint.png"
         alt=""
       />
@@ -69,6 +69,7 @@ export default {
 }
 
 .body {
+  display: inline-block;
   font-size: 16px;
   line-height: 1.55;
 
