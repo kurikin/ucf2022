@@ -39,7 +39,15 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 48px;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
+
+  @include mq() {
+    margin-bottom: 48px;
+  }
+
+  @include mq(lg) {
+    margin-bottom: 64px;
+  }
 }
 
 @include mq(sm) {

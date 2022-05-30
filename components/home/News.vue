@@ -35,7 +35,15 @@ export default {
 <style lang="scss" scoped>
 .news {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 48px;
+
+  @include mq() {
+    margin-bottom: 64px;
+  }
+
+  @include mq(lg) {
+    margin-bottom: 80px;
+  }
 }
 
 .news-list {

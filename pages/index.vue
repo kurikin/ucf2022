@@ -5,6 +5,7 @@
     </transition>
     <HomeHeader />
     <div class="content">
+      <YouTubeLive />
       <News :contents="this.contents" />
       <Pickup />
       <Hamburger :baseColor="'white'" />
@@ -20,6 +21,7 @@ import Pickup from '~/components/home/Pickup.vue'
 import Splash from '~/components/Splash.vue'
 import { mapState, mapMutations } from 'vuex'
 import { startObserve } from '~/scripts/observe'
+import YouTubeLive from '~/components/home/YouTubeLive.vue'
 
 export default {
   name: 'IndexPage',
@@ -28,6 +30,7 @@ export default {
     News,
     Pickup,
     Splash,
+    YouTubeLive,
   },
   created() {
     this.changeSplashParam()
