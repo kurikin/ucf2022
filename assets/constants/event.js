@@ -336,6 +336,29 @@ export const events = [
     speakers: [],
   },
   {
+    title: '横国バーチャルキャンパス',
+    subtitle: '',
+    hasSubtitle: false,
+    theme: 'tatazumu',
+    format: 'on-demand',
+    thumbnail: 'earth.jpeg',
+    description:
+      '日本語では仮想現実と訳されるVR。今回私たちは、VR空間上で横国のキャンパスを再現しました。みなさんは、ページ上で猫となって自由にキャンパスを歩き回ることができます。ぜひ、ビター君になったつもりでVRキャンパスを楽しんでください！',
+    comingsoon: false,
+    firstButtonData: {
+      text: '企画ページへ',
+      type: 'link',
+      link: 'ynumap.vercel.app',
+    },
+    secondButtonData: {
+      link: '',
+      type: '',
+      type: '',
+    },
+    hasSecondButton: false,
+    speakers: [],
+  },
+  {
     title: '裏道探索',
     subtitle: '',
     hasSubtitle: false,
