@@ -60,10 +60,10 @@ export const events = [
     thumbnail: '4-studios.jpeg',
     description:
       '「都市社会共生学科ってどんな人がいるの？」「どんなことをしているの？」この企画では都市社会共生学科にある4つのスタジオから学生の皆さんに集まっていただき、対談してもらう予定です。”都社共”の雰囲気を感じ取ってもらえるような時間になればと思います。',
-    comingsoon: true,
+    comingsoon: false,
     firstButtonData: {
-      text: '後日公開予定',
-      type: '',
+      text: '登壇者を見る',
+      type: 'modal',
       link: '',
     },
     secondButtonData: {
@@ -72,7 +72,36 @@ export const events = [
       type: '',
     },
     hasSecondButton: false,
-    speakers: [],
+    speakers: [
+      {
+        name: '江藤 克',
+        hasLink: false,
+        linkFileName: '',
+        linkURL: '',
+        belongs: ['都市社会共生学科 ４年', '海外研究・藤掛スタジオ'],
+      },
+      {
+        name: '加藤 柊',
+        hasLink: false,
+        linkFileName: '',
+        linkURL: '',
+        belongs: ['都市社会共生学科 ３年', '社会文化批評・清田スタジオ'],
+      },
+      {
+        name: '廣瀬 亜紀',
+        hasLink: false,
+        linkFileName: '',
+        linkURL: '',
+        belongs: ['都市社会共生学科 ３年', '社会分析・鎌原スタジオ'],
+      },
+      {
+        name: '藤田 里奈',
+        hasLink: false,
+        linkFileName: '',
+        linkURL: '',
+        belongs: ['都市社会共生学科 ３年', '文化創成・須川スタジオ'],
+      },
+    ],
   },
   {
     title: 'ご当地調査委員会',
