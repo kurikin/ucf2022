@@ -11,9 +11,11 @@
         alt=""
         class="studio-img image-fadeIn"
       />
-      <p class="description" v-scroll-lock="studioModalOpen">
-        {{ studioModalData.description }}
-      </p>
+      <div class="description-box">
+        <p class="description" v-scroll-lock="studioModalOpen">
+          {{ studioModalData.description }}
+        </p>
+      </div>
     </div>
   </BaseModal>
 </template>
@@ -107,7 +109,8 @@ export default {
 .description {
   color: $black;
   font-size: 16px;
-  overflow: scroll;
+  overflow-y: auto;
+  height: 100%;
   max-height: 200px;
 
   @include mq(sm) {

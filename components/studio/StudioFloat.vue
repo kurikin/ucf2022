@@ -1,5 +1,5 @@
 <template>
-  <div class="float-wrapper" :class="{ hide: hideFloat }">
+  <div class="float-wrapper">
     <div class="studio-float" :class="{ hide: hideFloat }">
       <img class="twitter-icon" src="/logos/twitter.svg" alt="" />
       <div class="text-box">
@@ -48,9 +48,7 @@ export default {
   height: 100%;
   z-index: 100;
 
-  &.hide {
-    pointer-events: none;
-  }
+  pointer-events: none;
 
   @include mq(sm) {
     display: none;
@@ -60,6 +58,7 @@ export default {
 .studio-float {
   width: 94%;
   transform: translateX(3%);
+  pointer-events: auto;
 
   position: absolute;
   bottom: 20px;
