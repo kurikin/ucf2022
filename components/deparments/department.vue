@@ -28,7 +28,11 @@
         >
           {{ data.secondaryButtonText }}
         </nuxt-link>
-        <a ref="" class="base-button button--primary">
+        <a
+          :href="data.primaryButtonLink"
+          target="_blank"
+          class="base-button button--primary"
+        >
           {{ data.primaryButtonText }}
         </a>
       </div>
