@@ -43,7 +43,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://ucf2022.com/ogp.png',
+        content: 'https://ucf2022.com/logos/ogp.png',
       },
       { name: 'twitter:card', content: 'summary_large_image' },
     ],
