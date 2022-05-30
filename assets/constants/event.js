@@ -341,9 +341,9 @@ export const events = [
     hasSubtitle: false,
     theme: 'tatazumu',
     format: 'on-demand',
-    thumbnail: 'earth.jpeg',
+    thumbnail: 'vr.jpeg',
     description:
-      '日本語では仮想現実と訳されるVR。今回私たちは、VR空間上で横国のキャンパスを再現しました。みなさんは、ページ上で猫となって自由にキャンパスを歩き回ることができます。ぜひ、ビター君になったつもりでVRキャンパスを楽しんでください！',
+      'いま盛り上がりを見せつつある「メタバース」といった仮想世界。そんな仮想世界で、私たちは横国のキャンパスを再現しました。みなさんは猫となってキャンパスを歩き回ることができます。ビター君になったつもりでバーチャル横国を楽しんでみませんか？プレイにはPCが必要となります。',
     comingsoon: false,
     firstButtonData: {
       text: '企画ページへ',

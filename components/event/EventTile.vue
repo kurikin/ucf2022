@@ -278,6 +278,7 @@ export default {
     grid-column: 2;
     grid-row: 2;
     align-self: flex-start;
+    line-height: 1.66;
   }
 }
 </style>
