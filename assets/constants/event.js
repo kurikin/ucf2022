@@ -203,8 +203,8 @@ export const events = [
     comingsoon: false,
     firstButtonData: {
       text: '本棚を見る',
-      type: '',
-      link: '',
+      type: 'link',
+      link: 'https://booklog.jp/users/ynu0cus0ucf',
     },
     secondButtonData: {
       link: '',

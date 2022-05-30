@@ -31,11 +31,16 @@ export default {
 
 <style lang="scss" scoped>
 .footprint {
-  position: absolute;
-  right: 50px;
-  bottom: 0;
-  transform: translateY(62px);
-  height: 68vh;
+  display: none;
+
+  @include mq() {
+    display: block;
+    position: absolute;
+    right: 50px;
+    bottom: 0;
+    transform: translateY(62px);
+    height: 68vh;
+  }
 
   @include mq(lg) {
     height: 74vh;
