@@ -100,8 +100,8 @@ export const questions = {
     longChoice: false,
     firstChoice: 'はい',
     secondChoice: 'そうでもない',
-    firstChoiceNextPath: 'results/matsumoto',
-    secondChoiceNextPath: 'results/hirano',
+    firstChoiceNextPath: 'results/hirano',
+    secondChoiceNextPath: 'results/matsumoto',
   },
   14: {
     questionText: '社会の格差や制度政策に興味がある',
@@ -116,8 +116,8 @@ export const questions = {
     longChoice: false,
     firstChoice: 'はい',
     secondChoice: 'いいえ',
-    firstChoiceNextPath: 'results/miura',
-    secondChoiceNextPath: 'results/saito',
+    firstChoiceNextPath: 'results/saito',
+    secondChoiceNextPath: 'results/miura',
   },
   16: {
     questionText: '芸術に関わるなら？',
