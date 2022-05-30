@@ -20,9 +20,10 @@
       </li>
       <li class="list-item">
         <PickupItem
-          title="記憶と歩みの友"
-          description="お散歩プレイリスト"
-          imageUri="/events/playlist.jpeg"
+          title="優しさの街"
+          description="皆を支える都市基盤の魅力とは"
+          imageUri="/events/yasashisa.jpeg"
+          path="/events/yasashisa"
         />
       </li>
     </ul>
@@ -50,29 +51,24 @@ export default {
   gap: 48px;
   margin-bottom: 32px;
 
+  @include mq(sm) {
+    flex-direction: row;
+    gap: 20px;
+  }
+
   @include mq() {
     margin-bottom: 48px;
   }
 
   @include mq(lg) {
     margin-bottom: 64px;
+    gap: 48px;
   }
 }
 
 @include mq(sm) {
-  .pickup-list {
-    flex-direction: row;
-    gap: 20px;
-  }
-
   .list-item {
     flex: 1;
-  }
-}
-
-@include mq(lg) {
-  .pickup-list {
-    gap: 48px;
   }
 }
 </style>
