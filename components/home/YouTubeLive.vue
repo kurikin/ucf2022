@@ -1,6 +1,6 @@
 <template>
   <div class="container fade-up-observe home-section-margin">
-    <h2 class="section-heading">ライブ配信企画</h2>
+    <h2 class="section-heading">YouTubeライブ</h2>
     <div class="youtube-wrapper">
       <iframe
         class="youtube"
@@ -27,11 +27,14 @@ export default {}
   width: 100%;
   aspect-ratio: 16 / 9;
   border: 1px solid $white;
-
   margin-bottom: 48px;
 
   @include mq() {
     margin-bottom: 64px;
+  }
+
+  @include mq(lg) {
+    margin-bottom: 80px;
   }
 
   .youtube {
