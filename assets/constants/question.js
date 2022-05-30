@@ -204,8 +204,8 @@ export const questions = {
     longChoice: true,
     firstChoice: 'A. 自分のことで悩んでいる',
     secondChoice: 'B. 社会全体のことについて疑問がある',
-    firstChoiceNextPath: 'results/hikoe',
-    secondChoiceNextPath: 'results/kiyota',
+    firstChoiceNextPath: 'results/kiyota',
+    secondChoiceNextPath: 'results/hikoe',
   },
   27: {
     questionText: '映像作品を見るのが好きだ',
@@ -226,9 +226,9 @@ export const questions = {
   29: {
     questionText: '芸術に関わるなら？',
     longChoice: true,
-    firstChoice: '作品を鑑賞したい',
-    secondChoice: '自ら作りたい',
-    firstChoiceNextPath: 'results/kurenuma',
-    secondChoiceNextPath: 'results/hirakura',
+    firstChoice: 'A. 作品を鑑賞したい',
+    secondChoice: 'B. 自ら作りたい',
+    firstChoiceNextPath: 'results/hirakura',
+    secondChoiceNextPath: 'results/kurenuma',
   },
 }
