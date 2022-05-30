@@ -19,7 +19,7 @@
       :class="{ 'one-button': !eventData.hasSecondButton }"
     >
       <button v-if="eventData.comingsoon" class="action-button disabled">
-        後日公開予定
+        {{ eventData.firstButtonData.text }}
       </button>
       <button
         v-else
