@@ -45,7 +45,7 @@ export default {
         property: 'og:image',
         content: 'https://ucf2022.com/ogp.png',
       },
-      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:card', content: 'summary_large_image' },
     ],
     link: [
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
