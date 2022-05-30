@@ -348,7 +348,7 @@ export const events = [
     firstButtonData: {
       text: '企画ページへ',
       type: 'link',
-      link: 'ynumap.vercel.app',
+      link: 'https://ynumap.vercel.app',
     },
     secondButtonData: {
       link: '',
