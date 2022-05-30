@@ -16,7 +16,7 @@ export const dataList = [
     buttonLink: '',
   },
   {
-    activityName: '3. 常磐祭出展',
+    activityName: '3. 常盤祭出展',
     description:
       '常盤祭にて、都市基盤学科を学生目線で紹介するYouTube動画を公開しました。',
     hasButton: true,

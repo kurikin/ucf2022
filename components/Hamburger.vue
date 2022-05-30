@@ -40,9 +40,23 @@
               <li class="nav-item">
                 <nuxt-link to="/members">実行委員一覧</nuxt-link>
               </li>
-              <li class="nav-item"><nuxt-link to="#">入試情報</nuxt-link></li>
-              <li class="nav-item"><nuxt-link to="#">アクセス</nuxt-link></li>
-              <li class="nav-item"><nuxt-link to="#">お問合せ</nuxt-link></li>
+              <li class="nav-item">
+                <a
+                  href="https://www.ynu.ac.jp/access/index.html"
+                  target="_blank"
+                  >アクセス</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="https://www.cus.ynu.ac.jp/exam/exam/examinfo.html"
+                  target="_blank"
+                  >入試情報</a
+                >
+              </li>
+              <li class="nav-item">
+                <nuxt-link to="/contact">お問合せ</nuxt-link>
+              </li>
             </ul>
           </div>
           <div class="sns">
