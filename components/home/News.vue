@@ -22,7 +22,7 @@ export default {
   props: ['contents'],
   methods: {
     categoryColor(category) {
-      if (category === '全体') {
+      if (category === '企画') {
         return 'primary'
       } else {
         return 'secondary'
