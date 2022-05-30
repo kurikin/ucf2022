@@ -11,11 +11,6 @@ export const members = [
     ],
     members: [
       {
-        name: '喜元 陽',
-        position: '',
-        belong: '都市科学部 都市社会共生学科２年',
-      },
-      {
         name: '田中 怜',
         position: '',
         belong: '都市科学部 環境リスク共生学科３年',
@@ -29,6 +24,11 @@ export const members = [
         name: '山崎 昴陽',
         position: '',
         belong: '都市科学部 環境リスク共生学科３年',
+      },
+      {
+        name: '喜元 陽',
+        position: '',
+        belong: '都市科学部 都市社会共生学科２年',
       },
     ],
   },
