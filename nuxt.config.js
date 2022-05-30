@@ -6,13 +6,14 @@ export default {
   head: {
     title: '都市文化祭2022',
     htmlAttrs: {
-      lang: 'jp',
+      lang: 'ja',
+      prefix: 'og: http://ogp.me/ns#',
     },
     meta: [
       { charset: 'utf-8' },
       {
         name: 'viewport',
-        content: 'width=device-width, initial-scale=1, viewport-fit=cover',
+        content: 'width=device-width, initial-scale=1',
       },
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
@@ -23,28 +24,30 @@ export default {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Zen+Antique&family=Zen+Kaku+Gothic+New:wght@400;700&family=Zen+Old+Mincho&display=swap',
       },
-      { hid: 'icon', rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
-        hid: 'apple-touch-icon',
         rel: 'apple-touch-icon',
         sizes: '180x180',
         href: '/apple-touch-icon.png',
       },
       {
-        hid: 'icon32',
         rel: 'icon',
         type: 'image/png',
         sizes: '32x32',
         href: '/favicon-32x32.png',
       },
       {
-        hid: 'icon16',
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '48x48',
+        href: '/favicon-48x48.png',
+      },
+      {
         rel: 'icon',
         type: 'image/png',
         sizes: '16x16',
         href: '/favicon-16x16.png',
       },
-      { hid: 'manifest', rel: 'manifest', href: '/site.webmanifest' },
     ],
   },
 
