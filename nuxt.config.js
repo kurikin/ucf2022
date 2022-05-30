@@ -40,7 +40,11 @@ export default {
         property: 'og:description',
         content: '横浜国立大学 都市文化祭2022の公式ホームページです。',
       },
-      { hid: 'og:image', property: 'og:image', content: '/ogp.png' },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://ucf2022.com/ogp.png',
+      },
       { name: 'twitter:card', content: 'summary' },
     ],
     link: [
