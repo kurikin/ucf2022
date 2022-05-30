@@ -26,7 +26,7 @@ export default {}
   margin: 0 auto;
   width: 100%;
   aspect-ratio: 16 / 9;
-  border: 1.5px solid $white;
+  border: 1px solid $white;
 
   margin-bottom: 48px;
 
