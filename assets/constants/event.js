@@ -169,6 +169,29 @@ export const events = [
     speakers: [],
   },
   {
+    title: 'スタジオ診断',
+    subtitle: '',
+    hasSubtitle: false,
+    theme: 'nomareru',
+    format: 'on-demand',
+    thumbnail: 'studio-analyze.jpeg',
+    description:
+      '「都市社会共生学科で自分に向いているスタジオが分からない」「どんなことが勉強できるの？」そんな疑問を解決するために、スタジオ診断をご用意しました。質問に答えるとあなたに合ったスタジオを提案します。都市科学を覗き見るのにぜひご活用ください。結果はスクリーンショットでシェアしてみよう！',
+    comingsoon: false,
+    firstButtonData: {
+      text: '診断を始める',
+      type: 'route',
+      link: '/studios/analyze',
+    },
+    secondButtonData: {
+      link: '',
+      type: '',
+      type: '',
+    },
+    hasSecondButton: false,
+    speakers: [],
+  },
+  {
     title: '本棚の片隅、覗かせてください',
     subtitle: '',
     hasSubtitle: false,
