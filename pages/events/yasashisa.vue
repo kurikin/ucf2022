@@ -9,13 +9,16 @@
     <div class="content">
       <div class="container">
         <div class="youtube-wrapper">
-          <youtube
-            :fitParent="true"
-            ref="youtube"
+          <iframe
+            width="560"
+            height="315"
             class="youtube"
-            :video-id="videoId"
-            :resize="true"
-          ></youtube>
+            src="https://www.youtube.com/embed/NwKTQUKK4oQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </div>
         <section class="about">
           <div class="about-header">
@@ -60,7 +63,7 @@ import Footer from '~/components/Footer.vue'
 export default {
   data() {
     return {
-      videoId: 'n0dMgDM9OY0',
+      videoId: 'rHnOaHtJPHo',
     }
   },
   computed: {
@@ -94,6 +97,8 @@ export default {
   max-width: 800px;
   margin: 0 auto;
   margin-bottom: 24px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
 
   @include mq(sm) {
     margin-bottom: 32px;
@@ -108,11 +113,8 @@ export default {
   }
 
   .youtube {
-    position: absolute;
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
   }
 }
 
