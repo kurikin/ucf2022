@@ -4,17 +4,26 @@
     <ul class="pickup-list">
       <li class="list-item">
         <PickupItem
-          :title="'たたずみたい都市'"
-          :description="'お気に入りの風景を募集中'"
-          :imageUri="'/events/tatatoshi.jpeg'"
-          :path="'/events/tatatoshi'"
+          title="たたずみたい都市"
+          description="お気に入りの風景を募集中"
+          imageUri="/events/tatatoshi.jpeg"
+          path="/events/tatatoshi"
         />
       </li>
       <li class="list-item">
-        <PickupItem :title="'Coming soon...'" :description="'More Programs'" />
+        <PickupItem
+          title="スタジオ診断"
+          description="あなたにぴったりのスタジオは？"
+          imageUri="/events/studio-analyze.jpeg"
+          path="/studios/analyze"
+        />
       </li>
       <li class="list-item">
-        <PickupItem :title="'Coming soon...'" :description="'More Programs'" />
+        <PickupItem
+          title="記憶と歩みの友"
+          description="お散歩プレイリスト"
+          imageUri="/events/playlist.jpeg"
+        />
       </li>
     </ul>
     <nuxt-link class="primary-button" to="/events">企画一覧を見る</nuxt-link>
