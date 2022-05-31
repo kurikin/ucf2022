@@ -27,7 +27,9 @@
           参加用Googleフォームからも写真を投稿できます。
         </p>
       </div>
-      <button class="primary-button google-form-button">Googleフォーム</button>
+      <button @click="openForm()" class="primary-button google-form-button">
+        Googleフォーム
+      </button>
     </div>
   </BaseModal>
 </template>
@@ -38,10 +40,14 @@ import { mapState, mapMutations } from 'vuex'
 
 export default {
   components: { BaseModal },
+
   computed: {
     ...mapState(['applyModalOpen']),
   },
   methods: {
+    openForm() {
+      window.open('https://forms.gle/edwn2nTkRX84DHaU8', '_blank')
+    },
     ...mapMutations(['toggleApplyModal']),
   },
 }

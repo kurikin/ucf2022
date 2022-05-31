@@ -44,7 +44,7 @@
                 class="activity-img"
               />
               <button
-                @click="data.buttonLink"
+                @click="openLink(data.buttonLink)"
                 v-if="data.hasButton"
                 class="primary-button"
               >
@@ -69,6 +69,11 @@ export default {
     return {
       title: '優しさの街 | 都市文化祭2022',
     }
+  },
+  methods: {
+    openLink(url) {
+      window.open(url, '_blank')
+    },
   },
   computed: {
     dataList() {
