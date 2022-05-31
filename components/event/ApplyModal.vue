@@ -56,7 +56,7 @@ export default {
 <style lang="scss" scoped>
 .modal-content {
   display: grid;
-  overflow: scroll;
+  overflow-y: scroll;
   gap: 20px;
   grid-template-columns: 1fr auto;
   align-items: center;

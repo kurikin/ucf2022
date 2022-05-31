@@ -101,7 +101,7 @@ export default {
 .modal-content {
   display: grid;
   gap: 20px;
-  overflow: scroll;
+  overflow-y: scroll;
 
   @include mq(sm) {
     gap: 24px;
