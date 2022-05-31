@@ -217,13 +217,12 @@ export default {
   top: 0;
   right: 0;
   padding: 28px;
-  padding-top: 40px;
+  padding-top: 32px;
   flex-direction: column;
-  gap: 18px;
+  gap: 10px;
 
   @include mqh() {
     padding-top: 52px;
-    gap: 32px;
   }
 }
 
@@ -257,7 +256,7 @@ export default {
   list-style: none;
   color: $white;
   text-align: left;
-  gap: 8px;
+  gap: 4px;
 
   @include mqh() {
     gap: 12px;
@@ -278,10 +277,12 @@ export default {
 .sns {
   display: flex;
   gap: 32px;
-  margin-top: 6px;
+  margin-top: 2px;
+  margin-bottom: 16px;
 
   @include mqh() {
     margin-top: 12px;
+    margin-bottom: 0;
   }
 }
 
