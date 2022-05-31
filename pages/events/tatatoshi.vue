@@ -58,7 +58,7 @@ export default {
     const images = await $microcms.get({
       endpoint: 'tatatoshi',
       queries: {
-        limit: 30,
+        limit: 60,
       },
     })
 
