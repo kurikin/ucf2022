@@ -110,7 +110,7 @@ export default {
     [
       'nuxt-lazy-load',
       {
-        defaultImage: '/comingsoon.jpeg',
+        defaultImage: '/comingsoon.svg',
         directiveOnly: true,
       },
     ],
