@@ -134,6 +134,16 @@ export default {
 
   build: {},
 
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID,
+  },
+
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: process.env.GOOGLE_ANALYTICS_ID,
+    },
+  },
+
   generate: {
     fallback: true,
     async routes() {
