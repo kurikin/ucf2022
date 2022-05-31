@@ -8,7 +8,7 @@
     </WhiteHeader>
     <div class="content">
       <div class="container">
-        <div class="youtube-wrapper">
+        <div class="youtube-wrapper fade-up-observe">
           <iframe
             width="560"
             height="315"
@@ -21,7 +21,7 @@
           ></iframe>
         </div>
         <section class="about">
-          <div class="about-header">
+          <div class="about-header fade-up-observe">
             <h2 class="heading">「優しさの街」について</h2>
             <YasashisaLinks />
             <p class="description">
@@ -32,7 +32,7 @@
             <div
               v-for="(data, index) in dataList"
               :key="index"
-              class="activity-tile"
+              class="activity-tile fade-up-observe"
             >
               <h2 class="activity-name">{{ data.activityName }}</h2>
               <p class="description">
@@ -64,11 +64,6 @@ export default {
   head() {
     return {
       title: '優しさの街 | 都市文化祭2022',
-    }
-  },
-  data() {
-    return {
-      videoId: 'rHnOaHtJPHo',
     }
   },
   computed: {

@@ -11,11 +11,9 @@
         alt=""
         class="studio-img image-fadeIn"
       />
-      <div class="description-box">
-        <p class="description" v-scroll-lock="studioModalOpen">
-          {{ studioModalData.description }}
-        </p>
-      </div>
+      <p class="description" v-scroll-lock="studioModalOpen">
+        {{ studioModalData.description }}
+      </p>
     </div>
   </BaseModal>
 </template>
@@ -85,7 +83,7 @@ export default {
   }
 
   @include mq(lg) {
-    font-size: 44px;
+    font-size: 36px;
   }
 }
 
@@ -119,7 +117,7 @@ export default {
 
   @include mq() {
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.65;
     grid-column: 2;
     max-height: 500px;
   }

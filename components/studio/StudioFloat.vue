@@ -26,7 +26,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.hideFloat = false
-    }, 1000)
+    }, 1200)
   },
   data() {
     return {
@@ -60,8 +60,9 @@ export default {
   transform: translateX(3%);
   pointer-events: auto;
 
+  height: 72px;
   position: absolute;
-  bottom: 20px;
+  bottom: 25px;
   padding: 10px 18px;
   border-radius: 18px;
   display: flex;
@@ -71,18 +72,17 @@ export default {
   background-color: $blue;
   box-shadow: 0px 5px 10px hsla(0, 0%, 0%, 0.3);
 
-  transition-property: position opacity;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-out;
+  transition-property: bottom opacity;
+  transition-duration: 0.7s;
+  transition-timing-function: ease-in-out;
 
   &.hide {
-    bottom: 0;
-    opacity: 0;
+    bottom: -72px;
+    opacity: 0.95;
   }
 
   @include mq(xs) {
     gap: 24px;
-    // transform: translate(3%, calc(-100% - 44px));
   }
 
   @include mq(sm) {

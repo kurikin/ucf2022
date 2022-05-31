@@ -17,10 +17,10 @@
       >
         <slot name="no-animation-page-title"></slot>
       </h1>
-      <p class="description fadeIn animation-2">
+      <p class="description fadeIn animation-1">
         <slot name="description"></slot>
       </p>
-      <div class="fadeIn animation-2">
+      <div class="fadeIn animation-1">
         <slot name="custom"></slot>
       </div>
     </div>
