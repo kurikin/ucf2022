@@ -43,7 +43,11 @@
                 alt=""
                 class="activity-img"
               />
-              <button v-if="data.hasButton" class="primary-button">
+              <button
+                @click="data.buttonLink"
+                v-if="data.hasButton"
+                class="primary-button"
+              >
                 {{ data.buttonText }}
               </button>
             </div>

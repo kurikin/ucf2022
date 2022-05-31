@@ -62,7 +62,7 @@ export default {
 
   height: 72px;
   position: absolute;
-  bottom: 25px;
+  bottom: 30px;
   padding: 10px 18px;
   border-radius: 18px;
   display: flex;

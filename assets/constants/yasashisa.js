@@ -21,6 +21,6 @@ export const dataList = [
       '常盤祭にて、都市基盤学科を学生目線で紹介するYouTube動画を公開しました。',
     hasButton: true,
     buttonText: '動画を見る',
-    buttonLink: '',
+    buttonLink: 'https://youtu.be/5zoL_-T2HZQ',
   },
 ]
