@@ -132,7 +132,7 @@ export const events = [
     hasSubtitle: false,
     theme: 'tatazumu',
     format: 'youtube-live',
-    thumbnail: 'business.jpeg',
+    thumbnail: 'business.jpg',
     description:
       'SDGsの普及とともに近年話題となっている「ソーシャルビジネス」。その重要性や期待は急激に高まっています。この企画では、ソーシャルビジネスの最前線で活躍する現役横国生を迎え、皆さんに知ってほしいプロジェクトの魅力や今後のビジョンを語り尽くします！',
     comingsoon: false,
@@ -336,7 +336,7 @@ export const events = [
     speakers: [],
   },
   {
-    title: '横国バーチャルキャンパス',
+    title: '横国VRキャンパス',
     subtitle: '',
     hasSubtitle: false,
     theme: 'tatazumu',
