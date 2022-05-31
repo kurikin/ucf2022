@@ -1,5 +1,5 @@
 <template>
-  <div class="container fade-up-observe home-section-margin">
+  <div class="container home-section-margin">
     <h2 class="section-heading">YouTubeライブ</h2>
     <div class="youtube-wrapper">
       <iframe
@@ -17,7 +17,12 @@
 </template>
 
 <script>
-export default {}
+import { mapState } from 'vuex'
+export default {
+  computed: {
+    ...mapState(['firstLoad']),
+  },
+}
 </script>
 
 <style lang="scss" scoped>

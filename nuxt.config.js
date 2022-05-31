@@ -4,7 +4,7 @@ export default {
   target: 'static',
 
   head: {
-    title: '都市文化祭2022',
+    title: '都市文化祭2022 公式HP',
     htmlAttrs: {
       lang: 'ja',
       prefix: 'og: http://ogp.me/ns#',

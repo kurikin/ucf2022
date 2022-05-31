@@ -41,6 +41,11 @@ import { mapState } from 'vuex'
 import { startObserve } from '~/scripts/observe'
 
 export default {
+  head() {
+    return {
+      title: '企画一覧 | 都市文化祭2022',
+    }
+  },
   components: { Footer, EventListHeader, EventTile, SpeakersModal },
   mounted() {
     startObserve()

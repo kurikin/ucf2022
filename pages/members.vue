@@ -78,6 +78,11 @@ import { members } from '~/assets/constants/member'
 import { startObserve } from '~/scripts/observe'
 
 export default {
+  head() {
+    return {
+      title: '実行委員一覧 | 都市文化祭2022',
+    }
+  },
   components: { WhiteHeader, Footer },
   mounted() {
     window.addEventListener('keypress', this.onKeyPress)

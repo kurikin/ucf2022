@@ -27,6 +27,11 @@ import Message from '~/components/about/Message.vue'
 import { startObserve } from '~/scripts/observe'
 
 export default {
+  head() {
+    return {
+      title: '都市文化祭とは | 都市文化祭2022',
+    }
+  },
   mounted() {
     startObserve()
   },

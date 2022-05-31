@@ -31,6 +31,11 @@ import { departments } from '~/assets/constants/department'
 import { startObserve } from '~/scripts/observe'
 
 export default {
+  head() {
+    return {
+      title: '学科一覧 | 都市文化祭2022',
+    }
+  },
   components: { Footer, Department },
   mounted() {
     startObserve()

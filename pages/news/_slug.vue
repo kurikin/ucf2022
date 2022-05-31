@@ -22,6 +22,11 @@
 import Footer from '~/components/Footer.vue'
 import { startObserve } from '~/scripts/observe'
 export default {
+  head() {
+    return {
+      title: '新着情報 | 都市文化祭2022',
+    }
+  },
   mounted() {
     startObserve()
   },

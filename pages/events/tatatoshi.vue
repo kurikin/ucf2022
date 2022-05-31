@@ -39,6 +39,11 @@ import { mapState, mapMutations } from 'vuex'
 import { startObserve } from '~/scripts/observe'
 
 export default {
+  head() {
+    return {
+      title: 'たたずみたい都市 | 都市文化祭2022',
+    }
+  },
   components: { Footer, ImageGallery, ImageModal, ApplyModal },
   methods: {
     ...mapMutations(['toggleApplyModal']),

@@ -43,6 +43,11 @@ import { mapState } from 'vuex'
 import { startObserve } from '~/scripts/observe'
 
 export default {
+  head() {
+    return {
+      title: 'スタジオ紹介 | 都市文化祭2022',
+    }
+  },
   mounted() {
     startObserve()
   },
