@@ -84,7 +84,7 @@ export const studiosByCategory = [
         teacherName: '藤掛 洋子',
         englishName: 'fujikake',
         lastName: '藤掛',
-        hasStudioImage: false,
+        hasStudioImage: true,
         hashtags: [
           '#パラグアイ',
           '#ジェンダー',
@@ -172,7 +172,7 @@ export const studiosByCategory = [
         teacherName: '鎌原 勇太',
         englishName: 'kamahara',
         lastName: '鎌原',
-        hasStudioImage: false,
+        hasStudioImage: true,
         hashtags: [
           '#内戦研究',
           '#国際関係学',
@@ -181,7 +181,7 @@ export const studiosByCategory = [
           '#どうして人は戦争をするのか',
         ],
         description:
-          '社会分析スタジオは、インタビューやアンケート調査を用いた質的調査と、データの分析を行う量的調査の二つに分けられます。鎌原スタジオは唯一の量的調査を行うスタジオであり、統計の手法を用いて分析の仕方を考えます。普段、厳密には考えることなく直感的に思っていることや、ニュースなどで見て「本当にその2つのことは関係があるのだろうか？」と疑問に思うとき、自ら科学的に考える力や検証する技術を学ぶことができる楽しさがあります。',
+          '社会分析スタジオは、インタビューやアンケート調査を用いた質的調査と、データの分析を行う量的調査の二つに分けられます。鎌原スタジオは唯一の量的調査を行うスタジオであり、統計の手法を用いて分析の仕方を考えます。普段、厳密には考えることなく直感的に思っていることや、ニュースなどで見て「本当にその2つのことは関係があるのだろうか？」と疑問に思うとき、自ら科学的に考える力や検証する技術を学ぶことができる楽しさがあります。（写真のスクリプトは浅野正彦・矢内勇生著「Rによる計量政治学」オーム社）',
       },
       {
         teacherName: '齊藤 麻人',
@@ -204,7 +204,7 @@ export const studiosByCategory = [
         teacherName: '佐藤 峰',
         englishName: 'sato',
         lastName: '佐藤',
-        hasStudioImage: false,
+        hasStudioImage: true,
         hashtags: [
           '#開発',
           '#住民主体の街づくり',
@@ -220,7 +220,7 @@ export const studiosByCategory = [
         teacherName: '松本 尚久',
         englishName: 'matsumoto',
         lastName: '松本',
-        hasStudioImage: false,
+        hasStudioImage: true,
         hashtags: [
           '#文化人類学',
           '#価値観崩壊',
@@ -236,7 +236,7 @@ export const studiosByCategory = [
         teacherName: '三浦 倫平',
         englishName: 'miura',
         lastName: '三浦',
-        hasStudioImage: false,
+        hasStudioImage: true,
         hashtags: [
           '#都市社会学',
           '#貧困',
