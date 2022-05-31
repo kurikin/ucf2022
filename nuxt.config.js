@@ -101,7 +101,7 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: ['nuxt-microcms-module', '@nuxtjs/google-analytics'],
+  buildModules: ['nuxt-microcms-module'],
 
   modules: [
     '@nuxtjs/axios',
@@ -112,6 +112,13 @@ export default {
       {
         defaultImage: '/comingsoon.svg',
         directiveOnly: true,
+      },
+    ],
+    [
+      '@nuxtjs/google-gtag',
+      {
+        id: 'G-T6PWW1E0RN',
+        debug: false,
       },
     ],
   ],
@@ -133,16 +140,6 @@ export default {
   },
 
   build: {},
-
-  googleAnalytics: {
-    id: process.env.GOOGLE_ANALYTICS_ID,
-  },
-
-  publicRuntimeConfig: {
-    googleAnalytics: {
-      id: process.env.GOOGLE_ANALYTICS_ID,
-    },
-  },
 
   generate: {
     fallback: true,
