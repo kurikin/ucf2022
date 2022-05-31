@@ -23,7 +23,7 @@ export const members = [
       {
         name: '山崎 昴陽',
         position: '',
-        belong: '都市科学部 環境リスク共生学科３年',
+        belong: '都市科学部 都市社会共生学科３年',
       },
       {
         name: '喜元 陽',
