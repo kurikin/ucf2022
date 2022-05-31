@@ -89,11 +89,11 @@ export default {
     startObserve()
   },
   methods: {
-    onKeyPress(e) {
-      if (e.code === 'KeyP') {
-        this.ikedaFileName = 'ikeda-pink.png'
-      }
-    },
+    // onKeyPress(e) {
+    //   if (e.code === 'KeyP') {
+    //     this.ikedaFileName = 'ikeda-pink.png'
+    //   }
+    // },
   },
   data() {
     return {
