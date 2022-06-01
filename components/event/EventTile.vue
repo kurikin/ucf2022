@@ -66,7 +66,6 @@ export default {
           this.$router.push(buttonData.link)
       }
     },
-    secondButtonClicked() {},
     ...mapMutations(['setSpeakersModalData', 'toggleSpeakersModal']),
   },
 }

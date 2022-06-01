@@ -164,17 +164,25 @@ export default {
     path: '/sitemap.xml',
     hostname: 'https://ucf2022.com/',
     routes(callback) {
-      axios
-        .get(`https://ucf2022.microcms.io/api/v1/news?limit=100`, {
-          headers: { 'X-MICROCMS-API-KEY': process.env.API_KEY },
+      const routeList = []
+
+      // Add routes related to microcms
+      try {
+        const res = axios.get(
+          `https://ucf2022.microcms.io/api/v1/news?limit=100`,
+          {
+            headers: { 'X-MICROCMS-API-KEY': process.env.API_KEY },
+          }
+        )
+
+        const route1 = res.data.contents.map((content) => {
+          return '/news' + content.id
         })
-        .then((res) => {
-          const routes = res.data.contents.map((content) => {
-            return '/news/' + content.id
-          })
-          callback(null, routes)
-        })
-        .catch(callback)
+
+        callback(null, routeList)
+      } catch (e) {
+        callback(e)
+      }
     },
   },
 }
