@@ -18,7 +18,8 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: '横浜国立大学 都市文化祭2022の公式ホームページです。',
+        content:
+          '横浜国立大学 都市文化祭2022の公式ホームページです。開催日は6月26日（日）となります。今年のテーマは『雑踏』です！',
       },
       { name: 'format-detection', content: 'telephone=no' },
       { charset: 'utf-8' },
