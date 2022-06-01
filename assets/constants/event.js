@@ -339,7 +339,7 @@ export const events = [
     title: '横国VRキャンパス',
     subtitle: '',
     hasSubtitle: false,
-    theme: 'tatazumu',
+    theme: 'hagureru',
     format: 'on-demand',
     thumbnail: 'vr.jpeg',
     description:
