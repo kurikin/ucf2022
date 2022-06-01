@@ -10,7 +10,6 @@
           { fadeIn: animatePageTitle },
           { 'animation-1': animatePageTitle },
         ]"
-        v-if="this.$slots['page-title']"
       >
         <slot name="page-title"></slot>
       </h1>
