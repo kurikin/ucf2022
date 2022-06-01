@@ -4,18 +4,15 @@
     <Hamburger :baseColor="`black`" v-show="!hideHamburger" />
     <div class="container">
       <h1
-        class="page-title fadeIn animation-1"
-        :class="{ 'has-second-slot': hasSecondSlot }"
+        class="page-title"
+        :class="[
+          { 'has-second-slot': hasSecondSlot },
+          { fadeIn: animatePageTitle },
+          { 'animation-1': animatePageTitle },
+        ]"
         v-if="this.$slots['page-title']"
       >
         <slot name="page-title"></slot>
-      </h1>
-      <h1
-        class="page-title"
-        :class="{ 'has-description': hasSecondSlot }"
-        v-if="this.$slots['no-animation-page-title']"
-      >
-        <slot name="no-animation-page-title"></slot>
       </h1>
       <p class="description fadeIn animation-1">
         <slot name="description"></slot>
@@ -40,6 +37,10 @@ export default {
   props: {
     hideHamburger: {
       type: Boolean,
+    },
+    animatePageTitle: {
+      type: Boolean,
+      default: true,
     },
   },
 }

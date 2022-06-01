@@ -1,9 +1,7 @@
 <template>
   <div class="white-background">
-    <WhiteHeader>
-      <template v-slot:no-animation-page-title
-        >ス<span>タ</span>ジオ診断</template
-      >
+    <WhiteHeader :animatePageTitle="false">
+      <template v-slot:page-title>ス<span>タ</span>ジオ診断</template>
     </WhiteHeader>
     <div class="no-margin-content container">
       <div class="analyze-background">
