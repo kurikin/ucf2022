@@ -27,9 +27,11 @@ export default {
   gap: 32px;
   grid-row: 1;
   justify-content: flex-end;
+  margin-right: 12px;
 
   @include mq(sm) {
     grid-column: 2;
+    margin-right: 0;
   }
 
   @include mq() {
