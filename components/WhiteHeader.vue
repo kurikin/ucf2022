@@ -6,7 +6,7 @@
       <h1
         class="page-title"
         :class="[
-          { 'has-second-slot': hasSecondSlot() },
+          { 'has-second-slot': hasSecondSlot },
           { fadeIn: animatePageTitle },
           { 'animation-1': animatePageTitle },
         ]"
@@ -25,14 +25,6 @@
 
 <script>
 export default {
-  computed: {
-    hasSecondSlot() {
-      return (
-        this.$slots['description'] !== undefined ||
-        this.$slots['custom'] !== undefined
-      )
-    },
-  },
   props: {
     hideHamburger: {
       type: Boolean,
@@ -40,6 +32,10 @@ export default {
     animatePageTitle: {
       type: Boolean,
       default: true,
+    },
+    hasSecondSlot: {
+      type: Boolean,
+      default: false,
     },
   },
 }

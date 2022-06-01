@@ -1,6 +1,6 @@
 <template>
   <div class="white-background">
-    <WhiteHeader>
+    <WhiteHeader :hasSecondSlot="true">
       <template v-slot:page-title>ス<span>タ</span>ジオ診断</template>
       <template v-slot:description
         >スタジオ？？よく分からない！！<br />

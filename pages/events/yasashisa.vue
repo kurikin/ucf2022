@@ -1,6 +1,6 @@
 <template>
   <div class="white-background">
-    <WhiteHeader>
+    <WhiteHeader :hasSecondSlot="true">
       <template v-slot:page-title>優<span>し</span>さの街</template>
       <template v-slot:custom>
         <p class="page-subtitle">〜皆を支える都市基盤の魅力を伝える〜</p>
