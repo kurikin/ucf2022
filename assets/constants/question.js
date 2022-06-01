@@ -116,8 +116,8 @@ export const questions = {
     longChoice: false,
     firstChoice: 'はい',
     secondChoice: 'いいえ',
-    firstChoiceNextPath: 'results/saito',
-    secondChoiceNextPath: 'results/miura',
+    firstChoiceNextPath: 'results/miura',
+    secondChoiceNextPath: 'results/saito',
   },
   16: {
     questionText: '芸術に関わるなら？',
