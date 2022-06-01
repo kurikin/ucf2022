@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <BlackNavBar />
-    <Hamburger :baseColor="`black`" v-show="!hideHamburger" />
+    <Hamburger :baseColor="`black`" />
     <div class="container">
       <h1
         class="page-title"
@@ -26,9 +26,6 @@
 <script>
 export default {
   props: {
-    hideHamburger: {
-      type: Boolean,
-    },
     animatePageTitle: {
       type: Boolean,
       default: true,
