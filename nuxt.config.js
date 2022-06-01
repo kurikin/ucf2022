@@ -107,6 +107,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
     '@nuxtjs/date-fns',
+    '@nuxtjs/sitemap',
     [
       'nuxt-lazy-load',
       {
@@ -150,11 +151,29 @@ export default {
         })
         .then((res) =>
           res.data.contents.map((content) => ({
-            route: `/news/${content.id}`,
+            route: '/news/' + content.id,
             payload: content,
           }))
         )
       return pages
+    },
+  },
+
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://ucf2022.com/',
+    routes(callback) {
+      axios
+        .get(`https://ucf2022.microcms.io/api/v1/news?limit=100`, {
+          headers: { 'X-API-KEY': process.env.API_KEY },
+        })
+        .then((res) => {
+          const routes = res.data.contents.map((content) => {
+            return '/news/' + content.id
+          })
+          callback(null, routes)
+        })
+        .catch(callback)
     },
   },
 }

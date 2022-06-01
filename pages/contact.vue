@@ -1,6 +1,6 @@
 <template>
   <div class="white-background">
-    <WhiteHeader class="upper-element">
+    <WhiteHeader :hasSecondSlot="true" class="upper-element">
       <template v-slot:page-title>お<span>問</span>合せ</template>
       <template v-slot:description
         >都市文化祭へのお問合せは、下記のGoogleフォームからお送りください。<br />
