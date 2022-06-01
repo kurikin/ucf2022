@@ -1,6 +1,6 @@
 <template>
   <div class="white-background">
-    <WhiteHeader>
+    <WhiteHeader :hasSecondSlot="true">
       <template v-slot:page-title>た<span>た</span>ずみたい都市</template>
       <template v-slot:custom>
         <div class="header-bottom-box">
