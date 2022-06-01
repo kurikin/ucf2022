@@ -165,7 +165,7 @@ export default {
     routes(callback) {
       axios
         .get(`https://ucf2022.microcms.io/api/v1/news?limit=100`, {
-          headers: { 'X-API-KEY': process.env.API_KEY },
+          headers: { 'X-MICROCMS-API-KEY': process.env.API_KEY },
         })
         .then((res) => {
           const routes = res.data.contents.map((content) => {
