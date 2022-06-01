@@ -221,10 +221,7 @@ export default {
     border: 2.5px solid $secondary;
     color: $secondary;
     background-color: $white;
-
-    &:hover {
-      cursor: default;
-    }
+    pointer-events: none;
   }
 
   @include mq(xs) {
