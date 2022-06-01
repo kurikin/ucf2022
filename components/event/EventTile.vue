@@ -147,6 +147,7 @@ export default {
 .icon-box {
   display: flex;
   gap: 12px;
+  margin-top: -10px;
 
   @include mq(sm) {
     gap: 16px;
@@ -156,6 +157,7 @@ export default {
     justify-self: end;
     grid-row: 1;
     grid-column: 2;
+    margin-top: 0px;
   }
 
   @include mq(lg) {
