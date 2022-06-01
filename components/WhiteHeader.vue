@@ -6,7 +6,7 @@
       <h1
         class="page-title"
         :class="[
-          { 'has-second-slot': hasSecondSlot },
+          { 'has-second-slot': hasSecondSlot() },
           { fadeIn: animatePageTitle },
           { 'animation-1': animatePageTitle },
         ]"
