@@ -74,6 +74,7 @@ export default {
     column-gap: 32px;
     row-gap: 32px;
     align-items: flex-start;
+    overflow-y: auto;
   }
 }
 
