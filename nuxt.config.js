@@ -192,8 +192,6 @@ export default {
           })
 
         routeList.push(route1, route2, route3)
-        console.log(routeList)
-
         callback(null, routeList)
       } catch (e) {
         callback(e)
