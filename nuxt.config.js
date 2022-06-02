@@ -166,8 +166,6 @@ export default {
     path: '/sitemap.xml',
     hostname: 'https://ucf2022.com/',
     async routes(callback) {
-      const routeList = []
-
       // Add routes related to microcms
       try {
         const res = await axios.get(
@@ -191,7 +189,9 @@ export default {
             return '/studios/analyze/results/' + teacher
           })
 
-        routeList.push(route1, route2, route3)
+        const routeList = [...route1, ...route2, ...route3]
+
+        console.log(routeList)
         callback(null, routeList)
       } catch (e) {
         callback(e)
