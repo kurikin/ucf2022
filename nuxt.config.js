@@ -1,4 +1,6 @@
 import axios from 'axios'
+import { questions } from './assets/constants/question'
+import { teachers } from './assets/constants/teacher'
 
 export default {
   target: 'static',
@@ -163,12 +165,12 @@ export default {
   sitemap: {
     path: '/sitemap.xml',
     hostname: 'https://ucf2022.com/',
-    routes(callback) {
+    async routes(callback) {
       const routeList = []
 
       // Add routes related to microcms
       try {
-        const res = axios.get(
+        const res = await axios.get(
           `https://ucf2022.microcms.io/api/v1/news?limit=100`,
           {
             headers: { 'X-MICROCMS-API-KEY': process.env.API_KEY },
@@ -176,8 +178,21 @@ export default {
         )
 
         const route1 = res.data.contents.map((content) => {
-          return '/news' + content.id
+          return '/news/' + content.id
         })
+
+        const route2 = Object.keys(questions).map((key) => {
+          return '/studio/analyze/questions/' + key
+        })
+
+        const route3 = teachers
+          .filter((teacher) => teacher !== 'takahashi')
+          .map((teacher) => {
+            return '/studios/analyze/results/' + teacher
+          })
+
+        routeList.push(route1, route2, route3)
+        console.log(routeList)
 
         callback(null, routeList)
       } catch (e) {
