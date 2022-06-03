@@ -176,7 +176,11 @@ export default {}
   }
 
   @include mq(sm) {
-    gap: 0;
+    gap: 4px;
+  }
+
+  @include mq(smd) {
+    gap: 28px;
   }
 
   @include mq() {
