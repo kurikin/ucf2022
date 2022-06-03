@@ -179,6 +179,10 @@ export default {}
     gap: 0;
   }
 
+  @include mq(smd) {
+    gap: 28px;
+  }
+
   @include mq() {
     font-size: 36px;
     gap: 32px;
