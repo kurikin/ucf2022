@@ -15,13 +15,11 @@
       <div class="center-line fade-up-observe"></div>
       <AnalyzeButton class="fade-up-observe" />
       <div class="studio-container">
-        <!-- Fade up animation index 4 ~ 7 -->
         <StudioSlider
           v-for="(studios, index) in studiosByCategory"
           :key="index"
           :index="index"
           :studios="studios"
-          :animationNum="index + 4"
         />
       </div>
       <AnalyzeButton class="fade-up-observe" />
