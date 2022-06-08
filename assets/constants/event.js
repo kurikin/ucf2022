@@ -88,11 +88,11 @@ export const events = [
         belongs: ['都市社会共生学科 ３年', '社会文化批評・清田スタジオ'],
       },
       {
-        name: '廣瀬 亜紀',
+        name: '横田 陸',
         hasLink: false,
         linkFileName: '',
         linkURL: '',
-        belongs: ['都市社会共生学科 ３年', '社会分析・鎌原スタジオ'],
+        belongs: ['都市社会共生学科 ３年', '社会分析・三浦スタジオ'],
       },
       {
         name: '藤田 里奈',
