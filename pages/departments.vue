@@ -33,7 +33,7 @@ import { startObserve } from '~/scripts/observe'
 export default {
   head() {
     return {
-      title: '学科一覧 | 都市文化祭2022',
+      title: '学科一覧 | 都市文化祭2022 公式ホームページ',
       meta: [
         {
           hid: 'description',

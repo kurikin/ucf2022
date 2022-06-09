@@ -61,7 +61,7 @@ import { startObserve } from '~/scripts/observe'
 export default {
   head() {
     return {
-      title: 'スタジオ診断 | 都市文化祭2022',
+      title: 'スタジオ診断 | 都市文化祭2022 公式ホームページ',
       meta: [
         {
           hid: 'description',

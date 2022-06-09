@@ -67,7 +67,7 @@ import Footer from '~/components/Footer.vue'
 export default {
   head() {
     return {
-      title: '優しさの街 | 都市文化祭2022',
+      title: '優しさの街 | 都市文化祭2022 公式ホームページ',
       meta: [
         {
           hid: 'description',

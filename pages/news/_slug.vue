@@ -24,7 +24,7 @@ import { startObserve } from '~/scripts/observe'
 export default {
   head() {
     return {
-      title: '新着情報 | 都市文化祭2022',
+      title: '新着情報 | 都市文化祭2022 公式ホームページ',
       meta: [
         {
           hid: 'description',
