@@ -180,7 +180,7 @@ export default {
         })
 
         const route2 = Object.keys(questions).map((key) => {
-          return '/studio/analyze/questions/' + key
+          return '/studios/analyze/questions/' + key
         })
 
         const route3 = teachers
