@@ -10,7 +10,7 @@ export const departments = [
     primaryButtonText: '都市社会共生学科 公式HP',
     secondaryButtonText: 'スタジオ紹介',
     primaryButtonLink: 'https://usc.ynu.ac.jp/',
-    secondaryButtonLink: '/studios',
+    secondaryButtonLink: '/studios/',
     rightSideImage: true,
   },
   {
@@ -38,7 +38,7 @@ export const departments = [
     primaryButtonText: '都市基盤学科 公式HP',
     secondaryButtonText: '優しさの街 ～皆を支える都市基盤の魅力を伝える～',
     primaryButtonLink: 'http://www.cvg.ynu.ac.jp',
-    secondaryButtonLink: '/events/yasashisa',
+    secondaryButtonLink: '/events/yasashisa/',
     rightSideImage: true,
   },
   {
