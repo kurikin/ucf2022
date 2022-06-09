@@ -7,7 +7,7 @@
           title="たたずみたい都市"
           description="お気に入りの風景を募集中"
           imageUri="/events/tatatoshi.jpeg"
-          path="/events/tatatoshi"
+          path="/events/tatatoshi/"
         />
       </li>
       <li class="list-item">
@@ -15,7 +15,7 @@
           title="スタジオ診断"
           description="あなたにぴったりのスタジオは？"
           imageUri="/events/studio-analyze.jpeg"
-          path="/studios/analyze"
+          path="/studios/analyze/"
         />
       </li>
       <li class="list-item">
@@ -23,11 +23,11 @@
           title="優しさの街"
           description="皆を支える都市基盤の魅力とは"
           imageUri="/events/yasashisa.jpeg"
-          path="/events/yasashisa"
+          path="/events/yasashisa/"
         />
       </li>
     </ul>
-    <nuxt-link class="primary-button" to="/events">企画一覧を見る</nuxt-link>
+    <nuxt-link class="primary-button" to="/events/">企画一覧を見る</nuxt-link>
   </section>
 </template>
 

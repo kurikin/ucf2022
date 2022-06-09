@@ -23,7 +23,7 @@
           <nuxt-link
             class="nav-link"
             :class="{ current: pathMatch('/about') }"
-            to="/about"
+            to="/about/"
             >都市文化祭とは</nuxt-link
           >
         </li>
@@ -32,7 +32,7 @@
           <nuxt-link
             class="nav-link"
             :class="{ current: pathMatch('/events') }"
-            to="/events"
+            to="/events/"
             >企画一覧</nuxt-link
           >
         </li>
@@ -41,7 +41,7 @@
           <nuxt-link
             class="nav-link"
             :class="{ current: pathMatch('/departments') }"
-            to="/departments"
+            to="/departments/"
             >学科紹介</nuxt-link
           >
         </li>
@@ -50,7 +50,7 @@
           <nuxt-link
             class="nav-link"
             :class="{ current: pathMatch('/studios') }"
-            to="/studios"
+            to="/studios/"
             >スタジオ紹介</nuxt-link
           >
         </li>

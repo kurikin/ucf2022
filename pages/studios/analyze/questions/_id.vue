@@ -12,12 +12,12 @@
           <div class="button-box">
             <nuxt-link
               class="choice-button fadeIn animation-2"
-              :to="'/studios/analyze/' + question.firstChoiceNextPath"
+              :to="'/studios/analyze/' + question.firstChoiceNextPath + '/'"
               >{{ question.firstChoice }}</nuxt-link
             >
             <nuxt-link
               class="choice-button fadeIn animation-2"
-              :to="'/studios/analyze/' + question.secondChoiceNextPath"
+              :to="'/studios/analyze/' + question.secondChoiceNextPath + '/'"
               >{{ question.secondChoice }}</nuxt-link
             >
           </div>
@@ -37,12 +37,12 @@
           <div class="button-box">
             <nuxt-link
               class="choice-button fadeIn animation-2"
-              :to="'/studios/analyze/' + question.firstChoiceNextPath"
+              :to="'/studios/analyze/' + question.firstChoiceNextPath + '/'"
               >A</nuxt-link
             >
             <nuxt-link
               class="choice-button fadeIn animation-2"
-              :to="'/studios/analyze/' + question.secondChoiceNextPath"
+              :to="'/studios/analyze/' + question.secondChoiceNextPath + '/'"
               >B</nuxt-link
             >
           </div>
