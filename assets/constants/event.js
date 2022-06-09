@@ -210,7 +210,7 @@ export const events = [
     firstButtonData: {
       text: '診断を始める',
       type: 'route',
-      link: '/studios/analyze',
+      link: '/studios/analyze/',
     },
     secondButtonData: {
       link: '',
@@ -284,7 +284,7 @@ export const events = [
     secondButtonData: {
       text: '写真を見る',
       type: 'route',
-      link: '/events/tatatoshi',
+      link: '/events/tatatoshi/',
     },
     hasSecondButton: true,
     speakers: [],
@@ -302,7 +302,7 @@ export const events = [
     firstButtonData: {
       text: '企画ページを見る',
       type: 'route',
-      link: '/events/yasashisa',
+      link: '/events/yasashisa/',
     },
     secondButtonData: {
       link: '',

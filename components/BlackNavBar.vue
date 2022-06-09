@@ -15,19 +15,19 @@
         </li>
         <div class="divider"></div>
         <li class="list-item">
-          <nuxt-link class="nav-link" to="/about">都市文化祭とは</nuxt-link>
+          <nuxt-link class="nav-link" to="/about/">都市文化祭とは</nuxt-link>
         </li>
         <div class="divider"></div>
         <li class="list-item">
-          <nuxt-link class="nav-link" to="/events">企画一覧</nuxt-link>
+          <nuxt-link class="nav-link" to="/events/">企画一覧</nuxt-link>
         </li>
         <div class="divider"></div>
         <li class="list-item">
-          <nuxt-link class="nav-link" to="/departments">学科紹介</nuxt-link>
+          <nuxt-link class="nav-link" to="/departments/">学科紹介</nuxt-link>
         </li>
         <div class="divider"></div>
         <li class="list-item">
-          <nuxt-link class="nav-link" to="/studios">スタジオ紹介</nuxt-link>
+          <nuxt-link class="nav-link" to="/studios/">スタジオ紹介</nuxt-link>
         </li>
       </ul>
     </nav>

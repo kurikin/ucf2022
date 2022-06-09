@@ -21,16 +21,16 @@
                 <nuxt-link to="/">HOME</nuxt-link>
               </li>
               <li class="nav-item">
-                <nuxt-link to="/about">都市文化祭とは</nuxt-link>
+                <nuxt-link to="/about/">都市文化祭とは</nuxt-link>
               </li>
               <li class="nav-item">
-                <nuxt-link to="/events">企画一覧</nuxt-link>
+                <nuxt-link to="/events/">企画一覧</nuxt-link>
               </li>
               <li class="nav-item">
-                <nuxt-link to="/departments">学科紹介</nuxt-link>
+                <nuxt-link to="/departments/">学科紹介</nuxt-link>
               </li>
               <li class="nav-item">
-                <nuxt-link to="/studios">スタジオ紹介</nuxt-link>
+                <nuxt-link to="/studios/">スタジオ紹介</nuxt-link>
               </li>
             </ul>
           </div>
@@ -38,7 +38,7 @@
             <h3 class="genre-title">GUIDE</h3>
             <ul class="nav-list">
               <li class="nav-item">
-                <nuxt-link to="/members">実行委員一覧</nuxt-link>
+                <nuxt-link to="/members/">実行委員一覧</nuxt-link>
               </li>
               <li class="nav-item">
                 <a
@@ -55,7 +55,7 @@
                 >
               </li>
               <li class="nav-item">
-                <nuxt-link to="/contact">お問合せ</nuxt-link>
+                <nuxt-link to="/contact/">お問合せ</nuxt-link>
               </li>
             </ul>
           </div>

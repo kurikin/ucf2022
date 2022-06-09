@@ -10,7 +10,7 @@
     </WhiteHeader>
     <div class="no-margin-content container">
       <div class="analyze-background fadeIn animation-2">
-        <nuxt-link class="analyze-button" to="/studios/analyze/questions/1">
+        <nuxt-link class="analyze-button" to="/studios/analyze/questions/1/">
           スタジオ診断を始める！
         </nuxt-link>
       </div>
