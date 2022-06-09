@@ -25,6 +25,11 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: 'エラー | 都市文化祭2022 公式ホームページ',
+    }
+  },
   props: ['error'],
   methods: {
     backToHome() {
