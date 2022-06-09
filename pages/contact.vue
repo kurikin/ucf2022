@@ -26,6 +26,14 @@ export default {
   head() {
     return {
       title: 'お問合せ | 都市文化祭2022',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            '都市文化祭へのお問合せは、下記のGoogleフォームからお送りください。送信後、自動返信メールが届きますのでご確認ください。',
+        },
+      ],
     }
   },
   mounted() {

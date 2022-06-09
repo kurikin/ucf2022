@@ -62,6 +62,14 @@ export default {
   head() {
     return {
       title: 'スタジオ診断 | 都市文化祭2022',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'スタジオ？？よく分からない！！そんなあなたにぴったりのスタジオをご紹介します。​まだ見ぬ世界に出会えるかも…！？',
+        },
+      ],
     }
   },
   mounted() {

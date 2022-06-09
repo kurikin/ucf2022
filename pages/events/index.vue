@@ -44,6 +44,14 @@ export default {
   head() {
     return {
       title: '企画一覧 | 都市文化祭2022',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            '都市文化祭2022で開催するオンライン企画を一覧で紹介しています。それぞれの企画の登壇者、特設ページを見ることができます。',
+        },
+      ],
     }
   },
   components: { Footer, EventListHeader, EventTile, SpeakersModal },

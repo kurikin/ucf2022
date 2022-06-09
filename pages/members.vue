@@ -81,6 +81,14 @@ export default {
   head() {
     return {
       title: '実行委員一覧 | 都市文化祭2022',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            '都市文化祭2022に関わっている実行委員の一覧です。実行委員は、総務部・企画部・広報部・システム部の４つに分かれています。',
+        },
+      ],
     }
   },
   components: { WhiteHeader, Footer },

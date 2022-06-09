@@ -25,6 +25,13 @@ export default {
   head() {
     return {
       title: '新着情報 | 都市文化祭2022',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: '都市文化祭2022の新着情報一覧ページです。',
+        },
+      ],
     }
   },
   mounted() {
