@@ -70,7 +70,7 @@ export default {
       this.toggleStudioModal()
     },
     analyzeAgain() {
-      this.$router.push('/studios/analyze')
+      this.$router.push('/studios/analyze/')
     },
     ...mapMutations(['setStudioModalData', 'toggleStudioModal']),
   },

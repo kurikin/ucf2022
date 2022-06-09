@@ -162,11 +162,15 @@ export default {
     },
   },
 
+  router: {
+    trailingSlash: true,
+  },
+
   sitemap: {
     path: '/sitemap.xml',
     hostname: 'https://ucf2022.com/',
+    trailingSlash: true,
     async routes(callback) {
-      // Add routes related to microcms
       try {
         const res = await axios.get(
           `https://ucf2022.microcms.io/api/v1/news?limit=100`,
