@@ -34,6 +34,14 @@ export default {
   head() {
     return {
       title: '学科一覧 | 都市文化祭2022',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            '都市をさまざまな角度から捉えるユニークな学科が集まる都市科学部。4つの学科の様子を、学生の綴った言葉でご紹介します。',
+        },
+      ],
     }
   },
   components: { Footer, Department },

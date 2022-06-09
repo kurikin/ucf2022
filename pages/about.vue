@@ -29,7 +29,15 @@ import { startObserve } from '~/scripts/observe'
 export default {
   head() {
     return {
-      title: '都市文化祭とは | 都市文化祭2022',
+      title: '都市文化祭とは | 都市文化祭2022ホームページ',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            '「都市」を学び、「都市」で学び、「都市」と学ぶ。あらゆるものが詰まった都市というフィールドで、何を学び、何を考えるのかを、形にし、発信していくイベントが都市文化祭です。',
+        },
+      ],
     }
   },
   mounted() {

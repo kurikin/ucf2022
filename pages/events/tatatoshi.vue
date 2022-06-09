@@ -42,6 +42,14 @@ export default {
   head() {
     return {
       title: 'たたずみたい都市 | 都市文化祭2022',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'みなさんが「たたずみたい」と思う都市の写真を集める企画です。自分の周りの都市・地域を見つめなおしてみませんか？自分の知らない都市・地域を知ってみませんか？',
+        },
+      ],
     }
   },
   components: { Footer, ImageGallery, ImageModal, ApplyModal },

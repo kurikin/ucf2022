@@ -44,6 +44,14 @@ export default {
   head() {
     return {
       title: 'スタジオ紹介 | 都市文化祭2022',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            '都市社会共生学科で最も特徴的な制度、スタジオ。スタジオの中身を見ていくと、都市社会共生学科の全貌が少しずつ見えてくるかもしれません。',
+        },
+      ],
     }
   },
   mounted() {
