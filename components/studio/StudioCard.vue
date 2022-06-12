@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 
 export default {
   methods: {
@@ -44,7 +44,7 @@ export default {
     ...mapMutations(['setStudioModalData', 'toggleStudioModal']),
   },
   computed: {
-    ...mapGetters(['studioSecretOn']),
+    ...mapState(['studioSecretOn']),
   },
   data() {
     return {

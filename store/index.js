@@ -11,6 +11,7 @@ export const state = () => ({
     eventName: '',
     speakers: [],
   },
+  studioSecretOn: false,
 })
 
 export const mutations = {
@@ -44,11 +45,5 @@ export const mutations = {
   },
   toggleStudioSecret(state) {
     state.studioSecretOn = true
-  },
-}
-
-export const getters = {
-  studioSecretOn() {
-    return false
   },
 }
