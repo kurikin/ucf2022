@@ -1,15 +1,28 @@
 <template>
   <div class="studio-card" @click="showModal">
     <img
+      v-if="!studioSecretOn"
       :src="'/teachers/' + studioData.englishName + '.jpeg'"
       alt=""
       class="teacher-img"
     />
+    <img v-else :src="'/teachers/miura.jpeg'" alt="" class="teacher-img" />
     <div class="text-box">
-      <p class="teacher-name">{{ studioData.teacherName }}</p>
-      <p class="hashtags">
+      <p v-if="!studioSecretOn" class="teacher-name">
+        {{ studioData.teacherName }}
+      </p>
+      <p v-else class="teacher-name">三浦 倫平</p>
+      <p v-if="!studioSecretOn" class="hashtags">
         <span
           v-for="hashtag in studioData.hashtags"
+          :key="hashtag.teaherName"
+          class="hashtag"
+          >{{ hashtag }}</span
+        >
+      </p>
+      <p v-else class="hashtags">
+        <span
+          v-for="hashtag in miuraHashtags"
           :key="hashtag.teaherName"
           class="hashtag"
           >{{ hashtag }}</span
@@ -20,7 +33,7 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+import { mapGetters, mapMutations } from 'vuex'
 
 export default {
   methods: {
@@ -29,6 +42,22 @@ export default {
       this.toggleStudioModal()
     },
     ...mapMutations(['setStudioModalData', 'toggleStudioModal']),
+  },
+  computed: {
+    ...mapGetters(['studioSecretOn']),
+  },
+  data() {
+    return {
+      miuraHashtags: [
+        '#都市社会学',
+        '#貧困',
+        '#高学歴ワーキングプア',
+        '#デモ',
+        '#社会運動',
+        '#東京',
+        '#孤独',
+      ],
+    }
   },
   props: {
     studioData: {

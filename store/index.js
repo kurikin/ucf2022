@@ -42,4 +42,13 @@ export const mutations = {
     state.speakersModalData.eventName = eventName
     state.speakersModalData.speakers = speakers
   },
+  toggleStudioSecret(state) {
+    state.studioSecretOn = true
+  },
+}
+
+export const getters = {
+  studioSecretOn() {
+    return false
+  },
 }
