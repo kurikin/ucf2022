@@ -18,15 +18,25 @@
                 :key="leader.name"
                 class="leader"
               >
-                <div v-if="index === 0">
-                  <transition name="ikeda-fade">
-                    <img
-                      :src="'/portraits/' + ikedaFileName"
-                      class="portrait"
-                      :key="ikedaFileName"
-                      alt=""
-                    />
-                  </transition>
+                <div class="ikeda-portrait-box" v-if="index === 0">
+                  <img
+                    src="/portraits/ikeda.png"
+                    class="portrait normal-ikeda"
+                    alt=""
+                  />
+                  <img
+                    src="/portraits/ikeda-pink.png"
+                    class="portrait pink-ikeda"
+                    alt=""
+                  />
+                  <button
+                    @click="toggleSecret"
+                    class="secret-button button-1"
+                  ></button>
+                  <button
+                    @click="toggleSecret"
+                    class="secret-button button-2"
+                  ></button>
                 </div>
                 <img
                   v-else
@@ -93,19 +103,18 @@ export default {
   },
   components: { WhiteHeader, Footer },
   mounted() {
-    window.addEventListener('keypress', this.onKeyPress)
     startObserve()
   },
   methods: {
-    // onKeyPress(e) {
-    //   if (e.code === 'KeyP') {
-    //     this.ikedaFileName = 'ikeda-pink.png'
-    //   }
-    // },
+    toggleSecret() {
+      const pinkIkeda = window.document.getElementsByClassName('pink-ikeda')[0]
+
+      pinkIkeda.style.opacity = 1
+    },
   },
   data() {
     return {
-      ikedaFileName: 'ikeda.png',
+      pinkSunglasses: true,
     }
   },
   computed: {
@@ -243,6 +252,38 @@ export default {
 
   @include mq() {
     font-size: 20px;
+  }
+}
+
+.pink-ikeda {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+
+  transition: opacity 0.5s ease;
+}
+
+.ikeda-portrait-box {
+  position: relative;
+}
+
+.secret-button {
+  position: absolute;
+  background-color: transparent;
+  width: 12.8%;
+  height: 6.4%;
+  border-radius: 8px;
+
+  &.button-1 {
+    top: 35.4%;
+    left: 50.6%;
+    transform: rotateZ(-3deg);
+  }
+  &.button-2 {
+    top: 33.8%;
+    left: 68.9%;
+    transform: rotateZ(-5deg);
   }
 }
 </style>

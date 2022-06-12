@@ -1,34 +1,82 @@
 <template>
-  <div class="studio-card" @click="showModal">
-    <img
-      :src="'/teachers/' + studioData.englishName + '.jpeg'"
-      alt=""
-      class="teacher-img"
-    />
-    <div class="text-box">
-      <p class="teacher-name">{{ studioData.teacherName }}</p>
-      <p class="hashtags">
-        <span
-          v-for="hashtag in studioData.hashtags"
-          :key="hashtag.teaherName"
-          class="hashtag"
-          >{{ hashtag }}</span
-        >
-      </p>
+  <div class="card-container">
+    <div class="studio-card" @click="showModal">
+      <img
+        :src="'/teachers/' + studioData.englishName + '.jpeg'"
+        alt=""
+        class="teacher-img"
+      />
+      <div class="text-box">
+        <p class="teacher-name">
+          {{ studioData.teacherName }}
+        </p>
+        <p class="hashtags">
+          <span
+            v-for="hashtag in studioData.hashtags"
+            :key="hashtag.teaherName"
+            class="hashtag"
+            >{{ hashtag }}</span
+          >
+        </p>
+      </div>
     </div>
+    <transition name="card-fade">
+      <div v-if="studioSecretOn" class="studio-card upper" @click="showModal">
+        <img :src="'/teachers/miura.jpeg'" alt="" class="teacher-img" />
+        <div class="text-box">
+          <p class="teacher-name">三浦 倫平</p>
+          <p class="hashtags">
+            <span
+              v-for="hashtag in miuraStudioData.hashtags"
+              :key="hashtag.teaherName"
+              class="hashtag"
+              >{{ hashtag }}</span
+            >
+          </p>
+        </div>
+      </div>
+    </transition>
   </div>
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 
 export default {
   methods: {
     showModal() {
-      this.setStudioModalData(this.studioData)
+      if (this.studioSecretOn) {
+        this.setStudioModalData(this.miuraStudioData)
+      } else {
+        this.setStudioModalData(this.studioData)
+      }
       this.toggleStudioModal()
     },
     ...mapMutations(['setStudioModalData', 'toggleStudioModal']),
+  },
+  computed: {
+    ...mapState(['studioSecretOn']),
+  },
+  data() {
+    return {
+      miuraStudioData: {
+        teacherName: '三浦 倫平',
+        englishName: 'miura',
+        lastName: '三浦',
+        hasStudioImage: true,
+        hashtags: [
+          '#都市社会学',
+          '#貧困',
+          '#高学歴ワーキングプア',
+          '#デモ',
+          '#社会運動',
+          '#東京',
+          '#孤独',
+        ],
+        description:
+          '三浦スタジオでは、都市に関する研究を個人個人で進め、年度末に冊子にまとめます。テーマは自由で、谷根千や池袋など場所に関するものや、観光や都市開発に関するもの、さらに筆者自身は子育てコミュニティを分析しました。研究は、文献を読み込んで比較したり、対象者にインタビューをしたりと各々進めていくので、ゼミの時間は参考になる文献の輪読や、個人の進捗報告を深ぼっていました。加えて、現地フィールドワークも2回行ったりと、現場感も大切にしています。',
+      },
+    }
   },
   props: {
     studioData: {
@@ -39,6 +87,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.card-container {
+  position: relative;
+}
+
+.card-fade-enter-active,
+.card-fade-leave-active {
+  transition: opacity 0.8s ease;
+}
+.card-fade-enter,
+.card-fade-leave-to {
+  opacity: 0;
+}
+
 .studio-card {
   display: flex;
   width: 100%;
@@ -49,6 +110,10 @@ export default {
   background-color: #fff;
   flex-direction: column;
   border-radius: $radius-sm;
+
+  &.upper {
+    position: absolute;
+  }
 
   &:hover {
     cursor: pointer;
