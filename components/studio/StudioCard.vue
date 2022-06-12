@@ -1,34 +1,41 @@
 <template>
-  <div class="studio-card" @click="showModal">
-    <img
-      v-if="!studioSecretOn"
-      :src="'/teachers/' + studioData.englishName + '.jpeg'"
-      alt=""
-      class="teacher-img"
-    />
-    <img v-else :src="'/teachers/miura.jpeg'" alt="" class="teacher-img" />
-    <div class="text-box">
-      <p v-if="!studioSecretOn" class="teacher-name">
-        {{ studioData.teacherName }}
-      </p>
-      <p v-else class="teacher-name">三浦 倫平</p>
-      <p v-if="!studioSecretOn" class="hashtags">
-        <span
-          v-for="hashtag in studioData.hashtags"
-          :key="hashtag.teaherName"
-          class="hashtag"
-          >{{ hashtag }}</span
-        >
-      </p>
-      <p v-else class="hashtags">
-        <span
-          v-for="hashtag in miuraStudioData.hashtags"
-          :key="hashtag.teaherName"
-          class="hashtag"
-          >{{ hashtag }}</span
-        >
-      </p>
+  <div class="card-container">
+    <div class="studio-card" @click="showModal">
+      <img
+        :src="'/teachers/' + studioData.englishName + '.jpeg'"
+        alt=""
+        class="teacher-img"
+      />
+      <div class="text-box">
+        <p class="teacher-name">
+          {{ studioData.teacherName }}
+        </p>
+        <p class="hashtags">
+          <span
+            v-for="hashtag in studioData.hashtags"
+            :key="hashtag.teaherName"
+            class="hashtag"
+            >{{ hashtag }}</span
+          >
+        </p>
+      </div>
     </div>
+    <transition name="card-fade">
+      <div v-if="studioSecretOn" class="studio-card upper" @click="showModal">
+        <img :src="'/teachers/miura.jpeg'" alt="" class="teacher-img" />
+        <div class="text-box">
+          <p class="teacher-name">三浦 倫平</p>
+          <p class="hashtags">
+            <span
+              v-for="hashtag in miuraStudioData.hashtags"
+              :key="hashtag.teaherName"
+              class="hashtag"
+              >{{ hashtag }}</span
+            >
+          </p>
+        </div>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -80,6 +87,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.card-container {
+  position: relative;
+}
+
+.card-fade-enter-active,
+.card-fade-leave-active {
+  transition: opacity 0.8s ease;
+}
+.card-fade-enter,
+.card-fade-leave-to {
+  opacity: 0;
+}
+
 .studio-card {
   display: flex;
   width: 100%;
@@ -90,6 +110,10 @@ export default {
   background-color: #fff;
   flex-direction: column;
   border-radius: $radius-sm;
+
+  &.upper {
+    position: absolute;
+  }
 
   &:hover {
     cursor: pointer;
