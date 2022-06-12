@@ -25,6 +25,8 @@
                     class="portrait pink-ikeda"
                     alt=""
                   />
+                  <button class="secret-button button-1"></button>
+                  <button class="secret-button button-2"></button>
                 </div>
                 <img
                   v-else
@@ -258,5 +260,24 @@ export default {
 
 .ikeda-portrait-box {
   position: relative;
+}
+
+.secret-button {
+  position: absolute;
+  background-color: transparent;
+  width: 12.8%;
+  height: 6.4%;
+  border-radius: 8px;
+
+  &.button-1 {
+    top: 35.4%;
+    left: 50.6%;
+    transform: rotateZ(-3deg);
+  }
+  &.button-2 {
+    top: 33.8%;
+    left: 68.9%;
+    transform: rotateZ(-5deg);
+  }
 }
 </style>
