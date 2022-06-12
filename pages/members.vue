@@ -18,15 +18,13 @@
                 :key="leader.name"
                 class="leader"
               >
-                <div v-if="index === 0">
-                  <transition name="ikeda-fade">
-                    <img
-                      :src="'/portraits/' + ikedaFileName"
-                      class="portrait"
-                      :key="ikedaFileName"
-                      alt=""
-                    />
-                  </transition>
+                <div class="ikeda-portrait-box" v-if="index === 0">
+                  <img src="/portraits/ikeda.png" class="portrait" alt="" />
+                  <img
+                    src="/portraits/ikeda-pink.png"
+                    class="portrait pink-ikeda"
+                    alt=""
+                  />
                 </div>
                 <img
                   v-else
@@ -97,15 +95,18 @@ export default {
     startObserve()
   },
   methods: {
-    // onKeyPress(e) {
-    //   if (e.code === 'KeyP') {
-    //     this.ikedaFileName = 'ikeda-pink.png'
-    //   }
-    // },
+    onKeyPress(e) {
+      if (e.code === 'KeyP') {
+        const pinkIkeda =
+          window.document.getElementsByClassName('pink-ikeda')[0]
+
+        pinkIkeda.style.opacity = 1
+      }
+    },
   },
   data() {
     return {
-      ikedaFileName: 'ikeda.png',
+      pinkSunglasses: true,
     }
   },
   computed: {
@@ -244,5 +245,18 @@ export default {
   @include mq() {
     font-size: 20px;
   }
+}
+
+.pink-ikeda {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+
+  transition: opacity 0.5s ease;
+}
+
+.ikeda-portrait-box {
+  position: relative;
 }
 </style>
