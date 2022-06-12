@@ -37,7 +37,7 @@ import AnalyzeButton from '@/components/studio/AnalyzeButton.vue'
 import StudioSlider from '~/components/studio/StudioSlider.vue'
 import { studiosByCategory } from '@/assets/constants/studio'
 import StudioModal from '~/components/studio/StudioModal.vue'
-import { mapState } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 import { startObserve } from '~/scripts/observe'
 
 export default {
@@ -56,12 +56,24 @@ export default {
   },
   mounted() {
     startObserve()
+    window.addEventListener('keypress', this.onKeyPress)
+  },
+  beforeDestroy() {
+    window.removeEventListener('keypress', this.onKeyPress)
   },
   computed: {
     studiosByCategory() {
       return studiosByCategory
     },
     ...mapState(['studioModalOpen']),
+  },
+  methods: {
+    onKeyPress(event) {
+      if (event.code === 'KeyM') {
+        this.toggleStudioSecret()
+      }
+    },
+    ...mapMutations(['toggleStudioSecret']),
   },
   components: {
     WhiteHeader,

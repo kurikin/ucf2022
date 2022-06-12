@@ -11,6 +11,7 @@ export const state = () => ({
     eventName: '',
     speakers: [],
   },
+  studioSecretOn: false,
 })
 
 export const mutations = {
@@ -41,5 +42,8 @@ export const mutations = {
   setSpeakersModalData(state, { eventName, speakers }) {
     state.speakersModalData.eventName = eventName
     state.speakersModalData.speakers = speakers
+  },
+  toggleStudioSecret(state) {
+    state.studioSecretOn = !state.studioSecretOn
   },
 }
