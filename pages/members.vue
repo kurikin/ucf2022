@@ -19,14 +19,24 @@
                 class="leader"
               >
                 <div class="ikeda-portrait-box" v-if="index === 0">
-                  <img src="/portraits/ikeda.png" class="portrait" alt="" />
+                  <img
+                    src="/portraits/ikeda.png"
+                    class="portrait normal-ikeda"
+                    alt=""
+                  />
                   <img
                     src="/portraits/ikeda-pink.png"
                     class="portrait pink-ikeda"
                     alt=""
                   />
-                  <button class="secret-button button-1"></button>
-                  <button class="secret-button button-2"></button>
+                  <button
+                    @click="toggleSecret"
+                    class="secret-button button-1"
+                  ></button>
+                  <button
+                    @click="toggleSecret"
+                    class="secret-button button-2"
+                  ></button>
                 </div>
                 <img
                   v-else
@@ -93,17 +103,13 @@ export default {
   },
   components: { WhiteHeader, Footer },
   mounted() {
-    window.addEventListener('keypress', this.onKeyPress)
     startObserve()
   },
   methods: {
-    onKeyPress(e) {
-      if (e.code === 'KeyP') {
-        const pinkIkeda =
-          window.document.getElementsByClassName('pink-ikeda')[0]
+    toggleSecret() {
+      const pinkIkeda = window.document.getElementsByClassName('pink-ikeda')[0]
 
-        pinkIkeda.style.opacity = 1
-      }
+      pinkIkeda.style.opacity = 1
     },
   },
   data() {
