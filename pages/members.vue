@@ -275,10 +275,6 @@ export default {
   height: 6.4%;
   border-radius: 8px;
 
-  &:hover {
-    cursor: default;
-  }
-
   &.button-1 {
     top: 35.4%;
     left: 50.6%;
