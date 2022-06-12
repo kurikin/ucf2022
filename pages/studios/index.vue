@@ -56,11 +56,10 @@ export default {
   },
   mounted() {
     startObserve()
-    window.addEventListener('keypress', (event) => {
-      if (event.code === 'KeyM') {
-        this.toggleStudioSecret()
-      }
-    })
+    window.addEventListener('keypress', this.onKeyPress)
+  },
+  beforeDestroy() {
+    window.removeEventListener('keypress', this.onKeyPress)
   },
   computed: {
     studiosByCategory() {
@@ -69,6 +68,11 @@ export default {
     ...mapState(['studioModalOpen']),
   },
   methods: {
+    onKeyPress(event) {
+      if (event.code === 'KeyM') {
+        this.toggleStudioSecret()
+      }
+    },
     ...mapMutations(['toggleStudioSecret']),
   },
   components: {
