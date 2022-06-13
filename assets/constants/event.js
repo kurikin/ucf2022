@@ -114,16 +114,16 @@ export const events = [
       '大学って本当に色んな人がいますよね！そして色んな所から来てる人がいると思います。そんな皆さんの地元のお話をお聞きします！一体どんなことが聞けるのでしょうか…？新入生・受験生も必見の情報もあるかも！？',
     comingsoon: false,
     firstButtonData: {
-      text: 'アンケートに答える',
-      type: 'link',
-      link: 'https://forms.gle/UR4CiGUXJcMPpk8cA',
-    },
-    secondButtonData: {
       text: '登壇者を見る',
       type: 'modal',
       link: '',
     },
-    hasSecondButton: true,
+    secondButtonData: {
+      text: '',
+      type: '',
+      link: '',
+    },
+    hasSecondButton: false,
     speakers: [
       {
         name: '荒木 拓巳',
