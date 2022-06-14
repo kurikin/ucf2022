@@ -83,7 +83,7 @@ export default {
 
 .footprint {
   position: absolute;
-  height: 58vh;
+  height: 50vh;
   right: 0;
   bottom: 0;
 
@@ -94,7 +94,7 @@ export default {
 
   @include mq(sm) {
     right: 40px;
-    height: 75vh;
+    height: 70vh;
   }
 
   @include mq() {
