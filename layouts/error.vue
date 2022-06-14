@@ -20,6 +20,7 @@
       </ErrorWhiteHeader>
       <img class="footprint fadeIn animation-1" src="/footprint.png" alt="" />
     </div>
+    <Footer />
   </div>
 </template>
 
