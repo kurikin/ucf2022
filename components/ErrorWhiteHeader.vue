@@ -1,5 +1,6 @@
 <template>
   <header class="header">
+    <BlackNavBar />
     <div class="container">
       <h1 class="page-title fadeIn animation-1">
         <slot name="page-title"></slot>
