@@ -6,8 +6,8 @@
     <HomeHeader />
     <div class="content">
       <YouTubeLive />
-      <News :contents="this.contents" />
       <TimeTable />
+      <News :contents="this.contents" />
       <Pickup />
       <Hamburger :baseColor="'white'" />
     </div>
