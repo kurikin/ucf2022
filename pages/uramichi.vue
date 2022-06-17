@@ -10,6 +10,8 @@
         </p></template
       >
     </WhiteHeader>
+    <div class="content container"></div>
+    <Footer />
   </div>
 </template>
 
