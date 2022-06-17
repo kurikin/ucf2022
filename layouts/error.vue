@@ -94,7 +94,7 @@ export default {
 
   @include mq(sm) {
     right: 40px;
-    height: 70vh;
+    height: 70vha;
   }
 
   @include mq() {
