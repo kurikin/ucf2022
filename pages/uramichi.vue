@@ -10,7 +10,9 @@
         </p></template
       >
     </WhiteHeader>
-    <div class="content container"></div>
+    <div class="content container">
+      <img src="/uramichi/campus.png" alt="" class="campus-img" />
+    </div>
     <Footer />
   </div>
 </template>
@@ -19,4 +21,12 @@
 export default {}
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.content {
+  text-align: center;
+}
+.campus-img {
+  width: 100%;
+  max-width: 750px;
+}
+</style>
