@@ -12,13 +12,35 @@
     </WhiteHeader>
     <div class="content container">
       <img src="/uramichi/campus.png" alt="" class="campus-img" />
+      <div class="youtube-wrapper">
+        <iframe
+          v-for="video in videos"
+          :key="video.url"
+          class="youtube"
+          width="560"
+          height="315"
+          :src="video.url"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
     </div>
     <Footer />
   </div>
 </template>
 
 <script>
-export default {}
+import { videos } from '~/assets/constants/uramichi'
+
+export default {
+  computed: {
+    videos() {
+      return videos
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -28,5 +50,17 @@ export default {}
 .campus-img {
   width: 100%;
   max-width: 750px;
+}
+
+.youtube-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid $black;
+
+  .youtube {
+    width: 100%;
+    height: 100%;
+  }
 }
 </style>
