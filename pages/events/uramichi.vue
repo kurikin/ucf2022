@@ -52,6 +52,19 @@ import { videos } from '~/assets/constants/uramichi'
 import { startObserve } from '~/scripts/observe'
 
 export default {
+  head() {
+    return {
+      title: '裏道探索 | 都市文化祭2022 公式ホームページ',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            '横浜国立大学には多くの道がある。あなたの知らない楽しい道を誰かは知っているかもしれない。裏道を通して横浜国立大学の新たな一面を探しにいきましょう。',
+        },
+      ],
+    }
+  },
   computed: {
     videos() {
       return videos
