@@ -12,19 +12,29 @@
     </WhiteHeader>
     <div class="content container">
       <img src="/uramichi/campus.png" alt="" class="campus-img" />
-      <div class="youtube-wrapper">
-        <iframe
-          v-for="video in videos"
-          :key="video.url"
-          class="youtube"
-          width="560"
-          height="315"
-          :src="video.url"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+      <div class="videos grid">
+        <div v-for="(video, index) in videos" :key="index" class="video">
+          <div class="title-box">
+            <img
+              :src="'/uramichi/pin' + (index + 1) + '.png'"
+              alt=""
+              class="uramichi-pin"
+            />
+            <p class="place-name">{{ video.placeName }}</p>
+          </div>
+          <div class="iframe-wrapper">
+            <iframe
+              class="youtube"
+              width="560"
+              height="315"
+              :src="video.url"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
       </div>
     </div>
     <Footer />
@@ -52,15 +62,31 @@ export default {
   max-width: 750px;
 }
 
-.youtube-wrapper {
+.iframe-wrapper {
   margin: 0 auto;
   width: 100%;
   aspect-ratio: 16 / 9;
-  border: 1px solid $black;
 
   .youtube {
     width: 100%;
     height: 100%;
   }
+}
+
+.title-box {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.place-name {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.uramichi-pin {
+  height: 32px;
 }
 </style>
