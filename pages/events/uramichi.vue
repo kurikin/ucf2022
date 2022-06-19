@@ -12,8 +12,12 @@
     </WhiteHeader>
     <div class="content">
       <div class="container">
-        <img src="/uramichi/campus.png" alt="" class="campus-img" />
-        <div class="videos grid">
+        <img
+          src="/uramichi/campus.png"
+          alt=""
+          class="campus-img fade-up-observe"
+        />
+        <div class="videos grid fade-up-observe">
           <div v-for="(video, index) in videos" :key="index" class="video">
             <div class="title-box">
               <img
@@ -45,12 +49,16 @@
 
 <script>
 import { videos } from '~/assets/constants/uramichi'
+import { startObserve } from '~/scripts/observe'
 
 export default {
   computed: {
     videos() {
       return videos
     },
+  },
+  mounted() {
+    startObserve()
   },
 }
 </script>
