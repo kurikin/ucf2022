@@ -20,10 +20,10 @@
       </li>
       <li class="list-item">
         <PickupItem
-          title="優しさの街"
-          description="皆を支える都市基盤の魅力とは"
-          imageUri="/events/yasashisa.jpeg"
-          path="/events/yasashisa/"
+          title="裏道探索"
+          description="こんな裏道あなたは知ってる？"
+          imageUri="/events/uramichi.jpeg"
+          path="/events/uramichi/"
         />
       </li>
     </ul>
