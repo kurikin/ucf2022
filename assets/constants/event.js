@@ -396,11 +396,11 @@ export const events = [
     thumbnail: 'uramichi.jpeg',
     description:
       '横浜国立大学には多くの道がある。通学のとき、昼休み、はたまた考えに行き詰まった時。あなたの道は誰かにとって出会いになるかもしれない。あなたの知らない楽しい道を誰かは知っているかもしれない。裏道を通して横浜国立大学の新たな一面を探しにいきましょう。',
-    comingsoon: true,
+    comingsoon: false,
     firstButtonData: {
-      text: '後日公開予定',
-      type: '',
-      link: '',
+      text: '企画ページへ',
+      type: 'route',
+      link: '/events/uramichi/',
     },
     secondButtonData: {
       link: '',
