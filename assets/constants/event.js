@@ -283,12 +283,12 @@ export const events = [
       '散歩のとき、通学のとき、帰省のとき……様々な足跡、足音を音楽と結び付けて共有する企画です。都市文化祭テーマである「雑踏」などからあなたが自由に連想した曲をアンケートから教えてください。Spotifyにてプレイリスト化します。その曲にまつわる思い出や言葉も一緒に紹介していただけると嬉しいです。何度でも参加可能です。',
     comingsoon: false,
     firstButtonData: {
-      text: '曲を投稿する',
+      text: 'YouTubeで聴く',
       type: 'link',
-      link: 'https://forms.gle/zB77UL9ToPw2QQvX7',
+      link: 'https://www.youtube.com/playlist?list=PLdATC2KDNtL_qmH0L3eFfC0WfegT4ron_',
     },
     secondButtonData: {
-      text: 'プレイリストを見る',
+      text: 'Spotifyで聴く',
       type: 'link',
       link: 'https://open.spotify.com/playlist/6YTlcpUE1IBzMItMwVqdVg',
     },
