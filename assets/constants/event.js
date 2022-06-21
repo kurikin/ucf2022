@@ -350,11 +350,11 @@ export const events = [
     thumbnail: 'radio.jpeg',
     description:
       '都市科学部の学生が、それぞれの学びを自分の言葉で話します。学部や学科の枠に捉われない独自の活動から、都市科学の可能性を探っていきます。あなたに合う都市をぜひ見つけてみてください。',
-    comingsoon: true,
+    comingsoon: false,
     firstButtonData: {
-      text: '後日公開予定',
-      type: '',
-      link: '',
+      text: 'ラジオを聴く',
+      type: 'link',
+      link: 'https://note.com/ucf2022/m/m0ceaa3b48712',
     },
     secondButtonData: {
       link: '',
