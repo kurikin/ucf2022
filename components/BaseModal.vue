@@ -27,7 +27,7 @@ export default {}
 
 .modal-container {
   width: 95%;
-  max-width: 1040px;
+  max-width: 1100px;
   max-height: 95%;
   background-color: $white;
   border-radius: $radius-sm;

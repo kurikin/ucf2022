@@ -48,7 +48,7 @@ export default {
   @include mq() {
     grid-column: 1 / -1;
     grid-row: 1;
-    width: 78%;
+    width: 65%;
   }
 }
 
