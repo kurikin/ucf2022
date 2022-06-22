@@ -6,10 +6,11 @@
     <HomeHeader />
     <div class="content">
       <Thanks />
-      <Survey />
+      <!-- <Survey /> -->
       <Gallery :contents="contents" />
       <Hamburger :baseColor="'white'" />
     </div>
+    <SurveyFloat />
     <Footer />
   </div>
 </template>
@@ -26,6 +27,7 @@ import { mapState, mapMutations } from 'vuex'
 import { startObserve } from '~/scripts/observe'
 import YouTubeLive from '~/components/home/YouTubeLive.vue'
 import Gallery from '~/components/finish/Gallery.vue'
+import SurveyFloat from '~/components/finish/SurveyFloat.vue'
 
 export default {
   components: {
@@ -38,6 +40,7 @@ export default {
     Gallery,
     Thanks,
     Survey,
+    SurveyFloat,
   },
   created() {
     this.changeSplashParam()
@@ -67,7 +70,7 @@ export default {
   },
   async asyncData({ $microcms }) {
     const images = await $microcms.get({
-      endpoint: 'tatatoshi',
+      endpoint: 'members',
       queries: {
         limit: 15,
       },
