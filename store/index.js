@@ -3,7 +3,7 @@ export const state = () => ({
   splashParam: 0.0,
   studioModalOpen: false,
   imageModalOpen: false,
-  movieModalOpen: false,
+  movieModalOpen: true,
   applyModalOpen: false,
   speakersModalOpen: false,
   studioModalData: {},

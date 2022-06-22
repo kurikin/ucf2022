@@ -3,10 +3,11 @@
     <transition name="splash-fade">
       <Splash v-if="showSplash && firstLoad" />
     </transition>
+    <MovieModal />
     <HomeHeader />
     <div class="content">
       <Thanks />
-      <Survey />
+      <!-- <Survey /> -->
       <Gallery :contents="contents" />
       <Hamburger :baseColor="'white'" />
     </div>
@@ -28,6 +29,7 @@ import { startObserve } from '~/scripts/observe'
 import YouTubeLive from '~/components/home/YouTubeLive.vue'
 import Gallery from '~/components/finish/Gallery.vue'
 import SurveyFloat from '~/components/finish/SurveyFloat.vue'
+import MovieModal from '../components/finish/MovieModal.vue'
 
 export default {
   components: {
@@ -41,6 +43,7 @@ export default {
     Thanks,
     Survey,
     SurveyFloat,
+    MovieModal,
   },
   created() {
     this.changeSplashParam()
