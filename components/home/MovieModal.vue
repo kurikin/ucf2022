@@ -47,7 +47,7 @@ export default {
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.8);
   // Larger than hanburder lines by 1
-  z-index: 10000;
+  z-index: 10001;
 }
 
 .modal-content {
