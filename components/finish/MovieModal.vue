@@ -1,6 +1,12 @@
 <template>
   <div class="background">
-    <div class="modal-content">
+    <div class="modal-content container">
+      <img
+        @click="toggleMovieModal()"
+        src="/icons/thin-close.svg"
+        alt=""
+        class="close-icon"
+      />
       <div class="youtube-wrapper" v-scroll-lock="movieModalOpen">
         <iframe
           width="560"
@@ -41,19 +47,35 @@ export default {
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.8);
   // Larger than hanburder lines by 1
-  z-index: 10001;
+  z-index: 10000;
 }
 
 .modal-content {
+  max-width: 800px;
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.close-icon {
+  height: 18px;
+  width: 18px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @include mq(sm) {
+    height: 24px;
+    width: 24px;
+  }
 }
 
 .youtube-wrapper {
-  max-width: 800px;
   margin: 0 auto;
   width: 100%;
   aspect-ratio: 16 / 9;

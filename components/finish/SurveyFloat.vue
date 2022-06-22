@@ -62,7 +62,7 @@ export default {
 
   position: absolute;
   bottom: 30px;
-  padding: 16px 20px;
+  padding: 12px 20px;
   border-radius: 24px;
   display: flex;
   align-items: center;
@@ -85,14 +85,20 @@ export default {
   }
 
   @include mq(xs) {
+    gap: 20px;
+    padding: 12px 24px;
+  }
+
+  @include mq(sm) {
     gap: 24px;
-    padding: 18px 32px;
+    padding: 16px 24px;
   }
 
   @include mq() {
     right: 36px;
     width: auto;
     gap: 28px;
+    padding: 18px 32px;
   }
 }
 
@@ -128,12 +134,25 @@ export default {
   gap: 2px;
 
   .small-text {
-    font-size: 16px;
+    font-size: 14px;
+
+    @include mq(xs) {
+      font-size: 15px;
+    }
+
+    @include mq() {
+      font-size: 18px;
+    }
   }
 
   .big-text {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
+    line-height: 1.4;
+
+    @include mq() {
+      font-size: 20px;
+    }
   }
 }
 </style>

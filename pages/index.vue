@@ -3,14 +3,17 @@
     <transition name="splash-fade">
       <Splash v-if="showSplash && firstLoad" />
     </transition>
+    <transition name="component-fade">
+      <MovieModal v-show="movieModalOpen" />
+    </transition>
     <HomeHeader />
     <div class="content">
-      <YouTubeLive />
-      <TimeTable />
-      <News :contents="this.contents" />
-      <Pickup />
+      <Thanks />
+      <!-- <Survey /> -->
+      <Gallery :contents="contents" />
       <Hamburger :baseColor="'white'" />
     </div>
+    <SurveyFloat v-if="!showSplash && !movieModalOpen" />
     <Footer />
   </div>
 </template>
@@ -21,12 +24,16 @@ import News from '~/components/home/News.vue'
 import Pickup from '~/components/home/Pickup.vue'
 import Splash from '~/components/Splash.vue'
 import TimeTable from '~/components/home/TimeTable.vue'
+import Thanks from '~/components/finish/Thanks.vue'
+import Survey from '~/components/finish/Survey.vue'
 import { mapState, mapMutations } from 'vuex'
 import { startObserve } from '~/scripts/observe'
 import YouTubeLive from '~/components/home/YouTubeLive.vue'
+import Gallery from '~/components/finish/Gallery.vue'
+import SurveyFloat from '~/components/finish/SurveyFloat.vue'
+import MovieModal from '../components/finish/MovieModal.vue'
 
 export default {
-  name: 'IndexPage',
   components: {
     HomeHeader,
     News,
@@ -34,12 +41,21 @@ export default {
     Splash,
     YouTubeLive,
     TimeTable,
+    Gallery,
+    Thanks,
+    Survey,
+    SurveyFloat,
+    MovieModal,
   },
   created() {
     this.changeSplashParam()
   },
   mounted() {
     startObserve()
+    if (!this.firstLoad) {
+      this.showSplash = false
+    }
+
     this.$nextTick(function () {
       setTimeout(() => {
         this.showSplash = false
@@ -53,7 +69,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['firstLoad']),
+    ...mapState(['firstLoad', 'movieModalOpen']),
   },
   methods: {
     closeSplash() {
@@ -62,11 +78,14 @@ export default {
     ...mapMutations(['toggleFirstLoad', 'changeSplashParam']),
   },
   async asyncData({ $microcms }) {
-    const data = await $microcms.get({
-      endpoint: 'news',
-      queries: { limit: 20, orders: '-publishedAt' },
+    const images = await $microcms.get({
+      endpoint: 'members',
+      queries: {
+        limit: 15,
+      },
     })
-    return data
+
+    return images
   },
 }
 </script>
