@@ -6,7 +6,7 @@
     <HomeHeader />
     <div class="content">
       <Thanks />
-      <section class="questionnaire container">
+      <section class="survey container">
         <h2 class="section-heading">アンケート</h2>
       </section>
       <Hamburger :baseColor="'white'" />
