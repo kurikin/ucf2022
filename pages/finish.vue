@@ -6,9 +6,7 @@
     <HomeHeader />
     <div class="content">
       <Thanks />
-      <section class="survey container">
-        <h2 class="section-heading">アンケート</h2>
-      </section>
+      <Survey />
       <Hamburger :baseColor="'white'" />
     </div>
     <Footer />
@@ -24,7 +22,8 @@ import TimeTable from '~/components/home/TimeTable.vue'
 import { mapState, mapMutations } from 'vuex'
 import { startObserve } from '~/scripts/observe'
 import YouTubeLive from '~/components/home/YouTubeLive.vue'
-import Thanks from '~/components/finish/thanks.vue'
+import Thanks from '~/components/finish/Thanks.vue'
+import Survey from '~/components/finish/Survey.vue'
 
 export default {
   name: 'IndexPage',
@@ -36,6 +35,7 @@ export default {
     YouTubeLive,
     TimeTable,
     Thanks,
+    Survey,
   },
   created() {
     this.changeSplashParam()

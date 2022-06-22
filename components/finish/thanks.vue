@@ -26,14 +26,14 @@ export default {}
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 48px;
+  margin-bottom: 64px;
 
   @include mq() {
-    margin-bottom: 64px;
+    margin-bottom: 80px;
   }
 
   @include mq(lg) {
-    margin-bottom: 80px;
+    margin-bottom: 94px;
   }
 }
 
@@ -62,11 +62,17 @@ export default {}
   }
 
   @include mq() {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   @include mq(lg) {
     line-height: 1.7;
+  }
+}
+
+.primary-button {
+  @include mq(lg) {
+    padding: 10px 36px;
   }
 }
 </style>
