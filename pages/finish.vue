@@ -5,18 +5,23 @@
     </transition>
     <HomeHeader />
     <div class="content">
-      <section class="thanks">
+      <section class="thanks container">
         <h2 class="section-heading">ご参加ありがとうございました</h2>
         <div class="text-box">
           <p class="text">
-            都市文化祭2022は無事終了いたしました。<br />
+            都市文化祭2022は無事終了いたしました。<br class="show-over-sm" />
             大変多くのご参加、ありがとうございました。
           </p>
           <p class="text">
-            オンデマンド企画およびライブ配信企画のアーカイブは、<br />
+            オンデマンド企画およびライブ配信企画のアーカイブは、<br
+              class="show-over-sm"
+            />
             引き続き企画一覧ページからご覧いただけます。
           </p>
         </div>
+        <nuxt-link class="primary-button" to="/events/"
+          >アーカイブを見る</nuxt-link
+        >
       </section>
       <Hamburger :baseColor="'white'" />
     </div>
@@ -81,6 +86,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.thanks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+
+  @include mq() {
+    gap: 24px;
+    margin-bottom: 38px;
+  }
+}
 .text {
   display: grid;
   gap: 24px;
