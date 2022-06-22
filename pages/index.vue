@@ -19,27 +19,20 @@
 </template>
 
 <script>
-import HomeHeader from '~/components/home/HomeHeader.vue'
-import News from '~/components/home/News.vue'
-import Pickup from '~/components/home/Pickup.vue'
-import Splash from '~/components/Splash.vue'
-import TimeTable from '~/components/home/TimeTable.vue'
-import Thanks from '~/components/finish/Thanks.vue'
 import { mapState, mapMutations } from 'vuex'
 import { startObserve } from '~/scripts/observe'
-import YouTubeLive from '~/components/home/YouTubeLive.vue'
-import Gallery from '~/components/finish/Gallery.vue'
-import SurveyFloat from '~/components/finish/SurveyFloat.vue'
-import MovieModal from '../components/finish/MovieModal.vue'
+import HomeHeader from '~/components/home/HomeHeader.vue'
+import Splash from '~/components/Splash.vue'
+import Thanks from '~/components/home/Thanks.vue'
+import Survey from '~/components/home/Survey.vue'
+import Gallery from '~/components/home/Gallery.vue'
+import SurveyFloat from '~/components/home/SurveyFloat.vue'
+import MovieModal from '../components/home/MovieModal.vue'
 
 export default {
   components: {
     HomeHeader,
-    News,
-    Pickup,
     Splash,
-    YouTubeLive,
-    TimeTable,
     Gallery,
     Thanks,
     Survey,
