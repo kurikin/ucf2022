@@ -7,6 +7,7 @@
     <div class="content">
       <Thanks />
       <Survey />
+      <ImageGallery />
       <Hamburger :baseColor="'white'" />
     </div>
     <Footer />
@@ -19,14 +20,14 @@ import News from '~/components/home/News.vue'
 import Pickup from '~/components/home/Pickup.vue'
 import Splash from '~/components/Splash.vue'
 import TimeTable from '~/components/home/TimeTable.vue'
+import Thanks from '~/components/finish/Thanks.vue'
+import Survey from '~/components/finish/Survey.vue'
 import { mapState, mapMutations } from 'vuex'
 import { startObserve } from '~/scripts/observe'
 import YouTubeLive from '~/components/home/YouTubeLive.vue'
-import Thanks from '~/components/finish/Thanks.vue'
-import Survey from '~/components/finish/Survey.vue'
+import ImageGallery from '~/components/finish/ImageGallery.vue'
 
 export default {
-  name: 'IndexPage',
   components: {
     HomeHeader,
     News,
@@ -34,6 +35,7 @@ export default {
     Splash,
     YouTubeLive,
     TimeTable,
+    ImageGallery,
     Thanks,
     Survey,
   },
