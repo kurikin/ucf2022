@@ -107,7 +107,7 @@ export default {
   display: inline-block;
 
   @include mq(xs) {
-    height: 48px;
+    height: 100%;
   }
 }
 
