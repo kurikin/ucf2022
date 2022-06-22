@@ -6,11 +6,11 @@
     <HomeHeader />
     <div class="content">
       <Thanks />
-      <!-- <Survey /> -->
+      <Survey />
       <Gallery :contents="contents" />
       <Hamburger :baseColor="'white'" />
     </div>
-    <SurveyFloat />
+    <SurveyFloat v-if="!showSplash" />
     <Footer />
   </div>
 </template>
@@ -47,6 +47,10 @@ export default {
   },
   mounted() {
     startObserve()
+    if (!this.firstLoad) {
+      this.showSplash = false
+    }
+
     this.$nextTick(function () {
       setTimeout(() => {
         this.showSplash = false

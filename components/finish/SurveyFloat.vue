@@ -25,7 +25,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.hideFloat = false
-    }, 2000)
+    }, 1500)
   },
   data() {
     return {
