@@ -7,7 +7,7 @@
     <div class="content">
       <Thanks />
       <Survey />
-      <ImageGallery />
+      <Gallery :contents="contents" />
       <Hamburger :baseColor="'white'" />
     </div>
     <Footer />
@@ -25,7 +25,7 @@ import Survey from '~/components/finish/Survey.vue'
 import { mapState, mapMutations } from 'vuex'
 import { startObserve } from '~/scripts/observe'
 import YouTubeLive from '~/components/home/YouTubeLive.vue'
-import ImageGallery from '~/components/finish/ImageGallery.vue'
+import Gallery from '~/components/finish/Gallery.vue'
 
 export default {
   components: {
@@ -35,7 +35,7 @@ export default {
     Splash,
     YouTubeLive,
     TimeTable,
-    ImageGallery,
+    Gallery,
     Thanks,
     Survey,
   },
@@ -66,11 +66,14 @@ export default {
     ...mapMutations(['toggleFirstLoad', 'changeSplashParam']),
   },
   async asyncData({ $microcms }) {
-    const data = await $microcms.get({
-      endpoint: 'news',
-      queries: { limit: 20, orders: '-publishedAt' },
+    const images = await $microcms.get({
+      endpoint: 'tatatoshi',
+      queries: {
+        limit: 15,
+      },
     })
-    return data
+
+    return images
   },
 }
 </script>

@@ -3,6 +3,7 @@ export const state = () => ({
   splashParam: 0.0,
   studioModalOpen: false,
   imageModalOpen: false,
+  movieModalOpen: false,
   applyModalOpen: false,
   speakersModalOpen: false,
   studioModalData: {},
@@ -26,6 +27,9 @@ export const mutations = {
   },
   toggleImageModal(state) {
     state.imageModalOpen = !state.imageModalOpen
+  },
+  toggleMovieModal(state) {
+    state.movieModalOpen = !state.movieModalOpen
   },
   toggleApplyModal(state) {
     state.applyModalOpen = !state.applyModalOpen
