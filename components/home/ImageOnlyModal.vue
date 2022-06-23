@@ -1,4 +1,6 @@
-<template></template>
+<template>
+  <BaseModal></BaseModal>
+</template>
 
 <script>
 export default {}
