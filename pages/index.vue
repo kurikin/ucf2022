@@ -79,7 +79,8 @@ export default {
     const images = await $microcms.get({
       endpoint: 'members',
       queries: {
-        limit: 15,
+        limit: 50,
+        orders: 'sortNum',
       },
     })
 
@@ -91,7 +92,7 @@ export default {
 <style lang="scss" scoped>
 .group-photo {
   width: 90%;
-  max-width: 850px;
+  max-width: 900px;
   margin: 0 auto;
   aspect-ratio: 3 / 2;
   display: block;
@@ -100,10 +101,12 @@ export default {
 
   @include mq() {
     margin-bottom: 64px;
+    border-radius: 24px;
   }
 
   @include mq(lg) {
     margin-bottom: 80px;
+    border-radius: 32px;
   }
 }
 </style>
