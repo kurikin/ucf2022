@@ -9,6 +9,7 @@ export const state = () => ({
   speakersModalOpen: false,
   studioModalData: {},
   imageModalData: {},
+  imageOnlyModalData: {},
   speakersModalData: {
     eventName: '',
     speakers: [],
@@ -46,6 +47,9 @@ export const mutations = {
   },
   setImageModalData(state, data) {
     state.imageModalData = data
+  },
+  setImageOnlyModalData(state, data) {
+    state.imageOnlyModalData = data
   },
   setSpeakersModalData(state, { eventName, speakers }) {
     state.speakersModalData.eventName = eventName

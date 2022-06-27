@@ -4,14 +4,18 @@
       <Splash v-if="showSplash && firstLoad" />
     </transition>
     <transition name="component-fade">
-      <MovieModal v-show="movieModalOpen" />
+      <MovieModal v-if="movieModalOpen" />
     </transition>
     <HomeHeader />
     <div class="content">
       <Thanks />
       <!-- <Survey /> -->
+      <img class="group-photo" src="group.jpg" alt="" />
       <Gallery :contents="contents" />
       <Hamburger :baseColor="'white'" />
+      <transition name="component-fade">
+        <ImageOnlyModal v-if="imageOnlyModalOpen" />
+      </transition>
     </div>
     <SurveyFloat v-if="!showSplash && !movieModalOpen" />
     <Footer />
@@ -28,6 +32,7 @@ import Survey from '~/components/home/Survey.vue'
 import Gallery from '~/components/home/Gallery.vue'
 import SurveyFloat from '~/components/home/SurveyFloat.vue'
 import MovieModal from '../components/home/MovieModal.vue'
+import ImageOnlyModal from '~/components/home/ImageOnlyModal.vue'
 
 export default {
   components: {
@@ -38,6 +43,7 @@ export default {
     Survey,
     SurveyFloat,
     MovieModal,
+    ImageOnlyModal,
   },
   created() {
     this.changeSplashParam()
@@ -61,7 +67,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['firstLoad', 'movieModalOpen']),
+    ...mapState(['firstLoad', 'movieModalOpen', 'imageOnlyModalOpen']),
   },
   methods: {
     closeSplash() {
@@ -82,4 +88,22 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.group-photo {
+  width: 90%;
+  max-width: 850px;
+  margin: 0 auto;
+  aspect-ratio: 3 / 2;
+  display: block;
+  object-fit: cover;
+  margin-bottom: 48px;
+
+  @include mq() {
+    margin-bottom: 64px;
+  }
+
+  @include mq(lg) {
+    margin-bottom: 80px;
+  }
+}
+</style>

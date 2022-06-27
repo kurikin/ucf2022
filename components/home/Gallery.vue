@@ -22,10 +22,10 @@ export default {
   props: ['contents'],
   methods: {
     showModal(content) {
-      this.setImageModalData(content)
-      this.toggleImageModal()
+      this.setImageOnlyModalData(content)
+      this.toggleImageOnlyModal()
     },
-    ...mapMutations(['toggleImageModal', 'setImageModalData']),
+    ...mapMutations(['toggleImageOnlyModal', 'setImageOnlyModalData']),
   },
 }
 </script>
