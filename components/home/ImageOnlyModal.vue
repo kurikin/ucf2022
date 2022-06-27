@@ -40,6 +40,10 @@ export default {
   @include mq() {
     grid-column: 1;
     grid-row: 1;
+    width: 90%;
+  }
+
+  @include mq(lg) {
     width: 83%;
   }
 }

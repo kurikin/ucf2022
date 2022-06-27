@@ -61,6 +61,11 @@ export default {
   width: 100%;
   object-fit: cover;
   border-radius: $radius-sm;
+  pointer-events: none;
+
+  @include mq(sm) {
+    pointer-events: all;
+  }
 
   @include mq() {
     border-radius: $radius-md;
