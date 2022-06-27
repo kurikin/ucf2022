@@ -98,15 +98,18 @@ export default {
   display: block;
   object-fit: cover;
   margin-bottom: 48px;
+  border-radius: $radius-sm;
+
+  @include mq() {
+    border-radius: $radius-md;
+  }
 
   @include mq() {
     margin-bottom: 64px;
-    border-radius: 24px;
   }
 
   @include mq(lg) {
     margin-bottom: 80px;
-    border-radius: 32px;
   }
 }
 </style>
