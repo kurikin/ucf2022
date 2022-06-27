@@ -33,14 +33,14 @@ export default {
 <style lang="scss" scoped>
 .image {
   width: 100%;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 3 / 2.1;
   border-radius: 24px;
   object-fit: cover;
 
   @include mq() {
     grid-column: 1;
     grid-row: 1;
-    width: 85%;
+    width: 83%;
   }
 }
 

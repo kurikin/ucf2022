@@ -94,7 +94,7 @@ export default {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  aspect-ratio: 3 / 2;
+  // aspect-ratio: 3 / 2;
   display: block;
   object-fit: cover;
   margin-bottom: 48px;
