@@ -2,8 +2,8 @@
   <div class="black-background">
     <BlackHeader :hideHamburger="studioModalOpen">
       <template v-slot:page-title>ス<span>タ</span>ジオ紹介</template>
-      <template v-slot:description
-        ><p>
+      <template v-slot:description>
+        <p>
           都市社会共生学科で最も特徴的な制度、スタジオ。<br />
           スタジオの中身を見ていくと、<br
             class="show-over-sm"

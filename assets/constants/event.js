@@ -15,11 +15,11 @@ export const events = [
       link: '',
     },
     secondButtonData: {
-      text: '',
-      type: '',
-      link: '',
+      text: 'アーカイブを見る',
+      type: 'link',
+      link: 'https://youtu.be/rHnOaHtJPHo?t=2340',
     },
-    hasSecondButton: false,
+    hasSecondButton: true,
     speakers: [
       {
         name: '日比野 莉良',
@@ -67,11 +67,11 @@ export const events = [
       link: '',
     },
     secondButtonData: {
-      link: '',
-      type: '',
-      type: '',
+      text: 'アーカイブを見る',
+      type: 'link',
+      link: 'https://youtu.be/rHnOaHtJPHo?t=9504',
     },
-    hasSecondButton: false,
+    hasSecondButton: true,
     speakers: [
       {
         name: '江藤 克',
@@ -119,11 +119,11 @@ export const events = [
       link: '',
     },
     secondButtonData: {
-      text: '',
-      type: '',
-      link: '',
+      text: 'アーカイブを見る',
+      type: 'link',
+      link: 'https://youtu.be/rHnOaHtJPHo?t=12950',
     },
-    hasSecondButton: false,
+    hasSecondButton: true,
     speakers: [
       {
         name: '荒木 拓巳',
@@ -171,11 +171,11 @@ export const events = [
       link: '',
     },
     secondButtonData: {
-      link: '',
-      type: '',
-      type: '',
+      text: 'アーカイブを見る',
+      type: 'link',
+      link: 'https://youtu.be/rHnOaHtJPHo?t=6015',
     },
-    hasSecondButton: false,
+    hasSecondButton: true,
     speakers: [
       {
         name: '渡辺 洋平',
@@ -306,16 +306,12 @@ export const events = [
       'みなさんが「たたずみたい」と思う都市の写真を集める企画です！自分の周りの都市・地域を見つめなおしてみませんか？自分の知らない都市・地域を知ってみませんか？Twitter、Instagram、Googleフォームから何回でも投稿可能です。',
     comingsoon: false,
     firstButtonData: {
-      text: '写真を投稿する',
-      type: 'link',
-      link: 'https://forms.gle/edwn2nTkRX84DHaU8',
-    },
-    secondButtonData: {
       text: '写真を見る',
       type: 'route',
       link: '/events/tatatoshi/',
     },
-    hasSecondButton: true,
+    secondButtonData: {},
+    hasSecondButton: false,
     speakers: [],
   },
   {

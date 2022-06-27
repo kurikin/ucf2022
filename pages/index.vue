@@ -3,43 +3,57 @@
     <transition name="splash-fade">
       <Splash v-if="showSplash && firstLoad" />
     </transition>
+    <transition name="component-fade">
+      <MovieModal v-if="movieModalOpen" />
+    </transition>
     <HomeHeader />
     <div class="content">
-      <YouTubeLive />
-      <TimeTable />
-      <News :contents="this.contents" />
-      <Pickup />
+      <Thanks />
+      <!-- <Survey /> -->
+      <img class="group-photo" src="group.jpg" alt="" />
+      <Gallery :contents="contents" />
       <Hamburger :baseColor="'white'" />
+      <transition name="component-fade">
+        <ImageOnlyModal v-if="imageOnlyModalOpen" />
+      </transition>
     </div>
+    <SurveyFloat v-if="!showSplash && !movieModalOpen" />
     <Footer />
   </div>
 </template>
 
 <script>
-import HomeHeader from '~/components/home/HomeHeader.vue'
-import News from '~/components/home/News.vue'
-import Pickup from '~/components/home/Pickup.vue'
-import Splash from '~/components/Splash.vue'
-import TimeTable from '~/components/home/TimeTable.vue'
 import { mapState, mapMutations } from 'vuex'
 import { startObserve } from '~/scripts/observe'
-import YouTubeLive from '~/components/home/YouTubeLive.vue'
+import HomeHeader from '~/components/home/HomeHeader.vue'
+import Splash from '~/components/Splash.vue'
+import Thanks from '~/components/home/Thanks.vue'
+import Survey from '~/components/home/Survey.vue'
+import Gallery from '~/components/home/Gallery.vue'
+import SurveyFloat from '~/components/home/SurveyFloat.vue'
+import MovieModal from '../components/home/MovieModal.vue'
+import ImageOnlyModal from '~/components/home/ImageOnlyModal.vue'
 
 export default {
-  name: 'IndexPage',
   components: {
     HomeHeader,
-    News,
-    Pickup,
     Splash,
-    YouTubeLive,
-    TimeTable,
+    Gallery,
+    Thanks,
+    Survey,
+    SurveyFloat,
+    MovieModal,
+    ImageOnlyModal,
   },
   created() {
     this.changeSplashParam()
   },
   mounted() {
     startObserve()
+    if (!this.firstLoad) {
+      this.showSplash = false
+    }
+
     this.$nextTick(function () {
       setTimeout(() => {
         this.showSplash = false
@@ -53,7 +67,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['firstLoad']),
+    ...mapState(['firstLoad', 'movieModalOpen', 'imageOnlyModalOpen']),
   },
   methods: {
     closeSplash() {
@@ -62,13 +76,40 @@ export default {
     ...mapMutations(['toggleFirstLoad', 'changeSplashParam']),
   },
   async asyncData({ $microcms }) {
-    const data = await $microcms.get({
-      endpoint: 'news',
-      queries: { limit: 20, orders: '-publishedAt' },
+    const images = await $microcms.get({
+      endpoint: 'members',
+      queries: {
+        limit: 50,
+        orders: 'sortNum',
+      },
     })
-    return data
+
+    return images
   },
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.group-photo {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  // aspect-ratio: 3 / 2;
+  display: block;
+  object-fit: cover;
+  margin-bottom: 48px;
+  border-radius: $radius-sm;
+
+  @include mq() {
+    border-radius: $radius-md;
+  }
+
+  @include mq() {
+    margin-bottom: 64px;
+  }
+
+  @include mq(lg) {
+    margin-bottom: 80px;
+  }
+}
+</style>

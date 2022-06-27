@@ -40,8 +40,8 @@ export default {
   align-items: center;
   justify-content: center;
   background-color: $black;
-  // Larger than hanburder lines by 1
-  z-index: 10001;
+  // Larger than hanburder & modal overlay by 1
+  z-index: 10002;
 }
 
 .splash {
