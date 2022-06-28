@@ -1,5 +1,5 @@
 <template>
-  <section class="thanks container">
+  <section class="thanks container fade-in-observe">
     <h2 class="section-heading">ご参加ありがとうございました</h2>
     <div class="text-box">
       <p class="text">都市文化祭2022は無事終了いたしました。<br /></p>
