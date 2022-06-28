@@ -17,7 +17,7 @@ export const events = [
     secondButtonData: {
       text: 'アーカイブを見る',
       type: 'link',
-      link: 'https://youtu.be/rHnOaHtJPHo?t=2340',
+      link: 'https://youtu.be/wEk5k_2yPVk?t=1746',
     },
     hasSecondButton: true,
     speakers: [
@@ -69,7 +69,7 @@ export const events = [
     secondButtonData: {
       text: 'アーカイブを見る',
       type: 'link',
-      link: 'https://youtu.be/rHnOaHtJPHo?t=9504',
+      link: 'https://youtu.be/wEk5k_2yPVk?t=8960',
     },
     hasSecondButton: true,
     speakers: [
@@ -121,7 +121,7 @@ export const events = [
     secondButtonData: {
       text: 'アーカイブを見る',
       type: 'link',
-      link: 'https://youtu.be/rHnOaHtJPHo?t=12950',
+      link: 'https://youtu.be/wEk5k_2yPVk?t=12559',
     },
     hasSecondButton: true,
     speakers: [
@@ -173,7 +173,7 @@ export const events = [
     secondButtonData: {
       text: 'アーカイブを見る',
       type: 'link',
-      link: 'https://youtu.be/rHnOaHtJPHo?t=6015',
+      link: 'https://youtu.be/wEk5k_2yPVk?t=5438',
     },
     hasSecondButton: true,
     speakers: [
