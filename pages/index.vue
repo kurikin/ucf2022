@@ -10,7 +10,7 @@
     <div class="content">
       <Thanks />
       <!-- <Survey /> -->
-      <img class="group-photo" src="group.jpg" alt="" />
+      <img class="group-photo fade-in-observe" src="group.jpg" alt="" />
       <Gallery :contents="contents" />
       <Hamburger :baseColor="'white'" />
       <transition name="component-fade">

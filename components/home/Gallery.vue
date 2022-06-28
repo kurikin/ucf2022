@@ -1,6 +1,6 @@
 <template>
   <div class="gallery container">
-    <h2 class="section-heading">フォトギャラリー</h2>
+    <h2 class="section-heading fade-in-observe">フォトギャラリー</h2>
     <div class="grid image-gallery">
       <img
         v-for="content in contents"
