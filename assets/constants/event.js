@@ -52,7 +52,7 @@ export const events = [
     ],
   },
   {
-    title: '都市社会共生学科学科４スタジオの会',
+    title: '都市社会共生学科４スタジオの会',
     subtitle: '',
     hasSubtitle: false,
     theme: 'nomareru',
