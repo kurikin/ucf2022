@@ -17,7 +17,7 @@ export const events = [
     secondButtonData: {
       text: '新Ver をプレイ',
       type: 'link',
-      link: 'https://ucf-ynumap.s3.ap-northeast-1.amazonaws.com/index.html',
+      link: 'https://vrynu.com/play/',
     },
     hasSecondButton: true,
     speakers: [],
